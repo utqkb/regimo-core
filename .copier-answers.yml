@@ -1,0 +1,16 @@
+# Changes here will be overwritten by Copier
+_commit: v0.4.1
+_src_path: https://github.com/linkml/linkml-project-copier
+add_example: true
+copyright_year: '2025'
+email: utqkb@student.kit.edu
+full_name: Anubhab Biswas
+gh_action_docs_preview: true
+gh_action_pypi: false
+github_org: KIT
+license: MIT
+project_description: Aimed upon designing an MVP to facilitate automatic publication
+    of metadata at OEP
+project_name: my-linkmk-schema
+project_slug: my_linkmk_schema
+
