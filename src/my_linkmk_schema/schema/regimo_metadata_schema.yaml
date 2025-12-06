@@ -1,0 +1,92 @@
+# Schema ID: The unique identifier for this set of rules (for the HKG)
+id: https://example.org/regimo/metadata_integrity_schema
+name: regimo_metadata_schema
+description: Schema enforcing Data Integrity (Completeness, Accuracy) and FAIR principles for energy research metadata.
+default_prefix: regimo
+
+prefixes:
+  regimo: https://example.org/regimo/
+  linkml: https://w3id.org/linkml/
+  # Ontology Prefix for Interoperability (OEO is often used in the energy domain)
+  OEO: http://openenergy-platform.org/ontology/OEO_
+
+# TYPES: Custom data types used for integrity checks
+types:
+  MeasurementValue:
+    # Ensures all measurement readings are numeric (accuracy)
+    base: float
+
+# ENUMERATIONS: Controlled Vocabularies (Essential for Interoperability)
+enums:
+  UnitOfTemperature:
+    description: Units for temperature, mapped to OEO/PATO concepts.
+    permissible_values:
+      Kelvin:
+        meaning: OEO:0000000000000001
+      Celsius:
+        meaning: OEO:0000000000000002
+      # This ensures users cannot type 'degrees' or 'deg C' (Consistency)
+
+# CLASSES: The main entities (metadata records)
+classes:
+  # The top-level container for a project's data submissions
+  ProjectSubmission:
+    tree_root: true
+    description: Container for metadata records being submitted via the MVP.
+    slots:
+      - project_id
+      - operator_name
+      - records
+
+  # The actual metadata record for a single measurement
+  MeasurementRecord:
+    description: Core metadata fields required for data integrity and FAIRness.
+    slots:
+      - sample_unique_id
+      - measurement_time
+      - temperature_value
+      - temperature_unit
+      - instrument_calibration_date
+
+# SLOTS: The properties and the integrity rules
+slots:
+  project_id:
+    description: Unique ID for the project (FAIR: Findable, required for traceability).
+    required: true
+    identifier: true
+    range: string
+
+  operator_name:
+    description: Name of the person responsible for the data collection (Integrity).
+    required: true
+    range: string
+
+  sample_unique_id:
+    description: Unique identifier for the collected sample (FAIR: Reusable key).
+    required: true
+    range: string
+
+  # FAIRNESS RULE: Ensuring the value is of the correct type (Accuracy)
+  temperature_value:
+    description: The recorded numerical temperature reading.
+    required: true
+    range: MeasurementValue # Enforced to be a float
+
+  # FAIRNESS RULE: Enforcing controlled vocabulary (Interoperability/Consistency)
+  temperature_unit:
+    description: The physical unit for the temperature value.
+    required: true
+    range: UnitOfTemperature # Must select a value from the enum above
+    slot_uri: OEO:0000000000000003 # Example mapping to a unit slot URI
+
+  # INTEGRITY RULE: Enforcing Trustworthiness/Provenance (Workshop point)
+  instrument_calibration_date:
+    description: Date the instrument was last calibrated (Integrity/Provenance).
+    required: true
+    range: date
+
+  records:
+    description: List of individual measurement records.
+    multivalued: true
+    range: MeasurementRecord
+    inlined: true
