@@ -1,5 +1,5 @@
 # Auto generated from my_linkmk_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-12-05T00:04:00
+# Generation date: 2025-12-08T02:18:12
 # Schema: my-linkmk-schema
 #
 # id: https://w3id.org/KIT/my-linkmk-schema

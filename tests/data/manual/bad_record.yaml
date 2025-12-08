@@ -1,0 +1,9 @@
+# Metadata record that violates schema integrity rules
+project_id: EXP-2025-FAIL
+# operator_name is missing (Completeness Integrity Failure!)
+records:
+  - sample_unique_id: SAMPLE-X
+    measurement_time: 2025-12-05T10:00:00+01:00
+    temperature_value: "10" # Fails Accuracy (needs float, got string due to lack of quote conversion)
+    temperature_unit: Fahrenheit # Fails Consistency (not in your Kelvin/Celsius controlled vocabulary)
+    instrument_calibration_date: 2025-11-01

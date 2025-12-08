@@ -1,96 +1,92 @@
----
-id: https://w3id.org/KIT/my-linkmk-schema
-name: my-linkmk-schema
-title: my-linkmk-schema
-description: |-
-  Aimed upon designing an MVP to facilitate automatic publication of metadata at OEP
-license: MIT
-see_also:
-  - https://KIT.github.io/my-linkmk-schema
+# Schema ID: The unique identifier for this set of rules (for the HKG)
+id: https://example.org/regimo/metadata_integrity_schema
+name: regimo_metadata_schema
+description: Schema enforcing Data Integrity (Completeness, Accuracy) and FAIR principles for energy research metadata.
+default_prefix: regimo
 
 prefixes:
-  my_linkmk_schema: https://w3id.org/KIT/my-linkmk-schema/
+  regimo: https://example.org/regimo/
   linkml: https://w3id.org/linkml/
-  biolink: https://w3id.org/biolink/
-  schema: http://schema.org/
-  PATO: http://purl.obolibrary.org/obo/PATO_
-  example: https://example.org/
-default_prefix: my_linkmk_schema
-default_range: string
+  # Ontology Prefix for Interoperability (OEO is often used in the energy domain)
+  OEO: http://openenergy-platform.org/ontology/OEO_
 
-imports:
-  - linkml:types
+# TYPES: Custom data types used for integrity checks
+types:
+  MeasurementValue:
+    # Ensures all measurement readings are numeric (accuracy)
+    base: float
 
-classes:
-
-  NamedThing:
-    description: >-
-      A generic grouping for any identifiable entity
-    slots:
-      - id
-      - name
-      - description
-    class_uri: schema:Thing
-
-  Person:
-    is_a: NamedThing
-    description: >-
-      Represents a Person
-    slots:
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
-
-  PersonCollection:
-    tree_root: true
-    description: >-
-      A holder for Person objects
-    attributes:
-      entries:
-        range: Person
-        multivalued: true
-        inlined_as_list: true
-
-slots:
-  id:
-    identifier: true
-    slot_uri: schema:identifier
-    range: uriorcurie
-    description: A unique identifier for a thing
-  name:
-    slot_uri: schema:name
-    description: A human-readable name for a thing
-  description:
-    slot_uri: schema:description
-    description: A human-readable description for a thing
-  primary_email:
-    slot_uri: schema:email
-    description: The main email address of a person
-  birth_date:
-    slot_uri: schema:birthDate
-    range: date
-    description: Date on which a person is born
-  age_in_years:
-    range: integer
-    description: Number of years since birth
-  vital_status:
-    range: PersonStatus
-    description: living or dead status
-
+# ENUMERATIONS: Controlled Vocabularies (Essential for Interoperability)
 enums:
-  PersonStatus:
+  UnitOfTemperature:
+    description: Units for temperature, mapped to OEO/PATO concepts.
     permissible_values:
-      ALIVE:
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        description: the vital status is not known
-        todos:
-          - map this to an ontology
+      Kelvin:
+        meaning: OEO:0000000000000001
+      Celsius:
+        meaning: OEO:0000000000000002
+      # This ensures users cannot type 'degrees' or 'deg C' (Consistency)
+
+# CLASSES: The main entities (metadata records)
+classes:
+  # The top-level container for a project's data submissions
+  ProjectSubmission:
+    tree_root: true
+    description: Container for metadata records being submitted via the MVP.
+    slots:
+      - project_id
+      - operator_name
+      - records
+
+  # The actual metadata record for a single measurement
+  MeasurementRecord:
+    description: Core metadata fields required for data integrity and FAIRness.
+    slots:
+      - sample_unique_id
+      - measurement_time
+      - temperature_value
+      - temperature_unit
+      - instrument_calibration_date
+
+# SLOTS: The properties and the integrity rules
+slots:
+  project_id:
+    description: Unique ID for the project (FAIR: Findable, required for traceability).
+    required: true
+    identifier: true
+    range: string
+
+  operator_name:
+    description: Name of the person responsible for the data collection (Integrity).
+    required: true
+    range: string
+
+  sample_unique_id:
+    description: Unique identifier for the collected sample (FAIR: Reusable key).
+    required: true
+    range: string
+
+  # FAIRNESS RULE: Ensuring the value is of the correct type (Accuracy)
+  temperature_value:
+    description: The recorded numerical temperature reading.
+    required: true
+    range: MeasurementValue # Enforced to be a float
+
+  # FAIRNESS RULE: Enforcing controlled vocabulary (Interoperability/Consistency)
+  temperature_unit:
+    description: The physical unit for the temperature value.
+    required: true
+    range: UnitOfTemperature # Must select a value from the enum above
+    slot_uri: OEO:0000000000000003 # Example mapping to a unit slot URI
+
+  # INTEGRITY RULE: Enforcing Trustworthiness/Provenance (Workshop point)
+  instrument_calibration_date:
+    description: Date the instrument was last calibrated (Integrity/Provenance).
+    required: true
+    range: date
+
+  records:
+    description: List of individual measurement records.
+    multivalued: true
+    range: MeasurementRecord
+    inlined: true
