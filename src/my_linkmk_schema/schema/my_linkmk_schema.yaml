@@ -2,8 +2,8 @@ id: https://example.org/regimo/metadata_integrity_schema
 name: regimo_metadata_schema
 title: Regimo Metadata Integrity Schema
 description: >-
-  Schema enforcing data integrity (completeness, accuracy, provenance)
-  and FAIR principles for energy research measurement metadata.
+  Enforces data integrity, provenance and FAIR principles for temperature
+  measurements in energy research.
 version: 0.1.0
 license: MIT
 
@@ -13,8 +13,8 @@ default_range: string
 prefixes:
   regimo: https://example.org/regimo/
   linkml: https://w3id.org/linkml/
-  xsd: http://www.w3.org/2001/XMLSchema#
-  oeo: http://openenergy-platform.org/ontology/oeo/
+  xsd:    http://www.w3.org/2001/XMLSchema#
+  oeo:    http://openenergy-platform.org/ontology/oeo/
 
 imports:
   - linkml:types
@@ -23,12 +23,11 @@ types:
   MeasurementValue:
     base: float
     uri: xsd:float
-    description: Numeric temperature value (enforces accuracy via strict float type)
+    description: Temperature reading as a proper floating-point number
 
 enums:
   UnitOfTemperature:
-    description: Controlled vocabulary for temperature units (enforces consistency and interoperability)
-    uri: regimo:UnitOfTemperature
+    description: Allowed temperature units (controlled vocabulary)
     permissible_values:
       Kelvin:
         description: Temperature in Kelvin
@@ -41,14 +40,14 @@ classes:
 
   ProjectSubmission:
     tree_root: true
-    description: Top-level container for a submission containing one or more measurement records
+    description: Container for one or more measurement records
     attributes:
       project_id:
       operator_name:
       records:
 
   MeasurementRecord:
-    description: Single temperature measurement with full provenance and integrity metadata
+    description: Single temperature measurement with full provenance
     attributes:
       sample_unique_id:
       measurement_time:
@@ -57,43 +56,44 @@ classes:
       instrument_calibration_date:
 
 slots:
+
   project_id:
     identifier: true
     required: true
-    description: Unique identifier of the research project (FAIR Findable)
+    description: Unique project identifier (FAIR Findable)
 
   operator_name:
     required: true
-    description: Full name of the person responsible for collecting the data
+    description: Person who performed the measurement
 
   sample_unique_id:
     required: true
-    description: Unique identifier of the physical sample being measured
+    description: Unique ID of the physical sample
 
   measurement_time:
     required: true
     range: datetime
-    description: Exact date and time when the measurement was performed
+    description: Date and time of the measurement
 
   temperature_value:
     required: true
     range: MeasurementValue
-    description: Measured temperature as a numeric value (accuracy enforced by type)
+    description: Measured temperature (numeric only)
 
   temperature_unit:
     required: true
     range: UnitOfTemperature
-    slot_uri: oeo:OEO_00020035
-    description: Unit of the temperature measurement (controlled vocabulary)
+    description: oeo:OEO_00020035
+    description: Unit for the temperature value
 
   instrument_calibration_date:
     required: true
     range: date
-    description: Date of the last calibration of the measuring instrument (provenance & integrity)
+    description: Date of last instrument calibration
 
   records:
     multivalued: true
     inlined: true
     inlined_as_list: true
     range: MeasurementRecord
-    description: List of all individual measurement records in this submission
+    description: All measurement records in this submission
