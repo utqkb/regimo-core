@@ -6,13 +6,12 @@ default_prefix: regimo
 prefixes:
   regimo: https://example.org/regimo/
   linkml: https://w3id.org/linkml/
-  # Ontology Prefix for Interoperability (OEO is often used in the energy domain)
-  OEO: http://openenergy-platform.org/ontology/OEO_
+  OEO: http://openenergy-platform.org/ontology/oeo/
 
 types:
   MeasurementValue:
-    # Ensures all measurement readings are numeric (accuracy)
     base: float
+    description: Ensures all measurement readings are numeric (accuracy)
 
 enums:
   UnitOfTemperature:
@@ -22,10 +21,8 @@ enums:
         meaning: OEO:0000000000000001
       Celsius:
         meaning: OEO:0000000000000002
-      # This ensures users cannot type 'degrees' or 'deg C' (Consistency)
 
 classes:
-  # The top-level container for a project's data submissions
   ProjectSubmission:
     tree_root: true
     description: Container for metadata records being submitted via the MVP.
@@ -34,7 +31,6 @@ classes:
       - operator_name
       - records
 
-  # The actual metadata record for a single measurement
   MeasurementRecord:
     description: Core metadata fields required for data integrity and FAIRness.
     slots:
@@ -47,17 +43,17 @@ classes:
 slots:
   project_id:
     description: Unique ID for the project (FAIR: Findable, required for traceability).
-    required: true
     identifier: true
+    required: true
     range: string
 
   operator_name:
-    description: Name of the person responsible for the data collection (Integrity).
+    description: Name of the person responsible for the data collection.
     required: true
     range: string
 
   sample_unique_id:
-    description: Unique identifier for the collected sample (FAIR: Reusable key).
+    description: Unique identifier for the collected sample.
     required: true
     range: string
 
@@ -66,22 +62,22 @@ slots:
     required: true
     range: datetime
 
-  # FAIRNESS RULE: Ensuring the value is of the correct type (Accuracy)
   temperature_value:
     description: The recorded numerical temperature reading.
     required: true
-    range: MeasurementValue   # Enforced to be a float
+    # Enforced to be a float via the custom type
+    range: MeasurementValue
 
-  # FAIRNESS RULE: Enforcing controlled vocabulary (Interoperability/Consistency)
   temperature_unit:
     description: The physical unit for the temperature value.
     required: true
-    range: UnitOfTemperature   # Must select a value from the enum above
-    slot_uri: OEO:0000000000000003   # Example mapping to a unit slot URI
+    # Must be one of the controlled values defined above
+    range: UnitOfTemperature
+    # Example semantic mapping
+    slot_uri: http://openenergy-platform.org/ontology/oeo/OEO_00020035
 
-  # INTEGRITY RULE: Enforcing Trustworthiness/Provenance (Workshop point)
   instrument_calibration_date:
-    description: Date the instrument was last calibrated (Integrity/Provenance).
+    description: Date the instrument was last calibrated (provenance/integrity).
     required: true
     range: date
 
@@ -90,4 +86,4 @@ slots:
     multivalued: true
     range: MeasurementRecord
     inlined: true
-    inlined_as_list: true   # recommended for multivalued inlined objects
+    inlined_as_list: true
