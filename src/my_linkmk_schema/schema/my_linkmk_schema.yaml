@@ -5,34 +5,39 @@ default_prefix: regimo
 
 prefixes:
   regimo: https://example.org/regimo/
+  # your own namespace
   linkml: https://w3id.org/linkml/
-  OEO: http://openenergy-platform.org/ontology/oeo/
+  oeo: http://openenergy-platform.org/ontology/oeo/
+
+imports:
+  - linkml:types
 
 types:
   MeasurementValue:
     base: float
-    description: Ensures all measurement readings are numeric (accuracy)
+    description: Numeric temperature measurement value
 
 enums:
   UnitOfTemperature:
-    description: Units for temperature, mapped to OEO/PATO concepts.
+    description: Controlled vocabulary for temperature units
     permissible_values:
       Kelvin:
-        meaning: OEO:0000000000000001
+        meaning: oeo:OEO_00020034
       Celsius:
-        meaning: OEO:0000000000000002
+        meaning: oeo:OEO_00020035
 
 classes:
+
   ProjectSubmission:
     tree_root: true
-    description: Container for metadata records being submitted via the MVP.
+    description: Top-level container for a set of measurement records
     slots:
       - project_id
       - operator_name
       - records
 
   MeasurementRecord:
-    description: Core metadata fields required for data integrity and FAIRness.
+    description: One individual temperature measurement with full provenance
     slots:
       - sample_unique_id
       - measurement_time
@@ -41,49 +46,47 @@ classes:
       - instrument_calibration_date
 
 slots:
+
   project_id:
-    description: Unique ID for the project (FAIR: Findable, required for traceability).
     identifier: true
     required: true
+    description: Unique project identifier (FAIR Findable)
     range: string
 
   operator_name:
-    description: Name of the person responsible for the data collection.
     required: true
+    description: Person responsible for data collection
     range: string
 
   sample_unique_id:
-    description: Unique identifier for the collected sample.
     required: true
+    description: Unique identifier of the physical sample
     range: string
 
   measurement_time:
-    description: Date and time when the measurement was taken.
     required: true
+    description: Exact date and time of the measurement
     range: datetime
 
   temperature_value:
-    description: The recorded numerical temperature reading.
     required: true
-    # Enforced to be a float via the custom type
+    description: Measured temperature value (numeric only)
     range: MeasurementValue
 
   temperature_unit:
-    description: The physical unit for the temperature value.
     required: true
-    # Must be one of the controlled values defined above
+    description: Unit of the temperature measurement (controlled vocabulary)
     range: UnitOfTemperature
-    # Example semantic mapping
-    slot_uri: http://openenergy-platform.org/ontology/oeo/OEO_00020035
+    slot_uri: oeo:OEO_00020035
 
   instrument_calibration_date:
-    description: Date the instrument was last calibrated (provenance/integrity).
     required: true
+    description: Date of last instrument calibration (provenance & integrity)
     range: date
 
   records:
-    description: List of individual measurement records.
     multivalued: true
-    range: MeasurementRecord
     inlined: true
     inlined_as_list: true
+    range: MeasurementRecord
+    description: Collection of all measurement records in this submission
