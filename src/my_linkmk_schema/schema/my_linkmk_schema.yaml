@@ -1,9 +1,7 @@
 id: https://example.org/regimo/metadata_integrity_schema
 name: regimo_metadata_schema
 title: Regimo Metadata Integrity Schema
-description: >-
-  Enforces data integrity, provenance and FAIR principles for temperature
-  measurements in energy research.
+description: Enforces data integrity, provenance and FAIR principles for temperature measurements in energy research.
 version: 0.1.0
 license: MIT
 
@@ -13,8 +11,8 @@ default_range: string
 prefixes:
   regimo: https://example.org/regimo/
   linkml: https://w3id.org/linkml/
-  xsd:    http://www.w3.org/2001/XMLSchema#
-  oeo:    http://openenergy-platform.org/ontology/oeo/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  oeo: http://openenergy-platform.org/ontology/oeo/
 
 imports:
   - linkml:types
@@ -23,17 +21,17 @@ types:
   MeasurementValue:
     base: float
     uri: xsd:float
-    description: Temperature reading as a proper floating-point number
+    description: Temperature reading as a floating-point number
 
 enums:
   UnitOfTemperature:
-    description: Allowed temperature units (controlled vocabulary)
+    description: Allowed temperature units
     permissible_values:
       Kelvin:
-        description: Temperature in Kelvin
+        description: Kelvin scale
         meaning: oeo:OEO_00020034
       Celsius:
-        description: Temperature in degrees Celsius
+        description: Degrees Celsius
         meaning: oeo:OEO_00020035
 
 classes:
@@ -47,7 +45,7 @@ classes:
       records:
 
   MeasurementRecord:
-    description: Single temperature measurement with full provenance
+    description: Single temperature measurement with provenance
     attributes:
       sample_unique_id:
       measurement_time:
@@ -64,36 +62,36 @@ slots:
 
   operator_name:
     required: true
-    description: Person who performed the measurement
+    description: Person responsible for the measurement
 
   sample_unique_id:
     required: true
-    description: Unique ID of the physical sample
+    description: Unique identifier of the physical sample
 
   measurement_time:
     required: true
     range: datetime
-    description: Date and time of the measurement
+    description: Date and time when the measurement was taken
 
   temperature_value:
     required: true
     range: MeasurementValue
-    description: Measured temperature (numeric only)
+    description: Measured temperature value (numeric only)
 
   temperature_unit:
     required: true
     range: UnitOfTemperature
-    description: oeo:OEO_00020035
-    description: Unit for the temperature value
+    slot_uri: oeo:OEO_00020035
+    description: Unit of the temperature (controlled vocabulary)
 
   instrument_calibration_date:
     required: true
     range: date
-    description: Date of last instrument calibration
+    description: Date the instrument was last calibrated
 
   records:
     multivalued: true
     inlined: true
     inlined_as_list: true
     range: MeasurementRecord
-    description: All measurement records in this submission
+    description: List of all measurement records in this submission
