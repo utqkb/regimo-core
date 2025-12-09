@@ -30,7 +30,7 @@ from pydantic import (
 
 
 metamodel_version = "None"
-version = "None"
+version = "0.1.0"
 
 
 class ConfiguredBaseModel(BaseModel):
@@ -78,99 +78,72 @@ class LinkMLMeta(RootModel):
         return key in self.root
 
 
-linkml_meta = LinkMLMeta({'default_prefix': 'my_linkmk_schema',
+linkml_meta = LinkMLMeta({'default_prefix': 'regimo',
      'default_range': 'string',
-     'description': 'Aimed upon designing an MVP to facilitate automatic '
-                    'publication of metadata at OEP',
-     'id': 'https://w3id.org/KIT/my-linkmk-schema',
+     'description': 'Enforces data integrity, provenance and FAIR principles for '
+                    'temperature measurements in energy research.',
+     'id': 'https://example.org/regimo/metadata_integrity_schema',
      'imports': ['linkml:types'],
      'license': 'MIT',
-     'name': 'my-linkmk-schema',
-     'prefixes': {'PATO': {'prefix_prefix': 'PATO',
-                           'prefix_reference': 'http://purl.obolibrary.org/obo/PATO_'},
-                  'biolink': {'prefix_prefix': 'biolink',
-                              'prefix_reference': 'https://w3id.org/biolink/'},
-                  'example': {'prefix_prefix': 'example',
-                              'prefix_reference': 'https://example.org/'},
-                  'linkml': {'prefix_prefix': 'linkml',
+     'name': 'regimo_metadata_schema',
+     'prefixes': {'linkml': {'prefix_prefix': 'linkml',
                              'prefix_reference': 'https://w3id.org/linkml/'},
-                  'my_linkmk_schema': {'prefix_prefix': 'my_linkmk_schema',
-                                       'prefix_reference': 'https://w3id.org/KIT/my-linkmk-schema/'},
-                  'schema': {'prefix_prefix': 'schema',
-                             'prefix_reference': 'http://schema.org/'}},
-     'see_also': ['https://KIT.github.io/my-linkmk-schema'],
+                  'oeo': {'prefix_prefix': 'oeo',
+                          'prefix_reference': 'http://openenergy-platform.org/ontology/oeo/'},
+                  'regimo': {'prefix_prefix': 'regimo',
+                             'prefix_reference': 'https://example.org/regimo/'},
+                  'xsd': {'prefix_prefix': 'xsd',
+                          'prefix_reference': 'http://www.w3.org/2001/XMLSchema#'}},
      'source_file': 'src/my_linkmk_schema/schema/my_linkmk_schema.yaml',
-     'title': 'my-linkmk-schema'} )
+     'title': 'Regimo Metadata Integrity Schema',
+     'types': {'MeasurementValue': {'base': 'float',
+                                    'description': 'Temperature reading as a '
+                                                   'floating-point number',
+                                    'from_schema': 'https://example.org/regimo/metadata_integrity_schema',
+                                    'name': 'MeasurementValue',
+                                    'uri': 'xsd:float'}}} )
 
-class PersonStatus(str, Enum):
-    ALIVE = "ALIVE"
+class UnitOfTemperature(str, Enum):
     """
-    the person is living
+    Allowed temperature units
     """
-    DEAD = "DEAD"
+    Kelvin = "Kelvin"
     """
-    the person is deceased
+    Kelvin scale
     """
-    UNKNOWN = "UNKNOWN"
+    Celsius = "Celsius"
     """
-    the vital status is not known
+    Degrees Celsius
     """
-
-
-
-class NamedThing(ConfiguredBaseModel):
-    """
-    A generic grouping for any identifiable entity
-    """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Thing',
-         'from_schema': 'https://w3id.org/KIT/my-linkmk-schema'})
-
-    id: str = Field(default=..., description="""A unique identifier for a thing""", json_schema_extra = { "linkml_meta": {'domain_of': ['NamedThing'], 'slot_uri': 'schema:identifier'} })
-    name: Optional[str] = Field(default=None, description="""A human-readable name for a thing""", json_schema_extra = { "linkml_meta": {'domain_of': ['NamedThing'], 'slot_uri': 'schema:name'} })
-    description: Optional[str] = Field(default=None, description="""A human-readable description for a thing""", json_schema_extra = { "linkml_meta": {'domain_of': ['NamedThing'], 'slot_uri': 'schema:description'} })
 
 
-class Person(NamedThing):
+
+class ProjectSubmission(ConfiguredBaseModel):
     """
-    Represents a Person
+    Container for one or more measurement records
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/KIT/my-linkmk-schema',
-         'slot_usage': {'primary_email': {'name': 'primary_email',
-                                          'pattern': '^\\S+@[\\S+\\.]+\\S+'}}})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://example.org/regimo/metadata_integrity_schema',
+         'tree_root': True})
 
-    primary_email: Optional[str] = Field(default=None, description="""The main email address of a person""", json_schema_extra = { "linkml_meta": {'domain_of': ['Person'], 'slot_uri': 'schema:email'} })
-    birth_date: Optional[date] = Field(default=None, description="""Date on which a person is born""", json_schema_extra = { "linkml_meta": {'domain_of': ['Person'], 'slot_uri': 'schema:birthDate'} })
-    age_in_years: Optional[int] = Field(default=None, description="""Number of years since birth""", json_schema_extra = { "linkml_meta": {'domain_of': ['Person']} })
-    vital_status: Optional[PersonStatus] = Field(default=None, description="""living or dead status""", json_schema_extra = { "linkml_meta": {'domain_of': ['Person']} })
-    id: str = Field(default=..., description="""A unique identifier for a thing""", json_schema_extra = { "linkml_meta": {'domain_of': ['NamedThing'], 'slot_uri': 'schema:identifier'} })
-    name: Optional[str] = Field(default=None, description="""A human-readable name for a thing""", json_schema_extra = { "linkml_meta": {'domain_of': ['NamedThing'], 'slot_uri': 'schema:name'} })
-    description: Optional[str] = Field(default=None, description="""A human-readable description for a thing""", json_schema_extra = { "linkml_meta": {'domain_of': ['NamedThing'], 'slot_uri': 'schema:description'} })
-
-    @field_validator('primary_email')
-    def pattern_primary_email(cls, v):
-        pattern=re.compile(r"^\S+@[\S+\.]+\S+")
-        if isinstance(v, list):
-            for element in v:
-                if isinstance(element, str) and not pattern.match(element):
-                    err_msg = f"Invalid primary_email format: {element}"
-                    raise ValueError(err_msg)
-        elif isinstance(v, str) and not pattern.match(v):
-            err_msg = f"Invalid primary_email format: {v}"
-            raise ValueError(err_msg)
-        return v
+    project_id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['ProjectSubmission']} })
+    operator_name: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['ProjectSubmission']} })
+    records: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['ProjectSubmission']} })
 
 
-class PersonCollection(ConfiguredBaseModel):
+class MeasurementRecord(ConfiguredBaseModel):
     """
-    A holder for Person objects
+    Single temperature measurement with provenance
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/KIT/my-linkmk-schema', 'tree_root': True})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://example.org/regimo/metadata_integrity_schema'})
 
-    entries: Optional[list[Person]] = Field(default=[], json_schema_extra = { "linkml_meta": {'domain_of': ['PersonCollection']} })
+    sample_unique_id: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['MeasurementRecord']} })
+    measurement_time: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['MeasurementRecord']} })
+    temperature_value: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['MeasurementRecord']} })
+    temperature_unit: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['MeasurementRecord']} })
+    instrument_calibration_date: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['MeasurementRecord']} })
 
 
 # Model rebuild
 # see https://pydantic-docs.helpmanual.io/usage/models/#rebuilding-a-model
-NamedThing.model_rebuild()
-Person.model_rebuild()
-PersonCollection.model_rebuild()
+ProjectSubmission.model_rebuild()
+MeasurementRecord.model_rebuild()

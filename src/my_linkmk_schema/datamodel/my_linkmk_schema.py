@@ -1,9 +1,9 @@
 # Auto generated from my_linkmk_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-12-08T02:18:12
-# Schema: my-linkmk-schema
+# Generation date: 2025-12-09T00:08:40
+# Schema: regimo_metadata_schema
 #
-# id: https://w3id.org/KIT/my-linkmk-schema
-# description: Aimed upon designing an MVP to facilitate automatic publication of metadata at OEP
+# id: https://example.org/regimo/metadata_integrity_schema
+# description: Enforces data integrity, provenance and FAIR principles for temperature measurements in energy research.
 # license: MIT
 
 import dataclasses
@@ -56,170 +56,166 @@ from rdflib import (
     URIRef
 )
 
-from linkml_runtime.linkml_model.types import Date, Integer, String, Uriorcurie
-from linkml_runtime.utils.metamodelcore import URIorCURIE, XSDDate
+from linkml_runtime.linkml_model.types import Date, Datetime, String
+from linkml_runtime.utils.metamodelcore import XSDDate, XSDDateTime
 
 metamodel_version = "1.7.0"
-version = None
+version = "0.1.0"
 
 # Namespaces
-PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
-BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
-EXAMPLE = CurieNamespace('example', 'https://example.org/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-MY_LINKMK_SCHEMA = CurieNamespace('my_linkmk_schema', 'https://w3id.org/KIT/my-linkmk-schema/')
-SCHEMA = CurieNamespace('schema', 'http://schema.org/')
-DEFAULT_ = MY_LINKMK_SCHEMA
+OEO = CurieNamespace('oeo', 'http://openenergy-platform.org/ontology/oeo/')
+REGIMO = CurieNamespace('regimo', 'https://example.org/regimo/')
+XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
+DEFAULT_ = REGIMO
 
 
 # Types
+class MeasurementValue(float):
+    """ Temperature reading as a floating-point number """
+    type_class_uri = XSD["float"]
+    type_class_curie = "xsd:float"
+    type_name = "MeasurementValue"
+    type_model_uri = REGIMO.MeasurementValue
+
 
 # Class references
-class NamedThingId(URIorCURIE):
-    pass
 
-
-class PersonId(NamedThingId):
-    pass
 
 
 @dataclass(repr=False)
-class NamedThing(YAMLRoot):
+class ProjectSubmission(YAMLRoot):
     """
-    A generic grouping for any identifiable entity
+    Container for one or more measurement records
     """
     _inherited_slots: ClassVar[list[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = SCHEMA["Thing"]
-    class_class_curie: ClassVar[str] = "schema:Thing"
-    class_name: ClassVar[str] = "NamedThing"
-    class_model_uri: ClassVar[URIRef] = MY_LINKMK_SCHEMA.NamedThing
+    class_class_uri: ClassVar[URIRef] = REGIMO["ProjectSubmission"]
+    class_class_curie: ClassVar[str] = "regimo:ProjectSubmission"
+    class_name: ClassVar[str] = "ProjectSubmission"
+    class_model_uri: ClassVar[URIRef] = REGIMO.ProjectSubmission
 
-    id: Union[str, NamedThingId] = None
-    name: Optional[str] = None
-    description: Optional[str] = None
+    project_id: Optional[str] = None
+    operator_name: Optional[str] = None
+    records: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, NamedThingId):
-            self.id = NamedThingId(self.id)
+        if self.project_id is not None and not isinstance(self.project_id, str):
+            self.project_id = str(self.project_id)
 
-        if self.name is not None and not isinstance(self.name, str):
-            self.name = str(self.name)
+        if self.operator_name is not None and not isinstance(self.operator_name, str):
+            self.operator_name = str(self.operator_name)
 
-        if self.description is not None and not isinstance(self.description, str):
-            self.description = str(self.description)
+        if self.records is not None and not isinstance(self.records, str):
+            self.records = str(self.records)
 
         super().__post_init__(**kwargs)
 
 
 @dataclass(repr=False)
-class Person(NamedThing):
+class MeasurementRecord(YAMLRoot):
     """
-    Represents a Person
-    """
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = MY_LINKMK_SCHEMA["Person"]
-    class_class_curie: ClassVar[str] = "my_linkmk_schema:Person"
-    class_name: ClassVar[str] = "Person"
-    class_model_uri: ClassVar[URIRef] = MY_LINKMK_SCHEMA.Person
-
-    id: Union[str, PersonId] = None
-    primary_email: Optional[str] = None
-    birth_date: Optional[Union[str, XSDDate]] = None
-    age_in_years: Optional[int] = None
-    vital_status: Optional[Union[str, "PersonStatus"]] = None
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, PersonId):
-            self.id = PersonId(self.id)
-
-        if self.primary_email is not None and not isinstance(self.primary_email, str):
-            self.primary_email = str(self.primary_email)
-
-        if self.birth_date is not None and not isinstance(self.birth_date, XSDDate):
-            self.birth_date = XSDDate(self.birth_date)
-
-        if self.age_in_years is not None and not isinstance(self.age_in_years, int):
-            self.age_in_years = int(self.age_in_years)
-
-        if self.vital_status is not None and not isinstance(self.vital_status, PersonStatus):
-            self.vital_status = PersonStatus(self.vital_status)
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass(repr=False)
-class PersonCollection(YAMLRoot):
-    """
-    A holder for Person objects
+    Single temperature measurement with provenance
     """
     _inherited_slots: ClassVar[list[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MY_LINKMK_SCHEMA["PersonCollection"]
-    class_class_curie: ClassVar[str] = "my_linkmk_schema:PersonCollection"
-    class_name: ClassVar[str] = "PersonCollection"
-    class_model_uri: ClassVar[URIRef] = MY_LINKMK_SCHEMA.PersonCollection
+    class_class_uri: ClassVar[URIRef] = REGIMO["MeasurementRecord"]
+    class_class_curie: ClassVar[str] = "regimo:MeasurementRecord"
+    class_name: ClassVar[str] = "MeasurementRecord"
+    class_model_uri: ClassVar[URIRef] = REGIMO.MeasurementRecord
 
-    entries: Optional[Union[dict[Union[str, PersonId], Union[dict, Person]], list[Union[dict, Person]]]] = empty_dict()
+    sample_unique_id: Optional[str] = None
+    measurement_time: Optional[str] = None
+    temperature_value: Optional[str] = None
+    temperature_unit: Optional[str] = None
+    instrument_calibration_date: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        self._normalize_inlined_as_list(slot_name="entries", slot_type=Person, key_name="id", keyed=True)
+        if self.sample_unique_id is not None and not isinstance(self.sample_unique_id, str):
+            self.sample_unique_id = str(self.sample_unique_id)
+
+        if self.measurement_time is not None and not isinstance(self.measurement_time, str):
+            self.measurement_time = str(self.measurement_time)
+
+        if self.temperature_value is not None and not isinstance(self.temperature_value, str):
+            self.temperature_value = str(self.temperature_value)
+
+        if self.temperature_unit is not None and not isinstance(self.temperature_unit, str):
+            self.temperature_unit = str(self.temperature_unit)
+
+        if self.instrument_calibration_date is not None and not isinstance(self.instrument_calibration_date, str):
+            self.instrument_calibration_date = str(self.instrument_calibration_date)
 
         super().__post_init__(**kwargs)
 
 
 # Enumerations
-class PersonStatus(EnumDefinitionImpl):
-
-    ALIVE = PermissibleValue(
-        text="ALIVE",
-        description="the person is living",
-        meaning=PATO["0001421"])
-    DEAD = PermissibleValue(
-        text="DEAD",
-        description="the person is deceased",
-        meaning=PATO["0001422"])
-    UNKNOWN = PermissibleValue(
-        text="UNKNOWN",
-        description="the vital status is not known")
+class UnitOfTemperature(EnumDefinitionImpl):
+    """
+    Allowed temperature units
+    """
+    Kelvin = PermissibleValue(
+        text="Kelvin",
+        description="Kelvin scale",
+        meaning=OEO["OEO_00020034"])
+    Celsius = PermissibleValue(
+        text="Celsius",
+        description="Degrees Celsius",
+        meaning=OEO["OEO_00020035"])
 
     _defn = EnumDefinition(
-        name="PersonStatus",
+        name="UnitOfTemperature",
+        description="Allowed temperature units",
     )
 
 # Slots
 class slots:
     pass
 
-slots.id = Slot(uri=SCHEMA.identifier, name="id", curie=SCHEMA.curie('identifier'),
-                   model_uri=MY_LINKMK_SCHEMA.id, domain=None, range=URIRef)
+slots.project_id = Slot(uri=REGIMO.project_id, name="project_id", curie=REGIMO.curie('project_id'),
+                   model_uri=REGIMO.project_id, domain=None, range=URIRef)
 
-slots.name = Slot(uri=SCHEMA.name, name="name", curie=SCHEMA.curie('name'),
-                   model_uri=MY_LINKMK_SCHEMA.name, domain=None, range=Optional[str])
+slots.operator_name = Slot(uri=REGIMO.operator_name, name="operator_name", curie=REGIMO.curie('operator_name'),
+                   model_uri=REGIMO.operator_name, domain=None, range=str)
 
-slots.description = Slot(uri=SCHEMA.description, name="description", curie=SCHEMA.curie('description'),
-                   model_uri=MY_LINKMK_SCHEMA.description, domain=None, range=Optional[str])
+slots.sample_unique_id = Slot(uri=REGIMO.sample_unique_id, name="sample_unique_id", curie=REGIMO.curie('sample_unique_id'),
+                   model_uri=REGIMO.sample_unique_id, domain=None, range=str)
 
-slots.primary_email = Slot(uri=SCHEMA.email, name="primary_email", curie=SCHEMA.curie('email'),
-                   model_uri=MY_LINKMK_SCHEMA.primary_email, domain=None, range=Optional[str])
+slots.measurement_time = Slot(uri=REGIMO.measurement_time, name="measurement_time", curie=REGIMO.curie('measurement_time'),
+                   model_uri=REGIMO.measurement_time, domain=None, range=Union[str, XSDDateTime])
 
-slots.birth_date = Slot(uri=SCHEMA.birthDate, name="birth_date", curie=SCHEMA.curie('birthDate'),
-                   model_uri=MY_LINKMK_SCHEMA.birth_date, domain=None, range=Optional[Union[str, XSDDate]])
+slots.temperature_value = Slot(uri=REGIMO.temperature_value, name="temperature_value", curie=REGIMO.curie('temperature_value'),
+                   model_uri=REGIMO.temperature_value, domain=None, range=float)
 
-slots.age_in_years = Slot(uri=MY_LINKMK_SCHEMA.age_in_years, name="age_in_years", curie=MY_LINKMK_SCHEMA.curie('age_in_years'),
-                   model_uri=MY_LINKMK_SCHEMA.age_in_years, domain=None, range=Optional[int])
+slots.temperature_unit = Slot(uri=OEO.OEO_00020035, name="temperature_unit", curie=OEO.curie('OEO_00020035'),
+                   model_uri=REGIMO.temperature_unit, domain=None, range=Union[str, "UnitOfTemperature"])
 
-slots.vital_status = Slot(uri=MY_LINKMK_SCHEMA.vital_status, name="vital_status", curie=MY_LINKMK_SCHEMA.curie('vital_status'),
-                   model_uri=MY_LINKMK_SCHEMA.vital_status, domain=None, range=Optional[Union[str, "PersonStatus"]])
+slots.instrument_calibration_date = Slot(uri=REGIMO.instrument_calibration_date, name="instrument_calibration_date", curie=REGIMO.curie('instrument_calibration_date'),
+                   model_uri=REGIMO.instrument_calibration_date, domain=None, range=Union[str, XSDDate])
 
-slots.personCollection__entries = Slot(uri=MY_LINKMK_SCHEMA.entries, name="personCollection__entries", curie=MY_LINKMK_SCHEMA.curie('entries'),
-                   model_uri=MY_LINKMK_SCHEMA.personCollection__entries, domain=None, range=Optional[Union[dict[Union[str, PersonId], Union[dict, Person]], list[Union[dict, Person]]]])
+slots.records = Slot(uri=REGIMO.records, name="records", curie=REGIMO.curie('records'),
+                   model_uri=REGIMO.records, domain=None, range=Optional[Union[Union[dict, MeasurementRecord], list[Union[dict, MeasurementRecord]]]])
 
-slots.Person_primary_email = Slot(uri=SCHEMA.email, name="Person_primary_email", curie=SCHEMA.curie('email'),
-                   model_uri=MY_LINKMK_SCHEMA.Person_primary_email, domain=Person, range=Optional[str],
-                   pattern=re.compile(r'^\S+@[\S+\.]+\S+'))
+slots.projectSubmission__project_id = Slot(uri=REGIMO.project_id, name="projectSubmission__project_id", curie=REGIMO.curie('project_id'),
+                   model_uri=REGIMO.projectSubmission__project_id, domain=None, range=Optional[str])
+
+slots.projectSubmission__operator_name = Slot(uri=REGIMO.operator_name, name="projectSubmission__operator_name", curie=REGIMO.curie('operator_name'),
+                   model_uri=REGIMO.projectSubmission__operator_name, domain=None, range=Optional[str])
+
+slots.projectSubmission__records = Slot(uri=REGIMO.records, name="projectSubmission__records", curie=REGIMO.curie('records'),
+                   model_uri=REGIMO.projectSubmission__records, domain=None, range=Optional[str])
+
+slots.measurementRecord__sample_unique_id = Slot(uri=REGIMO.sample_unique_id, name="measurementRecord__sample_unique_id", curie=REGIMO.curie('sample_unique_id'),
+                   model_uri=REGIMO.measurementRecord__sample_unique_id, domain=None, range=Optional[str])
+
+slots.measurementRecord__measurement_time = Slot(uri=REGIMO.measurement_time, name="measurementRecord__measurement_time", curie=REGIMO.curie('measurement_time'),
+                   model_uri=REGIMO.measurementRecord__measurement_time, domain=None, range=Optional[str])
+
+slots.measurementRecord__temperature_value = Slot(uri=REGIMO.temperature_value, name="measurementRecord__temperature_value", curie=REGIMO.curie('temperature_value'),
+                   model_uri=REGIMO.measurementRecord__temperature_value, domain=None, range=Optional[str])
+
+slots.measurementRecord__temperature_unit = Slot(uri=REGIMO.temperature_unit, name="measurementRecord__temperature_unit", curie=REGIMO.curie('temperature_unit'),
+                   model_uri=REGIMO.measurementRecord__temperature_unit, domain=None, range=Optional[str])
+
+slots.measurementRecord__instrument_calibration_date = Slot(uri=REGIMO.instrument_calibration_date, name="measurementRecord__instrument_calibration_date", curie=REGIMO.curie('instrument_calibration_date'),
+                   model_uri=REGIMO.measurementRecord__instrument_calibration_date, domain=None, range=Optional[str])

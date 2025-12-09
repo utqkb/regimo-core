@@ -1,7 +1,7 @@
 id: https://example.org/regimo/metadata_integrity_schema
 name: regimo_metadata_schema
 title: Regimo Metadata Integrity Schema
-description: Enforces data integrity, provenance and FAIR principles for temperature measurements in energy research.
+description: Enforces data integrity, provenance and FAIR principles for temperature measurements.
 version: 0.1.0
 license: MIT
 
@@ -35,7 +35,6 @@ enums:
         meaning: oeo:OEO_00020035
 
 classes:
-
   ProjectSubmission:
     tree_root: true
     description: Container for one or more measurement records
@@ -54,11 +53,10 @@ classes:
       instrument_calibration_date:
 
 slots:
-
   project_id:
     identifier: true
     required: true
-    description: Unique project identifier (FAIR Findable)
+    description: Unique project identifier
 
   operator_name:
     required: true
@@ -66,23 +64,23 @@ slots:
 
   sample_unique_id:
     required: true
-    description: Unique identifier of the physical sample
+    description: Unique identifier of the sample
 
   measurement_time:
     required: true
     range: datetime
-    description: Date and time when the measurement was taken
+    description: Date and time of the measurement
 
   temperature_value:
     required: true
     range: MeasurementValue
-    description: Measured temperature value (numeric only)
+    description: Measured temperature value
 
   temperature_unit:
     required: true
     range: UnitOfTemperature
     slot_uri: oeo:OEO_00020035
-    description: Unit of the temperature (controlled vocabulary)
+    description: Unit of the temperature
 
   instrument_calibration_date:
     required: true

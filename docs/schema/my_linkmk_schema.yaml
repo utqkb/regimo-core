@@ -1,35 +1,35 @@
-name: my-linkmk-schema
-description: Aimed upon designing an MVP to facilitate automatic publication of metadata
-  at OEP
-title: my-linkmk-schema
-see_also:
-- https://KIT.github.io/my-linkmk-schema
-id: https://w3id.org/KIT/my-linkmk-schema
+name: regimo_metadata_schema
+description: Enforces data integrity, provenance and FAIR principles for temperature
+  measurements in energy research.
+title: Regimo Metadata Integrity Schema
+id: https://example.org/regimo/metadata_integrity_schema
+version: 0.1.0
 imports:
 - linkml:types
 license: MIT
 prefixes:
-  my_linkmk_schema:
-    prefix_prefix: my_linkmk_schema
-    prefix_reference: https://w3id.org/KIT/my-linkmk-schema/
+  regimo:
+    prefix_prefix: regimo
+    prefix_reference: https://example.org/regimo/
   linkml:
     prefix_prefix: linkml
     prefix_reference: https://w3id.org/linkml/
-  biolink:
-    prefix_prefix: biolink
-    prefix_reference: https://w3id.org/biolink/
-  schema:
-    prefix_prefix: schema
-    prefix_reference: http://schema.org/
-  PATO:
-    prefix_prefix: PATO
-    prefix_reference: http://purl.obolibrary.org/obo/PATO_
-  example:
-    prefix_prefix: example
-    prefix_reference: https://example.org/
-default_prefix: my_linkmk_schema
+  xsd:
+    prefix_prefix: xsd
+    prefix_reference: http://www.w3.org/2001/XMLSchema#
+  oeo:
+    prefix_prefix: oeo
+    prefix_reference: http://openenergy-platform.org/ontology/oeo/
+default_prefix: regimo
 default_range: string
 types:
+  MeasurementValue:
+    name: MeasurementValue
+    definition_uri: https://example.org/regimo/MeasurementValue
+    description: Temperature reading as a floating-point number
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    base: float
+    uri: xsd:float
   string:
     name: string
     definition_uri: https://w3id.org/linkml/String
@@ -299,187 +299,207 @@ types:
     uri: xsd:string
     repr: str
 enums:
-  PersonStatus:
-    name: PersonStatus
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/PersonStatus
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
+  UnitOfTemperature:
+    name: UnitOfTemperature
+    definition_uri: https://example.org/regimo/UnitOfTemperature
+    description: Allowed temperature units
+    from_schema: https://example.org/regimo/metadata_integrity_schema
     permissible_values:
-      ALIVE:
-        text: ALIVE
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        text: DEAD
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        text: UNKNOWN
-        description: the vital status is not known
-        todos:
-        - map this to an ontology
+      Kelvin:
+        text: Kelvin
+        description: Kelvin scale
+        meaning: oeo:OEO_00020034
+      Celsius:
+        text: Celsius
+        description: Degrees Celsius
+        meaning: oeo:OEO_00020035
 slots:
-  id:
-    name: id
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/id
-    description: A unique identifier for a thing
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    mappings:
-    - schema:identifier
-    slot_uri: schema:identifier
+  project_id:
+    name: project_id
+    definition_uri: https://example.org/regimo/project_id
+    description: Unique project identifier (FAIR Findable)
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:project_id
     identifier: true
-    owner: NamedThing
-    domain_of:
-    - NamedThing
-    range: uriorcurie
+    range: string
     required: true
-  name:
-    name: name
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/name
-    description: A human-readable name for a thing
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    mappings:
-    - schema:name
-    slot_uri: schema:name
-    owner: NamedThing
-    domain_of:
-    - NamedThing
+  operator_name:
+    name: operator_name
+    definition_uri: https://example.org/regimo/operator_name
+    description: Person responsible for the measurement
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:operator_name
     range: string
-  description:
-    name: description
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/description
-    description: A human-readable description for a thing
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    mappings:
-    - schema:description
-    slot_uri: schema:description
-    owner: NamedThing
-    domain_of:
-    - NamedThing
+    required: true
+  sample_unique_id:
+    name: sample_unique_id
+    definition_uri: https://example.org/regimo/sample_unique_id
+    description: Unique identifier of the physical sample
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:sample_unique_id
     range: string
-  primary_email:
-    name: primary_email
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/primary_email
-    description: The main email address of a person
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
+    required: true
+  measurement_time:
+    name: measurement_time
+    definition_uri: https://example.org/regimo/measurement_time
+    description: Date and time when the measurement was taken
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:measurement_time
+    range: datetime
+    required: true
+  temperature_value:
+    name: temperature_value
+    definition_uri: https://example.org/regimo/temperature_value
+    description: Measured temperature value (numeric only)
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:temperature_value
+    range: MeasurementValue
+    required: true
+  temperature_unit:
+    name: temperature_unit
+    definition_uri: https://example.org/regimo/temperature_unit
+    description: Unit of the temperature (controlled vocabulary)
+    from_schema: https://example.org/regimo/metadata_integrity_schema
     mappings:
-    - schema:email
-    slot_uri: schema:email
-    owner: Person
-    domain_of:
-    - Person
-    range: string
-  birth_date:
-    name: birth_date
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/birth_date
-    description: Date on which a person is born
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    mappings:
-    - schema:birthDate
-    slot_uri: schema:birthDate
-    owner: Person
-    domain_of:
-    - Person
+    - oeo:OEO_00020035
+    slot_uri: oeo:OEO_00020035
+    range: UnitOfTemperature
+    required: true
+  instrument_calibration_date:
+    name: instrument_calibration_date
+    definition_uri: https://example.org/regimo/instrument_calibration_date
+    description: Date the instrument was last calibrated
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:instrument_calibration_date
     range: date
-  age_in_years:
-    name: age_in_years
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/age_in_years
-    description: Number of years since birth
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    slot_uri: my_linkmk_schema:age_in_years
-    owner: Person
-    domain_of:
-    - Person
-    range: integer
-  vital_status:
-    name: vital_status
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/vital_status
-    description: living or dead status
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    slot_uri: my_linkmk_schema:vital_status
-    owner: Person
-    domain_of:
-    - Person
-    range: PersonStatus
-  personCollection__entries:
-    name: personCollection__entries
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    slot_uri: my_linkmk_schema:entries
-    alias: entries
-    owner: PersonCollection
-    domain_of:
-    - PersonCollection
-    range: Person
+    required: true
+  records:
+    name: records
+    definition_uri: https://example.org/regimo/records
+    description: List of all measurement records in this submission
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:records
+    range: MeasurementRecord
     multivalued: true
     inlined: true
     inlined_as_list: true
-  Person_primary_email:
-    name: Person_primary_email
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/primary_email
-    description: The main email address of a person
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    mappings:
-    - schema:email
-    is_a: primary_email
-    domain: Person
-    slot_uri: schema:email
-    alias: primary_email
-    owner: Person
+  projectSubmission__project_id:
+    name: projectSubmission__project_id
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:project_id
+    alias: project_id
+    owner: ProjectSubmission
     domain_of:
-    - Person
-    is_usage_slot: true
-    usage_slot_name: primary_email
+    - ProjectSubmission
     range: string
-    pattern: ^\S+@[\S+\.]+\S+
+  projectSubmission__operator_name:
+    name: projectSubmission__operator_name
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:operator_name
+    alias: operator_name
+    owner: ProjectSubmission
+    domain_of:
+    - ProjectSubmission
+    range: string
+  projectSubmission__records:
+    name: projectSubmission__records
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:records
+    alias: records
+    owner: ProjectSubmission
+    domain_of:
+    - ProjectSubmission
+    range: string
+  measurementRecord__sample_unique_id:
+    name: measurementRecord__sample_unique_id
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:sample_unique_id
+    alias: sample_unique_id
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: string
+  measurementRecord__measurement_time:
+    name: measurementRecord__measurement_time
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:measurement_time
+    alias: measurement_time
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: string
+  measurementRecord__temperature_value:
+    name: measurementRecord__temperature_value
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:temperature_value
+    alias: temperature_value
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: string
+  measurementRecord__temperature_unit:
+    name: measurementRecord__temperature_unit
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:temperature_unit
+    alias: temperature_unit
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: string
+  measurementRecord__instrument_calibration_date:
+    name: measurementRecord__instrument_calibration_date
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:instrument_calibration_date
+    alias: instrument_calibration_date
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: string
 classes:
-  NamedThing:
-    name: NamedThing
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/NamedThing
-    description: A generic grouping for any identifiable entity
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    mappings:
-    - schema:Thing
+  ProjectSubmission:
+    name: ProjectSubmission
+    definition_uri: https://example.org/regimo/ProjectSubmission
+    description: Container for one or more measurement records
+    from_schema: https://example.org/regimo/metadata_integrity_schema
     slots:
-    - id
-    - name
-    - description
-    class_uri: schema:Thing
-  Person:
-    name: Person
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/Person
-    description: Represents a Person
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    is_a: NamedThing
-    slots:
-    - id
-    - name
-    - description
-    - Person_primary_email
-    - birth_date
-    - age_in_years
-    - vital_status
-    slot_usage:
-      primary_email:
-        name: primary_email
-        pattern: ^\S+@[\S+\.]+\S+
-    class_uri: my_linkmk_schema:Person
-  PersonCollection:
-    name: PersonCollection
-    definition_uri: https://w3id.org/KIT/my-linkmk-schema/PersonCollection
-    description: A holder for Person objects
-    from_schema: https://w3id.org/KIT/my-linkmk-schema
-    slots:
-    - personCollection__entries
+    - projectSubmission__project_id
+    - projectSubmission__operator_name
+    - projectSubmission__records
     attributes:
-      entries:
-        name: entries
-        range: Person
-        multivalued: true
-        inlined_as_list: true
-    class_uri: my_linkmk_schema:PersonCollection
+      project_id:
+        name: project_id
+      operator_name:
+        name: operator_name
+      records:
+        name: records
+    class_uri: regimo:ProjectSubmission
     tree_root: true
+  MeasurementRecord:
+    name: MeasurementRecord
+    definition_uri: https://example.org/regimo/MeasurementRecord
+    description: Single temperature measurement with provenance
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slots:
+    - measurementRecord__sample_unique_id
+    - measurementRecord__measurement_time
+    - measurementRecord__temperature_value
+    - measurementRecord__temperature_unit
+    - measurementRecord__instrument_calibration_date
+    attributes:
+      sample_unique_id:
+        name: sample_unique_id
+      measurement_time:
+        name: measurement_time
+      temperature_value:
+        name: temperature_value
+      temperature_unit:
+        name: temperature_unit
+      instrument_calibration_date:
+        name: instrument_calibration_date
+    class_uri: regimo:MeasurementRecord
 metamodel_version: 1.7.0
 source_file: my_linkmk_schema.yaml
-source_file_date: '2025-12-04T02:46:01'
-source_file_size: 2253
-generation_date: '2025-12-06T19:55:44'
+source_file_date: '2025-12-09T00:07:48'
+source_file_size: 2456
+generation_date: '2025-12-09T00:08:46'
 
