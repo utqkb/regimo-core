@@ -1,0 +1,106 @@
+{
+    "$defs": {
+        "MeasurementRecord": {
+            "additionalProperties": false,
+            "description": "Single temperature measurement with provenance",
+            "properties": {
+                "instrument_calibration_date": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "measurement_time": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "sample_unique_id": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "temperature_unit": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "temperature_value": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "MeasurementRecord",
+            "type": "object"
+        },
+        "ProjectSubmission": {
+            "additionalProperties": false,
+            "description": "Container for one or more measurement records",
+            "properties": {
+                "operator_name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "project_id": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "records": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "ProjectSubmission",
+            "type": "object"
+        },
+        "UnitOfTemperature": {
+            "description": "Allowed temperature units",
+            "enum": [
+                "Kelvin",
+                "Celsius"
+            ],
+            "title": "UnitOfTemperature",
+            "type": "string"
+        }
+    },
+    "$id": "https://example.org/regimo/metadata_integrity_schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "description": "Container for one or more measurement records",
+    "metamodel_version": "1.7.0",
+    "properties": {
+        "operator_name": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "project_id": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "records": {
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    },
+    "title": "regimo_metadata_schema",
+    "type": "object",
+    "version": "0.1.0"
+}
+
