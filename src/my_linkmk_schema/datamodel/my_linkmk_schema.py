@@ -1,5 +1,5 @@
 # Auto generated from my_linkmk_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-12-09T01:46:19
+# Generation date: 2025-12-09T11:23:51
 # Schema: regimo_metadata_schema
 #
 # id: https://example.org/regimo/metadata_integrity_schema
