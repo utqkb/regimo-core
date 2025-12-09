@@ -1,6 +1,6 @@
 name: regimo_metadata_schema
 description: Enforces data integrity, provenance and FAIR principles for temperature
-  measurements in energy research.
+  measurements.
 title: Regimo Metadata Integrity Schema
 id: https://example.org/regimo/metadata_integrity_schema
 version: 0.1.0
@@ -317,7 +317,7 @@ slots:
   project_id:
     name: project_id
     definition_uri: https://example.org/regimo/project_id
-    description: Unique project identifier (FAIR Findable)
+    description: Unique project identifier
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:project_id
     identifier: true
@@ -334,7 +334,7 @@ slots:
   sample_unique_id:
     name: sample_unique_id
     definition_uri: https://example.org/regimo/sample_unique_id
-    description: Unique identifier of the physical sample
+    description: Unique identifier of the sample
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:sample_unique_id
     range: string
@@ -342,7 +342,7 @@ slots:
   measurement_time:
     name: measurement_time
     definition_uri: https://example.org/regimo/measurement_time
-    description: Date and time when the measurement was taken
+    description: Date and time of the measurement
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:measurement_time
     range: datetime
@@ -350,7 +350,7 @@ slots:
   temperature_value:
     name: temperature_value
     definition_uri: https://example.org/regimo/temperature_value
-    description: Measured temperature value (numeric only)
+    description: Measured temperature value
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:temperature_value
     range: MeasurementValue
@@ -358,7 +358,7 @@ slots:
   temperature_unit:
     name: temperature_unit
     definition_uri: https://example.org/regimo/temperature_unit
-    description: Unit of the temperature (controlled vocabulary)
+    description: Unit of the temperature
     from_schema: https://example.org/regimo/metadata_integrity_schema
     mappings:
     - oeo:OEO_00020035
@@ -499,7 +499,7 @@ classes:
     class_uri: regimo:MeasurementRecord
 metamodel_version: 1.7.0
 source_file: my_linkmk_schema.yaml
-source_file_date: '2025-12-09T00:07:48'
-source_file_size: 2456
-generation_date: '2025-12-09T00:08:46'
+source_file_date: '2025-12-09T01:34:58'
+source_file_size: 2262
+generation_date: '2025-12-09T01:37:04'
 

@@ -1,9 +1,9 @@
 # Auto generated from my_linkmk_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-12-09T00:08:40
+# Generation date: 2025-12-09T01:36:55
 # Schema: regimo_metadata_schema
 #
 # id: https://example.org/regimo/metadata_integrity_schema
-# description: Enforces data integrity, provenance and FAIR principles for temperature measurements in energy research.
+# description: Enforces data integrity, provenance and FAIR principles for temperature measurements.
 # license: MIT
 
 import dataclasses

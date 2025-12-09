@@ -81,7 +81,7 @@ class LinkMLMeta(RootModel):
 linkml_meta = LinkMLMeta({'default_prefix': 'regimo',
      'default_range': 'string',
      'description': 'Enforces data integrity, provenance and FAIR principles for '
-                    'temperature measurements in energy research.',
+                    'temperature measurements.',
      'id': 'https://example.org/regimo/metadata_integrity_schema',
      'imports': ['linkml:types'],
      'license': 'MIT',
