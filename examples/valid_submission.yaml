@@ -1,18 +1,20 @@
 project_id: REGIMO-2025-001
 operator_name: Dr. Anna Müller
+project_start_date: "2025-01-01"
+
 records:
   - sample_unique_id: SAMPLE-001
-    measurement_time: 2025-04-08T14:30:00
-    temperature_value: 298.15
-    temperature_unit: Kelvin
-    instrument_calibration_date: 2025-01-15
+    measurement_time: "2025-04-08T14:30:00Z"
+    temperature_kelvin: 298.15
+    instrument_calibration_date: "2025-01-15"
+
   - sample_unique_id: SAMPLE-002
-    measurement_time: 2025-04-08T14:35:00
-    temperature_value: 25.0
-    temperature_unit: Celsius
-    instrument_calibration_date: 2025-01-15
+    measurement_time: "2025-04-08T14:35:00Z"
+    temperature_celsius: 25
+    instrument_calibration_date: "2025-01-15"
+
   - sample_unique_id: SAMPLE-003
-    measurement_time: 2025-04-08T14:40:00
-    temperature_value: 22.5
-    temperature_unit: Celsius
-    instrument_calibration_date: 2025-01-15
+    measurement_time: "2025-04-08T14:40:00Z"
+    temperature_celsius: 22.5
+    instrument_calibration_date: "2025-01-15"
+
