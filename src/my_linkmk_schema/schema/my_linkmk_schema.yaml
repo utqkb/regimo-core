@@ -1,0 +1,128 @@
+id: https://example.org/regimo/metadata_integrity_schema
+name: regimo_metadata_schema
+title: Regimo Metadata Integrity Schema
+description: Enforces data integrity, provenance and FAIR principles for temperature measurements.
+version: 0.1.0
+license: MIT
+
+default_prefix: regimo
+default_range: string
+
+prefixes:
+  regimo: https://example.org/regimo/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  oeo: http://openenergy-platform.org/ontology/oeo/
+
+imports:
+  - linkml:types
+
+types:
+  MeasurementValue:
+    base: float
+    uri: xsd:float
+    description: Temperature reading as a floating-point number
+
+
+
+classes:
+  ProjectSubmission:
+    tree_root: true
+    description: Container for one or more measurement records
+    slots:
+      - project_id
+      - operator_name
+      - project_start_date
+      - records
+
+
+  MeasurementRecord:
+    description: Single temperature measurement with provenance
+    slots:
+      - sample_unique_id
+      - measurement_time
+      - instrument_calibration_date
+      - temperature_celsius
+      - temperature_kelvin
+    exactly_one_of:
+      - slot_conditions:
+          temperature_celsius:
+            required: true
+      - slot_conditions:
+          temperature_kelvin:
+            required: true
+     
+
+
+slots:
+  project_id:
+    identifier: true
+    required: true
+    pattern: "^REGIMO-\\d{4}-\\d{3}$"
+    description: >
+      Unique project identifier.
+      Must follow the pattern REGIMO-YYYY-NNN (e.g. REGIMO-2025-001).
+
+  project_start_date:
+    required: true
+    range: date
+    description: Date when the project officially started
+
+
+  operator_name:
+    required: true
+    description: Person responsible for the measurement
+
+  sample_unique_id:
+    required: true
+    pattern: "^SAMPLE-\\d{3}$"
+    description: >
+      Unique identifier of the sample.
+      Must follow the pattern SAMPLE-NNN (e.g. SAMPLE-001).
+
+  measurement_time:
+    required: true
+    range: datetime
+    description: Date and time of the measurement
+
+  temperature_value:
+    required: true
+    range: MeasurementValue
+    minimum_value: 0
+    description: >
+      Measured temperature value.
+      Enforced to be physically possible (≥ absolute zero).
+
+  temperature_unit:
+    required: true
+    range: UnitOfTemperature
+    slot_uri: oeo:OEO_00020035
+    description: Unit of the temperature
+
+  instrument_calibration_date:
+    required: true
+    range: date
+    description: Date the instrument was last calibrated
+
+  temperature_celsius:
+    range: float
+    minimum_value: 10
+    maximum_value: 40
+    description: >
+      Room temperature measured in degrees Celsius.
+      Valid range: 10–40 °C.
+
+  temperature_kelvin:
+    range: float
+    minimum_value: 283.15
+    maximum_value: 313.15
+    description: >
+      Room temperature measured in Kelvin.
+      Valid range: 283.15–313.15 K.
+
+  records:
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+    range: MeasurementRecord
+    description: List of all measurement records in this submission
