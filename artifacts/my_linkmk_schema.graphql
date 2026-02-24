@@ -1,0 +1,20 @@
+# metamodel_version: 1.7.0
+# version: 0.1.0
+type MeasurementRecord
+  {
+    sampleUniqueId: String!
+    measurementTime: Datetime!
+    instrumentCalibrationDate: Date!
+    temperatureCelsius: Float
+    temperatureKelvin: Float
+  }
+
+type ProjectSubmission
+  {
+    projectId: String!
+    operatorName: String!
+    projectStartDate: Date!
+    records: [MeasurementRecord]
+  }
+
+

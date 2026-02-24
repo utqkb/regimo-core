@@ -85,20 +85,6 @@ slots:
     range: datetime
     description: Date and time of the measurement
 
-  temperature_value:
-    required: true
-    range: MeasurementValue
-    minimum_value: 0
-    description: >
-      Measured temperature value.
-      Enforced to be physically possible (≥ absolute zero).
-
-  temperature_unit:
-    required: true
-    range: UnitOfTemperature
-    slot_uri: oeo:OEO_00020035
-    description: Unit of the temperature
-
   instrument_calibration_date:
     required: true
     range: date
@@ -126,3 +112,14 @@ slots:
     inlined_as_list: true
     range: MeasurementRecord
     description: List of all measurement records in this submission
+
+enums:
+  UnitOfTemperature:
+    description: Allowed units for temperature measurements.
+    permissible_values:
+      Celsius:
+        description: Degree Celsius
+        meaning: oeo:OEO_00020035
+      Kelvin:
+        description: Kelvin
+        meaning: oeo:OEO_00020036    
