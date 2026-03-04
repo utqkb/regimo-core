@@ -1,8 +1,13 @@
 
 
-# Slot: measurement_time
+# Slot: current_l1
 
-URI: [regimo:measurement_time](https://example.org/regimo/measurement_time)
+
+_Current on Phase 1 (Max 16A for standard lab socket)_
+
+
+
+URI: [regimo:current_l1](https://example.org/regimo/current_l1)
 
 
 
@@ -26,9 +31,11 @@ URI: [regimo:measurement_time](https://example.org/regimo/measurement_time)
 
 ## Properties
 
-* Range: [Datetime](Datetime.md)
+* Range: [Float](Float.md)
 
-* Required: True
+* Minimum Value: 0
+
+* Maximum Value: 16
 
 
 
@@ -54,14 +61,16 @@ URI: [regimo:measurement_time](https://example.org/regimo/measurement_time)
 
 <details>
 ```yaml
-name: measurement_time
+name: current_l1
+description: Current on Phase 1 (Max 16A for standard lab socket)
 from_schema: https://example.org/regimo/metadata_integrity_schema
 rank: 1000
-alias: measurement_time
+alias: current_l1
 domain_of:
 - MeasurementRecord
-range: datetime
-required: true
+range: float
+minimum_value: 0
+maximum_value: 16
 
 ```
 </details>

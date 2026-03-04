@@ -1,5 +1,5 @@
 # metamodel_version: 1.7.0
-# version: 0.1.0
+# version: 0.2.0
 type MeasurementRecord
   {
     sampleUniqueId: String!
@@ -7,6 +7,12 @@ type MeasurementRecord
     instrumentCalibrationDate: Date!
     temperatureCelsius: Float
     temperatureKelvin: Float
+    voltageL1: Float
+    voltageL2: Float
+    voltageL3: Float
+    currentL1: Float
+    currentL2: Float
+    currentL3: Float
   }
 
 type ProjectSubmission

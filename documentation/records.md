@@ -3,7 +3,7 @@
 # Slot: records
 
 
-_List of all measurement records in this submission_
+_List of all measurement records in this submission._
 
 
 
@@ -60,7 +60,7 @@ URI: [regimo:records](https://example.org/regimo/records)
 <details>
 ```yaml
 name: records
-description: List of all measurement records in this submission
+description: List of all measurement records in this submission.
 from_schema: https://example.org/regimo/metadata_integrity_schema
 rank: 1000
 alias: records

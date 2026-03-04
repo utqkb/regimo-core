@@ -1,0 +1,8 @@
+project_id: "WRONG-ID-123" # Should fail regex pattern
+operator_name: "Research Fellow A"
+project_start_date: "2025-01-15"
+records:
+  - sample_unique_id: "SAMPLE-001"
+    measurement_time: "2025-03-04T12:00:00Z"
+    instrument_calibration_date: "2024-12-01"
+    temperature_celsius: 500.0 # Should fail maximum_value (40°C)

@@ -1,8 +1,8 @@
 
 
-# Slot: operator_name
+# Slot: current_l3
 
-URI: [regimo:operator_name](https://example.org/regimo/operator_name)
+URI: [regimo:current_l3](https://example.org/regimo/current_l3)
 
 
 
@@ -16,7 +16,7 @@ URI: [regimo:operator_name](https://example.org/regimo/operator_name)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [ProjectSubmission](ProjectSubmission.md) | Container for one or more measurement records |  no  |
+| [MeasurementRecord](MeasurementRecord.md) | Single measurement event (Temperature or 3-Phase Power) |  no  |
 
 
 
@@ -26,9 +26,11 @@ URI: [regimo:operator_name](https://example.org/regimo/operator_name)
 
 ## Properties
 
-* Range: [String](String.md)
+* Range: [Float](Float.md)
 
-* Required: True
+* Minimum Value: 0
+
+* Maximum Value: 16
 
 
 
@@ -54,14 +56,15 @@ URI: [regimo:operator_name](https://example.org/regimo/operator_name)
 
 <details>
 ```yaml
-name: operator_name
+name: current_l3
 from_schema: https://example.org/regimo/metadata_integrity_schema
 rank: 1000
-alias: operator_name
+alias: current_l3
 domain_of:
-- ProjectSubmission
-range: string
-required: true
+- MeasurementRecord
+range: float
+minimum_value: 0
+maximum_value: 16
 
 ```
 </details>

@@ -2,13 +2,6 @@
 
 # Slot: temperature_kelvin
 
-
-_Room temperature measured in Kelvin. Valid range: 283.15–313.15 K._
-
-__
-
-
-
 URI: [regimo:temperature_kelvin](https://example.org/regimo/temperature_kelvin)
 
 
@@ -23,7 +16,7 @@ URI: [regimo:temperature_kelvin](https://example.org/regimo/temperature_kelvin)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [MeasurementRecord](MeasurementRecord.md) | Single temperature measurement with provenance |  no  |
+| [MeasurementRecord](MeasurementRecord.md) | Single measurement event (Temperature or 3-Phase Power) |  no  |
 
 
 
@@ -64,9 +57,6 @@ URI: [regimo:temperature_kelvin](https://example.org/regimo/temperature_kelvin)
 <details>
 ```yaml
 name: temperature_kelvin
-description: 'Room temperature measured in Kelvin. Valid range: 283.15–313.15 K.
-
-  '
 from_schema: https://example.org/regimo/metadata_integrity_schema
 rank: 1000
 alias: temperature_kelvin

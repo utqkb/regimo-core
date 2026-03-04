@@ -1,0 +1,13 @@
+project_id: "REGIMO-2025-001"
+operator_name: "Research Fellow A"
+project_start_date: "2025-03-04"
+records:
+  - sample_unique_id: "SAMPLE-002"
+    measurement_time: "2025-03-04T14:00:00Z"
+    instrument_calibration_date: "2024-12-01"
+    # Normal Voltage
+    voltage_l1: 230.5
+    # FIXED: Lowered from 285.0 to 230.2 to be within the 200V-250V safety range
+    voltage_l2: 230.2
+    # Normal Current
+    current_l1: 4.2

@@ -1,8 +1,13 @@
 
 
-# Slot: measurement_time
+# Slot: voltage_l1
 
-URI: [regimo:measurement_time](https://example.org/regimo/measurement_time)
+
+_Voltage on Phase 1 (Target 230V)_
+
+
+
+URI: [regimo:voltage_l1](https://example.org/regimo/voltage_l1)
 
 
 
@@ -26,9 +31,11 @@ URI: [regimo:measurement_time](https://example.org/regimo/measurement_time)
 
 ## Properties
 
-* Range: [Datetime](Datetime.md)
+* Range: [Float](Float.md)
 
-* Required: True
+* Minimum Value: 200
+
+* Maximum Value: 250
 
 
 
@@ -54,14 +61,16 @@ URI: [regimo:measurement_time](https://example.org/regimo/measurement_time)
 
 <details>
 ```yaml
-name: measurement_time
+name: voltage_l1
+description: Voltage on Phase 1 (Target 230V)
 from_schema: https://example.org/regimo/metadata_integrity_schema
 rank: 1000
-alias: measurement_time
+alias: voltage_l1
 domain_of:
 - MeasurementRecord
-range: datetime
-required: true
+range: float
+minimum_value: 200
+maximum_value: 250
 
 ```
 </details>

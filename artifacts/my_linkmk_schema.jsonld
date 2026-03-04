@@ -1,9 +1,9 @@
 {
   "name": "regimo_metadata_schema",
-  "description": "Enforces data integrity, provenance and FAIR principles for temperature measurements.",
+  "description": "Enforces data integrity for temperature and 3-phase electrical measurements.",
   "title": "Regimo Metadata Integrity Schema",
   "id": "https://example.org/regimo/metadata_integrity_schema",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "imports": [
     "linkml:types"
   ],
@@ -29,15 +29,6 @@
   "default_prefix": "regimo",
   "default_range": "string",
   "types": [
-    {
-      "name": "MeasurementValue",
-      "definition_uri": "https://example.org/regimo/MeasurementValue",
-      "description": "Temperature reading as a floating-point number",
-      "from_schema": "https://example.org/regimo/metadata_integrity_schema",
-      "base": "float",
-      "uri": "http://www.w3.org/2001/XMLSchema#float",
-      "@type": "TypeDefinition"
-    },
     {
       "name": "string",
       "definition_uri": "https://w3id.org/linkml/String",
@@ -347,31 +338,10 @@
       "@type": "TypeDefinition"
     }
   ],
-  "enums": [
-    {
-      "name": "UnitOfTemperature",
-      "definition_uri": "https://example.org/regimo/UnitOfTemperature",
-      "description": "Allowed units for temperature measurements.",
-      "from_schema": "https://example.org/regimo/metadata_integrity_schema",
-      "permissible_values": [
-        {
-          "text": "Celsius",
-          "description": "Degree Celsius",
-          "meaning": "oeo:OEO_00020035"
-        },
-        {
-          "text": "Kelvin",
-          "description": "Kelvin",
-          "meaning": "oeo:OEO_00020036"
-        }
-      ]
-    }
-  ],
   "slots": [
     {
       "name": "project_id",
       "definition_uri": "https://example.org/regimo/project_id",
-      "description": "Unique project identifier. Must follow the pattern REGIMO-YYYY-NNN (e.g. REGIMO-2025-001).\n",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/project_id",
       "identifier": true,
@@ -387,7 +357,6 @@
     {
       "name": "project_start_date",
       "definition_uri": "https://example.org/regimo/project_start_date",
-      "description": "Date when the project officially started",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/project_start_date",
       "owner": "ProjectSubmission",
@@ -401,7 +370,6 @@
     {
       "name": "operator_name",
       "definition_uri": "https://example.org/regimo/operator_name",
-      "description": "Person responsible for the measurement",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/operator_name",
       "owner": "ProjectSubmission",
@@ -415,7 +383,6 @@
     {
       "name": "sample_unique_id",
       "definition_uri": "https://example.org/regimo/sample_unique_id",
-      "description": "Unique identifier of the sample. Must follow the pattern SAMPLE-NNN (e.g. SAMPLE-001).\n",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/sample_unique_id",
       "owner": "MeasurementRecord",
@@ -430,7 +397,6 @@
     {
       "name": "measurement_time",
       "definition_uri": "https://example.org/regimo/measurement_time",
-      "description": "Date and time of the measurement",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/measurement_time",
       "owner": "MeasurementRecord",
@@ -444,7 +410,6 @@
     {
       "name": "instrument_calibration_date",
       "definition_uri": "https://example.org/regimo/instrument_calibration_date",
-      "description": "Date the instrument was last calibrated",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/instrument_calibration_date",
       "owner": "MeasurementRecord",
@@ -458,7 +423,6 @@
     {
       "name": "temperature_celsius",
       "definition_uri": "https://example.org/regimo/temperature_celsius",
-      "description": "Room temperature measured in degrees Celsius. Valid range: 10\u201340 \u00b0C.\n",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/temperature_celsius",
       "owner": "MeasurementRecord",
@@ -473,7 +437,6 @@
     {
       "name": "temperature_kelvin",
       "definition_uri": "https://example.org/regimo/temperature_kelvin",
-      "description": "Room temperature measured in Kelvin. Valid range: 283.15\u2013313.15 K.\n",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/temperature_kelvin",
       "owner": "MeasurementRecord",
@@ -486,9 +449,95 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "voltage_l1",
+      "definition_uri": "https://example.org/regimo/voltage_l1",
+      "description": "Voltage on Phase 1 (Target 230V)",
+      "from_schema": "https://example.org/regimo/metadata_integrity_schema",
+      "slot_uri": "https://example.org/regimo/voltage_l1",
+      "owner": "MeasurementRecord",
+      "domain_of": [
+        "MeasurementRecord"
+      ],
+      "range": "float",
+      "minimum_value": 200,
+      "maximum_value": 250,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "voltage_l2",
+      "definition_uri": "https://example.org/regimo/voltage_l2",
+      "from_schema": "https://example.org/regimo/metadata_integrity_schema",
+      "slot_uri": "https://example.org/regimo/voltage_l2",
+      "owner": "MeasurementRecord",
+      "domain_of": [
+        "MeasurementRecord"
+      ],
+      "range": "float",
+      "minimum_value": 200,
+      "maximum_value": 250,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "voltage_l3",
+      "definition_uri": "https://example.org/regimo/voltage_l3",
+      "from_schema": "https://example.org/regimo/metadata_integrity_schema",
+      "slot_uri": "https://example.org/regimo/voltage_l3",
+      "owner": "MeasurementRecord",
+      "domain_of": [
+        "MeasurementRecord"
+      ],
+      "range": "float",
+      "minimum_value": 200,
+      "maximum_value": 250,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "current_l1",
+      "definition_uri": "https://example.org/regimo/current_l1",
+      "description": "Current on Phase 1 (Max 16A for standard lab socket)",
+      "from_schema": "https://example.org/regimo/metadata_integrity_schema",
+      "slot_uri": "https://example.org/regimo/current_l1",
+      "owner": "MeasurementRecord",
+      "domain_of": [
+        "MeasurementRecord"
+      ],
+      "range": "float",
+      "minimum_value": 0,
+      "maximum_value": 16,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "current_l2",
+      "definition_uri": "https://example.org/regimo/current_l2",
+      "from_schema": "https://example.org/regimo/metadata_integrity_schema",
+      "slot_uri": "https://example.org/regimo/current_l2",
+      "owner": "MeasurementRecord",
+      "domain_of": [
+        "MeasurementRecord"
+      ],
+      "range": "float",
+      "minimum_value": 0,
+      "maximum_value": 16,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "current_l3",
+      "definition_uri": "https://example.org/regimo/current_l3",
+      "from_schema": "https://example.org/regimo/metadata_integrity_schema",
+      "slot_uri": "https://example.org/regimo/current_l3",
+      "owner": "MeasurementRecord",
+      "domain_of": [
+        "MeasurementRecord"
+      ],
+      "range": "float",
+      "minimum_value": 0,
+      "maximum_value": 16,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "records",
       "definition_uri": "https://example.org/regimo/records",
-      "description": "List of all measurement records in this submission",
+      "description": "List of all measurement records in this submission.",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slot_uri": "https://example.org/regimo/records",
       "owner": "ProjectSubmission",
@@ -506,7 +555,7 @@
     {
       "name": "ProjectSubmission",
       "definition_uri": "https://example.org/regimo/ProjectSubmission",
-      "description": "Container for one or more measurement records",
+      "description": "Container for one or more measurement records.",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slots": [
         "project_id",
@@ -522,47 +571,31 @@
     {
       "name": "MeasurementRecord",
       "definition_uri": "https://example.org/regimo/MeasurementRecord",
-      "description": "Single temperature measurement with provenance",
+      "description": "Single measurement event (Temperature or 3-Phase Power).",
       "from_schema": "https://example.org/regimo/metadata_integrity_schema",
       "slots": [
         "sample_unique_id",
         "measurement_time",
         "instrument_calibration_date",
         "temperature_celsius",
-        "temperature_kelvin"
+        "temperature_kelvin",
+        "voltage_l1",
+        "voltage_l2",
+        "voltage_l3",
+        "current_l1",
+        "current_l2",
+        "current_l3"
       ],
       "slot_usage": {},
       "class_uri": "https://example.org/regimo/MeasurementRecord",
-      "exactly_one_of": [
-        {
-          "slot_conditions": [
-            {
-              "name": "temperature_celsius",
-              "required": true,
-              "@type": "SlotDefinition"
-            }
-          ],
-          "@type": "AnonymousClassExpression"
-        },
-        {
-          "slot_conditions": [
-            {
-              "name": "temperature_kelvin",
-              "required": true,
-              "@type": "SlotDefinition"
-            }
-          ],
-          "@type": "AnonymousClassExpression"
-        }
-      ],
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "my_linkmk_schema.yaml",
-  "source_file_date": "2026-02-24T22:23:54",
-  "source_file_size": 2961,
-  "generation_date": "2026-02-24T22:28:27",
+  "source_file_date": "2026-03-04T14:49:30",
+  "source_file_size": 2601,
+  "generation_date": "2026-03-04T14:52:07",
   "@type": "SchemaDefinition",
   "@context": [
     "https://w3id.org/linkml/types.context.jsonld",

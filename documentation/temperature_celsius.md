@@ -2,13 +2,6 @@
 
 # Slot: temperature_celsius
 
-
-_Room temperature measured in degrees Celsius. Valid range: 10–40 °C._
-
-__
-
-
-
 URI: [regimo:temperature_celsius](https://example.org/regimo/temperature_celsius)
 
 
@@ -23,7 +16,7 @@ URI: [regimo:temperature_celsius](https://example.org/regimo/temperature_celsius
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [MeasurementRecord](MeasurementRecord.md) | Single temperature measurement with provenance |  no  |
+| [MeasurementRecord](MeasurementRecord.md) | Single measurement event (Temperature or 3-Phase Power) |  no  |
 
 
 
@@ -64,9 +57,6 @@ URI: [regimo:temperature_celsius](https://example.org/regimo/temperature_celsius
 <details>
 ```yaml
 name: temperature_celsius
-description: 'Room temperature measured in degrees Celsius. Valid range: 10–40 °C.
-
-  '
 from_schema: https://example.org/regimo/metadata_integrity_schema
 rank: 1000
 alias: temperature_celsius

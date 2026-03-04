@@ -1,6 +1,6 @@
 # Regimo Metadata Integrity Schema
 
-Enforces data integrity, provenance and FAIR principles for temperature measurements.
+Enforces data integrity for temperature and 3-phase electrical measurements.
 
 URI: https://example.org/regimo/metadata_integrity_schema
 
@@ -12,8 +12,8 @@ Name: regimo_metadata_schema
 
 | Class | Description |
 | --- | --- |
-| [MeasurementRecord](MeasurementRecord.md) | Single temperature measurement with provenance |
-| [ProjectSubmission](ProjectSubmission.md) | Container for one or more measurement records |
+| [MeasurementRecord](MeasurementRecord.md) | Single measurement event (Temperature or 3-Phase Power). |
+| [ProjectSubmission](ProjectSubmission.md) | Container for one or more measurement records. |
 
 
 
@@ -21,22 +21,27 @@ Name: regimo_metadata_schema
 
 | Slot | Description |
 | --- | --- |
-| [instrument_calibration_date](instrument_calibration_date.md) | Date the instrument was last calibrated |
-| [measurement_time](measurement_time.md) | Date and time of the measurement |
-| [operator_name](operator_name.md) | Person responsible for the measurement |
-| [project_id](project_id.md) | Unique project identifier |
-| [project_start_date](project_start_date.md) | Date when the project officially started |
+| [current_l1](current_l1.md) | Current on Phase 1 (Max 16A for standard lab socket) |
+| [current_l2](current_l2.md) |  |
+| [current_l3](current_l3.md) |  |
+| [instrument_calibration_date](instrument_calibration_date.md) |  |
+| [measurement_time](measurement_time.md) |  |
+| [operator_name](operator_name.md) |  |
+| [project_id](project_id.md) |  |
+| [project_start_date](project_start_date.md) |  |
 | [records](records.md) | List of all measurement records in this submission |
-| [sample_unique_id](sample_unique_id.md) | Unique identifier of the sample |
-| [temperature_celsius](temperature_celsius.md) | Room temperature measured in degrees Celsius |
-| [temperature_kelvin](temperature_kelvin.md) | Room temperature measured in Kelvin |
+| [sample_unique_id](sample_unique_id.md) |  |
+| [temperature_celsius](temperature_celsius.md) |  |
+| [temperature_kelvin](temperature_kelvin.md) |  |
+| [voltage_l1](voltage_l1.md) | Voltage on Phase 1 (Target 230V) |
+| [voltage_l2](voltage_l2.md) |  |
+| [voltage_l3](voltage_l3.md) |  |
 
 
 ## Enumerations
 
 | Enumeration | Description |
 | --- | --- |
-| [UnitOfTemperature](UnitOfTemperature.md) | Allowed units for temperature measurements |
 
 
 ## Types
@@ -54,7 +59,6 @@ Name: regimo_metadata_schema
 | [Integer](Integer.md) | An integer |
 | [Jsonpath](Jsonpath.md) | A string encoding a JSON Path |
 | [Jsonpointer](Jsonpointer.md) | A string encoding a JSON Pointer |
-| [MeasurementValue](MeasurementValue.md) | Temperature reading as a floating-point number |
 | [Ncname](Ncname.md) | Prefix part of CURIE |
 | [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
 | [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |

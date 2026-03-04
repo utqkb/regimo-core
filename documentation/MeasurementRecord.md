@@ -3,7 +3,7 @@
 # Class: MeasurementRecord
 
 
-_Single temperature measurement with provenance_
+_Single measurement event (Temperature or 3-Phase Power)._
 
 
 
@@ -20,6 +20,12 @@ URI: [regimo:MeasurementRecord](https://example.org/regimo/MeasurementRecord)
  classDiagram
     class MeasurementRecord
     click MeasurementRecord href "../MeasurementRecord"
+      MeasurementRecord : current_l1
+        
+      MeasurementRecord : current_l2
+        
+      MeasurementRecord : current_l3
+        
       MeasurementRecord : instrument_calibration_date
         
       MeasurementRecord : measurement_time
@@ -29,6 +35,12 @@ URI: [regimo:MeasurementRecord](https://example.org/regimo/MeasurementRecord)
       MeasurementRecord : temperature_celsius
         
       MeasurementRecord : temperature_kelvin
+        
+      MeasurementRecord : voltage_l1
+        
+      MeasurementRecord : voltage_l2
+        
+      MeasurementRecord : voltage_l3
         
       
 ```
@@ -43,11 +55,17 @@ URI: [regimo:MeasurementRecord](https://example.org/regimo/MeasurementRecord)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [sample_unique_id](sample_unique_id.md) | 1 <br/> [String](String.md) | Unique identifier of the sample | direct |
-| [measurement_time](measurement_time.md) | 1 <br/> [Datetime](Datetime.md) | Date and time of the measurement | direct |
-| [instrument_calibration_date](instrument_calibration_date.md) | 1 <br/> [Date](Date.md) | Date the instrument was last calibrated | direct |
-| [temperature_celsius](temperature_celsius.md) | 0..1 <br/> [Float](Float.md) | Room temperature measured in degrees Celsius | direct |
-| [temperature_kelvin](temperature_kelvin.md) | 0..1 <br/> [Float](Float.md) | Room temperature measured in Kelvin | direct |
+| [sample_unique_id](sample_unique_id.md) | 1 <br/> [String](String.md) |  | direct |
+| [measurement_time](measurement_time.md) | 1 <br/> [Datetime](Datetime.md) |  | direct |
+| [instrument_calibration_date](instrument_calibration_date.md) | 1 <br/> [Date](Date.md) |  | direct |
+| [temperature_celsius](temperature_celsius.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [temperature_kelvin](temperature_kelvin.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [voltage_l1](voltage_l1.md) | 0..1 <br/> [Float](Float.md) | Voltage on Phase 1 (Target 230V) | direct |
+| [voltage_l2](voltage_l2.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [voltage_l3](voltage_l3.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [current_l1](current_l1.md) | 0..1 <br/> [Float](Float.md) | Current on Phase 1 (Max 16A for standard lab socket) | direct |
+| [current_l2](current_l2.md) | 0..1 <br/> [Float](Float.md) |  | direct |
+| [current_l3](current_l3.md) | 0..1 <br/> [Float](Float.md) |  | direct |
 
 
 
@@ -101,7 +119,7 @@ URI: [regimo:MeasurementRecord](https://example.org/regimo/MeasurementRecord)
 <details>
 ```yaml
 name: MeasurementRecord
-description: Single temperature measurement with provenance
+description: Single measurement event (Temperature or 3-Phase Power).
 from_schema: https://example.org/regimo/metadata_integrity_schema
 slots:
 - sample_unique_id
@@ -109,15 +127,12 @@ slots:
 - instrument_calibration_date
 - temperature_celsius
 - temperature_kelvin
-exactly_one_of:
-- slot_conditions:
-    temperature_celsius:
-      name: temperature_celsius
-      required: true
-- slot_conditions:
-    temperature_kelvin:
-      name: temperature_kelvin
-      required: true
+- voltage_l1
+- voltage_l2
+- voltage_l3
+- current_l1
+- current_l2
+- current_l3
 
 ```
 </details>
@@ -127,15 +142,11 @@ exactly_one_of:
 <details>
 ```yaml
 name: MeasurementRecord
-description: Single temperature measurement with provenance
+description: Single measurement event (Temperature or 3-Phase Power).
 from_schema: https://example.org/regimo/metadata_integrity_schema
 attributes:
   sample_unique_id:
     name: sample_unique_id
-    description: 'Unique identifier of the sample. Must follow the pattern SAMPLE-NNN
-      (e.g. SAMPLE-001).
-
-      '
     from_schema: https://example.org/regimo/metadata_integrity_schema
     rank: 1000
     alias: sample_unique_id
@@ -147,7 +158,6 @@ attributes:
     pattern: ^SAMPLE-\d{3}$
   measurement_time:
     name: measurement_time
-    description: Date and time of the measurement
     from_schema: https://example.org/regimo/metadata_integrity_schema
     rank: 1000
     alias: measurement_time
@@ -158,7 +168,6 @@ attributes:
     required: true
   instrument_calibration_date:
     name: instrument_calibration_date
-    description: Date the instrument was last calibrated
     from_schema: https://example.org/regimo/metadata_integrity_schema
     rank: 1000
     alias: instrument_calibration_date
@@ -169,10 +178,6 @@ attributes:
     required: true
   temperature_celsius:
     name: temperature_celsius
-    description: 'Room temperature measured in degrees Celsius. Valid range: 10–40
-      °C.
-
-      '
     from_schema: https://example.org/regimo/metadata_integrity_schema
     rank: 1000
     alias: temperature_celsius
@@ -184,10 +189,6 @@ attributes:
     maximum_value: 40
   temperature_kelvin:
     name: temperature_kelvin
-    description: 'Room temperature measured in Kelvin. Valid range: 283.15–313.15
-      K.
-
-      '
     from_schema: https://example.org/regimo/metadata_integrity_schema
     rank: 1000
     alias: temperature_kelvin
@@ -197,15 +198,74 @@ attributes:
     range: float
     minimum_value: 283.15
     maximum_value: 313.15
-exactly_one_of:
-- slot_conditions:
-    temperature_celsius:
-      name: temperature_celsius
-      required: true
-- slot_conditions:
-    temperature_kelvin:
-      name: temperature_kelvin
-      required: true
+  voltage_l1:
+    name: voltage_l1
+    description: Voltage on Phase 1 (Target 230V)
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    rank: 1000
+    alias: voltage_l1
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 200
+    maximum_value: 250
+  voltage_l2:
+    name: voltage_l2
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    rank: 1000
+    alias: voltage_l2
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 200
+    maximum_value: 250
+  voltage_l3:
+    name: voltage_l3
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    rank: 1000
+    alias: voltage_l3
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 200
+    maximum_value: 250
+  current_l1:
+    name: current_l1
+    description: Current on Phase 1 (Max 16A for standard lab socket)
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    rank: 1000
+    alias: current_l1
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 0
+    maximum_value: 16
+  current_l2:
+    name: current_l2
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    rank: 1000
+    alias: current_l2
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 0
+    maximum_value: 16
+  current_l3:
+    name: current_l3
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    rank: 1000
+    alias: current_l3
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 0
+    maximum_value: 16
 
 ```
 </details>

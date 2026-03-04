@@ -2,13 +2,6 @@
 
 # Slot: project_id
 
-
-_Unique project identifier. Must follow the pattern REGIMO-YYYY-NNN (e.g. REGIMO-2025-001)._
-
-__
-
-
-
 URI: [regimo:project_id](https://example.org/regimo/project_id)
 
 
@@ -64,10 +57,6 @@ URI: [regimo:project_id](https://example.org/regimo/project_id)
 <details>
 ```yaml
 name: project_id
-description: 'Unique project identifier. Must follow the pattern REGIMO-YYYY-NNN (e.g.
-  REGIMO-2025-001).
-
-  '
 from_schema: https://example.org/regimo/metadata_integrity_schema
 rank: 1000
 identifier: true

@@ -2,13 +2,6 @@
 
 # Slot: sample_unique_id
 
-
-_Unique identifier of the sample. Must follow the pattern SAMPLE-NNN (e.g. SAMPLE-001)._
-
-__
-
-
-
 URI: [regimo:sample_unique_id](https://example.org/regimo/sample_unique_id)
 
 
@@ -23,7 +16,7 @@ URI: [regimo:sample_unique_id](https://example.org/regimo/sample_unique_id)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [MeasurementRecord](MeasurementRecord.md) | Single temperature measurement with provenance |  no  |
+| [MeasurementRecord](MeasurementRecord.md) | Single measurement event (Temperature or 3-Phase Power) |  no  |
 
 
 
@@ -64,10 +57,6 @@ URI: [regimo:sample_unique_id](https://example.org/regimo/sample_unique_id)
 <details>
 ```yaml
 name: sample_unique_id
-description: 'Unique identifier of the sample. Must follow the pattern SAMPLE-NNN
-  (e.g. SAMPLE-001).
-
-  '
 from_schema: https://example.org/regimo/metadata_integrity_schema
 rank: 1000
 alias: sample_unique_id
