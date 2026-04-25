@@ -14,8 +14,8 @@ RDMO_PROJECT_ID = "1"
 # Your live RDMO token
 RDMO_TOKEN = "b64c185f090dd2f562ca4770d40a5831ea54e7b9" 
 
-# ACTION REQUIRED: Paste your OEP API Key here
-OEP_TOKEN = "1c1557cbd364d6abe9defc994eb9be708c30a950"
+# --- ACTION REQUIRED: PASTE YOUR OEP API KEY HERE ---
+OEP_TOKEN = "1c1557cbd364d6abe9defc994eb9be708c30a950" 
 
 # Local File Paths
 SCHEMA_PATH = "src/my_linkmk_schema/schema/my_linkmk_schema.yaml"
@@ -23,7 +23,10 @@ CONTEXT_PATH = "artifacts/my_linkmk_schema.jsonld"
 OEP_API_URL = "https://open-energy-platform.org/api/v0/schema/regimo/tables/measurements/rows"
 
 def flatten_rdmo_data(api_response):
-    """Harvests metadata from RDMO and adds static lab records."""
+    """
+    IMPROVED HARVESTER: Captures data exactly as entered in RDMO
+    to allow the LinkML Validator to catch errors.
+    """
     flat_data = {
         "project_id": "REGIMO-2026-001", 
         "operator_name": "Anubhab Biswas",
@@ -32,9 +35,13 @@ def flatten_rdmo_data(api_response):
     }
     
     description = api_response.get('description', '') or ""
-    id_match = re.search(r"REGIMO-\d{4}-\d{3}", description)
+    
+    # CHAOS TEST FIX: Capture whatever follows "Project ID: " instead of searching for a valid pattern
+    id_match = re.search(r"Project ID:\s*([^\n\r]+)", description)
     if id_match:
-        flat_data["project_id"] = id_match.group(0)
+        # This will now capture "BAD-ID-99" if you type it in RDMO
+        flat_data["project_id"] = id_match.group(1).strip()
+        print(f"[*] Harvested Project ID from RDMO: {flat_data['project_id']}")
 
     values = api_response.get('values', [])
     for v in values:
@@ -46,7 +53,7 @@ def flatten_rdmo_data(api_response):
         if 'project/partner' in attr_uri and val:
             flat_data["operator_name"] = val
 
-    # Simulated Static Lab Data (230V Standard)
+    # Simulated Static Lab Data
     flat_data["records"].append({
         "sample_unique_id": "SAMPLE-001",
         "measurement_time": datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -80,9 +87,12 @@ def validate_and_package(data):
     try:
         schemaview = SchemaView(SCHEMA_PATH)
         validator = JsonSchemaDataValidator(schemaview.schema)
+        
+        # This is where the 'BAD-ID-99' will be caught!
         errors = validator.validate_dict(data)
+        
         if errors:
-            print("❌ VALIDATION FAILED.")
+            print("❌ VALIDATION FAILED: The data does not meet RegiMo standards.")
             for e in errors: print(f"  - {e}")
             return None
         print("✅ SUCCESS: Data is semantically valid.")
@@ -109,16 +119,15 @@ def validate_and_package(data):
 def publish_to_oep(package):
     """Step 4: The Final Push to Open Energy Platform."""
     print(f"[*] Step 4: Initiating Publication to OEP...")
-    if OEP_TOKEN == "your_oep_token_here":
-        print("⚠️  DRY RUN: No OEP Token provided. Data not sent.")
+    
+    if OEP_TOKEN == "your_oep_token_here" or not OEP_TOKEN:
+        print("⚠️  DRY RUN: No OEP Token detected. Data not sent to the cloud.")
         return
     
     headers = {"Authorization": f"Token {OEP_TOKEN}", "Content-Type": "application/json"}
     try:
-        # NOTE: This is the actual publication command
-        # response = requests.post(OEP_API_URL, headers=headers, json=package, timeout=15)
-        # response.raise_for_status()
-        print(f"🚀 SUCCESS: Data published to {OEP_API_URL}!")
+        # Simulation of upload
+        print(f"🚀 SUCCESS: Data officially prepared for publication to {OEP_API_URL}!")
     except Exception as e:
         print(f"❌ OEP Error: {e}")
 
