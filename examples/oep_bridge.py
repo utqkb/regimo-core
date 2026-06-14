@@ -4,7 +4,22 @@ import requests
 import re
 from datetime import datetime
 from linkml_runtime.utils.schemaview import SchemaView
-from linkml.validators import JsonSchemaDataValidator
+
+# --- ROBUST LINKML IMPORT HANDLER ---
+# In some Python environments, LinkML's JSON schema validator module location differs.
+# We attempt native imports, then fall back to standard jsonschema validation.
+try:
+    from linkml.validators.jsonschemavalidator import JsonSchemaDataValidator
+    USE_LINKML_VALIDATOR = True
+except ModuleNotFoundError:
+    try:
+        from linkml.validators import JsonSchemaDataValidator
+        USE_LINKML_VALIDATOR = True
+    except ModuleNotFoundError:
+        # Robust fallback using direct jsonschema validation on compiled schema
+        from linkml.generators.jsonschemagen import JsonSchemaGenerator
+        import jsonschema
+        USE_LINKML_VALIDATOR = False
 
 # --- MVP CONFIGURATION ---
 RDMO_PORT = "8484" 
@@ -12,7 +27,7 @@ RDMO_API_BASE = f"http://localhost:{RDMO_PORT}/api/v1"
 RDMO_PROJECT_ID = "1" 
 
 # Your live RDMO token
-RDMO_TOKEN = "b64c185f090dd2f562ca4770d40a5831ea54e7b9" 
+RDMO_TOKEN = "c25189018b15916c92ee88eacc50e09ad30dfde3" 
 
 # --- ACTION REQUIRED: PASTE YOUR OEP API KEY HERE ---
 OEP_TOKEN = "1c1557cbd364d6abe9defc994eb9be708c30a950" 
@@ -83,9 +98,21 @@ def validate_and_package(data):
     """Step 2 & 3: Validate with LinkML and package as JSON-LD."""
     print(f"[*] Step 2: Running LinkML Validation...")
     try:
-        schemaview = SchemaView(SCHEMA_PATH)
-        validator = JsonSchemaDataValidator(schemaview.schema)
-        errors = validator.validate_dict(data)
+        errors = []
+        if USE_LINKML_VALIDATOR:
+            schemaview = SchemaView(SCHEMA_PATH)
+            validator = JsonSchemaDataValidator(schemaview.schema)
+            errors = validator.validate_dict(data)
+        else:
+            # Direct jsonschema compilation and validation fallback
+            schema_str = JsonSchemaGenerator(SCHEMA_PATH).serialize()
+            schema_json = json.loads(schema_str)
+            try:
+                jsonschema.validate(instance=data, schema=schema_json)
+            except jsonschema.exceptions.ValidationError as ve:
+                path_str = " -> ".join([str(p) for p in ve.path]) if ve.path else "root"
+                errors.append(f"[{path_str}] {ve.message}")
+
         if errors:
             print("❌ VALIDATION FAILED: The data does not meet RegiMo standards.")
             for e in errors: print(f"  - {e}")
