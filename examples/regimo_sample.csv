@@ -1,0 +1,2 @@
+project_id,operator_name,project_start_date,sample_unique_id,measurement_time,voltage_l1,voltage_l2,voltage_l3,current_l1,current_l2,current_l3
+REGIMO-2026-001,Anubhab Biswas,2026-03-22,SAMPLE-001,2026-06-17T00:00:00Z,230.2,229.8,230.1,4.2,3.9,4.1
