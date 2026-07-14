@@ -1,0 +1,392 @@
+{
+  "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+  "name": "iai_automation",
+  "title": "iai_automation",
+  "description": "This DS is an example for the automation of metadata registry.",
+  "@id": null,
+  "resources": [
+    {
+      "@id": null,
+      "name": "regimo_measurements",
+      "topics": [],
+      "title": "This is the first example of automatic registry",
+      "path": "https://openenergyplatform.org/database/tables/regimo_measurements",
+      "description": "This is the first example of automatic registry",
+      "languages": [],
+      "subject": [
+        {
+          "name": null,
+          "@id": null
+        }
+      ],
+      "keywords": [
+        "IAI"
+      ],
+      "publicationDate": "2026-07-14",
+      "embargoPeriod": {
+        "start": null,
+        "end": null,
+        "isActive": false
+      },
+      "context": {
+        "title": null,
+        "homepage": null,
+        "documentation": null,
+        "sourceCode": null,
+        "publisher": null,
+        "publisherLogo": null,
+        "contact": "utqkb@student.kit.edu",
+        "fundingAgency": "HMC",
+        "fundingAgencyLogo": null,
+        "grantNo": null
+      },
+      "spatial": {
+        "location": {
+          "address": null,
+          "@id": null,
+          "latitude": null,
+          "longitude": null
+        },
+        "extent": {
+          "name": null,
+          "@id": null,
+          "resolutionValue": null,
+          "resolutionUnit": null,
+          "boundingBox": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crs": null
+        }
+      },
+      "temporal": {
+        "referenceDate": null,
+        "timeseries": [
+          {
+            "start": null,
+            "end": null,
+            "resolutionValue": null,
+            "resolutionUnit": null,
+            "alignment": null,
+            "aggregationType": null
+          }
+        ]
+      },
+      "sources": [
+        {
+          "title": null,
+          "authors": [],
+          "description": null,
+          "publicationYear": null,
+          "path": null,
+          "sourceLicenses": [
+            {
+              "name": null,
+              "title": null,
+              "path": null,
+              "instruction": null,
+              "attribution": null,
+              "copyrightStatement": null
+            }
+          ]
+        }
+      ],
+      "licenses": [
+        {
+          "name": "BSD Zero Clause License",
+          "title": "BSD Zero Clause License",
+          "path": "https://spdx.org/licenses/0BSD.html",
+          "instruction": null,
+          "attribution": null,
+          "copyrightStatement": null
+        }
+      ],
+      "contributors": [
+        {
+          "title": "Creator",
+          "path": "https://orcid.org/0009-0002-1724-8865",
+          "organization": null,
+          "roles": [],
+          "date": "2026-07-14",
+          "object": null,
+          "comment": null
+        }
+      ],
+      "type": null,
+      "format": null,
+      "encoding": null,
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "description": null,
+            "type": "bigint",
+            "nullable": false,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "project_id",
+            "description": null,
+            "type": "varchar",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "operator_name",
+            "description": null,
+            "type": "varchar",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "project_start_date",
+            "description": null,
+            "type": "date",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "sample_unique_id",
+            "description": null,
+            "type": "varchar",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "measurement_time",
+            "description": null,
+            "type": "timestamp",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "voltage_l1",
+            "description": null,
+            "type": "numeric",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "voltage_l2",
+            "description": null,
+            "type": "numeric",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "voltage_l3",
+            "description": null,
+            "type": "numeric",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "current_l1",
+            "description": null,
+            "type": "numeric",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "current_l2",
+            "description": null,
+            "type": "numeric",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          },
+          {
+            "name": "current_l3",
+            "description": null,
+            "type": "numeric",
+            "nullable": true,
+            "unit": null,
+            "isAbout": [
+              {
+                "name": null,
+                "@id": null
+              }
+            ],
+            "valueReference": [
+              {
+                "value": null,
+                "name": null,
+                "@id": null
+              }
+            ]
+          }
+        ],
+        "primaryKey": [],
+        "foreignKeys": [
+          {
+            "fields": [],
+            "reference": {
+              "resource": null,
+              "fields": []
+            }
+          }
+        ]
+      },
+      "dialect": {
+        "delimiter": null,
+        "decimalSeparator": null
+      },
+      "review": {
+        "path": null,
+        "badge": null
+      }
+    }
+  ],
+  "metaMetadata": {
+    "metadataVersion": "OEMetadata-2.0.4",
+    "metadataLicense": {
+      "name": null,
+      "title": null,
+      "path": null
+    }
+  }
+}
