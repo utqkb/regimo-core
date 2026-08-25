@@ -1,0 +1,617 @@
+{
+    "@id": null,
+    "name": "genese_EDL_tool",
+    "title": null,
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "genese_edl_tool",
+            "path": "https://openenergyplatform.org/database/tables/genese_EDL_tool",
+            "type": null,
+            "title": null,
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "scenario_name",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "year",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "origin",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "data_type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "temporal_resolution",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "domain",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "sector",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "purpose",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "feature",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "feature_sub_group",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "name_of_parameter",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "value",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "measure",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "unit",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "source",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "comments",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [],
+            "context": {
+                "title": "GeNESE (Wirkungen des gesellschaftlichen Wandels auf Niveau und Profil der sektoralen Stromnachfrage und ihre Bedeutung bei der Kopplung von Energiemodellen mit unterschiedlicher zeitlicher Auflösung)",
+                "contact": null,
+                "grantNo": null,
+                "homepage": null,
+                "publisher": null,
+                "sourceCode": null,
+                "documentation": "https://scenariowizard.org/inko/Genese/genese_matrix.php",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie (BMWE)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Energy#/media/File:Federal_Ministry_for_Economic_Affairs_and_Energy_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Stand und Entwicklung des Rechenzentrumsstandorts Deutschland",
+                    "authors": [],
+                    "description": "https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Publikationen/Technologie/stand-und-entwicklung-des-rechenzentrumsstandorts-deutschland.pdf?__blob=publicationFile&v=10",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2025"
+                },
+                {
+                    "path": null,
+                    "title": " Langfristszenarien, Fraunhofer ISI",
+                    "authors": [],
+                    "description": "https://langfristszenarien.de/enertile-explorer-de/",
+                    "sourceLicenses": [],
+                    "publicationYear": "2022"
+                },
+                {
+                    "path": "https://doi.org/10.3390/en13030707",
+                    "title": "On the Way to a Sustainable European Energy System: Setting Up an Integrated Assessment Toolbox with TIMES PanEU as the Key Component",
+                    "authors": [
+                        "Pinar Korkmaz, Roland Cunha Montenegro , Dorothea Schmid , Markus Blesl, Ulrich Fahl"
+                    ],
+                    "description": null,
+                    "sourceLicenses": [],
+                    "publicationYear": "2020"
+                },
+                {
+                    "path": " https://doi.org/10.58007/5yk5-g596",
+                    "title": "Raumordnungs­prognose 2045",
+                    "authors": [
+                        "Bundesinstitut für Bau-, Stadt- und Raumforschung"
+                    ],
+                    "description": "https://www.bbsr.bund.de/BBSR/DE/veroeffentlichungen/analysen-kompakt/2024/ak-04-2024.html",
+                    "sourceLicenses": [],
+                    "publicationYear": "2024"
+                },
+                {
+                    "path": null,
+                    "title": "Gleitende Langfrist-Verkehrsprognose 2021-2022",
+                    "authors": [
+                        "Intraplan · Trimode"
+                    ],
+                    "description": "https://www.bmv.de/SharedDocs/DE/Anlage/K/prognose-berichtgleitende-langfrist-verkehrsprognose.pdf?__blob=publicationFile",
+                    "sourceLicenses": [],
+                    "publicationYear": "2023"
+                },
+                {
+                    "path": null,
+                    "title": "Erstellung der Anwendungsbilanzen 2021 für den Sektor der Privaten Haushalte und den Verkehrssektor in Deutschland",
+                    "authors": [
+                        "Frondel, Manuel; Janßen-Timmen, Ronald; Sommer, Stephan"
+                    ],
+                    "description": "https://www.econstor.eu/bitstream/10419/280787/1/1876204966.pdf",
+                    "sourceLicenses": [],
+                    "publicationYear": "2023"
+                },
+                {
+                    "path": null,
+                    "title": "Verkehr in Zahlen 2024/2025",
+                    "authors": [
+                        "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR); Deutsches Institut für Wirtschaftsforschung Berlin e. V. (DIW Berlin)"
+                    ],
+                    "description": "https://www.bmv.de/SharedDocs/DE/Anlage/G/verkehr-in-zahlen24-25-pdf.pdf?__blob=publicationFile",
+                    "sourceLicenses": [],
+                    "publicationYear": "2024"
+                },
+                {
+                    "path": null,
+                    "title": "Wärmeatlas Baden-Württemberg Erstellung eines Leitfadens und Umsetzung für Modellregionen",
+                    "authors": [
+                        "Blesl, M.; Kempe, S.; Ohl, M.; Fahl, U.; König, A.; Jenssen, T.; Eltrop, L. "
+                    ],
+                    "description": "https://elib.uni-stuttgart.de/server/api/core/bitstreams/d71fd9a6-10eb-4f1e-b1b7-c989e771a5a5/content",
+                    "sourceLicenses": [],
+                    "publicationYear": "2009"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null,
+                    "openModalButton": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "genese"
+            ],
+            "licenses": [
+                {
+                    "name": "Creative Commons Attribution 4.0 International",
+                    "path": "https://spdx.github.io/license-list-data/CC-BY-4.0.html",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "31.12.2050",
+                        "start": "01.01.2021",
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": "Yearly sum",
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [],
+            "description": null,
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [],
+                    "title": "Tsoutsoulopoulos, Dimitris; Ortlieb, Felicitas; Winkler, Jonas; Blesl, Markus",
+                    "object": null,
+                    "comment": null,
+                    "organization": "Institute of Energy Economics and Rational Energy Use (IER), University of Stuttgart, Germany"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "This dataset includes the data from the energy service demand tool (EDL)",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,294 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "parameter_variation",
+            "path": "bla",
+            "type": "Table",
+            "title": "variation of technical and economical specifications needed for arguments in oemof components",
+            "format": "csv",
+            "review": {
+                "path": "bla",
+                "badge": "bla"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Position",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of parameter",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "el_price_variation",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "value of parameter",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gas_price_variation",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "value of parameter",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "EES_capex_variation",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "value of parameter",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "TES_capex_variation",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "value of parameter",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "reference",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Reference of value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tag_1",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "tag",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tag_2",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "tag",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "component",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Component",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "caroline.moeller@rl-institut.de",
+                "grantNo": "bla",
+                "homepage": "https://reiner-lemoine-institut.de/oemof_heat/",
+                "publisher": "",
+                "sourceCode": "https://github.com/oemof-heat",
+                "documentation": "bla",
+                "fundingAgency": "bla",
+                "publisherLogo": "https://reiner-lemoine-institut.de/wp-content/uploads/2015/08/RLI_Logo.png",
+                "fundingAgencyLogo": "bla"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "Jakob.Wolf@beuth-hochschule.de",
+                    "title": "Jakob Wolf",
+                    "authors": [],
+                    "description": "Self estimated values",
+                    "sourceLicenses": [
+                        {
+                            "name": "bla",
+                            "path": "bla",
+                            "title": "bla",
+                            "attribution": "bla",
+                            "instruction": "bla",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "us-ascii",
+            "keywords": [
+                "oemof-thermal"
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY 4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "bla",
+                    "instruction": "You are free to: Share — copy and redistribute the material in any medium or format. Adapt — remix, transform, and build upon the material for any purpose, even commercially. This license is acceptable for Free Cultural Works. The licensor cannot revoke these freedoms as long as you follow the license terms.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2020-06-16"
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "bla",
+            "contributors": [
+                {
+                    "date": "2020-06-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jakob Wolf",
+                    "object": "bla",
+                    "comment": "bla",
+                    "organization": null
+                },
+                {
+                    "date": "2020-06-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "TuPhanRLI",
+                    "object": "bla",
+                    "comment": "bla",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2020-06-16"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

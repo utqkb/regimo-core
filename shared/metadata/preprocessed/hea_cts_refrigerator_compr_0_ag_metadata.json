@@ -1,0 +1,332 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "hea_cts_refrigerator_compr_0_ag",
+            "path": null,
+            "type": "Table",
+            "title": "sedos_hea_cts_refrigerator_compr_0_ag",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_timeseries_fixed",
+                        "type": "text",
+                        "unit": "kW/kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Availability timeseries",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_inst_0",
+                        "type": "float array",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Existing capacity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of electricity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_cts_proc_cooling",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of cooling",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_p",
+                        "type": "float array",
+                        "unit": "EUR/MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Investment cost per capacity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_p",
+                        "type": "float array",
+                        "unit": "EUR/MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Fixed operation and maintenance costs",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float array",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Lifetime in operation.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "text",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "g.mueller@fz-juelich.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://dx.doi.org/10.1088/1755-1315/214/1/012128",
+                    "title": "Techno-Economic Analysis of Adsorption-Based DH Driven Cooling System",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "global",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "AP6",
+                "Heat",
+                "oedatamodel-parameter",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": "",
+                    "instruction": "You are free: To Share, To Create, To Adapt",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Techno-economic parameter for aggregated existing CTS compression refrigerator cooling.",
+            "contributors": [
+                {
+                    "date": "2025-01-28",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Gian Müller, FZJ",
+                    "object": "data and metadata",
+                    "comment": "Data for aggregated existing CTS compression refrigerator cooling.",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-01-28"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

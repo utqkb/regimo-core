@@ -1,0 +1,268 @@
+{
+    "id": "deutscher_projektionsbericht2025_ev_preise",
+    "@id": null,
+    "name": "deutscher_projektionsbericht2025_ev_preise",
+    "title": "Endverbrauchspreise der Energieträger für die Treibhausgas-Projektionen 2025 (Datentabelle)",
+    "$schema": "https://openenergyplatform.org/static/metaedit/schema.json",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "deutscher_projektionsbericht2025_ev_preise",
+            "path": "deutscher_projektionsbericht2025_ev_preise",
+            "type": "Table",
+            "title": "Endverbrauchspreise der Energieträger für die Treibhausgas-Projektionen 2025 (Datentabelle)",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "indikator",
+                        "type": "varchar(512)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "einheit",
+                        "type": "varchar(64)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "jahr",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "scenario"
+            ],
+            "context": {
+                "title": "THG-Projektionen: Weiterentwicklung der Methoden und Umsetzung der Europäischen Governance-Verordnung und des Bundesklimaschutzgesetzes (\"Politikszenarien XII\")",
+                "contact": "oedb@oeko.de",
+                "grantNo": "FKZ 37K2442010 ",
+                "homepage": "https://www.oeko.de/projekte/detail/thg-projektionen-weiterentwicklung-der-methoden-und-umsetzung-der-europaeischen-governance-verordnung-und-des-bundesklimaschutzgesetzes-politikszenarien-xii",
+                "publisher": "Umweltbundesamt, Open Energy Platform",
+                "sourceCode": null,
+                "documentation": "https://openenergyplatform.org/scenario-bundles/id/93f1cdf6-a09a-c973-f948-138beeacd3df ",
+                "fundingAgency": "Umweltbundesamt",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "All data in this table",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Output of own calculations",
+                    "sourceLicenses": [],
+                    "publicationYear": "2025"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null,
+                    "openModalButton": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "Klimaschutzgesetz",
+                "DL-DE->BY-2.0",
+                "EU Governance-Verordnung",
+                "2025",
+                "Projektionsbericht",
+                "Deutschland",
+                "Treibhausgasprojektionen"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE->BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                    "attribution": "prognos (2025): Endverbrauchspreise der Energieträger für die Treibhausgas-Projektionen 2025 (Datentabelle)",
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [],
+            "description": "Die Tabelle umfasst Informationen zu Endverbrauchspreisen von Erdölprodukten, Erdgas, Strom, Fernwärme, ⁠Biomasse⁠ und Wasserstoff unter Berücksichtigung von Beschaffungs- und Vertriebskosten, Steuern, Abgaben sowie Netzentgelten.",
+            "contributors": [
+                {
+                    "date": "2025-07-01",
+                    "path": null,
+                    "roles": [],
+                    "title": "Öko-Institut",
+                    "object": "data upload, metadata",
+                    "comment": "publication on OEP as addition to UBA datacube",
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "Die Tabelle umfasst Informationen zu Endverbrauchspreisen von Erdölprodukten, Erdgas, Strom, Fernwärme, ⁠Biomasse⁠ und Wasserstoff unter Berücksichtigung von Beschaffungs- und Vertriebskosten, Steuern, Abgaben sowie Netzentgelten.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

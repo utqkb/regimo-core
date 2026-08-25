@@ -1,0 +1,250 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "modex_polins_installed_capacity",
+            "path": "http://openenergyplatform.org/dataedit/view/reference/polins_frameworkname_installed_capacity",
+            "type": "Table",
+            "title": "MODEX - POLINS - Installed capacity",
+            "format": null,
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/88",
+                "badge": "Bronze"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "03ET4075",
+                "homepage": "https://www.energiesystem-forschung.de/foerdern/projekte/modex-polins/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie (BMWi)",
+                "publisherLogo": "",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg;jsessionid=7C329FD594B914D85D84649345B95756?__blob=normal&v=3"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://data.open-power-system-data.org",
+                    "title": "European Power System Data",
+                    "authors": [],
+                    "description": "2020, Feed-in profiles for solar PV, wind onshore and offshore, urldate = {2021-04-30}, institution = {Open Power System}, date = {2020}",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-NC-4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "Creative Commons Attribution-NonCommercial 4.0 International",
+                            "attribution": "For academic and professional use (presentations, journal articles, trade publications, etc): Please cite the papers describing our methods [1, 2] and, if possible, link to www.renewables.ninja.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ecmwf.int/",
+                    "title": "Historic Weather Data",
+                    "authors": [],
+                    "description": "2020, Hydropower inflow per country , urldate = {2021-04-30}, institution = {European Centre for Medium-Range Weather Forecasts}, date = {2020}",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY-NC-ND 4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+                            "title": "Attribution-NonCommercial-NoDerivatives 4.0 International",
+                            "attribution": "European Centre for Medium-Range Weather Forecasts",
+                            "instruction": "Free to: Share",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://tyndp.entsoe.eu/maps-data/",
+                    "title": "TYNDP 2018 - Ten Year Network Development Plan 2018",
+                    "authors": [],
+                    "description": "2018, capacities of fossil power plants , urldate = {2021-04-30}, institution = {ENTSO-E}, date = {2018}",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-NC-4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "Creative Commons Attribution-NonCommercial 4.0 International",
+                            "attribution": "ENTSO-E",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.3390/en10111841",
+                    "title": "Aggregation Methods for Modelling Hydropower and Its Implications for a Highly Decarbonised Energy System in Europe",
+                    "authors": [],
+                    "description": "2017, hydropower capacities of already realised and currently planned projects , urldate = {2021-04-30}, journaltitle = {Energies 10, no. 11: 1841}, date = {2017}",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-NC-4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "Creative Commons Attribution-NonCommercial 4.0 International",
+                            "attribution": "Härtel, Philipp, and Magnus Korpås",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "erzeugung",
+                "kapazität",
+                "kraftwerk",
+                "erneuerbare"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB",
+                "de-DE"
+            ],
+            "description": "Kapazitäten für hydro-thermische und fluktuierende Erneuerbarenanlagen",
+            "contributors": [
+                {
+                    "date": "2021-07-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "jh-RLI",
+                    "object": "Metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-11-30",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "Metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-07-19"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

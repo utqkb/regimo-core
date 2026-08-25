@@ -1,0 +1,375 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "otg_ehvhv_branch_data",
+            "type": "Table",
+            "title": "EHV and EV branches processed by egoTGmod",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "result_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Database internal ID of result",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "view_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID for plotting purpose",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "branch_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID of branch",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "f_bus",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "from bus number",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "t_bus",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "to bus number",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "br_r",
+                        "type": "",
+                        "unit": "p.u.",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "resistance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "br_x",
+                        "type": "",
+                        "unit": "p.u.",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "reactance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "br_b",
+                        "type": "",
+                        "unit": "p.u.",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "total line charging susceptance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rate_a",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MVA rating A (long term rating)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rate_b",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MVA rating B (short term rating)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rate_c",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MVA rating C (emergency rating)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tap",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "transformer off nominal turns ratio",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "shift",
+                        "type": "",
+                        "unit": "degrees",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "transformer phase shift angle",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "br_status",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "initial branch status, 1 = in-service, 0 = out-of-service",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "link_type",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Link Type (transformer = transformer,overhead line = line, underground cable = cable)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "branch_voltage",
+                        "type": "",
+                        "unit": "kV",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Voltage of the overhead lines and underground cables",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cables",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Number of cables",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "frequency",
+                        "type": "",
+                        "unit": "Hz",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "frequency of the branch",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Postgis WGS84 Multiline geometry",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "topo",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Postgis WGS84 Linestring geometry",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "connected_via",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "States way of connection for synthetic branches: 1=connection of transfer-bus to closest substation, 2=connection of transfer-bus to closest line, 3=connection of a subgrid to the main grid.",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "OpenStreetMap",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://github.com/openego/osmTGmod/tree/ego_otg",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Database License (ODbL) v1.0",
+                    "path": "http://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "",
+                    "attribution": "NEXT ENERGY",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2016-10-20"
+            },
+            "languages": [
+                ""
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "2016-10-20",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Lukas Wienholt",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2017-10-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Kilian Zimmerer",
+                    "object": null,
+                    "comment": "Update metadata to v1.3",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

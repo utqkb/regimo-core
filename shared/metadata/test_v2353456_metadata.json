@@ -1,0 +1,229 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": null,
+            "type": "Table",
+            "title": null,
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": null,
+                        "type": null,
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": null,
+                        "type": null,
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            null
+                        ],
+                        "reference": {
+                            "fields": [
+                                null
+                            ],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": null,
+                "grantNo": null,
+                "homepage": null,
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "SEDOS"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": ""
+                    },
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": null,
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

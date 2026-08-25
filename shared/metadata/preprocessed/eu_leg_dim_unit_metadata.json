@@ -1,0 +1,264 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "eu_leg_dim_unit",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/eu_leg_dim_unit",
+            "type": "Table",
+            "title": "Parameter units that occur in greenhouse gas projections submitted under EU legislation",
+            "format": "PostgresSQL",
+            "review": {
+                "path": "",
+                "badge": "Silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Name of unit",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03EI1035B",
+                "homepage": "https://oeko.de/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.oeko.de/typo3conf/ext/wwt3_sitepackage/Resources/Public/frontend/assets/images/logo.svg",
+                "fundingAgencyLogo": "https://commons.wikimedia.org/wiki/File:BMWi_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://cdr.eionet.europa.eu/legalnotice",
+                    "title": "Common Data Repository on Eionet",
+                    "authors": [],
+                    "description": "The CDR holds data reported under various European legislation.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 2.5 DK",
+                            "path": "https://cdr.eionet.europa.eu/legalnotice",
+                            "title": "Attribution 2.5 Denmark",
+                            "attribution": "© European Environment Agency",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://reportnet.europa.eu/public/dataflow/113",
+                    "title": "Reportnet 3 - National projections of anthropogenic greenhouse gas emissions – Reporting year 2021",
+                    "authors": [],
+                    "description": "National projections provided by European Member States, pursuant to Governance Regulation Art.18 (1)(b) / Implementing Regulation Art.38",
+                    "sourceLicenses": [
+                        {
+                            "name": "ODC-By-1.0",
+                            "path": "https://www.eea.europa.eu/legal/eea-data-policy#toc-6",
+                            "title": "Open Data Commons Attribution License v1.0",
+                            "attribution": "© European Environment Agency",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.eea.europa.eu/data-and-maps/data/greenhouse-gas-emission-projections-for-7",
+                    "title": "Member States' greenhouse gas (GHG) emission projections",
+                    "authors": [],
+                    "description": "Member State's greenhouse gas emission projections compiled by the EEA",
+                    "sourceLicenses": [
+                        {
+                            "name": "ODC-By-1.0",
+                            "path": "https://www.eea.europa.eu/legal/eea-data-policy#toc-6",
+                            "title": "Open Data Commons Attribution License v1.0",
+                            "attribution": "© European Environment Agency",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000339",
+                    "name": "program parameter"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "european_environment_agency",
+                "sirop",
+                "cc_by_4_0",
+                "eu_legislation",
+                "ko_institut",
+                "parameters"
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY 4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© Öko-Institut",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table holds commonly used units for parameters that European Member States submit along their greenhouse gas projections under EU legislation",
+            "contributors": [
+                {
+                    "date": "2021-09-08",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "data, metadata",
+                    "comment": "initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2022-06-10",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "steull",
+                    "object": "metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2023-11-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institit",
+                    "object": "Metadata",
+                    "comment": "ontology annotation",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,651 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "wind_turbine_library",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/wind_turbine_library",
+            "type": "Table",
+            "title": "Wind Turbine Library",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/26",
+                "badge": "Silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unambiguous unique number for table entry",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "turbine_id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unambiguous unique number for turbine",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "manufacturer",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Turbine name as in product description of manufacturer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Turbine name as in product description of manufacturer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "turbine_type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Turbine name for all manufacturers in a consistent Format",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nominal_power",
+                        "type": "bigint",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "installed capacity of turbin",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rotor_diameter",
+                        "type": "numeric",
+                        "unit": "m",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "diameter of installed rotor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rotor_area",
+                        "type": "numeric",
+                        "unit": "m²",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Area covered by rotating rotor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hub_height",
+                        "type": "text",
+                        "unit": "m",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140000",
+                                "name": "hub height"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Height of turbine hub. Several possible heights separated by semicolon",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "max_speed_drive",
+                        "type": "numeric",
+                        "unit": "revolutions per minute",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "maximum rotational speed",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_class_iec",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "wind class conforming to IEC Standard",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_zone_dibt",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Suitable wind zone(s) according to DIBt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_density",
+                        "type": "numeric",
+                        "unit": "W/m²",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Nominal power per rotor area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_density_2",
+                        "type": "numeric",
+                        "unit": "m²/kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Reciprocal nominal power per rotor area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "calculated",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Boolean information if specifications were calculated rather than measured",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "has_power_curve",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Boolean information whether power curve is available",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_curve_wind_speeds",
+                        "type": "text",
+                        "unit": "m/s",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "List of wind speeds in accordance with list of values for power curve. The two colums represent the power curve for each turbine",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_curve_values",
+                        "type": "text",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "List of power values in accordance to wind speeds of power_curve_wind_speeds",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "has_cp_curve",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Boolean information whether power coefficient curve is available",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_coefficient_curve_wind_speeds",
+                        "type": "text",
+                        "unit": "m/s",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "List of wind speeds in accordance with list of values for power coefficient curve. The two colums represent the power coefficient curve for each turbine",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_coefficient_curve_values",
+                        "type": "text",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "List of power coefficient values in accordance to wind speeds of power_coefficient_curve_wind_speeds",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "has_ct_curve",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Boolean information whether thrust coefficient curve is available",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "thrust_coefficient_curve_wind_speeds",
+                        "type": "text",
+                        "unit": "m/s",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "List of wind speeds in accordance with list of values for thrust coefficient curve. The two colums represent the thrust coefficient curve for each turbine",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "thrust_coefficient_curve_values",
+                        "type": "text",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "List of thrust coefficient values in accordance to wind speeds of thrust_coefficient_curve_wind_speeds",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source of the information within a particular row",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Christian.Hofmann@rl-institut.de",
+                "grantNo": "0324006A",
+                "homepage": "https://openfredproject.wordpress.com/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://reiner-lemoine-institut.de//wp-content/uploads/2015/09/rlilogo.png",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg?__blob=poster&v=2"
+            },
+            "dialect": {
+                "delimiter": "fixme",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.enercon.de/en/products/",
+                    "title": "Enercon GmbH",
+                    "authors": [],
+                    "description": "Wind energy company, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://www.windenergie-im-binnenland.de/powercurve.php",
+                    "title": "windenergie-im-binnenland.de",
+                    "authors": [],
+                    "description": "Website offering windenergy powercurves by turbuine type",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://www.nordex-online.com/de/produkte-service/windenergieanlagen/",
+                    "title": "Nordex SE",
+                    "authors": [],
+                    "description": "Wind turbine provider, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.wind-turbine-models.com/turbines",
+                    "title": "wind-turbine-models.com",
+                    "authors": [],
+                    "description": "Portal about wind-power turbines and types, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.thewindpower.net/index.php",
+                    "title": "thewindpower.net",
+                    "authors": [],
+                    "description": "Wind energy market intelligence, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.acciona-energia.com/areas-of-activity/wind-power/",
+                    "title": "Acciona S.A.",
+                    "authors": [],
+                    "description": "Infrastructure and renewable energy provider, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.vestas.com/en/products",
+                    "title": "Vestas Wind Systems A/S",
+                    "authors": [],
+                    "description": "Wind turbine provider",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ge.com/renewableenergy/wind-energy",
+                    "title": "GE Renewable Energy",
+                    "authors": [],
+                    "description": "Renewable powerplant provider, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.senvion.com/global/en/products-services/wind-turbines/",
+                    "title": "Senvion S.A.",
+                    "authors": [],
+                    "description": "Wind turbine provider, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.vensys.de/",
+                    "title": "VENSYS Energy AG",
+                    "authors": [],
+                    "description": "Wind turbine provider, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.eno-energy.com",
+                    "title": "eno energy GmbH",
+                    "authors": [],
+                    "description": "Wind turbine provider, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://www.mhivestasoffshore.com/products-services/",
+                    "title": "MHI Vestas Offshore Wind A/S",
+                    "authors": [],
+                    "description": "Wind turbine provider, Website offering wind turbine powercurves",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000448",
+                    "name": "wind rotor"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "windpower",
+                "wind",
+                "powercurve"
+            ],
+            "licenses": [
+                {
+                    "name": "ODbL-1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "Open Data Commons Open Database License 1.0",
+                    "attribution": "© Reiner Lemoine Institut",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2018-11-01"
+            },
+            "languages": [
+                "en-GB",
+                "en-US",
+                "de-DE"
+            ],
+            "description": "A collection of the most common wind turbines with information on capacity, power curves and other parameters available from specification sheets",
+            "contributors": [
+                {
+                    "date": "2018-11-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Malte Petersen",
+                    "object": null,
+                    "comment": "Prepared the dataset",
+                    "organization": null
+                },
+                {
+                    "date": "2019-04-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christian Hofmann",
+                    "object": "Upload, Metadata",
+                    "comment": "reworked, fixed, added metadata and uploaded everything",
+                    "organization": null
+                },
+                {
+                    "date": "2019-08-05",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonas Huber",
+                    "object": "Metadata",
+                    "comment": "Update string to metadata v1.4",
+                    "organization": null
+                },
+                {
+                    "date": "2020-03-23",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "Metadata",
+                    "comment": "Update and publish metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-05-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "jh-RLI",
+                    "object": "Metadata and Data",
+                    "comment": "Fix missing field present in data table but not metadata; Update new wind tubine data",
+                    "organization": null
+                },
+                {
+                    "date": "2024-01-24",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "jh-RLI",
+                    "object": "Update Data",
+                    "comment": "Correct the data according to the comment form: https://github.com/OpenEnergyPlatform/data-preprocessing/issues/28#issuecomment-1889932499",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2019-08-13"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

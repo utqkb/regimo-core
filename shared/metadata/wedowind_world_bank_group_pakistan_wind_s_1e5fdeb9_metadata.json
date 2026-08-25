@@ -1,0 +1,100 @@
+{
+    "@id": "https://globalwindatlas.info",
+    "name": "wedowind_world_bank_group_pakistan_wind_s_4e99e196",
+    "title": "Pakistan - Wind Speed and Wind Power Potential Maps",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_world_bank_group_pakistan_wind_s_1e5fdeb9",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_world_bank_group_pakistan_wind_s_1e5fdeb9",
+            "type": "table",
+            "title": "Pakistan - Wind Speed and Wind Power Potential Maps - Posters",
+            "format": "HTML",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://globalwindatlas.info/downloads/Pakistan",
+                    "title": "Pakistan - Wind Speed and Wind Power Potential Maps - Posters",
+                    "authors": [],
+                    "description": "Maps with wind speed, wind rose and wind power density potential in Pakistan. The GIS data stems from the Global Wind Atlas (http://globalwindatlas.info/). GIS data is available as JSON and CSV. The second link provides poster size (.pdf) and midsize maps (.png).",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2018"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "ckan_pakistan_wind_speed_and_wi_070b574a",
+                "ckan"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Maps with wind speed, wind rose and wind power density potential in Pakistan. The GIS data stems from the Global Wind Atlas (http://globalwindatlas.info/). GIS data is available as JSON and CSV. The second link provides poster size (.pdf) and midsize maps (.png).",
+            "publicationDate": "2018-07-23"
+        }
+    ],
+    "description": "Maps with wind speed, wind rose and wind power density potential in Pakistan. The GIS data stems from the Global Wind Atlas (http://globalwindatlas.info/). GIS data is available as JSON and CSV. The second link provides poster size (.pdf) and midsize maps (.png).",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

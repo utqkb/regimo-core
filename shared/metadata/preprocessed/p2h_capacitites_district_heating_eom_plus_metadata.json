@@ -1,0 +1,309 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "-",
+            "name": "p2h_capacitites_district_heating_eom_plus",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/p2h_capacitites_district_heating_eom_plus",
+            "type": "Table",
+            "title": "Power2Heat capacities for district heating in Germany, Status Quo (2020) and projection (2030) for the EOM-Plus project",
+            "format": "csv",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags",
+                        "type": "int",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Municipality key (Amtlicher Gemeindeschlüssel)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nuts3",
+                        "type": "char(5)",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Nomenclature of territorial units for statistics.                                         In Germany NUTS-3 regions correspond to districts",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "int",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cap_pub",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Regional capacity of large heat pumps for district heating (public)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cap_ind",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Regional capacity of large electric boilers for district heating (industry)",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "benedikt.huemmer@thi.de",
+                "grantNo": "03EI1012A",
+                "homepage": "https://www.thi.de/forschung/institut-fuer-neue-energie-systeme-ines",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz",
+                "publisherLogo": "https://www.thi.de/_assets/a92153751098915699a1afa17e77f864/Images/Site/thi_logo_wb_RGB.svg",
+                "fundingAgencyLogo": "https://de.wikipedia.org/wiki/Bundesministerium_f%C3%BCr_Wirtschaft_und_Klimaschutz#/media/Datei:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://gitlab.com/hotmaps/heat",
+                    "title": "Heat density map (final energy demand for heating and DHW) of residential and non-residential buildings in EU28 +                       Switzerland, Norway and Iceland for the year 2015",
+                    "authors": [],
+                    "description": "Müller, A., Hummel, M., Kranzl, L., Fallahnejad, M., Büchele, R., 2019. Open Source Data for Gross Floor Area                             and Heat Demand Density on the Hectare Level for EU 28. Energies 12, 4789. https://doi.org/10.3390/en12244789",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 4.0",
+                            "path": "https://spdx.org/licenses/CC-BY-4.0.html",
+                            "title": "Creative Commons Attribution 4.0 International (CC BY 4.0) licence",
+                            "attribution": "Müller, A., Hummel, M., Kranzl, L., Fallahnejad, M., Büchele, R., 2019. Open Source Data for Gross Floor Area and Heat Demand Density on the Hectare Level for EU 28.",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-mit-einwohnerzahlen-stand-31-12-vg250-ew-31-12.html",
+                    "title": "Verwaltungsgebiete 1:250000 - VG250 und VG250-EW",
+                    "authors": [],
+                    "description": "The VG250 database of Bundesamt für Katografie und Geodäsie (BKG) includes the administrative units of the hierarchical                             administrative levels from the state to the municipalities with administrative boundaries, key figures, names and                             designations. The VG250-EW dataset also contains the population figures and the cadastral area.",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE-BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "GeoBasis-DE / BKG (2023)",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.marktstammdatenregister.de",
+                    "title": "Marktstammdatenregister (MaStR)",
+                    "authors": [],
+                    "description": "Data register for the German electricity and gas market with information on plants and market participants maintained                             by Bundesnetzagentur (BNetzA)",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE-BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/Versorgungssicherheit/Erzeugungskapazitaeten/Kraftwerksliste/start.html",
+                    "title": "Kraftwerksliste der Bundesnetzagentur",
+                    "authors": [],
+                    "description": "List of German power plants with a net rated electrical output of at least 10 MW",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE-BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://openenergy-platform.org/dataedit/view/model_draft/capacitites_district_heating_2020_raw",
+                    "title": "Installed and planned power2heat and storage capacities for district heating in Germany",
+                    "authors": [],
+                    "description": "Installed and planned power2heat and storage capacities for district heating in Germany.                             Data based on freely available sources (e.g. operator homepages, manufacturer information, industry presentations)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 4.0",
+                            "path": "https://spdx.org/licenses/CC-BY-4.0.html",
+                            "title": "Creative Commons Attribution 4.0 International (CC BY 4.0) licence",
+                            "attribution": "Müller, A., Hummel, M., Kranzl, L., Fallahnejad, M., Büchele, R., 2019. Open Source Data for Gross Floor Area and Heat Demand Density on the Hectare Level for EU 28.",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS3"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010262/",
+                    "name": "scenario projection"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010260/",
+                    "name": "parameterisation"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "district heating",
+                "heat pumps",
+                "capacity",
+                "heat",
+                "supply",
+                "2020",
+                "2030",
+                "EOM-Plus",
+                "THI"
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY 4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© THI",
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2020-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Status Quo (2020) and projection (2020) of P2H capacities in Germany on NUTS3-level. 2030 data based on freely available data                     (e.g. operator homepages, manufacturer information, industry presentations). 2030 projections via linear interpolation of                     scenario B in NEP37/45. Regionalization of the expansion is based on current industrial CHP locations (MaSTR, Kraftwerksliste)                     for electrode boilers (cap_ind) and on district heating potential (heat demand densities from hotmaps, restrictions from Jochum et al.                     (2017): Ableitung eines Korridors für den Ausbauder erneuerbaren Wärme im Gebäudebereich) for large heat pumps (cap_pub)",
+            "contributors": [
+                {
+                    "date": "2024-03-20",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "THI",
+                    "object": "data, metadata",
+                    "comment": "initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-03-20"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

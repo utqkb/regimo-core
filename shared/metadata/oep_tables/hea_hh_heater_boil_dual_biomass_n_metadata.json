@@ -1,0 +1,335 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "model_draft.hea_hh_heater_boil_dual_biomass_n",
+            "path": null,
+            "type": "Table",
+            "title": "example_technology_heat_sector_1",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "technology name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ceff_spaceheat",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140050",
+                                "name": "efficiency value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "comodity specific efficiency value of space heat",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ceff_waterheat",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140050",
+                                "name": "efficiency value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "comodity specific efficiency value of water heat",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "share_fx",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fixe share between output commodities",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "stock",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Capacity installed in the base year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020175",
+                                "name": "life time"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "life time",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140126",
+                                "name": "planned availability"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "planned availability",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "vera.sehn@ier.uni-stuttgart.de",
+                "grantNo": "",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": "model_draft.hea_hh_heater_boil_dual_biomass_n"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": "",
+                    "instruction": "You are free: To Share, To Create, To Adapt",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2010-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Example table used to give an example of a heat technology",
+            "contributors": [
+                {
+                    "date": "2023-03-20",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Vera Sehn",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2023-03-20"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

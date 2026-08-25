@@ -1,0 +1,461 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "global_scalars",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/global_scalars",
+            "type": "Table",
+            "title": "sedos_global_scalars",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "population",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Population (at the end of the year)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gdp",
+                        "type": "float",
+                        "unit": "B€",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Gross domestic product",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gdp_per_capita",
+                        "type": "float",
+                        "unit": "€",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Gross domestic product per capita",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "emission_reduction_target_wo_lulucf",
+                        "type": "float",
+                        "unit": "Mt CO2-eq.",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Total emissions target (without LULUCF)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "emission_reduction_target_wo_lulucf_waste",
+                        "type": "float",
+                        "unit": "Mt CO2-eq.",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Total emissions target (without LULUCF and Waste)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "households",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Number of Households",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "person_per_household",
+                        "type": "float",
+                        "unit": "person/household",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Household size",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "living_space",
+                        "type": "float",
+                        "unit": "million square meter",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Living space in residential and non-residential buildings",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "living_space_per_capita",
+                        "type": "float",
+                        "unit": "square meter/capita",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Living space per capita",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "residential_and_nonresidential_apartments",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Apartments in residential and non-residential buildings",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "empty_second_residence",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Empty residence / second residence",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "apartments_in_residential_buildings",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Apartements in residential buildings",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "apartment_share",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Share of apartments",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "living_space_in_residential_buildings",
+                        "type": "float",
+                        "unit": "million square meter",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Living space in residential buildings",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "living_space_share",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Share of living space",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "living_space_in_residential_buildings_per_capita",
+                        "type": "float",
+                        "unit": "square meter/capita",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Living space in residential buildings per capita",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "residential_building",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Residential building",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "apartments_per_residential_building",
+                        "type": "float",
+                        "unit": "unit",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Apartments per residential building",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "equivalence_factor_co2_ch4",
+                        "type": "float",
+                        "unit": "CO2-eq.",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 Equivalent factor for CH4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "equivalence_factor_co2_n2o",
+                        "type": "float",
+                        "unit": "CO2-eq.",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 Equivalent factor for N2O",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "ulrich.fahl@ier.uni-stuttgart.de",
+                "grantNo": null,
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fÃ¼r Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": "Global Scalars"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "input_data",
+                "AP9",
+                "global",
+                "scalars",
+                "oedatamodel-parameter"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": "You are free to: Share- copy and redistribute the material in any medium or format for any purpose, even commercially. Adapt - remix, transform, and build upon the material for any purpose, even commercially.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Dataset describes scalar techno-economic and scenario data of technology/process: Global scalars data",
+            "contributors": [
+                {
+                    "date": "2024-12-02",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. rer. pol. Ulrich Fahl",
+                    "object": "Framework data",
+                    "comment": "Prepared data and information on metadata for framework data",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-02",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Anik Islam",
+                    "object": "Framework data",
+                    "comment": "Prepared metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-12-02"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

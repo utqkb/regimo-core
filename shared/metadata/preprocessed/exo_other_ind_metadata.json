@@ -1,0 +1,835 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "exo_other_ind",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/exo_other_ind",
+            "type": "Table",
+            "title": "sedos-exo_other_ind",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_constant",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_coke",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_heat_high_other",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_bio_wood",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_coal",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_waste_mbio",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec_ind",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_heating_oil",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_heavy_fuel_oil",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_hydrogen",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_lpg",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_methane",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_heat_proc",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_machine_drive",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_steam",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_ict",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_cooling",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_heat_district_high_ind",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_pump_fans_compression",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_lighting",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_heat_kiln",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_envir_heat",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_geoth_heat",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_solar_radiation",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_other_ind",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_p",
+                        "type": "float",
+                        "unit": "MEuro/GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Costs independent from operations",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_p",
+                        "type": "float",
+                        "unit": "MEuro/GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Investment costs for new capacity per unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_e",
+                        "type": "float",
+                        "unit": "MEuro/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Costs independent from operations",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_e",
+                        "type": "float",
+                        "unit": "MEuro/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Investment costs for new capacity per unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_var_e",
+                        "type": "float",
+                        "unit": "MEuro/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Variable costs associated with the activity of a process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_hydrogen",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Upper amount of flow in share of commodity sec_hydrogen",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_inst_0",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Residual existing capacitystock of a process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_abs_new_max",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "New build added capacitystock of a process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_e_inst_0",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Residual existing capacitystock of a process in PJ",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_e_abs_new_max",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "New build added capacitystock of a process in PJ",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_iip_coke_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 emission factor of commodity iip_coke",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_iip_coke_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CH4 emission factor of commodity iip_coke",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_iip_coke_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "N2O emission factor of commodity iip_coke",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_bio_wood_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 emission factor of commodity pri_bio_wood",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_bio_wood_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CH4 emission factor of commodity pri_bio_wood",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_bio_wood_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "N2O emission factor of commodity pri_bio_wood",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_coal_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 emission factor of commodity pri_coal",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_coal_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CH4 emission factor of commodity pri_coal",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_coal_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "N2O emission factor of commodity pri_coal",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_waste_mbio_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 emission factor of commodity pri_waste_mbio",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_waste_mbio_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CH4 emission factor of commodity pri_waste_mbio",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_waste_mbio_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "N2O emission factor of commodity pri_waste_mbio",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heating_oil_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 emission factor of commodity sec_heating_oil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heating_oil_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CH4 emission factor of commodity sec_heating_oil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heating_oil_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "N2O emission factor of commodity sec_heating_oil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heavy_fuel_oil_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 emission factor of commodity sec_heavy_fuel_oil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heavy_fuel_oil_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CH4 emission factor of commodity sec_heavy_fuel_oil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heavy_fuel_oil_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "N2O emission factor of commodity sec_heavy_fuel_oil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_lpg_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 emission factor of commodity sec_lpg",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_lpg_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CH4 emission factor of commodity sec_lpg",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_lpg_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "N2O emission factor of commodity sec_lpg",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CO2 emission factor of commodity sec_methane",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "CH4 emission factor of commodity sec_methane",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "N2O emission factor of commodity sec_methane",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "dimitrios.tsoutsoulopoulos@ier.uni-stuttgart.de",
+                "grantNo": null,
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "OEFamily",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://elib.uni-stuttgart.de/bitstream/11682/2305/1/FB_115_Energieeffizienz_Ralf_Kuder.pdf",
+                    "title": "Energieeffizienz in der Industrie - Modellgestützte Analyse des effizienten Energieeinsatzes in der EU-27 mit Fokus auf den Industriesektor",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© Institut für Energiewirtschaft und Rationelle Energieanwendung, Universität Stuttgart 2023",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.umweltbundesamt.de/sites/default/files/medien/11850/publikationen/29_2023_cc_submission_under_the_united_nations_framework_convention.pdf",
+                    "title": "Submission under the United Nations Framework Convention on Climate Change and the Kyoto Protocol 2023, National Inventory Report for the German Greenhouse Gas Inventory 1990 – 2021",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "©  Umweltbundesamt 2023",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "input_data",
+                "final",
+                "Industry",
+                "other industries"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": null,
+                    "instruction": "You are free: To Share, To Create, To Adapt",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Processes related to the rest of the industry ",
+            "contributors": [
+                {
+                    "date": "2024-05-24",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dimitrios Tsoutsoulopoulos",
+                    "object": "Metadata",
+                    "comment": "Create Metada and Data",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-05-24"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

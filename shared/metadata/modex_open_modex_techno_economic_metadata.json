@@ -1,0 +1,458 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "modex_open_modex_techno_economic",
+            "path": "https://openenergy-platform.org/dataedit/view/reference/modex_open_modex_techno_economic",
+            "type": "Table",
+            "title": "MODEX - open_MODEX - Techno-economic",
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "sarah.berendes@rl-institut.de",
+                "grantNo": "03ET4076",
+                "homepage": "https://www.energiesystem-forschung.de/forschen/projekte/open_MODEX",
+                "publisher": "",
+                "sourceCode": "https://github.com/open-modex",
+                "documentation": "https://github.com/open-modex/models",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie (BMWi)",
+                "publisherLogo": "https://avatars2.githubusercontent.com/u/47811754?s=200&v=4",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg;jsessionid=7C329FD594B914D85D84649345B95756?__blob=normal&v=3"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                    "title": "Technology Data - Energy Plants for Electricity and District heating generation",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:DEA2020] - Energy Plants for Electricity and District heating generation, v_0009",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency and Energinet",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                    "title": "Technology Data - Energy Transport",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:DEA2020ET] - Technology Data - Energy Transport, v_0001",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency and Energinet",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                    "title": "Technology Data - Energy Storage",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:DEA2020ES] - Technology Data - Energy Storage, v_0007",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency and Energinet",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2018-06-26_texte_51-2018_energieerzeugung-abfaelle.pdf",
+                    "title": "Energieerzeugung aus Abfällen - Stand und Potenziale in Deutschland bis 2030",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:UmweltBundesamtAbfall2018] - Stand und Potenziale in Deutschland bis 2030",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Umweltbundesamt",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.umweltbundesamt.de/sites/default/files/medien/378/publikationen/energieziel_2050.pdf",
+                    "title": "2050: 100% Energieziel 2050: 100% Strom aus erneuerbaren Quellen",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:UBA2010] - 2050: 100% Energieziel 2050: 100% Strom aus erneuerbaren Quellen",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Klaus, T.; Vollmer, C.; Lehmann, K. W. & Müschen, K.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.netzentwicklungsplan.de/sites/default/files/paragraphs-files/NEP_2030_V2019_2_Entwurf_Teil1.pdf",
+                    "title": "Netzentwicklungsplan Strom 2030, Version 2019",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:Strom2019] - Netzentwicklungsplan Strom 2030, Version 2019",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© 50Hertz Transmission GmbH; Amprion GmbH; TenneT TSO GmbH; TransnetBW GmbH",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://data.jrc.ec.europa.eu/collection/id-00138",
+                    "title": "ENSPRESO - an open, EU-28 wide, transparent and coherent database of wind, solar and biomass energy potentials",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:Ruiz2019] - Energy potential data",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/deed.en",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "European Commission",
+                            "instruction": "You are free: To Share, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.3390/en13174448",
+                    "title": "Comparison of the Effects of Industrial Demand Side Management and Other Flexibilities on the Performance of the Energy System",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:Nebel2020] - E2P ratio for storage technologies",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/deed.en",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "MDPI",
+                            "instruction": "You are free: To Share, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.1016/j.est.2019.101153",
+                    "title": "The development of stationary battery storage systems in Germany - A market review",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:Figgener2020] - E2P ratio energy storages",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-NC-ND-4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+                            "title": "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
+                            "attribution": "Figgener, J.; Stenzel, P.; Kairies, K.-P.; Linßen, J.; Haberschusz, D.; Wessels, O.; Angenendt, G.; Robinius, M.; Stolten, D. & Sauer, D. U.",
+                            "instruction": "You are free: To Share",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://mediathek.fnr.de/broschuren/bioenergie/bioenergie-potenzialatlas.html",
+                    "title": "Potenzialatlas Bioenergie in den Bundesländern",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:FNR2013] - Biogas potential",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© FNR - Fachagentur Nachwachsende Rohstoffe e. V.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.2790/057687",
+                    "title": "ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:ETRI2014] - Technology data",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "European Commission",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.gesetze-im-internet.de/eeg_2014/",
+                    "title": "Gesetz für den Ausbau erneuerbarer Energien",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:EEG2017] - Gesetz für den Ausbau erneuerbarer Energien",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Bundesamt für Justiz",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-renewable-fuels",
+                    "title": "Technology Data - Renewable Fuels",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:DEA2020RF] - Technology Data - Renewable Fuels, v_0004",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency and Energinet",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bmu.de/fileadmin/Daten_BMU/Pools/Broschueren/klimaschutzprogramm_2030_bf.pdf",
+                    "title": "Klimaschutzprogramm 2030 der Bundesregierung zur Umsetzung des Klimaschutzplans 2050",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:BMU2019] - Renewable share 2050",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Bundesministerium für Umwelt, Naturschutz und nukleare Sicherheit",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://static.agora-energiewende.de/fileadmin/Projekte/2021/2021_04_KNDE45/A-EW_209_KNDE2045_Zusammenfassung_DE_WEB.pdf",
+                    "title": "Klimaneutrales Deutschland 2045. Wie Deutschland seine Klimaziele schon vor 2050 erreichen kann Zusammenfassung im Auftrag von Stiftung Klimaneutralität, Agora Energiewende und Agora Verkehrswende",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:Agora2020] - Emission limit",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Agora Energiewende; Prognos; Öko-Institut; Wuppertal-Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.5281/ZENODO.3872068",
+                    "title": "tum-ens/pyGRETA: python Generator of REnewable Time series and mAps",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:Siala2020] - Expansion limit",
+                    "sourceLicenses": [
+                        {
+                            "name": "GPL-3.0-only",
+                            "path": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+                            "title": "GNU General Public License version 3",
+                            "attribution": "Siala, K.; Houmy, H.",
+                            "instruction": "You are free: To Share",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.5281/ZENODO.3872068",
+                    "title": "tum-ens/pyGRETA: python Generator of REnewable Time series and mAps",
+                    "authors": [],
+                    "description": "[oed-table:scalar],[Bibtexkey:Siala2020] - Expansion limit",
+                    "sourceLicenses": [
+                        {
+                            "name": "GPL-3.0-only",
+                            "path": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+                            "title": "GNU General Public License version 3",
+                            "attribution": "Siala, K.; Houmy, H.",
+                            "instruction": "You are free: To Share",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "modex",
+                "open_modex"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB",
+                "de-DE"
+            ],
+            "description": "[Multiple Topics]: E2P ratios; Lifetime of investment for power plants for different generation technologies; Power plant efficiency for electricity production for different generation technologies",
+            "contributors": [
+                {
+                    "date": "2022-01-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christoph",
+                    "object": "Metadata",
+                    "comment": "Create metadata and group sources",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,308 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "ego_dp_mv_griddistrict",
+            "type": "Table",
+            "title": "eGo dataprocessing - MV Grid district",
+            "format": "sql",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "version",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "version id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "subst_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "subst_sum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "number of substation per MV griddistrict",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "area_ha",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "area in hectar",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom_type",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "polygon type (polygon, multipolygon)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "geometry",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "eGo dataprocessing",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License Version 3 (AGPL-3.0)",
+                            "path": "https://github.com/openego/data_processing",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "OpenStreetMap",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "Open Database License (ODbL) v1.0",
+                            "path": "http://www.openstreetmap.org/",
+                            "title": "",
+                            "attribution": "© OpenStreetMap contributors",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "BKG - Verwaltungsgebiete 1:250.000 (vg250)",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "Geodatenzugangsgesetz (GeoZG)",
+                            "path": "http://www.geodatenzentrum.de/",
+                            "title": "",
+                            "attribution": "© GeoBasis-DE / BKG 2016 (Data changed)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Gemany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Data Commons Open Database License 1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "ODbL-1.0",
+                    "attribution": "© Reiner Lemoine Institut",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "Catchment area of HVMV substation (Transition point)",
+            "contributors": [
+                {
+                    "date": "2016-09-02",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2017-01-15",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2017-03-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update metadata to 1.1",
+                    "organization": null
+                },
+                {
+                    "date": "2017-04-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update metadata to 1.2",
+                    "organization": null
+                },
+                {
+                    "date": "2017-09-12",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "KilianZimmerer",
+                    "object": null,
+                    "comment": "Update metadata to v1.3",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

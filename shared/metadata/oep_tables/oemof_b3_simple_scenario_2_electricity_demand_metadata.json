@@ -1,0 +1,247 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "simple_model_2",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/oemof_b3_simple_scenario_2_electricity_demand",
+            "type": "Table",
+            "title": null,
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tech",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bus",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "amount",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "profile",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "name"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "utf-8",
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

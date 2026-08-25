@@ -1,0 +1,554 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "https://openenergy-platform.org/dataedit/view/boundaries/bkg_gn250_b",
+            "type": "Table",
+            "title": "BKG - Geographische Namen 1:250 000 - GN250 - Darstellung als Bounding-Boxes (Polygon)",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "reference_date",
+                        "type": "date",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nnid",
+                        "type": "varchar(16)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "datum",
+                        "type": "varchar(10)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "oba",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "oba_wert",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "varchar(90)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sprache",
+                        "type": "varchar(25)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "genus",
+                        "type": "varchar(10)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name2",
+                        "type": "varchar(90)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sprache2",
+                        "type": "varchar(25)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "genus2",
+                        "type": "varchar(10)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zusatz",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags",
+                        "type": "varchar(8)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rs",
+                        "type": "varchar(12)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hoehe",
+                        "type": "varchar(8)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hoehe_ger",
+                        "type": "varchar(5)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ewz",
+                        "type": "varchar(8)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ewz_ger",
+                        "type": "varchar(8)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gewk",
+                        "type": "varchar(18)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gemteil",
+                        "type": "varchar(4)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "virtuell",
+                        "type": "varchar(4)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gemeinde",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verwgem",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kreis",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "regbezirk",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bundesland",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "staat",
+                        "type": "varchar(40)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geola",
+                        "type": "varchar(6)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geobr",
+                        "type": "varchar(6)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gkre",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gkho",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "utmre",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "utmho",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "box_geo",
+                        "type": "varchar(250)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "box_gk",
+                        "type": "varchar(250)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "box_utm",
+                        "type": "varchar(250)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "geometry",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": "Die Geographischen Namen beinhalten Namen der Objektbereiche Siedlung, Verkehr, Vegetation, Gewässer, Relief und Gebiete.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": "Datensatzbeschreibung als PDF",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": "Der Datenbestand umfasst sämtliche Verwaltungseinheiten aller hierarchischen Verwaltungsebenen vom Staat bis zu den Gemeinden mit ihren Verwaltungsgrenzen, statistischen Schlüsselzahlen und dem Namen der Verwaltungseinheit sowie der spezifischen Bezeichnung der Verwaltungsebene des jeweiligen Bundeslandes.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "vector"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "Geodatenzugangsgesetz",
+                "Germany",
+                "society",
+                "2015"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": "Die Geographischen Namen beinhalten Namen der Objektbereiche Siedlung, Verkehr, Vegetation, Gewässer, Relief und Gebiete. Der Datensatz GN250 orientiert sich am Maßstab 1:250 000 und umfasst ca. 134.000 Einträge. Die Lage der Objekte wird jeweils als Punktgeometrie über eine einzelne Koordinate (Punktgeometrie) und über kleinste umschreibende Rechtecke (Bounding Boxes) beschrieben.",
+            "contributors": [
+                {
+                    "date": "2017-07-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": null,
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2017-07-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": null,
+                    "object": null,
+                    "comment": "Add metadata v1.3",
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

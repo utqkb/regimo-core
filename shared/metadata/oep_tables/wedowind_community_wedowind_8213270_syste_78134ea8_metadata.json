@@ -1,0 +1,104 @@
+{
+    "@id": "https://doi.org/10.5281/zenodo.8213270",
+    "name": "wedowind_community_wedowind_8213270",
+    "title": "Björkö Wind Turbine Version 1 (45kW) SCADA",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_community_wedowind_8213270_syste_78134ea8",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_community_wedowind_8213270_syste_78134ea8",
+            "type": "table",
+            "title": "system_modes_mapping.json",
+            "format": "JSON",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://zenodo.org/api/records/8213270/files/system_modes_mapping.json/content",
+                    "title": "system_modes_mapping.json",
+                    "authors": [],
+                    "description": "Chalmers wind turbine has variable speed operation with a direct driven generator and a frequency converter, it also has a digital control system developed by Chalmers. The wind turbine has a rated power of 45 kW and rated speed of 75 rpm. The wooden tower is 30 m high, the blades of carbon fibres are 7.5 m long, and the turbine diameter is 15.9 m. The individually blade pitch system is electrical. The turbine is situated on the island Bj&ouml;rk&ouml; at Skarviksv&auml;gen, 20 km west of G&ouml;teborg city. The coordinates are: 57.71818820625921, 11.683382148764485. 68 SCADA Channels contain timeseries observations (at 1Hz) of Rotor, Gearbox, Yaw Motor, Inverter, and other components. In addition, some structural monitoring data such as nacelle accelerations, tower and blades bending moments are included. The data set covers time period from 06 July 2022 to 15 July 2023. Structured metadata about wind turbine characteristics and SCADA channels is included as JSON files and CSV. Additional information is available upon request.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2023"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "wind_energy",
+                "zenodo_8213270",
+                "zenodo"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Chalmers wind turbine has variable speed operation with a direct driven generator and a frequency converter, it also has a digital control system developed by Chalmers. The wind turbine has a rated power of 45 kW and rated speed of 75 rpm. The wooden tower is 30 m high, the blades of carbon fibres are 7.5 m long, and the turbine diameter is 15.9 m. The individually blade pitch system is electrical. The turbine is situated on the island Bj&ouml;rk&ouml; at Skarviksv&auml;gen, 20 km west of G&ouml;teborg city. The coordinates are: 57.71818820625921, 11.683382148764485. 68 SCADA Channels contain timeseries observations (at 1Hz) of Rotor, Gearbox, Yaw Motor, Inverter, and other components. In addition, some structural monitoring data such as nacelle accelerations, tower and blades bending moments are included. The data set covers time period from 06 July 2022 to 15 July 2023. Structured metadata about wind turbine characteristics and SCADA channels is included as JSON files and CSV. Additional information is available upon request.",
+            "publicationDate": "2023-08-01"
+        }
+    ],
+    "description": "Chalmers wind turbine has variable speed operation with a direct driven generator and a frequency converter, it also has a digital control system developed by Chalmers. The wind turbine has a rated power of 45 kW and rated speed of 75 rpm. The wooden tower is 30 m high, the blades of carbon fibres are 7.5 m long, and the turbine diameter is 15.9 m. The individually blade pitch system is electrical. The turbine is situated on the island Bj&ouml;rk&ouml; at Skarviksv&auml;gen, 20 km west of G&ouml;teborg city. The coordinates are: 57.71818820625921, 11.683382148764485. 68 SCADA Channels contain timeseries observations (at 1Hz) of Rotor, Gearbox, Yaw Motor, Inverter, and other components. In addition, some structural monitoring data such as nacelle accelerations, tower and blades bending moments are included. The data set covers time period from 06 July 2022 to 15 July 2023. Structured metadata about wind turbine characteristics and SCADA channels is included as JSON files and CSV. Additional information is available upon request.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

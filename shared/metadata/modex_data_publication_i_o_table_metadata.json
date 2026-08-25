@@ -1,0 +1,601 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "modex_data_publication_i_o_table",
+            "path": "https://openenergy-platform.org/dataedit/view/reference/modex_data_publication_i_o_table",
+            "type": "Table",
+            "title": "MODEX - data publication - I-O Table",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": "Silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Decribes identifier of row values",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "key",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Describes the symbols used in the table",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "key_explanation",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Explains the keys",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Decribes harmonisation categories",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "subcategory",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Decribes harmonisation sub-categories",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "participation_in_modex_project",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Describes the MODEX consortium projects",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "remix",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/39/",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dieter",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/29/",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "isaar",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/257",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "mars",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/106",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "genesys_2",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/frameworks/65",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "jmm",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/61",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "restore",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/33",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "e2m2",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/95",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "balmorel",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/21",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "genesys_mod",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/63",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "urbs",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/frameworks/71",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "oemof",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/frameworks/5",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dimension",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/260",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scope_electricity_market",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/125",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scope_cross_sectoral_invest",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/126",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "emma",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/233",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "powerflex_grid_eu",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "https://openenergy-platform.org/factsheets/models/120",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energie_agenten",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/frameworks/166",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gridsim",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "https://openenergy-platform.org/factsheets/models/94",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "mu_grids",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "https://openenergy-platform.org/factsheets/models/256",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "mosaik",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/frameworks/167",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "opsim",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pandapower_pro",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/116",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "integra_net_transient",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/185",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zuber",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/253",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "te3",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/131",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "aladin",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/199",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "astra",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/74",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "forecast",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gpm",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/80",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "heatsim",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "eload",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/197",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "eltramod",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/196",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "powerace",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/119",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "e2m2s",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/95",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "europower",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "etrago",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/42",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "perseus",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/117",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "miles",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "elmod",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "https://openenergy-platform.org/factsheets/models/76",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "sarah.berendes@rl-institut.de",
+                "grantNo": "03ET4076",
+                "homepage": "https://www.energiesystem-forschung.de/forschen/projekte/open_MODEX",
+                "publisher": "",
+                "sourceCode": "https://github.com/open-modex",
+                "documentation": "https://github.com/open-modex/models",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie (BMWi)",
+                "publisherLogo": "https://avatars2.githubusercontent.com/u/47811754?s=200&v=4",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg;jsessionid=7C329FD594B914D85D84649345B95756?__blob=normal&v=3"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://openenergy-platform.org/factsheets/models/",
+                    "title": "Open Energy Platform",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-3.0-DE",
+                            "path": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+                            "title": "Creative Commons Attribution 3.0 Germany",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "Share — copy and redistribute the material in any medium or format and  Adapt — remix and transform, and build upon the material for any purpose, even commercially.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "MODEX"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": "© Reiner Lemoine Institut",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute! See: https://tldrlegal.com/license/creative-commons-cc0-1.0-universal",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB",
+                "de-DE"
+            ],
+            "description": "The table highlights inputs and outputs for models participating in the MODEX projects. The model-specific inputs and outputs are clustered in several categories and subcategories",
+            "contributors": [
+                {
+                    "date": "2022-04-04",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christoph",
+                    "object": "Metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-05-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "steull",
+                    "object": "review",
+                    "comment": "review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-05-05"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

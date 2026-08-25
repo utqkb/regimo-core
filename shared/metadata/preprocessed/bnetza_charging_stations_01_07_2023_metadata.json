@@ -1,0 +1,568 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "bnetza_charging_stations_01_07_2023",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/bnetza_charging_stations_01_07_2023",
+            "type": "Table",
+            "title": "FAIR Charging Station data",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "operator",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00030022",
+                                "name": "organisation"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Organisation behind the operation of the station.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "thoroughfare",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/ns/locn#thoroughfare",
+                                "name": "thoroughfare"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "The name of a passage or way through from one location to another.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "locator_designator",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+                                "name": "locator designator"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "address_supplement",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/SupplementalAddressComponent",
+                                "name": "supplemental address component"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Supplemental address information",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "postcode",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/ns/locn#postCode",
+                                "name": "post code"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "post_name",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/ns/locn#postName",
+                                "name": "post name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "federal_state",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+                                "name": "administrative unit level 1"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Federal state.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "county",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+                                "name": "administrative unit level 2"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "County.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "latitude",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://www.w3.org/2003/01/geo/wgs84_pos#latitude",
+                                "name": "latitude"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Latitude in the WSG84 reference system.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "longitude",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://www.w3.org/2003/01/geo/wgs84_pos#longitude",
+                                "name": "longitude"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Longitude in the WSG84 reference system",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comissioning_date",
+                        "type": "date",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "comissioning date"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Comissioning date of the station.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "net_capacity",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00230002",
+                                "name": "declared net capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Declared net capacity in KW.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "column_type",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "type of column"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of charging configuration.",
+                        "valueReference": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "normal charging",
+                                "value": "regular"
+                            },
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "fast charging",
+                                "value": "fast"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "charger_amount",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "number of chargers"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Number of charging points.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_type_1",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "socket type"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of socket of the first charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_power_1",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                                "name": "power capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Power capacity of the first charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_public_key_1",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "public key"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Public key of the first charging point",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_type_2",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "socket type"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of socket of the second charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_power_2",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                                "name": "power capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Power capacity of the second charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_public_key_2",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "public key"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Public key of the second charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_type_3",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "socket type"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of socket of the third charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_power_3",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                                "name": "power capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Power capacity of the third charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_public_key_3",
+                        "type": "any",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "public key"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Public key of the third charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_type_4",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "socket type"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of socket of the fourth charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_power_4",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                                "name": "power capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Power capacity of the fourth charging point.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charger_public_key_4",
+                        "type": "any",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergy-platform.org/missing_term",
+                                "name": "public key"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Public key of the fourth charging point.",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": null,
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Energie/Unternehmen_Institutionen/E_Mobilitaet/Ladesaeulenregister.xlsx",
+                    "title": "BNetzA Ladesäulenkarte",
+                    "authors": [],
+                    "description": "Die Bundesnetzagentur veröffentlicht die im Rahmen der Ladesäulenverordnung (LSV) gemeldeten Daten zur öffentlich zugänglichen Ladeinfrastruktur in Deutschland.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0",
+                            "title": "Attribution 4.0 International",
+                            "attribution": "Bundesnetzagentur.de",
+                            "instruction": "You are free to copy and redistribute the material in any medium or format. You are free to remix, transform, and build upon the material for any purpose, even commercially.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://gitlab.dlr.de/ensym/lod/fair-charging-infrastructure",
+                    "title": "FAIR Charging Station Data Script",
+                    "authors": [],
+                    "description": "The script used to clean and annotate this dataset.",
+                    "sourceLicenses": [
+                        {
+                            "name": "BSD-3-Clause",
+                            "path": "https://opensource.org/license/bsd-3-clause/",
+                            "title": "BSD 3-Clause License",
+                            "attribution": "German Aerospace Center (DLR) - 2023",
+                            "instruction": "You are free to copy and redistribute the material in any medium or format. You are free to remix, transform, and build upon the material for any purpose, even commercially.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "point"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320040",
+                    "name": "vehicle charging station"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "electric vehicles",
+                "charging stations",
+                "mobility"
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY 4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0",
+                    "title": "Attribution 4.0 International",
+                    "attribution": "Copyright (c) 2023 German Aerospace Center (DLR)",
+                    "instruction": "You are free to copy and redistribute the material in any medium or format. You are free to remix, transform, and build upon the material for any purpose, even commercially.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "de-DE",
+                "en-GB"
+            ],
+            "description": "FAIR version of the charging infrastructure dataset published by the BNetzA. Column names translated to english.",
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2023-07-01"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

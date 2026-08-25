@@ -1,0 +1,408 @@
+{
+    "@id": null,
+    "name": "cleanengine_hsrm_sensor_list",
+    "title": "cleanEngine, HSRM, Sensor List",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "cleanengine_hsrm_sensor_list",
+            "path": "https://openenergyplatform.org/database/tables/cleanengine_hsrm_sensor_list",
+            "type": "Table",
+            "title": "cleanEngine, HSRM, Sensor List",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "--",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "--",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "position_in_p_and_id",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Position as shown in P&ID (piping and instrumentation diagram)",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "measurement_variable",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "media",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "measurement_range",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "accuracy",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "model",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "manufacturer",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "signal",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "signal_alternative",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "hydrogen",
+                "PEM",
+                "fuel cell"
+            ],
+            "context": {
+                "title": "cleanEngine",
+                "contact": null,
+                "grantNo": null,
+                "homepage": "https://www.now-gmbh.de/projektfinder/cleanenigne/",
+                "publisher": null,
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null,
+                    "openModalButton": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "hsrm",
+                "balance_of_plant",
+                "cleanengine",
+                "hydrogen",
+                "fuel_cell",
+                "pem"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://spdx.github.io/license-list-data/CC-BY-4.0.html",
+                    "title": "© 2026 by Maximilian Kleber is licensed under Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                "English"
+            ],
+            "description": "This list contains the sensors used for the fuel cell system in the research project cleanEngine in the Laboratory for Hydrogen Technologies and Energy Storage at the Hochschule RheinMain University of Applied Sciences and Arts. The table refers to the P&ID published in the article \"Experimental Optimization...\" by Maximilian Kleber et al. This research was funded by Federal Ministry for Digital and Transport (BMDV) of Germany as part of the project cleanEngine under grant number 03B10407B.",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [],
+                    "title": null,
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2026-05-04"
+        }
+    ],
+    "description": "This list contains the sensors used for the fuel cell system in the research project cleanEngine in the Laboratory for Hydrogen Technologies and Energy Storage at the Hochschule RheinMain University of Applied Sciences and Arts. The table refers to the P&ID published in the article \"Experimental Optimization...\" by Maximilian Kleber et al. This research was funded by Federal Ministry for Digital and Transport (BMDV) of Germany as part of the project cleanEngine under grant number 03B10407B.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

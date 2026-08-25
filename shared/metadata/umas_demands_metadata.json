@@ -1,0 +1,511 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://energy.databus.dbpedia.org/chrwm/LOD-GEOSS_use_case_oemof-B3/umas_demands",
+            "name": "umas_demands",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/umas_demands",
+            "type": "Table",
+            "title": "umas_demands",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id_scal",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique identifier of scalar",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_key",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000364",
+                                "name": "scenario"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of scenario as key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "name of region and type of demand",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_name",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000435",
+                                "name": "variable"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "variable name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020039",
+                                "name": "energy carrier"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of carrier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020032",
+                                "name": "study region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "indicator for region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tech",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000407",
+                                "name": "technology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of demand for different sectors",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "type of demand",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_value",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "variable value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_unit",
+                        "type": "string",
+                        "unit": "MWh/a",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000435",
+                                "name": "variable"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "variable unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000353",
+                                "name": "reference"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of sources used",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "general comments on data and data type",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.berlin.de/sen/uvk/_assets/klimaschutz/klimaschutzpolitik-in-berlin/berlin-paris-konform/studie-berlin-paris-konform-endbericht.pdf",
+                    "title": "Berlin Paris-konform machen",
+                    "authors": [],
+                    "description": "Eine Aktualisierung der Machbarkeitsstudie „Klimaneutrales Berlin 2050“ mit Blick auf die Anforderungen aus dem UN-Abkommen von Paris Abschlussbericht",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://mwae.brandenburg.de/media/bb1.a.3814.de/Prognos-Gutachten_Fortschreibung_Energiestratgie%20Bbg_2040.pdf",
+                    "title": "Gutachten zur Energiestrategie 2040",
+                    "authors": [],
+                    "description": "Aktualisierung und Weiterentwicklung der Energiestrategie 2030 des Landes Brandenburg",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ag-energiebilanzen.de/index.php?article_id=8&archiv=5&year=2020",
+                    "title": "Anwendungsbilanzen zur Energiebilanz Deutschland",
+                    "authors": [],
+                    "description": "Detaillierte Anwendungsbilanzen der Endenergiesektoren für 2018 und 2019 sowie zusammenfassende Zeitreihen zum Endenergieverbrauch nach Energieträgern und Anwendungszwecken für Jahre von 2009 bis 2019",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://ag-energiebilanzen.de/impressum/",
+                            "title": "Copyright AG Energiebilanzen e. V.",
+                            "attribution": "© AG Energiebilanzen e. V.",
+                            "instruction": "Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.langfristszenarien.de/enertile-explorer-wAssets/docs/LFS3_Bericht_TN_Szenarien_Modul_GHD_und_Geraete_final.pdf",
+                    "title": "Langfristszenarien für die Transformation des Energiesystems in Deutschland. Treibhausgasneutrale Hauptszenarien Modul GHD und Geräte",
+                    "authors": [],
+                    "description": "Treibhausgasneutrale Hauptszenarien Modul GHD und Geräte",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.langfristszenarien.de/enertile-explorer-wAssets/docs/LFS3_Bericht_TN_Szenarien_Modul_GHD_und_Geraete_final.pdf",
+                            "title": "Copyright © by Fraunhofer-Gesellschaft",
+                            "attribution": "© Fraunhofer-Gesellschaft",
+                            "instruction": "Permission is granted to download or print material published on this site for personal use only. Its use for any other purpose, and in particular its commercial use or distribution, are strictly forbidden in the absence of prior written approval.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.langfristszenarien.de/enertile-explorer-wAssets/docs/Modul_TN_Hauptszenarien_Industrie.pdf",
+                    "title": "Langfristszenarien für die Transformation des Energiesystems in Deutschland 3. Treibhausgasneutrale Hauptszenarien Modul Industrie",
+                    "authors": [],
+                    "description": "Treibhausgasneutrale Hauptszenarien Modul Industrie",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "Copyright © by Fraunhofer-Gesellschaft",
+                            "attribution": "© Fraunhofer-Gesellschaft",
+                            "instruction": "Permission is granted to download or print material published on this site for personal use only. Its use for any other purpose, and in particular its commercial use or distribution, are strictly forbidden in the absence of prior written approval.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.langfristszenarien.de/enertile-explorer-wAssets/docs/LFS3_Langbericht_Verkehr_final.pdf",
+                    "title": "Langfristszenarien für die Transformation des Energiesystems in Deutschland. Treibhausgasneutrale Hauptszenarien Modul Verkehr",
+                    "authors": [],
+                    "description": "Treibhausgasneutrale Hauptszenarien Modul Verkehr",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.langfristszenarien.de/enertile-explorer-wAssets/docs/LFS3_Langbericht_Verkehr_final.pdf",
+                            "title": "Copyright © by Fraunhofer-Gesellschaft",
+                            "attribution": "© Fraunhofer-Gesellschaft",
+                            "instruction": "Permission is granted to download or print material published on this site for personal use only. Its use for any other purpose, and in particular its commercial use or distribution, are strictly forbidden in the absence of prior written approval.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.langfristszenarien.de/enertile-explorer-wAssets/docs/LFS-Gebaeude.pdf",
+                    "title": "Langfristszenarien für die Transformation des Energiesystems in Deutschland. Treibhausgasneutrale Hauptszenarien Modul Gebäude",
+                    "authors": [],
+                    "description": "Treibhausgasneutrale Hauptszenarien Modul Gebäude",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.langfristszenarien.de/enertile-explorer-wAssets/docs/LFS-Gebaeude.pdf",
+                            "title": "Copyright © by Fraunhofer-Gesellschaft",
+                            "attribution": "© Fraunhofer-Gesellschaft",
+                            "instruction": "Permission is granted to download or print material published on this site for personal use only. Its use for any other purpose, and in particular its commercial use or distribution, are strictly forbidden in the absence of prior written approval.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.langfristszenarien.de/enertile-explorer-de/dokumente/",
+                    "title": "Langfristszenarien 3 – Bericht Energieangebot",
+                    "authors": [],
+                    "description": "In dieser Rubrik stellen wir für Sie eine Vielzahl von Informationen zu den Langfristzenarien bereit.Sie können hier folgende Inhalte finden: Videowebinare, foliensätze und Berichtsmodule.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.langfristszenarien.de/enertile-explorer-de/impressum/",
+                            "title": "Copyright © by Fraunhofer-Gesellschaft",
+                            "attribution": "© Fraunhofer-Gesellschaft",
+                            "instruction": "Permission is granted to download or print material published on this site for personal use only. Its use for any other purpose, and in particular its commercial use or distribution, are strictly forbidden in the absence of prior written approval.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Berlin Brandenburg",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "UMAS",
+                "raw",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Demand of energy carriers or heat demand of scenario EL-EFF, GAS and gas_lessCH4 for the years 2040 and 2050 for regions Berlin and Brandenburg",
+            "contributors": [
+                {
+                    "date": "2022-09-15",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "hedwiglieselotte",
+                    "object": "metadata",
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "stefanienguyen",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "sabinehaas",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "marie-clairegering",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-11-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "monika-o",
+                    "object": "metadata",
+                    "comment": "Annotate metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

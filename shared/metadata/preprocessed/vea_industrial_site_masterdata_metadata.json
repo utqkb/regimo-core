@@ -1,0 +1,287 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "vea_industrial_site_master_data",
+            "path": "https://openenergyplatform.org/dataedit/view/demand/vea_industrial_site_masterdata",
+            "type": "Table",
+            "title": "VEA industrial site master data",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Id used for each industrial site demand data. It is used unifiedly for the master, load and high load times data.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_group_id",
+                        "type": "char(1)",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Code for partitioning of German economic sector groups according to \"Klassifikation der Wirtschaftszweige\" (2008)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_group",
+                        "type": "text",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Label for partitioning of German economic sector groups according to \"Klassifikation der Wirtschaftszweige\" (2008)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_price_over_2500h_eur_per_kw",
+                        "type": "float",
+                        "unit": "EUR/kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Applied power price of grid fee from grid operator for peak load in kw if energy consumption divided by peak load lies above 2500h.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_price_over_2500h_eur_per_kwh",
+                        "type": "float",
+                        "unit": "EUR/kWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Applied energy price of grid fee from grid operator for total energy consumption if energy consumption divided by peak load lies above 2500h.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_price_under_2500h_eur_per_kw",
+                        "type": "float",
+                        "unit": "EUR/kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Applied power price of grid fee from grid operator for peak load in kw if energy consumption divided by peak load lies below 2500h.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_price_under_2500h_eur_per_kwh",
+                        "type": "float",
+                        "unit": "EUR/kWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Applied energy price of grid fee from grid operator for total energy consumption if energy consumption divided by peak load lies below 2500h.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zip_code",
+                        "type": "char(2)",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The first two digits of the German zip code.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "grid_level",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "German label for connected grid level (NS for Niederspannung = low voltage, MS/NS for direct connection to transformator between low and medium voltage, MS for Mittelspannung = medium voltage)",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "@PHTiem",
+                "grantNo": null,
+                "homepage": "https://doi.org/10.1016/j.enconman.2020.112539",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": "VEA Bundesverband der Energie-Abnehmer e. V.",
+                "publisherLogo": "https://www.offis.de/typo3conf/ext/offis/Resources/Public/Images/logo-offis.svg",
+                "fundingAgencyLogo": "https://www.vea.de/typo3conf/ext/ifab_sitepackage_extend/Resources/Public/Dist/website/images/logo.svg"
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "grid connection points",
+                    "resolutionValue": "single"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "See zip_code column in the data.",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000227",
+                    "name": "industry sector"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000405",
+                    "name": "commercial sector"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000128",
+                    "name": "energy demand sector"
+                },
+                {
+                    "@id": "http://purl.obolibrary.org/obo/RO_0001015",
+                    "name": "location of"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00040003",
+                    "name": "monetary price"
+                },
+                {
+                    "@id": "http://purl.obolibrary.org/obo/BFO_0000029",
+                    "name": "site"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000238",
+                    "name": "institution"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "industrial companies",
+                "energy consumers",
+                "grid fee",
+                "zip code",
+                "grid level"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://spdx.org/licenses/CC-BY-4.0.html",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "VEA Bundesverband der Energie-Abnehmer e. V.",
+                    "instruction": "You must give credit to the original author of the work, including a URI or hyperlink to the work, this Public license and a copyright notice. See for further information: https://www.tldrlegal.com/license/creative-commons-attribution-4-0-international-cc-by-4",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2016-01-01"
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "Master data of 5359 industrial sites in Germany for load data set found under TODO. It includes sector group, grid fee price components, zip code areas and connected grid level. All values were valid in the year 2016.",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Paul Hendrik Tiemann",
+                    "object": "data and metadata",
+                    "comment": "Data selection, cleaning and publication.",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

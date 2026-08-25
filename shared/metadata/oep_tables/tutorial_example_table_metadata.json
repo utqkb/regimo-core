@@ -1,0 +1,301 @@
+{
+    "@id": null,
+    "name": null,
+    "title": null,
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tutorial_example_table",
+            "path": "test_table",
+            "type": "Table",
+            "title": null,
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "numerical id of this data point",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "name",
+                        "type": "varchar(18)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "name of installation",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "is_active",
+                        "type": "boolean",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "true/false if installation is active",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "capacity_mw",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "installed capacity in MW",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "installation_datetime_utc",
+                        "type": "timestamp",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "date (and time) when installation was build",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "location",
+                        "type": "geometry",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "point location of installation",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    null
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            null
+                        ],
+                        "reference": {
+                            "fields": [
+                                null
+                            ],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                null
+            ],
+            "context": {
+                "title": null,
+                "contact": null,
+                "grantNo": null,
+                "homepage": null,
+                "publisher": null,
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [
+                        null
+                    ],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null,
+                    "openModalButton": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "energy",
+                "installations",
+                "geo"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                null
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        null
+                    ],
+                    "title": null,
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": null,
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

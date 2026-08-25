@@ -1,0 +1,391 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "eu_leg_dim_category",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/eu_leg_dim_category",
+            "type": "Table",
+            "title": "Harmonised nomenclature for sectoral divisions of greenhouse gas emission projections submitted under EU legislation.",
+            "format": "PostgresSQL",
+            "review": {
+                "path": "",
+                "badge": "Silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010360",
+                                "name": "source category"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the sector name including the CRF code",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category_code",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010360",
+                                "name": "source category"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the CRF sector code  (CRF = common reporting format)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category_lulucf",
+                        "type": "varchar(32)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010360",
+                                "name": "source category"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the LULUCF accounting category",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category_parent",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010360",
+                                "name": "source category"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the parent sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "level",
+                        "type": "smallint",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010360",
+                                "name": "source category"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the level of the sector in the sector hierarchy",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "is_user_defined",
+                        "type": "boolean",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000030",
+                                "name": "information content entity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "indicates with true, if the sector was defined by a user and is not included by default in legislation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "in_cir_2020_1208_annex_xxv_art_38_tab_1a",
+                        "type": "boolean",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010422",
+                                "name": "boolean value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "indicates with true if the sector is listed in Annex XXV in Commission Implementing Regulation (EU) 2020/1208",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "in_cir_749_2014_annex_xii_art_23_tab_1",
+                        "type": "boolean",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010422",
+                                "name": "boolean value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "indicates with true if the sector is listed in Annex XII in Commission Implementing Regulation (EU)  No 749/2014",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "crf_code",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010402",
+                                "name": "CRF-based sector division"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the CRF code (CRF = common reporting format)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "oeo_id",
+                        "type": "CHAR(12)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000030",
+                                "name": "information content entity"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "the instance id in the OEO (Open Energy Ontology)",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03EI1035B",
+                "homepage": "https://oeko.de/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.oeko.de/typo3conf/ext/wwt3_sitepackage/Resources/Public/frontend/assets/images/logo.svg",
+                "fundingAgencyLogo": "https://commons.wikimedia.org/wiki/File:BMWi_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://cdr.eionet.europa.eu/",
+                    "title": "Common Data Repository on Eionet",
+                    "authors": [],
+                    "description": "The CDR holds data reported under various European legislation.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 2.5 DK",
+                            "path": "https://cdr.eionet.europa.eu/legalnotice",
+                            "title": "Attribution 2.5 Denmark",
+                            "attribution": "© European Environment Agency",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://reportnet.europa.eu/public/dataflow/113",
+                    "title": "Reportnet 3 - National projections of anthropogenic greenhouse gas emissions – Reporting year 2021",
+                    "authors": [],
+                    "description": "National projections provided by European Member States, pursuant to Governance Regulation Art.18 (1)(b) / Implementing Regulation Art.38",
+                    "sourceLicenses": [
+                        {
+                            "name": "ODC-By-1.0",
+                            "path": "https://www.eea.europa.eu/legal/eea-data-policy#toc-6",
+                            "title": "Open Data Commons Attribution License v1.0",
+                            "attribution": "© European Environment Agency",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.eea.europa.eu/data-and-maps/data/greenhouse-gas-emission-projections-for-7",
+                    "title": "Member States' greenhouse gas (GHG) emission projections",
+                    "authors": [],
+                    "description": "Member State's greenhouse gas emission projections compiled by the EEA",
+                    "sourceLicenses": [
+                        {
+                            "name": "ODC-By-1.0",
+                            "path": "https://www.eea.europa.eu/legal/eea-data-policy#toc-6",
+                            "title": "Open Data Commons Attribution License v1.0",
+                            "attribution": "© European Environment Agency",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010402",
+                    "name": "CRF-based sector division"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "european_environment_agency",
+                "sirop",
+                "sector_division",
+                "crf",
+                "cc_by_4_0",
+                "ko_institut",
+                "eu_legislation"
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY 4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© Öko-Institut",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table holds harmonised sector codes and names of the sectors used in greenhouse gas emission projections submitted under EU legislation. They follow the so called \"Common Reporting Format\" (CRF) according to the IPCC 2006 Guidelines. The harmonisation was required as sector names across different submission years varied. Thus,  data comparisons across sectors and different submission years were not possible straight-fowardly with the original data.",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "data, metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2022-06-10",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "steull",
+                    "object": "metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2023-11-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Instittut",
+                    "object": "Metadata",
+                    "comment": "ontology annotation",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

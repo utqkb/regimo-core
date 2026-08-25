@@ -1,0 +1,235 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://energy.databus.dbpedia.org/chrwm/LOD-GEOSS_use_case_oemof-B3/umas_id_region_bb_b",
+            "name": "umas_id_region_bb_b",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/umas_id_region_bb_b",
+            "type": "Table",
+            "title": "umas_id_region_bb_b",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id_region",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/BFO_0000006",
+                                "name": "spatial region"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique identifier for region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/BFO_0000006",
+                                "name": "spatial region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "name of the region",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.regionalstatistik.de/genesis/online?operation=variable&levelindex=0&levelid=1629199727321&code=KREISE&option=value#abreadcrumb",
+                    "title": "Regionaldatenbank Deutschland",
+                    "authors": [],
+                    "description": "german database of statistical offices",
+                    "sourceLicenses": [
+                        {
+                            "name": "dl-de/by-2-0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Data licence Germany – attribution – version 2.0",
+                            "attribution": "dl-de/by-2-0",
+                            "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "UMAS",
+                "raw",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "2022-09-15",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Oskar",
+                    "object": "metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-12-05",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "monika-o",
+                    "object": "metadata",
+                    "comment": "Annotate metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

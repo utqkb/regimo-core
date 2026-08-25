@@ -1,0 +1,310 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "ee_status_de_current_totals",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/current_total",
+            "type": "Table",
+            "title": "Current totals of energy production and storage capacity per municipality in Germany",
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "geometry",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "municipality_key",
+                        "type": "varchar(8)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "municipality",
+                        "type": "varchar(200)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "county",
+                        "type": "varchar(200)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "state",
+                        "type": "varchar(200)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zip_code",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pv_net_nominal_capacity",
+                        "type": "numeric(20, 2)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_net_nominal_capacity",
+                        "type": "numeric(20, 2)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "biomass_net_nominal_capacity",
+                        "type": "numeric(20, 2)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hydro_net_nominal_capacity",
+                        "type": "numeric(20, 2)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "total_net_nominal_capacity",
+                        "type": "numeric(20, 2)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "storage_net_nominal_capacity",
+                        "type": "numeric(20, 2)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "population",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "area",
+                        "type": "numeric(20, 2)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_units",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "https://ee-status.de",
+                "publisher": "",
+                "sourceCode": "https://github.com/finnus/ee-status",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "https://ee-status.de/static/images/logo/ee_status_logo_no_text_square.png",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                    "name": "power capacity"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2023-11-20"
+            },
+            "languages": [
+                ""
+            ],
+            "description": "Table that is used to fuel ee-status.de",
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2023-12-19"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

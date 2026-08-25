@@ -1,0 +1,553 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "eu_leg_data_2016_eio_ir_article23_t3",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/eu_leg_data_2016_eio_ir_article23_t3",
+            "type": "Table",
+            "title": "2016 Collection of parameters for greenhouse gas emission projections submitted by European Member States under the Monitoring Mechanism Regulation (MMR)",
+            "format": "PostgresSQL",
+            "review": {
+                "path": null,
+                "badge": "Silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "country_code",
+                        "type": "varchar(8)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/BFO_0000006",
+                                "name": "spatial region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "country code",
+                        "valueReference": [
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Austria",
+                                "name": "Austria",
+                                "value": "AT"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Belgium",
+                                "name": "Belgium",
+                                "value": "BE"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Bulgaria",
+                                "name": "Bulgaria",
+                                "value": "BG"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Switzerland",
+                                "name": "Switzerland",
+                                "value": "CH"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Cyprus",
+                                "name": "Cyprus",
+                                "value": "CY"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Czechia",
+                                "name": "Czechia",
+                                "value": "CZ"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Germany",
+                                "name": "Germany",
+                                "value": "DE"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Denmark",
+                                "name": "Denmark",
+                                "value": "DK"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Estonia",
+                                "name": "Estonia",
+                                "value": "EE"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Greece",
+                                "name": "Greece",
+                                "value": "EL"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Spain",
+                                "name": "Spain",
+                                "value": "ES"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Finland",
+                                "name": "Finland",
+                                "value": "FI"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/France",
+                                "name": "France",
+                                "value": "FR"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/UnitedKingdomOfGreatBritainAndNorthernIreland",
+                                "name": "United Kingdom of Great Britain and Northern Ireland",
+                                "value": "GB"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Greece",
+                                "name": "Greece",
+                                "value": "GR"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Croatia",
+                                "name": "Croatia",
+                                "value": "HR"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Hungary",
+                                "name": "Hungary",
+                                "value": "HU"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Ireland",
+                                "name": "Ireland",
+                                "value": "IE"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Iceland",
+                                "name": "Iceland",
+                                "value": "IS"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Italy",
+                                "name": "Italy",
+                                "value": "IT"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Lithuania",
+                                "name": "Lithuania",
+                                "value": "LT"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Luxembourg",
+                                "name": "Luxembourg",
+                                "value": "LU"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Latvia",
+                                "name": "Latvia",
+                                "value": "LV"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Malta",
+                                "name": "Malta",
+                                "value": "MT"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Netherlands",
+                                "name": "Netherlands",
+                                "value": "NL"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Norway",
+                                "name": "Norway",
+                                "value": "NO"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Poland",
+                                "name": "Poland",
+                                "value": "PL"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Portugal",
+                                "name": "Portugal",
+                                "value": "PT"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Romania",
+                                "name": "Romania",
+                                "value": "RO"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Sweden",
+                                "name": "Sweden",
+                                "value": "SE"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Slovenia",
+                                "name": "Slovenia",
+                                "value": "SI"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Slovakia",
+                                "name": "Slovakia",
+                                "value": "SK"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/UnitedKingdomOfGreatBritainAndNorthernIreland",
+                                "name": "United Kingdom of Great Britain and Northern Ireland",
+                                "value": "UK"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000339",
+                                "name": "program parameter"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the parameter that is reported on ",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "char(3)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020317",
+                                "name": "greenhouse gas emission scenario"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000364",
+                                "name": "scenario"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the scenario for which data is reported",
+                        "valueReference": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020311",
+                                "name": "with existing measures scenario",
+                                "value": "WEM"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020312",
+                                "name": "with additional measures scenario",
+                                "value": "WAM"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020310",
+                                "name": "without measures scenario",
+                                "value": "WOM"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "year",
+                        "type": "smallint",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenario year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "year for which projected data is reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "base_year",
+                        "type": "smallint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "default_unit",
+                        "type": "varchar(8)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the unit in which the data should be reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "additional_unit",
+                        "type": "varchar(8)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "the unit in which the data is reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "notation",
+                        "type": "varchar(64)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "notation key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "float",
+                        "unit": "unit see column 'unit'",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000350",
+                                "name": "quantity value of"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "value reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source_original",
+                        "type": "varchar(128)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "varchar(512)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000030",
+                                "name": "information content entity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "any comment provided",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "parameter"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "parameter"
+                            ],
+                            "resource": "scenario.eea_eionet_eu_legislation_data_parameter"
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03EI1035B",
+                "homepage": "https://oeko.de/",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.oeko.de/typo3conf/ext/wwt3_sitepackage/Resources/Public/frontend/assets/images/logo.svg",
+                "fundingAgencyLogo": "https://upload.wikimedia.org/wikipedia/commons/e/e1/BMWi_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://cdr.eionet.europa.eu/",
+                    "title": "European Environment Agency - Central Data Repository on Eionet",
+                    "authors": [],
+                    "description": "The CDR holds data reported under various European legislation",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-2.5-DK",
+                            "path": "https://creativecommons.org/licenses/by/2.5/dk/legalcode",
+                            "title": "Creative Commons Attribution 2.5 Denmark",
+                            "attribution": "© European Environment Agency",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://data.europa.eu/eli/reg_impl/2014/749/oj",
+                    "title": "Commission Implementing Regulation (EU) No 749/2014 of 30 June 2014",
+                    "authors": [],
+                    "description": "Commission Implementing Regulation (EU) No 749/2014 of 30 June 2014 on structure, format, submission processes and review of information reported by Member States pursuant to Regulation (EU) No 525/2013 of the European Parliament and of the Council. Note: No longer in force, Date of end of validity: 31/12/2020; Repealed by 32020R1208",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© Official Journal of the European Union",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "EU-27",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000063",
+                    "name": "assumption"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000339",
+                    "name": "program parameter"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Öko-Institut",
+                "EU-legislation",
+                "parameters",
+                "CC-BY-4.0",
+                "SIROP",
+                "2016",
+                "European-Environment-Agency",
+                "European-Member-States"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© Öko-Institut",
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Parameters for 2016 greenhouse gas emission projections submitted by European Member States pursuant to Article 14 REGULATION (EU) No 525/2013 and Article 23 COMMISSION IMPLEMENTING REGULATION (EU) No 749/2014. Note: submissions by all European Member States are only mandatory every uneven year. In even years there is no requirement to submit emission projections. The data provided here includes all data openly available at the time of compilation.",
+            "contributors": [
+                {
+                    "date": "2021-09-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "data, metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2022-02-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "steull",
+                    "object": "metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-04-07"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,538 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "szenariendb_conversion",
+            "path": "https://openenergy-platform.org/dataedit/view/reference/szenariendb_conversion",
+            "type": "Table",
+            "title": "Conversion factors for common units and metrics",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/29",
+                "badge": "Silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "quantity",
+                        "type": "varchar",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "quantity of the units",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "from_unit",
+                        "type": "varchar",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "start unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "to_unit",
+                        "type": "varchar",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "target unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "conversion factor to multiply start unit to obtain target unit",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "quantity"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "quantity"
+                            ],
+                            "resource": "szenariendb_units"
+                        }
+                    },
+                    {
+                        "fields": [
+                            "from_unit"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "unit_abbreviation"
+                            ],
+                            "resource": "szenariendb_units"
+                        }
+                    },
+                    {
+                        "fields": [
+                            "to_unit"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "unit_abbreviation"
+                            ],
+                            "resource": "szenariendb_units"
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03ET4057C",
+                "homepage": "https://www.oeko.de/forschung-beratung/projekte/pr-details/verbundvorhaben-szenariendb-datenbank-fuer-klima-und-energieszenarien-teilvorhaben-szenarienreche/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.oeko.de/fileadmin/templates/oeko/Resources/Public/images/logo.svg",
+                "fundingAgencyLogo": "https://commons.wikimedia.org/wiki/File:BMWi_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 watt second (Ws) = 1 joule (J)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 watt hour (Wh) = 3.6 kilojoules (kJ)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 calorie (cal) = 4.1868 joules (J). We use the International steam table calorie.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 tonne of oil equivalent (toe) = 10 gigacalories (GCal)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 British thermal unit (Btu) = 1055.05585262 Joules (J). We use the International table Btu.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Barrel_of_oil_equivalent&oldid=906040694",
+                    "title": "Barrel of oil equivalent",
+                    "authors": [],
+                    "description": "1 Barrel of oil equivalent (boe) = 5.8*10^6 British thermal units (Btu)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Ton&oldid=945218634#Tonne_of_coal_equivalent",
+                    "title": "Ton",
+                    "authors": [],
+                    "description": "1 Ton of coal equivalent (tce) = 0.7 Ton of oil equivalents (toe)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Therm&oldid=945021933",
+                    "title": "Therm",
+                    "authors": [],
+                    "description": "1 therm (thm) = 10^5 British thermal units (Btu)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=British_thermal_unit&oldid=942310190",
+                    "title": "British thermal unit",
+                    "authors": [],
+                    "description": "1 million British thermal unit (mmBtu) = 10^6 British thermal units (Btu)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 quad (quad) = 10^15 British thermal units (Btu)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 tonne (t) = 1000 kilograms (kg)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 common year = 365 days (d)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 leap year = 366 days (d)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 Julian year = 365.25 days (d)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://en.wikipedia.org/w/index.php?title=Conversion_of_units&oldid=945223363",
+                    "title": "Conversion of units",
+                    "authors": [],
+                    "description": "1 Gregorian year = 365.2425 days (d)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-SA 3.0",
+                            "path": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                            "title": "Creative Commons Attribution-ShareAlike",
+                            "attribution": "© Wikipedia contributors",
+                            "instruction": "You are free to share and adapt as long as you attribute and share alike",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Öko-Institut",
+                "units",
+                "conversion",
+                "SzenarienDB"
+            ],
+            "licenses": [
+                {
+                    "name": "ODbL-1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "Open Data Commons Open Database License 1.0",
+                    "attribution": "© Öko-Institut",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table holds conversion factors of units often used in energy and climate modelling.",
+            "contributors": [
+                {
+                    "date": "2019-08-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hannah Förster",
+                    "object": "metadata",
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-08-13",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hannah Förster, Christian Winger",
+                    "object": "metadata",
+                    "comment": "refinement of metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-08-14",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hannah Förster",
+                    "object": "metadata",
+                    "comment": "validation of metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2020-03-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Lukas Emele",
+                    "object": "metadata",
+                    "comment": "convert metadata to new table structure and adapt sources",
+                    "organization": null
+                },
+                {
+                    "date": "2020-06-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "Review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-01-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hannah Förster",
+                    "object": "metadata",
+                    "comment": "Correct link BMWi logo",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2020-03-19"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

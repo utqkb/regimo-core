@@ -1,0 +1,305 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "eu_leg_dim_parameter",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/eu_leg_dim_parameter",
+            "type": "Table",
+            "title": "Collection of parameters for greenhouse gas emission projections submitted by European Member States under the Monitoring Mechanism Regulation (MMR) - Parameter",
+            "format": "PostgresSQL",
+            "review": {
+                "path": "",
+                "badge": "Silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "default_unit",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit in which the data should be reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "default_unit_base_year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year in which the data should be reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter_reportnet_2021a",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter_reportnet_2021b",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "default_unit_reportnet_2021",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter_eionet",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "default_unit_eionet",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "todo",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03EI1035B",
+                "homepage": "https://oeko.de/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.oeko.de/typo3conf/ext/wwt3_sitepackage/Resources/Public/frontend/assets/images/logo.svg",
+                "fundingAgencyLogo": "https://upload.wikimedia.org/wikipedia/commons/e/e1/BMWi_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://cdr.eionet.europa.eu/",
+                    "title": "European Environment Agency - Central Data Repository on Eionet",
+                    "authors": [],
+                    "description": "The CDR holds data reported under various European legislation",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-2.5-DK",
+                            "path": "https://creativecommons.org/licenses/by/2.5/dk/legalcode",
+                            "title": "Creative Commons Attribution 2.5 Denmark",
+                            "attribution": "© European Environment Agency",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://data.europa.eu/eli/reg_impl/2014/749/oj",
+                    "title": "Commission Implementing Regulation (EU) No 749/2014 of 30 June 2014",
+                    "authors": [],
+                    "description": "Commission Implementing Regulation (EU) No 749/2014 of 30 June 2014 on structure, format, submission processes and review of information reported by Member States pursuant to Regulation (EU) No 525/2013 of the European Parliament and of the Council. Note: No longer in force, Date of end of validity: 31/12/2020; Repealed by 32020R1208",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-2.5-DK",
+                            "path": "https://creativecommons.org/licenses/by/2.5/dk/legalcode",
+                            "title": "Creative Commons Attribution 2.5 Denmark",
+                            "attribution": "© Official Journal of the European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://reportnet.europa.eu/public/dataflow/113",
+                    "title": "Reportnet 3 - National projections of anthropogenic greenhouse gas emissions – Reporting year 2021",
+                    "authors": [],
+                    "description": "National projections provided by European Member States, pursuant to Governance Regulation Art.18 (1)(b) / Implementing Regulation Art.38",
+                    "sourceLicenses": [
+                        {
+                            "name": "European Environment Agency (EEA) Data Policy",
+                            "path": "https://www.eea.europa.eu/legal/eea-data-policy#toc-6",
+                            "title": "Creative Commons Attribution 2.5 Denmark",
+                            "attribution": "© European Environment Agency",
+                            "instruction": "This policy provides guidelines about EEA’s handling of data. The policy will ensure that data is handled in a consistent and transparent manner. EEA aspires to promote the sharing of environmental data. In agreeing to share, data providers need to have assurance that their data are properly handled, disseminated and acknowledged following similar principles and rules across countries and stakeholders.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "parameters",
+                "Öko-Institut",
+                "EU-legislation",
+                "SIROP",
+                "CC-BY-4.0"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© Öko-Institut",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Parameters for 2020 greenhouse gas emission projections submitted by European Member States. This table matches parameters for greenhouse gas emission projections submitted under EU legislation to default units and to a parameter group according to the parameter template. It also takes into account parameters added by Member States and which were not originally listed in the parameter template.",
+            "contributors": [
+                {
+                    "date": "2021-09-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "data, metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2022-02-18",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "steull",
+                    "object": "metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-04-07"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

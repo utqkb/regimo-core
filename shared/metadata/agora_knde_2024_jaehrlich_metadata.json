@@ -1,0 +1,823 @@
+{
+    "@id": null,
+    "name": "agora_knde_2024",
+    "title": "Agora Energiewende Klimaneutrales Deutschland (KNDE) 2024",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "agora_knde_2024_jaehrlich",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/agora_knde_2024_jaehrlich",
+            "type": null,
+            "title": "Agora Energiewende Klimaneutrales Deutschland (KNDE) 2024 - Jährlich",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "copyright_institut",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quellen",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "sektor",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "titel",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "kategorie",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "unterkategorie",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "unterunterkategorie",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "spezifikation",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "einheit",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "anmerkungen",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2018",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2019",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2020",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2021",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2022",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2023",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2024",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2025",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2026",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2027",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2028",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2029",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2030",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2035",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2040",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert_2045",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "scenario"
+            ],
+            "context": {
+                "title": "Klimaneutrales Deutschland: Von der Zielsetzung zur Umsetzung – Vertiefung der Szenariopfade",
+                "contact": "info@agora-energiewende.de",
+                "grantNo": null,
+                "homepage": "https://www.agora-energiewende.de/publikationen/klimaneutrales-deutschland-szenariopfade",
+                "publisher": null,
+                "sourceCode": null,
+                "documentation": "https://www.agora-energiewende.de/fileadmin/Projekte/2023/2023-30_DE_KNDE_Update/A-EW_349_KNDE_Szenariopfade_WEB.pdf",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "AGEB",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Öko-Institut",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Prognos",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Universität Kassel",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "UBA",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Agora Energiewende",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Agora Think Tanks gGmbH",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Agora Transport Transformation gGmbH",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null,
+                    "openModalButton": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "CC-BY-4.0",
+                "Agora"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© Agora Energiewende",
+                    "instruction": "You are free to share and change as long as you attribute. See https://www.tldrlegal.com/license/creative-commons-attribution-4-0-international-cc-by-4 for further information.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                "en-GB",
+                "de"
+            ],
+            "description": "Annual data that describe the scenario, including base year data, on model inputs, numerical assumptions, and model results. This subset contains the data of the main scenario that are available in yearly resolution.",
+            "contributors": [
+                {
+                    "date": "2025-08-31",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ContactPerson"
+                    ],
+                    "title": "Corinna Fischer",
+                    "object": "data",
+                    "comment": "Publish dataset",
+                    "organization": "Agora Energiewende"
+                },
+                {
+                    "date": "2025-09-11",
+                    "path": "https://orcid.org/0000-0003-4655-2321",
+                    "roles": [
+                        "DataCurator"
+                    ],
+                    "title": "Ludwig Hülk",
+                    "object": "metadata",
+                    "comment": "Create metadata",
+                    "organization": "Reiner Lemoine Institut"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2025-08-31"
+        }
+    ],
+    "description": "This dataset accompanies the 2024 edition of the synthesis study Klimaneutrales Deutschland, following the 2021 edition. The scenario assumes climate neutrality for Germany by 2045. The dataset contains the central input parameters, baseline data and results of the scenario modeling, providing detailed insights into technological developments as well as the economic and infrastructural decisions along the pathways to climate neutrality.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

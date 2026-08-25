@@ -1,0 +1,562 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "modex_flexmex_techno_economic",
+            "path": "http://openenergyplatform.org/dataedit/view/reference/modex_flexmex_techno_economic",
+            "type": "Table",
+            "title": "MODEX - FlexMex - Techno economic",
+            "format": null,
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/88",
+                "badge": "Bronze"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "03ET4077",
+                "homepage": "https://www.energiesystem-forschung.de/forschen/projekte/flexmex",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie (BMWi)",
+                "publisherLogo": "",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg;jsessionid=7C329FD594B914D85D84649345B95756?__blob=normal&v=3"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://www.netzentwicklungsplan.de/sites/default/files/paragraphs-files/nep_2012_2_entwurf_teil_2_kap_9.pdf",
+                    "title": "Netzentwicklungsplan Strom 2012",
+                    "authors": [],
+                    "description": "2012, Grid development plan in Germany, urldate = {2021-03-30}, institution = {50Hertz Transmission GmbH, Amprion GmbH, TenneT TSO GmbH, TransnetBW GmbH}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "BNetzA",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://dx.doi.org/10.18419/opus-9761",
+                    "title": "Storage demand in highly renewable energy scenarios for Europe: the influence of methodology and data assumptions in model-based assessments",
+                    "authors": [],
+                    "description": "2017, REMix model calculations for future storage demand in Europe, urldate = {2021-03-30}, institution = {University of Stuttgart}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Felix Cebulla (DLR)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_catalogue_for_individual_heating_installations.pdf",
+                    "title": "Technology Data for Individual Heating Plants",
+                    "authors": [],
+                    "description": "2016, Data collection for individual heating plants, urldate = {2021-03-30},  institution = {Danish Energy Agency and Energinet}, version = {2}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                            "title": "",
+                            "attribution": "Danish Energy Agency and Energinet",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Statistik/technology_data_catalogue_for_el_and_dh_-_0009.pdf",
+                    "title": "Technology Data for Generation of Electricity and District Heating",
+                    "authors": [],
+                    "description": "2016, Data collection for electricity generation and district heating plants, urldate = {2021-03-30},  institution = {Danish Energy Agency and Energinet}, version = {9}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                            "title": "",
+                            "attribution": "Danish Energy Agency and Energinet",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_for_renewable_fuels.pdf",
+                    "title": "Technology Data for Renewable fuels",
+                    "authors": [],
+                    "description": "2017, Data collection for renewable fuels technologies, urldate = {2021-03-30},  institution = {Danish Energy Agency and Energinet}, version = {5}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                            "title": "",
+                            "attribution": "Danish Energy Agency and Energinet",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_catalogue_for_energy_storage.pdf",
+                    "title": "Technology Data for Energy Storage",
+                    "authors": [],
+                    "description": "2018, Data collection for energy storage technologies, urldate = {2021-03-30},  institution = {Danish Energy Agency and Energinet}, version = {7}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                            "title": "",
+                            "attribution": "Danish Energy Agency and Energinet",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.clearingstelle-eeg-kwkg.de/sites/default/files/private/active/0/Kurzanalyse_KuN_Planung_D_2020_2030_Kurzfassung.pdf",
+                    "title": "Kurzanalyse der Kraftwerks- und Netzplanung in Deutschland bis 2020 (mit Ausblick auf 2030)",
+                    "authors": [],
+                    "description": "2008, Analysis of the power plant and grid development plans in Germany, urldate = {2021-03-30},  institution = {Deutsche Energie-Agentur GmbH}, version = { 1}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "dena",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bmwi.de/Redaktion/DE/Publikationen/Energie/technologieuebersicht.pdf?__blob=publicationFile&v=12",
+                    "title": "Technologieübersicht. Das deutsche Hochspannungsnetz: Technologien und Rahmenbedingungen",
+                    "authors": [],
+                    "description": "2014, Technology description for high voltage gids, urldate = {2021-03-30},  institution = {Deutsche Energie-Agentur GmbH}, version = {1}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "dena",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.econstor.eu/bitstream/10419/80348/1/757528015.pdf",
+                    "title": "Current and Prospective Costs of Electricity Generation until 2050",
+                    "authors": [],
+                    "description": "2013, Data collection for electricity generation costs, urldate = {2021-03-30},  institution = {DIW}, version = {Corrected Version}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Andreas Schröder, Friedrich Kunz, Jan Meiss, Roman Mendelevitch, Christian  von Hirschhausen (DIW)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.468.1526&rep=rep1&type=pdf",
+                    "title": "Roadmap 2050 - A Practical Guide to a Prosperous, Low-Carbon Europe - European Climate Foundation",
+                    "authors": [],
+                    "description": "2010, Data collection for future techno-economic parameters of energy generation plants, urldate = {2021-03-30},  institution = {ECF}, version = {1}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "European Climate Foundation (ECF)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://elib.dlr.de/101495/",
+                    "title": "Perspective of the Energy Transition: Technology Development and Investments under Uncertainty",
+                    "authors": [],
+                    "description": "2015, Development of techno-econimic parameters for electricity generation plants, urldate = {2021-03-30}, institution = {Technische Universität München}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Anna Garcia Teruel",
+                            "instruction": "Nur DLR-intern zugänglich",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.sciencedirect.com/science/article/pii/S0360544214001534",
+                    "title": "Assessment of the theoretical demand response potential in Europe",
+                    "authors": [],
+                    "description": "2014, Study for assessing the DR potential in Europe with a collection of parameters, urldate = {2021-03-30}, journaltitle = {Energy}, date = {2014.04.01}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Hans Christian Gils (DLR)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://dx.doi.org/10.18419/opus-6888",
+                    "title": "Balancing of intermittent renewable power generation by demand response and thermal energy storage",
+                    "authors": [],
+                    "description": "2015, Analysis of flexibility options using the REMix model, urldate = {2021-03-30}, institution = {University of Stuttgart}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Hans Christian Gils (DLR)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://link.springer.com/book/10.1007%2F978-3-658-08338-0",
+                    "title": "Investitionsplanung unter unsicheren Einflussgrößen - Thermische Kraftwerke als Realoptionen",
+                    "authors": [],
+                    "description": "2015, Investment planning in the electricity sector, urldate = {2021-03-30}, date = {2015}, isbn = {978-3-658-08337-3}, publisher = {Springer}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Matthias Hundt",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.researchgate.net/profile/Dwight-Agan/publication/241910062_Power_Plant_Cycling_Costs/links/58d1563eaca2720cd05eca9a/Power-Plant-Cycling-Costs.pdf",
+                    "title": "Power Plant Cycling Cost",
+                    "authors": [],
+                    "description": "2012, Cost study in the power sector, urldate = {2021-03-30}, institution = {NREL}, date ={2012-04}, version = {1}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Nikil Kumar, Philip Besuner, Steven Lefton, Dwight Agan, Douglas Hilleman",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://onlinelibrary.wiley.com/doi/full/10.1002/er.4056",
+                    "title": "Impact of electric vehicles on a future renewable energy based power system in Europe with a focus on Germany",
+                    "authors": [],
+                    "description": "2018, Study for analysing the impact and data collection of electric vehicles, urldate = {2021-03-30}, journaltitle = {Energy Research}, date = {2018-04-17}, doi={10.1002/er.4056}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Diego Luca de Tena, Thomas Pregger (DLR)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://elib.dlr.de/76043/",
+                    "title": "Langfristszenarien und Strategien für den Ausbau der erneuerbaren Energien in Deutschland bei Berücksichtigung der Entwicklung in Europa und global",
+                    "authors": [],
+                    "description": "2012, Scenario and strategy study for future renewable energy, urldate = {2021-03-30}, date={2012-03-29}, institution = {Fraunhofer IWES, DLR, IFNE}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Joachim Nitsch, Thomas Pregger, Tobias Naegler, Dominik Heide, Diego Luca de Tena, Franz Trieb, Yvonne Scholz, Kristina Nienhaus, Norman Gerhardt, Michael Sterner, Tobias Trost, Amany von Oehsen, Rainer Schwinn, Carsten Pape, Henning Hahn, Manuel Wickert, Bernd Wenzel",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://elib.dlr.de/94979/",
+                    "title": "Studie über die Planung einer Demonstrationsanlage zur Wasserstoff-Kraftstoffgewinnung durch Elektrolyse mit Zwischenspeicherung in Salzkavernen unter Druck",
+                    "authors": [],
+                    "description": "2015, Study for demonstrating hydrogen production for future fuels , urldate = {2021-03-30}, institution = {DLR, Ludwig-Bölkow-Systemtechnik GmbH (LBST), Fraunhofer ISE, KBB Underground Technologies GmbH}, date = {2014-11-28}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Christoph Noack and Fabian Burggraf and Seyed Schwan Hosseiny and Philipp Lettenmeier and Svenja Kolb and Stefan Belz and Josef Kallo and K. Andreas Friedrich and Thomas Pregger and Karl-Kiên Cao and Dominik Heide and Tobias Naegler and Frieder Borggrefe and Ulrich Bünger and Jan Michalski and Tetyana Raksha and Christopher Voglstätter and Tom Smolinka and Fritz Crotogino and Sabine Donadei and Peter-Laszlo Horvath and Gregor-Sönke Schneider",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://publications.rwth-aachen.de/record/764247",
+                    "title": "Einfluss des Modelldetailgrades in Strommarktsimulationen auf die Bewertung von Flexibilitätsoptionen",
+                    "authors": [],
+                    "description": "2019, Sensitivity analysis of the model complexity impact when assessing flexibility options, urldate = {2021-03-30}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Denis vom Stein (RWTH Aachen)",
+                            "instruction": "Nicht verfügbar",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.now-gmbh.de/wp-content/uploads/2020/08/now_projektsteckbrief_03bst09.pdf",
+                    "title": "Studie: Integration von Wind-Wasserstoff-Systemen in das Energiesystem – Schlussbericht",
+                    "authors": [],
+                    "description": "2014, Final report of the integration of wind/hydrogen systems with a collection of storage data, urldate = {2021-03-30}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Klaus Stolzenburg (PLANET)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://dx.doi.org/10.18419/opus-6888",
+                    "title": "Balancing of intermittent renewable power generation by demand response and thermal energy storage",
+                    "authors": [],
+                    "description": "2015, Analysis of flexibility options using the REMix model, urldate = {2021-03-30}, institution = {University of Stuttgart}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "Hans Christian Gils (DLR)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.entsoe.eu/Documents/TYNDP%20documents/TYNDP%202016/rgips/TYNDP2016%20market%20modelling%20data.xlsx",
+                    "title": "TYNDP 2016 - Market modelling data",
+                    "authors": [],
+                    "description": "2015, Ten Year Network Development Plan of Europe, urldate = {2021-03-30}, institution = {ENTSO-E}, date = {2015-11}",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://tyndp.entsoe.eu/",
+                            "title": "",
+                            "attribution": "ENTSO-E",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "techno-economic parameter",
+                "efficiency",
+                "cost",
+                "power plant",
+                "renewables",
+                "storages",
+                "generation",
+                "capacity",
+                "storage",
+                "infrastructure"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB",
+                "de-DE"
+            ],
+            "description": "Technical data and costs (e.g. efficiencies, losses, lifetimes, investment costs) and Capacitie data for generation plants, energy converters, storages, infrastructure and demand response technologies",
+            "contributors": [
+                {
+                    "date": "2021-07-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "jh-RLI",
+                    "object": "Metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-11-30",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "Metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-08-19"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

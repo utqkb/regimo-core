@@ -1,0 +1,400 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "wri_global_power_plant_database",
+            "type": "Table",
+            "title": "Global Power Plant Database",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "index",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unique id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "country",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "3 character country code corresponding to the ISO 3166-1 alpha-3 specification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "country_long",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Longer form of the country designation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name or title of the power plant, generally in Romanized form",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gppd_idnr",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "10 or 12 character identifier for the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_mw",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electrical generating capacity in megawatts",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "latitude",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geolocation in decimal degrees; WGS84 (EPSG:4326)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "longitude",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geolocation in decimal degrees; WGS84 (EPSG:4326)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "primary_fuel",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Energy source used in primary electricity generation or export",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "other_fuel1",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Energy source used in primary electricity generation or export",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "other_fuel2",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Energy source used in primary electricity generation or export",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "other_fuel3",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Energy source used in primary electricity generation or export",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "commissioning_year",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year of plant operation, weighted by unit-capacity when data is available",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "owner",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Majority shareholder of the power plant, generally in Romanized form",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Entity reporting the data; could be an organization, report, or document, generally in Romanized form",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "url",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Web document corresponding to the `source` field",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geolocation_source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Attribution for geolocation information",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wepp_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "A reference to a unique plant identifier in the widely-used PLATTS-WEPP datase",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year_of_capacity_data",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year the capacity information was reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_gwh_2013",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation in gigawatt-hours reported for the year 2013",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_gwh_2014",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation in gigawatt-hours reported for the year 2014",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_gwh_2015",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation in gigawatt-hours reported for the year 2015",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_gwh_2016",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation in gigawatt-hours reported for the year 2016",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_gwh_2017",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation in gigawatt-hours reported for the year 2017",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "estimated_generation_gwh",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Estimated annual electricity generation in gigawatt-hours for the year 2014",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Global Power Plant Database",
+                    "authors": [],
+                    "description": "A comprehensive, global, open source database of power plants",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "http://datasets.wri.org/dataset/globalpowerplantdatabase",
+                            "title": "",
+                            "attribution": "Copyright 2018-2019 World Resources Institute and Data Contributors",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "global",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "vector"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Creative Commons Attribution 4.0 International",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "CC-BY-4.0",
+                    "attribution": "Copyright 2018-2019 World Resources Institute and Data Contributors",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2019-06-12"
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "An affordable, reliable, and environmentally sustainable power sector is central to modern society. Governments, utilities, and companies make decisions that both affect and depend on the power sector. For example, if governments apply a carbon price to electricity generation, it changes how plants run and which plants are built over time. On the other hand, each new plant affects the electricity generation mix, the reliability of the system, and system emissions. Plants also have significant impact on climate change, through carbon dioxide (CO2) emissions; on water stress, through water withdrawal and consumption; and on air quality, through sulfur oxides (SOx), nitrogen oxides (NOx), and particulate matter (PM) emissions.  The Global Power Plant Database is an open-source open-access dataset of grid-scale (1 MW and greater) electricity generating facilities operating across the world.  The Database currently contains nearly 30000 power plants in 164 countries, representing about 82% of the world's capacity. Entries are at the facility level only, generally defined as a single transmission grid connection point. Generation unit-level information is not currently available.  The methodology for the dataset creation is given in the World Resources Institute publication \"A Global Database of Power Plants\" [0]. Associated code for the creation of the dataset can be found on GitHub.",
+            "contributors": [
+                {
+                    "date": "2019-12-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Upload data and create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

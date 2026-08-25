@@ -1,0 +1,499 @@
+openapi: 3.1.0
+info:
+  title: unHIDE Data Storage API
+  description: unHIDE Data Storage API
+  version: 0.0.1
+paths:
+  /api/v0/health:
+    get:
+      tags:
+        - health
+      summary: Health
+      operationId: health_api_v0_health_get
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/v0/raw/entities:
+    post:
+      tags:
+        - raw_data_storage
+      summary: Add Entities
+      description: >-
+        Endpoint to store entities.
+
+
+        Args:
+            request: The request containing a list of Entities to be stored.
+
+        Returns:
+            StorageResponseNewRawEntities: The response containing stored and rejected entities (bc. duplication).
+      operationId: add_entities_api_v0_raw_entities_post
+      security:
+        - HTTPBearer: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/RawEntity-Input"
+              title: Request
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StorageResponseNewRawEntities"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+    get:
+      tags:
+        - raw_data_storage
+      summary: Get Entities
+      description: |-
+        Endpoint to get a collection of entities.
+
+        Args:
+            offset (int): The offset of entities to return.
+            limit (int): The number of entities to return.
+            harvester_type (str | None): Filter by harvester type.
+            source (str | None): Filter by source.
+
+        Returns: An Entitylist of StorageEntities.
+      operationId: get_entities_api_v0_raw_entities_get
+      parameters:
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+            description: Offset of entities to return
+            default: 0
+            title: Offset
+          description: Offset of entities to return
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            maximum: 100000
+            minimum: 0
+            description: Number of entities to return
+            default: 10
+            title: Limit
+          description: Number of entities to return
+        - name: harvester_type
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: "null"
+            description: Filter by harvester type
+            title: Harvester Type
+          description: Filter by harvester type
+        - name: source
+          in: query
+          required: false
+          schema:
+            anyOf:
+              - type: string
+              - type: "null"
+            description: Filter by source
+            title: Source
+          description: Filter by source
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RawEntity-Output"
+                title: Response Get Entities Api V0 Raw Entities Get
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+    patch:
+      tags:
+        - raw_data_storage
+      summary: Update Entities
+      description: >-
+        Endpoint to update an entity by ID.
+
+
+        Args:
+            request (RawEntityUpdateRequest): The request containing fields to update.
+
+        Returns:
+            StorageResponseGetRawEntity: The response containing the updated entity.
+      operationId: update_entities_api_v0_raw_entities_patch
+      security:
+        - HTTPBearer: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/RawEntity-Input"
+              title: Request
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RawEntity-Output"
+                title: Response Update Entities Api V0 Raw Entities Patch
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+  /api/v0/raw/entities/by_ids:
+    post:
+      tags:
+        - raw_data_storage
+      summary: Get Entities By Ids
+      description: |-
+        Endpoint to get entities by IDs.
+
+        Args:
+            ids (list[str]): The IDs of the entities to retrieve.
+
+        Returns:
+            list[RawEntity]: The list of entities.
+      operationId: get_entities_by_ids_api_v0_raw_entities_by_ids_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                type: string
+              type: array
+              title: Entity Ids
+        required: true
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/RawEntity-Output"
+                type: array
+                title: Response Get Entities By Ids Api V0 Raw Entities By Ids Post
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+  /api/v0/raw/entity/{entity_id}:
+    get:
+      tags:
+        - raw_data_storage
+      summary: Get Entity By Id
+      description: |-
+        Endpoint to get an entity by ID.
+
+        Args:
+            entity_id (str): The ID of the entity to retrieve.
+        Returns:
+            StorageResponseEntity: The response containing the entity.
+      operationId: get_entity_by_id_api_v0_raw_entity__entity_id__get
+      parameters:
+        - name: entity_id
+          in: path
+          required: true
+          schema:
+            type: string
+            title: Entity Id
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RawEntity-Output"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+components:
+  schemas:
+    ErrorResponse:
+      properties:
+        error:
+          type: string
+          title: Error
+          description: Internal error
+      type: object
+      required:
+        - error
+      title: ErrorResponse
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: "#/components/schemas/ValidationError"
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    HealthResponse:
+      properties:
+        status:
+          type: string
+          title: Status
+          description: Health status
+          default: ok
+        version:
+          type: string
+          title: Version
+          description: Version of the service
+        debug:
+          type: boolean
+          title: Debug
+          description: Environment of the service
+      type: object
+      required:
+        - version
+        - debug
+      title: HealthResponse
+    RawDataModel:
+      properties:
+        pid:
+          anyOf:
+            - type: integer
+            - type: "null"
+          title: Pid
+          description: Internal auto increment identifier
+        id:
+          type: string
+          maxLength: 64
+          title: Id
+          description: Hash value of the entity
+        harvester_type:
+          type: string
+          maxLength: 255
+          title: Harvester Type
+          description: Type of harvester used
+        source:
+          type: string
+          maxLength: 255
+          title: Source
+          description: Source of the harvested data
+        harvested_date:
+          type: string
+          format: date-time
+          title: Harvested Date
+          description: The date and time when the entity was harvested
+        content:
+          anyOf:
+            - additionalProperties: true
+              type: object
+            - items: {}
+              type: array
+            - type: string
+            - type: integer
+            - type: number
+            - type: boolean
+          title: Content
+          description: Harvested content as JSON binary
+      additionalProperties: true
+      type: object
+      required:
+        - id
+        - harvester_type
+        - source
+        - content
+      title: RawDataModel
+      description: >-
+        SQL Model for raw harvested entities
+
+
+        This model corresponds to the raw_entities table and matches the Entity
+        domain model.
+
+        It stores raw harvested data before any uplifting or processing.
+    RawEntity-Input:
+      properties:
+        harvester_type:
+          type: string
+          title: Harvester Type
+          description: Type of harvester used
+        id:
+          anyOf:
+            - type: string
+            - type: "null"
+          title: Id
+          description: ID of the entity
+        pid:
+          anyOf:
+            - type: integer
+            - type: "null"
+          title: Pid
+          description: Internal auto increment identifier
+        source:
+          type: string
+          title: Source
+          description: Source of the harvested data
+        harvested_date:
+          type: string
+          format: date-time
+          title: Harvested Date
+          description: The date and time when the entity was harvested
+        content:
+          anyOf:
+            - additionalProperties: true
+              type: object
+            - items: {}
+              type: array
+            - type: string
+            - type: integer
+            - type: number
+            - type: boolean
+          title: Content
+          description: Additional content of the entity
+        "@type":
+          type: string
+          const: RawData
+          title: "@Type"
+          default: RawData
+      additionalProperties: true
+      type: object
+      required:
+        - harvester_type
+        - source
+        - harvested_date
+        - content
+      title: RawEntity
+    RawEntity-Output:
+      properties:
+        harvester_type:
+          type: string
+          title: Harvester Type
+          description: Type of harvester used
+        id:
+          anyOf:
+            - type: string
+            - type: "null"
+          title: Id
+          description: ID of the entity
+        pid:
+          anyOf:
+            - type: integer
+            - type: "null"
+          title: Pid
+          description: Internal auto increment identifier
+        source:
+          type: string
+          title: Source
+          description: Source of the harvested data
+        harvested_date:
+          type: string
+          format: date-time
+          title: Harvested Date
+          description: The date and time when the entity was harvested
+        content:
+          anyOf:
+            - additionalProperties: true
+              type: object
+            - items: {}
+              type: array
+            - type: string
+            - type: integer
+            - type: number
+            - type: boolean
+          title: Content
+          description: Additional content of the entity
+      additionalProperties: true
+      type: object
+      required:
+        - harvester_type
+        - source
+        - harvested_date
+        - content
+      title: RawEntity
+    StorageEntity_RawDataModel_:
+      properties:
+        entity:
+          $ref: "#/components/schemas/RawDataModel"
+          description: The original entity with all its fields preserved
+      additionalProperties: true
+      type: object
+      required:
+        - entity
+      title: StorageEntity[RawDataModel]
+    StorageResponseNewRawEntities:
+      properties:
+        stored_entities:
+          items:
+            additionalProperties:
+              $ref: "#/components/schemas/StorageEntity_RawDataModel_"
+            type: object
+          type: array
+          title: Stored Entities
+        duplicate_entities:
+          items:
+            additionalProperties:
+              $ref: "#/components/schemas/StorageEntity_RawDataModel_"
+            type: object
+          type: array
+          title: Duplicate Entities
+      type: object
+      title: StorageResponseNewRawEntities
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+        - loc
+        - msg
+        - type
+      title: ValidationError
+  securitySchemes:
+    HTTPBearer:
+      type: http
+      scheme: bearer

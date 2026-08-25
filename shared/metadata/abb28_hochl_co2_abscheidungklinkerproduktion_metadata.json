@@ -1,0 +1,754 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "abb28_hochl_co2_abscheidungklinkerproduktion",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/abb28_hochl_co2_abscheidungklinkerproduktion",
+            "type": "Table",
+            "title": "Klimaneutrales Deutschland. Von der Zielsetzung zur Umsetzung - Agora Think Tanks(Hochlauf der CO2-Abscheidung in der Klinkerproduktion in Mio. t Produktionskapazität Zementklinker)",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "jahr",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenario year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "klinkerproduktion",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00240003",
+                                "name": "production"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dro_mit_ccs_aminwaesche",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010141",
+                                "name": "ccs"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dro_mit_ccs_oxyfuel",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010141",
+                                "name": "carbon capture and storage"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dro_mit_ccs_membranverfahren",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010141",
+                                "name": "ccs"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dro_mit_ccs_eleilac",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010141",
+                                "name": "ccs"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "konventionell",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020147",
+                                "name": "conventional"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "info@agora-thinktanks.org",
+                "grantNo": null,
+                "homepage": "https://www.agora-energiewende.de/publikationen/klimaneutrales-deutschland-szenariopfade",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": "https://www.agora-energiewende.de/publikationen/klimaneutrales-deutschland-szenariopfade",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "https://www.agora-energiewende.de/publikationen/klimaneutrales-deutschland-szenariopfade",
+                    "title": "Agora Industrie und Wuppertal Institut und Universität Kassel (2024",
+                    "authors": [],
+                    "description": "Agora Think Tanks, Prognos AG, Öko-Institut e. V., Wuppertal Institut für Klima, Umwelt, Energie gGmbH, Universität Kassel (2024): Klimaneutrales Deutschland. Von der Zielsetzung zur Umsetzung – Vertiefung der Szenariopfade. - Dieser Datenanhang enthält Rahmendaten und Ergebnisse zur Studie \"Klimaneutrales Deutschland 2045:   von der Zielsetzung zur Umsetzung\".",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000364",
+                    "name": "scenario"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010165",
+                    "name": "CRF sector (IPCC 2006): cement production"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "Deutschland",
+                "Germany",
+                "Agora",
+                "Energiewende",
+                "Klimaneutralität",
+                "Klimawandel",
+                "Umsetzung",
+                "Zielsetzung",
+                "Szenario",
+                "2045",
+                "2030",
+                "Klinker",
+                "Klinkerproduktion"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2045",
+                        "start": "2020",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "one year"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "Membranverfahren stehen stellvertretend für verschiedene innovative post-combustionVerfahren zur CO2-Abscheidung",
+            "contributors": [
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Corinna Fischer",
+                    "object": null,
+                    "comment": "Agora Energiewende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Lea Nesselhauf",
+                    "object": null,
+                    "comment": "Agora Energiewende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Simon Müller",
+                    "object": null,
+                    "comment": "Agora Energiewende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Philipp Godron",
+                    "object": null,
+                    "comment": "Agora Energiewende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fabian Huneke",
+                    "object": null,
+                    "comment": "Agora Energiewende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Mathias Koch",
+                    "object": null,
+                    "comment": "Agora Energiewende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Niels Wauer",
+                    "object": null,
+                    "comment": "Agora Energiewende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Paul Münnich",
+                    "object": null,
+                    "comment": "Agora Industrie",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Julia Metz",
+                    "object": null,
+                    "comment": "Agora Industrie",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Wilhelm Klümper",
+                    "object": null,
+                    "comment": "Agora Agrar",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ivonne Kampermann",
+                    "object": null,
+                    "comment": "Agora Agrar",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Carl-Friedrich Elmer",
+                    "object": null,
+                    "comment": "Agora Verkehrswende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Marion Vieweg",
+                    "object": null,
+                    "comment": "Agora Verkehrswende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Inka Ziegenhagen",
+                    "object": null,
+                    "comment": "Agora Verkehrswende",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Andreas Kemmler",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Aurel Wünsch",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Alexander Piégsa",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Elias Althoff",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hans Dambeck",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Paurnima Kulkarni",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Sven Kreidelmeyer",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Sebastian Lübbers",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Saskia Lengning",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Melina Lohmann",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Fabian Muralter",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Nils Thamling",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Minh Phuong Vu",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Marco Wünsch",
+                    "object": null,
+                    "comment": "Prognos AG",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Margarethe Scheffler",
+                    "object": null,
+                    "comment": "Öko-Institut e. V.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Klaus Hennenberg",
+                    "object": null,
+                    "comment": "Öko-Institut e. V.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Mirjam Pfeiffer",
+                    "object": null,
+                    "comment": "Öko-Institut e. V.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Kirsten Wiegmann (alle Bereich Energie und Klimaschutz)",
+                    "object": null,
+                    "comment": "Öko-Institut e. V.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dennis Seibert",
+                    "object": null,
+                    "comment": "Öko-Institut e. V.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Konstantin Kreye",
+                    "object": null,
+                    "comment": "Öko-Institut e. V.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Peter Kasten (alle Bereich Ressourcen und Mobilität)",
+                    "object": null,
+                    "comment": "Öko-Institut e. V.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Georg Holtz",
+                    "object": null,
+                    "comment": "Wuppertal Institut für Klima, Umwelt, Energie gGmbH",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Sascha Samadi",
+                    "object": null,
+                    "comment": "Wuppertal Institut für Klima, Umwelt, Energie gGmbH",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Süheyb Bilici",
+                    "object": null,
+                    "comment": "Wuppertal Institut für Klima, Umwelt, Energie gGmbH",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ylva Kloo",
+                    "object": null,
+                    "comment": "Wuppertal Institut für Klima, Umwelt, Energie gGmbH",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Mathieu Saurat",
+                    "object": null,
+                    "comment": "Wuppertal Institut für Klima, Umwelt, Energie gGmbH",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Clemens Schneider",
+                    "object": null,
+                    "comment": "Universität Kassel",
+                    "organization": null
+                },
+                {
+                    "date": "2024-12-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Prof. Dr. Stefan Lechtenböhmer",
+                    "object": null,
+                    "comment": "Universität Kassel",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-10-15"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

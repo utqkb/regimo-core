@@ -1,0 +1,239 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "openstreetmap.osm_rels",
+            "path": "WILL_BE_SET_AT_PUBLICATION",
+            "type": "Table",
+            "title": "OpenStreetMap (OSM) - Germany - rels",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "way_off",
+                        "type": "smallint",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rel_off",
+                        "type": "smallint",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parts",
+                        "type": "bigint[]",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "members",
+                        "type": "text[]",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tags",
+                        "type": "text[]",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "https://ego-n.org/partners/",
+                "grantNo": "03EI1002",
+                "homepage": "https://ego-n.org/",
+                "publisher": "",
+                "sourceCode": "https://github.com/openego/eGon-data",
+                "documentation": "https://egon-data.readthedocs.io/en/latest/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://ego-n.org/images/eGon_logo_noborder_transbg.svg",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg?__blob=normal&v=3"
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://download.geofabrik.de/europe/germany-220101.osm.pbf",
+                    "title": "OpenStreetMap Data Extracts (Geofabrik)",
+                    "authors": [],
+                    "description": "Full data extract of OpenStreetMap data for defined spatial extent at 'referenceDate'",
+                    "sourceLicenses": [
+                        {
+                            "name": "ODbL-1.0",
+                            "path": "https://opendatacommons.org/licenses/odbl/1.0/index.html",
+                            "title": "Open Data Commons Open Database License 1.0",
+                            "attribution": "© OpenStreetMap contributors",
+                            "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [],
+            "licenses": [
+                {
+                    "name": "ODbL-1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/index.html",
+                    "title": "Open Data Commons Open Database License 1.0",
+                    "attribution": "© OpenStreetMap contributors",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "22-01-01"
+            },
+            "languages": [
+                "en-EN",
+                "de-DE"
+            ],
+            "description": "OpenStreetMap is a free, editable map of the whole world that is being built by volunteers largely from scratch and released with an open-content license.\n\nThe OpenStreetMap data here is the result of an PostgreSQL database import using osm2pgsql with a custom style file.",
+            "contributors": [
+                {
+                    "date": "2023-03-12",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Guido Pleßmann",
+                    "object": null,
+                    "comment": "Imported data",
+                    "organization": null
+                },
+                {
+                    "date": "2023-03-12",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonathan Amme",
+                    "object": null,
+                    "comment": "Metadata extended",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2023-03-12"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

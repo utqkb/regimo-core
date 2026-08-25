@@ -1,0 +1,388 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "TYNDP_2020_all_scenarios_supply_potential_natural_gas",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/tyndp_2020_scenario_datafile_all",
+            "type": "Table",
+            "title": "Supply potential of natural gas for all scenarios of TYNDP 2020",
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "node",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Node abbreviation which determine the coordinates and region of grid node",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generator_id",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Type of Generator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter is natural gas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Category determines, if the associated value is a production- or a demand-value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "case",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of function wich was applied on the data e.g. min, max ,average",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of scenario for which the data was calculated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year for which the scenario data was calculated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "climate_year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Node abbreviation which determine the coordinates and region of grid node",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "float",
+                        "unit": "TWh/y",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Resulting value of the case calculation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "simulation_id",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Simulation_ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "node_1",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Node 1",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "path",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Path",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "simulation_type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Simulation type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Gas- or electricity-sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "note",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Note to the associated scenario case",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "varchar(128)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit of the value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "https://tyndp.entsoe.eu/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://eepublicdownloads.blob.core.windows.net/public-cdn-container/tyndp-documents/TYNDP2020/FINAL/entso-e_TYNDP2020_Main_Report_2108.pdf",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://2020.entsos-tyndp-scenarios.eu/wp-content/uploads/2020/06/TYNDP_2020_Joint_ScenarioReport_final.pdf",
+                    "title": "TYNDP 2020 – Scenario Report",
+                    "authors": [],
+                    "description": "Main Report - ENTSOs’ TYNDP 2020 Scenario Report describes possible European energy futures up to 2050. Scenarios are not forecasts; they set out a range of possible futures used by the ENTSOs to test future electricity and gas infrastructure needs and projects.  The scenarios are ambitious as they deliver a low carbon energy system for Europe by 2050. The ENTSOs have developed credible scenarios that are guided by technically sound pathways, while reflecting country by country specifics, so that a pan-European low carbon future is achieved.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://2020.entsos-tyndp-scenarios.eu/download-data/",
+                    "title": "TYNDP 2020 – Scenario Report - Download Data",
+                    "authors": [],
+                    "description": "Download Page",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://2020.entsos-tyndp-scenarios.eu/wp-content/uploads/2020/06/TYNDP-2020-Scenario-Datafile.xlsx.zip",
+                    "title": "TYNDP 2020 – Scenario Data",
+                    "authors": [],
+                    "description": "Scenario Data Sets - The joint scenario package provides an extensive data set resource that is used by each ENTSO TYNDP and other studies. The ENTSOs invite stakeholders to use the scenario data sets for their own studies. Whereas Distributed Energy and Global Ambition have been built as full-energy scenarios until 2050, National Trends is based on electricity and gas related data from the NECP and developed until 2040.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "http://creativecommons.org/licenses/by/4.0/",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "©ENTSO-E ©ENTSOG TYNDP 2020 Scenarios",
+                            "instruction": "You are free: To Share, To Adapt, Under the following terms: Attribution, No additional restrictions",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Fraunhofer IEE",
+                "TYNDP",
+                "2020",
+                "ENSTO-E",
+                "ENTSOG"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "©ENTSO-E ©ENTSOG TYNDP 2020 Scenarios",
+                    "instruction": "You are free: To Share, To Adapt, Under the following terms: Attribution, No additional restrictions",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2040-12-31T23:00:00+01:00",
+                        "start": "2020-01-01T00:00:00+01:00",
+                        "alignment": "",
+                        "resolutionUnit": "a",
+                        "aggregationType": "current",
+                        "resolutionValue": "5"
+                    }
+                ],
+                "referenceDate": "2020-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "The TYNDP and the economic and technical studies performed to produce it generate a great quantity of valuable information on the future of the European power system. ENTSO-E, the European Network of Transmission System Operators for Electricity, is the association for the cooperation of the European transmission system operators (TSOs). ENTSO-E’s 10-year network development plan (TYNDP) is the European electricity infrastructure development plan.",
+            "contributors": [
+                {
+                    "date": "2021-09-15",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Martin Hertwig",
+                    "object": "Data, Metadata",
+                    "comment": "Preparation of tables, upload to OEP and metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-03-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Mirjam Stappel",
+                    "object": "Metadata",
+                    "comment": "Support and metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2023-02-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "Metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2020-06-01"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

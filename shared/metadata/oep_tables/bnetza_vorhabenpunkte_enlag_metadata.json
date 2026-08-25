@@ -1,0 +1,200 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "bnetza_vorhabenpunkte_enlag",
+            "type": "Table",
+            "title": "Stromleitungsvorhabenpunkte des EnlAG in Deutschland",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MultiLineString der Leitungsvorhaben",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "object_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Object id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name des Abschnittpunkt (Trafostation, Umspannwerk, Landesgrenze etc.)",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Vorhabenpunkte des BBPlG",
+                    "authors": [],
+                    "description": "Vorhabenpunkte des BBPlG, BNetzA, Stand 1. Quatal 2017",
+                    "sourceLicenses": [
+                        {
+                            "name": "GeoNutzV",
+                            "path": "www.netzausbau.de/enlag",
+                            "title": "",
+                            "attribution": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen (BNetzA)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "GeoNutzV",
+                    "path": "https://www.gesetze-im-internet.de/geonutzv/BJNR054700013.html",
+                    "title": "19.03.2013",
+                    "attribution": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen (BNetzA)",
+                    "instruction": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen (BNetzA)",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2017-06-13"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "Der Datensatz enthält die Netzausbauvorhaben des Energieleitungsausbaugesetz (EnLAG) als Linienploygon und weiteren Vorhabeninformationen zum Verfahrensstand Ende des 1. Quartals 2017. \n Für weitergehende, aktuelle Informationen zu den Vorhaben bitte auf die Webseiten www.netzausbau.de/bbplg bzw. www.netzausbau.de/enlag gehen.",
+            "contributors": [
+                {
+                    "date": "2017-07-31",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": null,
+                    "object": null,
+                    "comment": "Create table and comments",
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

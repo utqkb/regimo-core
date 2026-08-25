@@ -1,0 +1,260 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "-",
+            "name": "capacitites_district_heating_2020_raw",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/capacitites_district_heating_2020_raw",
+            "type": "Table",
+            "title": "Installed and planned power2heat and storage capacities for district heating in Germany",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags",
+                        "type": "int",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Municipality key (Amtlicher Gemeindeschlüssel)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tech",
+                        "type": "char(16)",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Categories for p2h (electric_boiler/heat_pump) and storage (heat_storage)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cap_supply",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Power-to-heat capacity (elec.)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cap_storage",
+                        "type": "float",
+                        "unit": "m³",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Storage capacity as water volume equivalent",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector",
+                        "type": "char(8)",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Categories for public and industry plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "status",
+                        "type": "char(16)",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Operational status",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "char(512)",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Data source",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS3"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010262/",
+                    "name": "scenario projection"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010260/",
+                    "name": "parameterisation"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "district heating",
+                "heat pumps",
+                "capacity",
+                "heat",
+                "supply",
+                "2020",
+                "EOM-Plus",
+                "THI"
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY 4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2023-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Installed and planned power2heat and storage capacities for district heating in Germany. Data based on freely available sources                     (e.g. operator homepages, manufacturer information, industry presentations).",
+            "contributors": [
+                {
+                    "date": "2024-03-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "THI",
+                    "object": "data, metadata",
+                    "comment": "initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-03-21"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

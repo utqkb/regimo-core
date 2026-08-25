@@ -1,0 +1,237 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "renpassGIS scenario regions geometries",
+            "path": "renpass_gis_parameter_region",
+            "type": "Table",
+            "title": null,
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "gid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Primary ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "u_region_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique region ID, based on EU NUTS standard",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "stat_level",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Primary ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Polygon Geom represent a scenario region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom_point",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Centruide Point of scenarion region",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/openego/data_processing/blob/refactor/oedb-restructuring_v0.2/calc_geo_powerplants/app_renpassgis.sql",
+                    "title": "renpassGIS",
+                    "authors": [],
+                    "description": "21-11-2016",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://github.com/znes/",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://osf.io/XXX",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Germany"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Database License (ODbL) v1.0",
+                    "path": "http://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "",
+                    "attribution": "Europa-Universität Flensburg, Centre for Sustainable Energy Systems",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2050"
+            },
+            "languages": [
+                ""
+            ],
+            "description": "XXXX",
+            "contributors": [
+                {
+                    "date": "2017-02-10",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Wolf-Dieter Bunke",
+                    "object": null,
+                    "comment": "Move tabel to oep V2 with meta data",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

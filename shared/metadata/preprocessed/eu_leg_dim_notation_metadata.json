@@ -1,0 +1,245 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "eu_leg_dim_notation",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/eu_leg_dim_notation",
+            "type": "Table",
+            "title": "Notation keys used in greenhouse gas emission projections submitted under EU legislation",
+            "format": "PostgresSQL",
+            "review": {
+                "path": "",
+                "badge": "Silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "notation",
+                        "type": "varchar(64)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010247",
+                                "name": "abbreviation"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "notation key (= abbreviation)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "notation_name",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "explanation of notation key",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03EI1035B",
+                "homepage": "https://oeko.de/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.oeko.de/typo3conf/ext/wwt3_sitepackage/Resources/Public/frontend/assets/images/logo.svg",
+                "fundingAgencyLogo": "https://commons.wikimedia.org/wiki/File:BMWi_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R1208&from=EN",
+                    "title": "COMMISSION  IMPLEMENTING  REGULATION  (EU)  2020/1208",
+                    "authors": [],
+                    "description": "Implementing Regulation that deals (among other things) with reporting formats of data on greenhouse gas projections to be submitted under Article 18 REGULATION (EU) 2018/1999",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://purl.obolibrary.org/obo/IAO_0000030",
+                    "name": "information content entity"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "european_environment_agency",
+                "abbreviation",
+                "sirop",
+                "notation_keys",
+                "cc_by_4_0",
+                "eu_legislation",
+                "ko_institut"
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY 4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© Öko-Institut",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table holds notation keys prescribed by EU legislation and used by European Member States when submitting greenhouse gas emission projections as required by EU legislation. The notation keys (except NK) are provided in Annex XXV in the source linked below. NK occurred in a Member States submission but is not prescribed by legislation.",
+            "contributors": [
+                {
+                    "date": "2021-09-08",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "data, metadata",
+                    "comment": "initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2022-06-10",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "steull",
+                    "object": "metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2023-11-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "Metadata",
+                    "comment": "ontology annotation",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

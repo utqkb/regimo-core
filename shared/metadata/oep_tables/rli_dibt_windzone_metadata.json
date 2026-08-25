@@ -1,0 +1,277 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "rli_dibt_windzone",
+            "path": "model_draft.rli_dibt_windzone",
+            "type": "Table",
+            "title": "Windzone map for Germany",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version number",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "vg_version",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version from vg250 (reference_date)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rli_dibt_windzone",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Windzone number",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "v_ref",
+                        "type": "double precision",
+                        "unit": "m/s",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Reference wind speed",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "geometry(MultiPolygon, 31467)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id",
+                    "version"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "0324006A",
+                "homepage": "https://reiner-lemoine-institut.de/open_fred-open-feed-time-series-based-renewable-energy-database/",
+                "publisher": "",
+                "sourceCode": "tba",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.dibt.de/fileadmin/dibt-website/Dokumente/Referat/P5/Technische_Bestimmungen/Windzonen_Formular_nach_Verwaltungsgrenzen.xlsx",
+                    "title": "Zuordnung der Windzonen nach Verwaltungsgrenzen",
+                    "authors": [],
+                    "description": "Stand: 27. September 2018",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "boundaries.bkg_vg250_6_gem",
+                    "title": "BKG - Verwaltungsgebiete 1:250.000 - Gemeinden (GEM)",
+                    "authors": [],
+                    "description": "Der Datenbestand umfasst die Verwaltungseinheiten der hierarchischen Verwaltungsebenen vom Staat bis zu den Gemeinden",
+                    "sourceLicenses": [
+                        {
+                            "name": "Gesetz über den Zugang zu digitalen Geodaten (Geodatenzugangsgesetz - GeoZG)",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© GeoBasis-DE / BKG 2016 (Daten verändert)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://www.windenergie-im-binnenland.de/windzonenrechner.php",
+                    "title": "Windenergie-im-Binnenland",
+                    "authors": [],
+                    "description": "Online Windzonenrechner für DIBt 2012 und DIN EN 1991-1-4/NA",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "vector"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "wind",
+                "climate"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© Reiner Lemoine Institut",
+                    "instruction": "https://tldrlegal.com/license/creative-commons-attribution-4.0-international-(cc-by-4)",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2018-09-27"
+            },
+            "languages": [
+                "de-DE",
+                "en-GB"
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "2019-03-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "data",
+                    "comment": "Create data",
+                    "organization": null
+                },
+                {
+                    "date": "2019-03-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2019-03-21"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

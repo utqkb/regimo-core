@@ -1,0 +1,455 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tso_nep_scenario_framework_2021_2035",
+            "path": "tba",
+            "type": "Table",
+            "title": "TSO NEP Scenario Framework 2021-2035",
+            "format": "csv",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/71",
+                "badge": "silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Scenario name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text array",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "input_energy_vector",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "It describes any type of energy or energy carrier (e.g. electricity, heat, solar radiation, natural gas, ...) that enters a technology.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "output_energy_vector",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "It describes any type of energy or energy carrier (e.g. electricity, heat, hydrogen, LNG, CO2, ...) that exits a technology.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter_name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "It describes a considered property of an element in the energy system.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "technology",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "It describes an element of the modelled energy system that processes an energy vector.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "technology_type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The specification can be technological, or freely user-defined, based on the requirements of the model.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_start",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Start timestemp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_stop",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Stop timestemp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_resolution",
+                        "type": "interval",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timesteps",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "series",
+                        "type": "float array",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timesteps",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tags",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Free classification with key-value pairs",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method type (sum, mean, median)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "tba",
+                "grantNo": "tba",
+                "homepage": "https://www.netzausbau.de/5schritte/szenariorahmen/de.html",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://www.netzausbau.de/bedarfsermittlung/2035_2021/szenariorahmen/de.html",
+                "fundingAgency": "tba",
+                "publisherLogo": "tba",
+                "fundingAgencyLogo": "tba"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/OpenEnergyPlatform/oedatamodel/tree/develop/oedatamodel",
+                    "title": "Open energy datamodel",
+                    "authors": [],
+                    "description": "oedatamodel for energy model data",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bmwi.de/Redaktion/DE/Artikel/Energie/energiedaten-gesamtausgabe.html",
+                    "title": "BMWi Energiedaten Gesamtausgabe - Stand: September 2019",
+                    "authors": [],
+                    "description": "Woher kommen unsere Energieträger, wie viel Energie verbrauchen wir und wie groß sind die weltweiten Reserven? Die Energiedaten geben umfangreiche Antworten auf aktuelle Fragen zur Energieversorgung. Sie bieten darüber hinaus Informationen zur Energieversorgung aus zuverlässigen Quellen.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© 2020 Bundesministerium für Wirtschaft und Energie (BMWi)",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.oeko.de/publikationen/p-details/sektorale-abgrenzung-der-deutschen-treibhausgasemissionen-mit-einem-schwerpunkt-auf-die-verbrennungs-1/",
+                    "title": "Öko-Insititut - Sektorale Abgrenzung der deutschen Treibhausgasemissionen mit einem Schwerpunkt auf die verbrennungsbedingten CO2-Emissionen - Stand: Oktober 2017",
+                    "authors": [],
+                    "description": "In diesem Arbeitspapier wird deshalb eine differenzierte Auswertung der Emissionen und Brennstoffe für die einzelnen Sektoren des Klimaschutzplans für die verbrennungsbedingten Emissionen (CRF 1.A) vorgenommen. Dabei ist zu beachten, dass die Ableitung des Brenn- und Kraftstoffeinsatzes in diesen Sektoren gemäß der internationalen Bilanzierungsmethodik der Treibhausgas-Inventare erfolgt. Kernprinzip ist hierbei, dass die Brennstoffeinsätze und Emissionen in den Sektoren bilanziert werden, in denen sie entstehen. Die Emissionen der Stromerzeugung in öffentlichen Kraftwerken werden somit der Energiewirtschaft zugeordnet, unabhängig davon, in welchem Endverbrauchssektor die Stromnachfrage stattfindet.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Öko-Institut e.V.",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Zeitreihen/zeitreihen.html",
+                    "title": "AGEE-Stat - Zeitreihen zur Entwicklungder erneuerbaren Energienin Deutschland",
+                    "authors": [],
+                    "description": "Die erneuerbaren Energien in Deutschland haben sich in den vergangenen Jahren weiter entwickelt und sind auf dem Weg, eine wichtige Säule unserer Energieversorgung zu werden. Diese Entwicklung wird in den Zeitreihen ab dem Jahr 1990 dargestellt. Die Daten in den Zeitreihen werden fortlaufend aktualisiert.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Umweltbundesamt",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bundesregierung.de/resource/blob/975226/1679914/e01d6bd855f09bf05cf7498e06d0a3ff/2019-10-09-klima-massnahmen-data.pdf?download=1",
+                    "title": "BMU - Klimaschutzprogramm 2030 der Bundesregierungzur Umsetzung des Klimaschutzplans 2050",
+                    "authors": [],
+                    "description": "Deutschland trägt als eine führende Industrienation eine besondere Verantwortung für den weltweiten Klimawandel. Die Bundesregierung hat am 20. September 2019 Eckpunkte für ein Klimaschutzprogramm 2030 vorgelegt, um die Klimaziele zu erreichen. Den ausführlichen Arbeitsplan - das Klimaschutzprogramm 2030 - hat das Kabinett am 9. Oktober 2019 beschlossen. Die einzelnen Maßnahmen werden Schritt für Schritt mit Gesetzen und Förderprogrammen umgesetzt.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Umweltbundesamt",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ffe.de/",
+                    "title": "FfE - ToDo",
+                    "authors": [],
+                    "description": "ToDo",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Forschungsstelle für Energiewirtschaft e. V.",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "ToDo",
+                    "title": "Übertragungsnetzbetreiber (ÜNB) - ToDo",
+                    "authors": [],
+                    "description": "ToDo",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© ToDo",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "state",
+                    "resolutionValue": "Federal"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "NEP",
+                "Szenariorahmen",
+                "2021-2035"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "ToDo",
+                    "instruction": "https://tldrlegal.com/license/creative-commons-attribution-4.0-international-(cc-by-4)",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2040-10-15",
+                        "start": "2018-10-15",
+                        "alignment": "middle",
+                        "resolutionUnit": "",
+                        "aggregationType": "tba",
+                        "resolutionValue": "2020; 2035; 2040"
+                    }
+                ],
+                "referenceDate": "2018-10-15"
+            },
+            "languages": [
+                "de-DE",
+                "en-GB"
+            ],
+            "description": "In the draft scenario framework 2021-2035, the transmission system operators outlined four possible scenarios for the likely development of the electricity sector up to the years 2035 and 2040.",
+            "contributors": [
+                {
+                    "date": "2020-08-11",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "TSO",
+                    "object": "data",
+                    "comment": "Provide data",
+                    "organization": null
+                },
+                {
+                    "date": "2020-08-24",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "Create oemetadata",
+                    "organization": null
+                },
+                {
+                    "date": "2020-08-24",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "data",
+                    "comment": "Transform data in oedatamodel",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2020-09-02"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

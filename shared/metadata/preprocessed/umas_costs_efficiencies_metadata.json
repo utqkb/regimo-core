@@ -1,0 +1,557 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://energy.databus.dbpedia.org/chrwm/LOD-GEOSS_use_case_oemof-B3/umas_costs_efficiencies",
+            "name": "umas_costs_efficiencies",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/umas_costs_efficiencies",
+            "type": "Table",
+            "title": "umas_costs_efficiencies",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id_scal",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier of scalar",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_key",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000364",
+                                "name": "scenario"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of scenario and referenced year as key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000435",
+                                "name": "variable"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "variable name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "type of carrier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020032",
+                                "name": "study region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "indicator for region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tech",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "type of transformer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "type of component",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_value",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "type of variable value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_unit",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000435",
+                                "name": "variable"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "variable unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000353",
+                                "name": "reference"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "general comments on data and data type",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Statistik/technology_data_catalogue_for_el_and_dh_-_0009.pdf",
+                    "title": "Danish Energy Agency",
+                    "authors": [],
+                    "description": "Technology Data for Electricity and District heating generation",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_for_el_and_dh.xlsx",
+                    "title": "Danish Energy Agency",
+                    "authors": [],
+                    "description": "Technology Data for Electricity and District heating generation Table",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_heating_installations_-_0003.xlsx",
+                    "title": "Danish Energy Agency",
+                    "authors": [],
+                    "description": "Technology Data Heating Installations Table",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_for_renewable_fuels.pdf",
+                    "title": "Danish Energy Agency",
+                    "authors": [],
+                    "description": "Technology Data Renewable Fuels",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_catalogue_for_energy_storage.xlsx",
+                    "title": "Danish Energy Agency",
+                    "authors": [],
+                    "description": "Technology Data Energy Storage Table",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_catalogue_for_energy_storage.pdf",
+                    "title": "Danish Energy Agency",
+                    "authors": [],
+                    "description": "Technology Data Energy Storage Document",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://dx.doi.org/10.18419/opus-9761",
+                    "title": "Storage Demand in Highly Renewable Energy Scenarios for Europe : The Influence of Methodology and Data Assumptions in Model-Based Assessments",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/energy_transport_datasheet.xlsx",
+                    "title": "Danish Energy Agency",
+                    "authors": [],
+                    "description": "Technology Data Energy Transport Table",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.2-g.com/de/wasserstoff-bhkw/",
+                    "title": "Produkte 2g BHKW",
+                    "authors": [],
+                    "description": "Liste von Blockheizkrafterken unterschiedlicher Brennstoffarten",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/wege-zu-einem-klimaneutralen-energiesystem.html",
+                    "title": "Frauenhofer ISE",
+                    "authors": [],
+                    "description": "Wege zu einem klimaneutralen Energiesystem - Anhang zur Studie",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "10.5281/zenodo.5802178",
+                    "title": "Model Input and Output Data of the FlexMex Model Comparison",
+                    "authors": [],
+                    "description": "This data collection includes the input and output data of the FlexMex model experiment (grant number: 03ET4077A-H) funded by the German Federal Ministry for Economic Affairs and Energy (BMWi). The aim of the FlexMex project is to better understand the interrelationships of modelling approaches and model results in the mapping and analysis of technical-structural flexibilities in future electricity systems.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.diw.de/documents/publikationen/73/diw_01.c.424566.de/diw_datadoc_2013-068.pdf",
+                    "title": "DIW Data Documentation",
+                    "authors": [],
+                    "description": "Current and Prospective Costs of Electricity Generation until 2050",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.diw.de/documents/publikationen/73/diw_01.c.424566.de/diw_datadoc_2013-068.pdf",
+                            "title": "Copyright by Deutsches Institut für Wirtschaftsforschung",
+                            "attribution": "© DIW Berlin, 2013",
+                            "instruction": "All rights reserved. Reproduction and distribution in any form, also in parts, requires the express written permission of DIW Berlin.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "windnode",
+                    "authors": [],
+                    "description": "unpublished",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "UMAS",
+                "raw",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "cost range of various transformer for the years 2040 and 2050",
+            "contributors": [
+                {
+                    "date": "2022-09-14",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "hedwiglieselotte",
+                    "object": "metadata",
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-12-05",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "monika-o",
+                    "object": "metadata",
+                    "comment": "Annotate metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

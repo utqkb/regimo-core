@@ -1,0 +1,400 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://energy.databus.dbpedia.org/oeplatform/scenario/ksz2050_r2_ks80_co2_emissions_industrial_processes",
+            "name": "ksz2050_r2_ks80_co2_emissions_industrial_processes",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/ksz2050_r2_ks80_co2_emissions_industrial_processes",
+            "type": "Table",
+            "title": "Projections of CO2 emission from industrial processes in scenario KS80",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/27",
+                "badge": "Gold"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.org/dc/elements/1.1/identifier",
+                                "name": "dc:identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "variable",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000435",
+                                "name": "variable"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Variable",
+                        "valueReference": [
+                            {
+                                "value": "CO2 emission"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "source_category",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000528",
+                                "name": "has source"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source category (subsector of industrial processes)",
+                        "valueReference": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010165",
+                                "name": "CRF sector (IPCC 2006): cement production",
+                                "value": "Cement production"
+                            },
+                            {
+                                "value": "Lime production and use"
+                            },
+                            {
+                                "value": "Glass production"
+                            },
+                            {
+                                "value": "Ceramic production"
+                            },
+                            {
+                                "value": "Soda ash production and use"
+                            },
+                            {
+                                "value": "Ammonia production"
+                            },
+                            {
+                                "value": "Carbide production"
+                            },
+                            {
+                                "value": "Catalytic burning"
+                            },
+                            {
+                                "value": "Conversion loss"
+                            },
+                            {
+                                "value": "Methanol production"
+                            },
+                            {
+                                "value": "Carbon black production"
+                            },
+                            {
+                                "value": "Iron and Steel production"
+                            },
+                            {
+                                "value": "Ferroalloys production"
+                            },
+                            {
+                                "value": "Primary aluminium production"
+                            },
+                            {
+                                "value": "Total"
+                            },
+                            {
+                                "value": "Flue gas desulphurisation"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "crf",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Code of the source category in the Common Reporting Format (CRF)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Unit of measurement",
+                        "valueReference": [
+                            {
+                                "value": "kt"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenario year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scenario year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000350",
+                                "name": "quantity value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Value",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "year"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "year"
+                            ],
+                            "resource": "schema.table"
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03KSE031",
+                "homepage": "https://www.klimaschutzszenario2050.de",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://www.oeko.de/oekodoc/2451/2015-608-de.pdf",
+                "fundingAgency": "Diese Daten wurden im Auftrag des Bundesministeriums für Umwelt, Naturschutz und nukleare Sicherheit erstellt",
+                "publisherLogo": "https://www.oeko.de/fileadmin/templates/oeko/Resources/Public/images/logo.svg",
+                "fundingAgencyLogo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Logo_Bundesministerium_f%C3%BCr_Umwelt_Naturschutz_und_nukleare_Sicherheit.png"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.oeko.de/publikationen/p-details/klimaschutzszenario-2050-2-endbericht",
+                    "title": "todo",
+                    "authors": [],
+                    "description": "Details see report provided under URL",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Öko-Institut",
+                "KSz-2050-R2",
+                "KS80",
+                "Germany",
+                "emissions",
+                "Industry",
+                "2020",
+                "2050"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE-BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Data licence Germany – attribution – version 2.0",
+                    "attribution": "© Öko-Institut",
+                    "instruction": "https://www.govdata.de/dl-de/by-2-0",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050-01-01T00:00:00+01:00",
+                        "start": "2020-01-01T00:00:00+01:00",
+                        "alignment": "left",
+                        "resolutionUnit": "years",
+                        "aggregationType": "",
+                        "resolutionValue": "10"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table holds CO2 emissions projections of the KS80 split by source categories. The data corresponds to the data in table 6-2 of the report.",
+            "contributors": [
+                {
+                    "date": "2019-06-26",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-01-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "metadata",
+                    "comment": "Fixed small typos and urls",
+                    "organization": null
+                },
+                {
+                    "date": "2021-02-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "tags",
+                    "comment": "add further tags",
+                    "organization": null
+                },
+                {
+                    "date": "2022-05-26",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Transfrom from oem141 to oem151 using new omi feature",
+                    "organization": null
+                },
+                {
+                    "date": "2022-06-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Fill isAbout and valueReference keys if applicable",
+                    "organization": null
+                },
+                {
+                    "date": "2022-07-20",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Delete key path if it is null. Needed for current MOSS sparql query implementation.",
+                    "organization": null
+                },
+                {
+                    "date": "2022-07-26",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "steull",
+                    "object": "metadata",
+                    "comment": "Metadata review",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

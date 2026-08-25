@@ -1,0 +1,266 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "ego_grid_ding0_lv_branchtee",
+            "type": "Table",
+            "title": "DING0 - Result data for lv branchtee",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "integer",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unambiguous unique numer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "run_id",
+                        "type": "",
+                        "unit": "yyyyMMddhhmmss",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "time and date of table generation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "WGS84 POINT",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "geometric coordinates",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id_db",
+                        "type": "",
+                        "unit": "integer",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unambiguous number of LV-Grid",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "",
+                        "unit": "string",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "unambiguous name: 'LVCableDistributorDing0_LV_#lvgridid#_#ascendingnumber",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "ding0",
+                    "authors": [],
+                    "description": "Ding0 reference",
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License-3.0",
+                            "path": "https://github.com/openego/ding0",
+                            "title": "",
+                            "attribution": "© 2017 openego project group",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "readthedocs.io",
+                    "authors": [],
+                    "description": "Ding0 documentation",
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License-3.0",
+                            "path": "https://dingo.readthedocs.io/en/dev/",
+                            "title": "",
+                            "attribution": "© Copyright 2015-2018, open_eGo-Team",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "zenodo",
+                    "authors": [],
+                    "description": "Distribution grid data generated by DINGO",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY-SA 4.0",
+                            "path": "https://doi.org/10.5281/zenodo.890479",
+                            "title": "",
+                            "attribution": "© 2017 openego project group",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Data Commons Open Database License 1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "ODbL-1.0",
+                    "attribution": "© Reiner Lemoine Institut",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "DIstribution Network Generat0r - A tool to generate synthetic medium and low voltage power distribution grids based on open (or at least accessible) data.",
+            "contributors": [
+                {
+                    "date": "2018-08-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonas Huber",
+                    "object": null,
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2018-09-12",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonas Huber",
+                    "object": null,
+                    "comment": "Update metadata section source",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

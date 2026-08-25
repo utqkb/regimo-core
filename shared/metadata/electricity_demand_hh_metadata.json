@@ -1,0 +1,233 @@
+{
+    "@id": "",
+    "name": "2045_scenario",
+    "title": "2045_scenario",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": "",
+            "name": "electricity_demand_hh",
+            "path": "data/elements/electricity-demand_hh.csv",
+            "type": "",
+            "title": "Electricity Demand for HH Sector",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "nullable": false
+                    },
+                    {
+                        "name": "amount",
+                        "type": "number",
+                        "nullable": true
+                    },
+                    {
+                        "name": "bus",
+                        "type": "string",
+                        "nullable": true
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "string",
+                        "nullable": true
+                    },
+                    {
+                        "name": "profile",
+                        "type": "string",
+                        "nullable": true
+                    },
+                    {
+                        "name": "region",
+                        "type": "string",
+                        "nullable": true
+                    },
+                    {
+                        "name": "tech",
+                        "type": "string",
+                        "nullable": true
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "nullable": true
+                    }
+                ],
+                "primaryKey": [
+                    "name"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "bus"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "name"
+                            ],
+                            "resource": "bus"
+                        }
+                    },
+                    {
+                        "fields": [
+                            "profile"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "profile"
+                            ],
+                            "resource": "electricity_demand_hh_profile"
+                        }
+                    }
+                ]
+            },
+            "topics": [],
+            "context": {
+                "title": "Stadt-Land-Energie: Robustheit und Übertragbarkeit von interkommunalen Energiewendeszenarien im Stadt-Land-Nexus ",
+                "contact": "sarah.berendes@rl-institut.de",
+                "grantNo": "03EI1051A",
+                "homepage": "https://reiner-lemoine-institut.de/projekt/stadt-land-energie-robustheit-und-uebertragbarkeit-von-interkommunalen-energiewendeszenarien-im-stadt-land-nexus/",
+                "publisher": "Open Energy Platform (OEP)",
+                "sourceCode": "https://github.com/rl-institut/apipe/tree/sle-features/case-study-1",
+                "documentation": "https://stadt-land-energie.rl-institut.de/explorer/documentation/",
+                "fundingAgency": "Federal Ministry for Economic Affairs and Energy",
+                "publisherLogo": "https://github.com/OpenEnergyPlatform/organisation/blob/production/logo/OpenEnergyFamily_Logo_OpenEnergyPlatform.svg",
+                "fundingAgencyLogo": "https://upload.wikimedia.org/wikipedia/commons/8/83/Federal_Ministry_for_Economic_Affairs_and_Energy_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/rl-institut/apipe/blob/sle-features/case-study-1/apipe/store/datasets/demand_electricity_region/dataset.md",
+                    "title": "demand_electricity_region",
+                    "authors": [
+                        "srhbrnds"
+                    ],
+                    "description": "A dataset.md for the assumptions and sources for the electricity demand within the energy system. ",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                },
+                {
+                    "path": "",
+                    "title": "2025-10-08-SLE_resources",
+                    "authors": [
+                        "srhbrnds"
+                    ],
+                    "description": "A bibtex file containing sources for the data and assumptions used in the case studies.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2025"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": "",
+                    "crs": "",
+                    "name": "",
+                    "boundingBox": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": "",
+                    "address": "",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320062",
+                    "name": "electricity demand"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000214",
+                    "name": "household sector"
+                }
+            ],
+            "encoding": "utf-8",
+            "keywords": [
+                "household",
+                "sle",
+                "preprocessed",
+                "electricty_demand"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0 ",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": "",
+                    "instruction": "You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. ",
+                    "copyrightStatement": ""
+                }
+            ],
+            "temporal": {
+                "timeseries": [],
+                "referenceDate": "2045-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "A dataset with specifications for the electricity demand in households for regions in Oderland-Spree.",
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        "DataCollector",
+                        "DataCurator"
+                    ],
+                    "title": "Sarah Berendes",
+                    "object": "",
+                    "comment": "",
+                    "organization": "Reiner Lemoine institut"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": ""
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

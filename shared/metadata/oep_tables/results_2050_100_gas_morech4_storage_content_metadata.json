@@ -1,0 +1,302 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "results_2050_100_gas_morech4_storage_content",
+            "path": "results_2050_100_gas_morech4_storage_content",
+            "type": "Table",
+            "title": "Model results oemof-B3 2050-100-gas moreCH4",
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id_ts",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Numerical index",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_key",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unique name of the oemof component",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_name",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Variable name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Energy carrier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tech",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Technology description",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "oemof.tabular facade type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_start",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Start of the timeindex following ISO 8601 date and time format",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_stop",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Stop of the timeindex following ISO 8601 date and time format",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_resolution",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time increment",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "series",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Series",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_unit",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit of the variable",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source of the data",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Additional information or notes such as the license or scope of validity",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "RLI",
+                "oemof_b3"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

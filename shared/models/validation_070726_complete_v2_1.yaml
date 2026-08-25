@@ -1,0 +1,564 @@
+id: https://example.org/oep-energy-schema
+name: OEP_Energy_Data_Schema
+
+description: >
+  LinkML representation of OpenEnergyPlatform OEMetadata v2.0.4 specification.
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  oemetadata: https://openenergyplatform.org/oemetadata/
+  oeo: http://openenergy-platform.org/ontology/oeo/
+
+imports:
+  - linkml:types
+
+
+types:
+  NonEmptyString:
+    typeof: string
+    uri: xsd:string
+    pattern: '.*\S.*'    # Der regex heißt: mind. ein Zeichen vorhanden und mindestens ein Zeichen ist kein Leerzeichen
+                         # Abgelehnt wird z.B. name: "" o. name: " "
+                         # alternativ würde auch das gehen -> minimum_value_length: 1 Das würde aber nur name: "" verhindern und nicht name: " "
+
+slots:
+
+  required_name:
+    required: true
+    minimum_cardinality: 1
+    range: NonEmptyString
+
+  required_type:
+    required: true
+    minimum_cardinality: 1
+    range: NonEmptyString
+
+  required_title:
+    required: true
+    minimum_cardinality: 1
+    range: NonEmptyString
+
+classes:
+  Dataset:
+    description: OEMetadata dataset object.
+
+    attributes:
+      id:
+        identifier: true
+        alias: "@id"
+        range: uriorcurie
+
+      name:
+        required: true  # required: true entspricht minimum_cardinality: 1
+        range: NonEmptyString
+        minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+      title:
+        range: string
+
+      context:
+        alias: "@context"
+        range: uriorcurie
+
+      resources:
+        required: true
+        multivalued: true
+        range: Resource
+
+      description:
+        range: string
+
+      metaMetadata:
+        range: MetaMetadata
+
+
+  Resource:
+    description: OEMetadata resource.
+
+    attributes:
+      id:
+        alias: "@id"
+        range: uriorcurie
+
+      name:
+        is_a: required_name
+        #maximum_cardinality: 1
+
+      title:
+        range: string
+
+      description:
+        range: string
+
+      path:
+        range: string
+
+      type:
+        range: string
+
+      format:
+        range: string
+
+      encoding:
+        range: string
+
+      publicationDate:
+        any_of:
+          - range: datetime
+          - range: string
+          - range: null
+
+      languages:
+        multivalued: true
+        range: string
+
+      keywords:
+        multivalued: true
+        range: string
+
+      topics:
+        multivalued: true
+        range: string
+
+      subject:
+        multivalued: true
+        range: OntologyReference
+
+      context:
+        range: ResourceContext
+
+      contributors:
+        multivalued: true
+        range: Contributor
+
+      embargoPeriod:
+        range: EmbargoPeriod
+
+      review:
+        range: Review
+
+      dialect:
+        range: Dialect
+
+      schema:
+        required: true
+        range: TableSchema
+        minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+      temporal:
+        range: TemporalInformation
+
+      spatial:
+        range: SpatialInformation
+
+      licenses:
+        multivalued: true
+        range: License
+
+      sources:
+        multivalued: true
+        range: Source
+
+
+  TableSchema:
+    attributes:
+      fields:
+        required: true
+        multivalued: true
+        range: Field
+        minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+      primaryKey:
+        required: true
+        multivalued: true
+        range: NonEmptyString
+
+      foreignKeys:
+        multivalued: true
+        range: ForeignKey
+
+
+  Field:
+    attributes:
+      name:
+        required: true
+        range: string
+        minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+      type:
+        is_a: required_type
+        #maximum_cardinality: 1
+
+      format:
+        range: string
+
+      unit:
+        range: string
+
+      description:
+        range: string
+
+      nullable:
+        required: true
+        range: boolean
+        minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+      isAbout:
+        multivalued: true
+        range: OntologyReference
+
+      valueReference:
+        multivalued: true
+        range: ValueReference
+
+
+  TemporalInformation:
+    attributes:
+      referenceDate:
+        any_of:
+          - range: datetime
+          - range: string
+          - range: null
+
+      timeseries:
+        multivalued: true
+        range: TimeSeries
+
+
+  TimeSeries:
+    attributes:
+      start:
+        any_of:
+          - range: datetime
+          - range: string
+          - range: null
+
+      end:
+        any_of:
+          - range: datetime
+          - range: string
+          - range: null
+
+      resolutionValue:
+        range: string
+
+      resolutionUnit:
+        range: string
+
+      alignment:
+        range: string
+
+      aggregationType:
+        range: string
+
+
+  SpatialInformation:
+    attributes:
+
+      extent:
+        range: SpatialExtent
+
+      location:
+        range: Location
+
+
+  SpatialExtent:
+    attributes:
+
+      id:
+        alias: "@id"
+        range: uriorcurie
+
+      name:
+        range: string
+
+      crs:
+        range: string
+
+      boundingBox:
+        multivalued: true
+        range: float
+
+      resolutionUnit:
+        range: string
+
+      resolutionValue:
+        range: string
+
+
+  Location:
+    attributes:
+      id:
+        alias: "@id"
+        range: uriorcurie
+
+      address:
+        range: string
+
+      latitude:
+        any_of:
+          - range: float
+          - range: null
+
+      longitude:
+        any_of:
+          - range: float
+          - range: null
+
+
+  OntologyReference:
+    attributes:
+      id:
+        alias: "@id"
+        range: uriorcurie
+
+      name:
+        range: string
+
+
+  ValueReference:
+    attributes:
+
+      id:
+        range: uriorcurie
+
+      name:
+        range: string
+
+      value:
+        range: string
+
+
+  Source:
+    attributes:
+      path:
+        range: uri
+
+      title:
+        range: string
+
+      description:
+        range: string
+
+      authors:
+        multivalued: true
+        range: string
+
+      publicationYear:
+        any_of:
+          - range: integer
+          - range: string
+          - range: null
+
+      sourceLicenses:
+        multivalued: true
+        range: License
+
+
+  License:
+    attributes:
+
+      name:
+        range: string
+
+      title:
+        range: string
+
+      path:
+        range: uri
+
+      attribution:
+        range: string
+
+      instruction:
+        range: string
+
+      copyrightStatement:
+        range: string
+
+
+  MetaMetadata:
+    attributes:
+
+      metadataVersion:
+        required: true
+        range: NonEmptyString
+        minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+      metadataLicense:
+        required: true
+        range: MetadataLicense
+        minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+  MetadataLicense:
+    attributes:
+
+      name:
+        is_a: required_name
+        #maximum_cardinality: 1
+
+      title:
+        is_a:required_title
+        #maximum_cardinality: 1
+
+      path:
+        required: true
+        range: uri
+        minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+
+  Contributor:
+    attributes:
+
+      title:
+        range: string
+
+      date:
+        any_of:
+          - range: datetime
+          - range: string
+          - range: null
+
+      path:
+        range: string
+
+      roles:
+        multivalued: true
+        range: string
+
+      role:
+        multivalued: true
+        range: string
+
+      object:
+        range: string
+
+      comment:
+        range: string
+
+      organization:
+        range: string
+
+
+  ResourceContext:
+    attributes:
+
+      title:
+        range: string
+
+      contact:
+        range: string
+
+      grantNo:
+        range: string
+
+      homepage:
+        range: uri
+
+      publisher:
+        range: string
+
+      sourceCode:
+        range: uri
+
+      documentation:
+        range: uri
+
+      fundingAgency:
+        range: string
+
+      publisherLogo:
+        range: uri
+
+      fundingAgencyLogo:
+        range: uri
+
+
+  EmbargoPeriod:
+    attributes:
+
+      start:
+        required: false
+        any_of:
+          - range: datetime
+          - range: null
+
+      end:
+        required: false
+        any_of:
+          - range: datetime
+          - range: null
+
+      isActive:
+        range: boolean
+
+
+  Review:
+    attributes:
+
+      path:
+        range: uri
+
+      badge:
+        range: string
+
+      lastUpdate:
+        range: datetime
+
+
+  ForeignKey:
+    attributes:
+
+      fields:
+        multivalued: true
+        range: string
+
+      reference:
+        range: ForeignKeyReference
+
+
+  ForeignKeyReference:
+    attributes:
+
+      resource:
+        range: string
+
+      fields:
+        multivalued: true
+        range: string
+
+
+  Dialect:
+    attributes:
+
+      delimiter:
+        #required: true
+        range: NonEmptyString
+        #minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+      decimalSeparator:
+        #required: true
+        range: NonEmptyString
+        #minimum_cardinality: 1
+        #maximum_cardinality: 1
+
+      quoteChar:
+        range: string
+
+      escapeChar:
+        range: string
+
+      header:
+        range: boolean
+
+      skipRows:
+        range: integer

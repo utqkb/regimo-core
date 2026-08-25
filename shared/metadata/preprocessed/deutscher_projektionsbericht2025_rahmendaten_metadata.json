@@ -1,0 +1,519 @@
+{
+    "id": "deutscher_projektionsbericht2025_rahmendaten",
+    "@id": null,
+    "name": "deutscher_projektionsbericht2025_rahmendaten",
+    "title": "Rahmendaten für die Treibhausgas-Projektionen 2025 (Datentabelle)",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "deutscher_projektionsbericht2025_rahmendaten",
+            "path": "deutscher_projektionsbericht2025_rahmendaten",
+            "type": "Table",
+            "title": "Rahmendaten für die Treibhausgas-Projektionen 2025 (Datentabelle)",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique id",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "tabelle",
+                        "type": "varchar(8)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Table in the report",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "varchar(128)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Name of the parameter",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "einheit",
+                        "type": "varchar(128)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Unit of the parameter",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "jahr",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "The year for which the value in column wert is valid",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wert",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "The value of the parameter",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    null
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            null
+                        ],
+                        "reference": {
+                            "fields": [
+                                null
+                            ],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "scenario"
+            ],
+            "context": {
+                "title": "THG-Projektionen: Weiterentwicklung der Methoden und Umsetzung der Europäischen Governance-Verordnung und des Bundesklimaschutzgesetzes (\"Politikszenarien XII\")",
+                "contact": "oedb@oeko.de",
+                "grantNo": "FKZ 37K2442010",
+                "homepage": "https://www.oeko.de/projekte/detail/thg-projektionen-weiterentwicklung-der-methoden-und-umsetzung-der-europaeischen-governance-verordnung-und-des-bundesklimaschutzgesetzes-politikszenarien-xii",
+                "publisher": "Umweltbundesamt, Open Energy Platform",
+                "sourceCode": null,
+                "documentation": "https://openenergyplatform.org/scenario-bundles/id/93f1cdf6-a09a-c973-f948-138beeacd3df",
+                "fundingAgency": "Umweltbundesamt",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Gesamtbevölkerung",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion der Bevölkerung Deutschlands zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Als Grundlage für die Berechnung diente die Variante 2 (G2-L2-W2) der 15. koordinierte Bevölkerungsvorausberechnung",
+                    "sourceLicenses": [],
+                    "publicationYear": "2025"
+                },
+                {
+                    "path": null,
+                    "title": "Erdgas Großhandelspreis",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des Großhandelpreises für Erdgas zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Als Grundlage für die Berechnung der Daten dienten das AP Szenarios aus IEA (2024): World Energy Outlook 2024: https://www.iea.org/reports/world-energy-outlook-2024, sowie die Erdgasfutures aus EEX (2024) The Erdgas Futures, https://www.eex.com/de/marktdaten/erdgas/futures#%7B%22snippetpicker%22%3A%22264%22%7D",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Großhandelspreis Rohöl Brent",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des Großhandelpreises für Rohöl zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Als Grundlage für die Berechnung der Daten dienten das AP Szenarios aus IEA (2024): World Energy Outlook 2024: https://www.iea.org/reports/world-energy-outlook-2024 (zuletzt geprüft: 02.09.2024), sowie die Futures aus Barchart (2024a): Crude Oil Brent Futures. https://www.barchart.com/futures/quotes/CB*0/futures-prices (zuletzt geprüft: 02.09.2024)",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Großhandelpreis Steinkohle",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des Großhandelpreises für Steinkohle zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Als Grundlage für die Berechnung der Daten dienten das AP Szenarios aus IEA (2024): World Energy Outlook 2024: https://www.iea.org/reports/world-energy-outlook-2024, sowie die Futures aus Barchart (2024): Coal Price Futures, https://www.barchart.com/futures/quotes/LU*0/futures-prices; abgerufen am 09.09.2024",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Großhandelspreis Wasserstoff",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des Großhandelpreises für Wasserstoff zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Als Grundlage für die Berechnung der Daten dienten eigene Berchnungen von Prognos, diese werden in einem seperaten Dokument veröffentlicht",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Heiz- und Kühlgradtage",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion der Heiz-und Kühlgradtage zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Die Berechnung der Heiz- und Kühlgradtage erfolgte auf Basis der vom DWD bereit gestellten langjährigen Mittelwerte (1971-2000) sowie den Abweichungen von den langjährigen Mittelwerten in den Klimaszenarien, auf Monatsebene. Dazu wurden die Mittelwerte des DWD-Referenz-Ensembles 2018 für das RCP-Szenario 4,5 verwendet. Für die Heizgradtage erfolgte noch eine Modifikation: Die berechneten Heizgradtage wurden von Prognos anhand der berechneten Veränderungsrate in Heizgradtage mit einer Heizgrenze bei 15°C und einer Innenraumtemperatur bei 20°C umgerechnet.",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Preis im EU Emissionshandel / EU ETS 1",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des Preises im EU Emissionshandel zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Als Grundlage für die Berechnung der Daten dienten EEX (2024b): EU ETS Preis https://www.eex.com/de/marktdaten/umweltprodukte/eu-ets-auktionen; abgerufen am 09.09.2024 und Empfehlungen der EU Commission (2024b): Recommended parameters for reporting on GHG projections in 2025, June 2024, sowie Internationale Energie Agentur IEA (2024): World Energy Outlook 2024, https://www.iea.org/reports/world-energy-outlook-2024",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Preis im nationalen Emissionshandel / EU ETS 2",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des Preises im nationalen Emissionshandel zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Als Grundlage für die Berechnung der Daten dienten die THG Projektionen 2024",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Preisindex Bruttoinlandsprodukt",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des Preisindex des Bruttoinlandsproduktes (Basisjahr 2023); zur Nutzung als Rahmendatum in den THG-Projektionen 2025",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Produktionswert",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des Produktionswertes zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Der Produktionswert wird nach Wirtschaftszweigen differenziert (nach Statistisches Bundesamt(2008): Gliederung der Klassifikation der Wirtschaftszweige, Ausgabe 2008 (WZ 2008) (https://www.destatis.de/DE/Methoden/Klassifikationen/Gueter-Wirtschaftsklassifikationen/Downloads/gliederung-klassifikation-wz-3100130089004.pdf?__blob=publicationFile.))",
+                    "sourceLicenses": [],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Wachstumsrate Bruttoinlandsprodukt",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion der prozentualen Veränderungsrate des deutschen Bruttoinlandsproduktes (deflationiert) zur Nutzung als Rahmendatum in den THG-Projektionen 2025",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Bruttoinlandsprodukt",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion des deutschen Bruttoinlandsproduktes (in Preisen des Jahres 2023) zur Nutzung als Rahmendatum in den THG-Projektionen 2025",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Bruttowertschöpfung",
+                    "authors": [
+                        "prognos"
+                    ],
+                    "description": "Eigene Projektion der deutschen Bruttowertschöpfung zur Nutzung als Rahmendatum in den THG-Projektionen 2025. Die Bruttowertschöpfung wird nach Wirtschaftszweigen differenziert (nach Statistisches Bundesamt(2008):Gliederung der Klassifikation der Wirtschaftszweige, Ausgabe 2008 (WZ 2008) (https://www.destatis.de/DE/Methoden/Klassifikationen/Gueter-Wirtschaftsklassifikationen/Downloads/gliederung-klassifikation-wz-3100130089004.pdf?__blob=publicationFile) (zuletzt geprüft: 06.11.2024)",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000063",
+                    "name": "assumption",
+                    "openModalButton": null
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00030029",
+                    "name": "exogenous data",
+                    "openModalButton": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "Klimaschutzgesetz",
+                "DL-DE->BY-2.0",
+                "EU Governance-Verordnung",
+                "2025",
+                "Projektionsbericht",
+                "Deutschland",
+                "Treibhausgasprojektionen"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE->BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                    "attribution": "prognos (2025):Rahmendaten für den Projektionsbericht 2025 (Datentabelle)",
+                    "instruction": "see https://www.govdata.de/dl-de/by-2-0",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050-01-01",
+                        "start": "2025-01-01",
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                "DE_de"
+            ],
+            "description": "Die Rahmendaten der ⁠Treibhausgas⁠-Projektionen 2025 beschreiben die Entwicklung zentraler Einflussfaktoren des Energiesystems in Deutschland bis 2050. Der Bericht umfasst Annahmen zur demografischen und wirtschaftlichen Entwicklung, zu Großhandelspreisen wichtiger Energieträger wie Rohöl, Erdgas, Steinkohle und Wasserstoff sowie zu ⁠CO2⁠-Preisen in den verschiedenen Systemen. Ergänzt wird dies durch Daten zu CO2-Transport- und Speicherkosten.",
+            "contributors": [
+                {
+                    "date": "2025-07-01",
+                    "path": null,
+                    "roles": [],
+                    "title": "Öko-Institut",
+                    "object": "data upload, metadata",
+                    "comment": "publication on OEP as addition to UBA datacube",
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "Die Rahmendaten der ⁠Treibhausgas⁠-Projektionen 2025 beschreiben die Entwicklung zentraler Einflussfaktoren des Energiesystems in Deutschland bis 2050. Sie umfassen Annahmen zur demografischen und wirtschaftlichen Entwicklung, zu Großhandelspreisen wichtiger Energieträger wie Rohöl, Erdgas, Steinkohle und Wasserstoff sowie zu ⁠CO2⁠-Preisen in den verschiedenen Systemen. Ergänzt wird dies durch Daten zu CO2-Transport- und Speicherkosten.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

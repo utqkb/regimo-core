@@ -1,0 +1,256 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/weather_modeloutput",
+            "type": "Table",
+            "title": null,
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "temperature_2m",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "relative_humidity_2m",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "surface_pressure",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_speed_10m",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_speed_100m",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "shortwave_radiation_instant",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "diffuse_radiation_instant",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "direct_normal_irradiance_instant",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "month",
+                        "type": "varchar(30)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": null,
+                "grantNo": null,
+                "homepage": null,
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": null,
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

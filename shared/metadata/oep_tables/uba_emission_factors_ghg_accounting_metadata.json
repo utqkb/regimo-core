@@ -1,0 +1,178 @@
+{
+    "@id": null,
+    "name": "uba_emission_factors_ghg_accounting",
+    "title": "Umweltbundesamt (UBA) - Emissionsfaktoren für die Treibhausgasbilanzierung von Organisationen - Version 1.0",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "uba_emission_factors_ghg_accounting",
+            "path": "https://openenergyplatform.org/dataedit/view/data/uba_emission_factors_ghg_accounting",
+            "type": null,
+            "title": "Umweltbundesamt (UBA) - Emissionsfaktoren für die Treibhausgasbilanzierung von Organisationen",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [],
+                "primaryKey": [],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "climate",
+                "environment"
+            ],
+            "context": {
+                "title": "UBA - Umwelt- und Energiemanagement",
+                "contact": "probas@uba.de",
+                "grantNo": null,
+                "homepage": "https://www.umweltbundesamt.de/",
+                "publisher": "Umweltbundesamt (UBA)",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "https://www.umweltbundesamt.de/themen/wirtschaft-konsum/wirtschaft-umwelt/umwelt-energiemanagement/emissionsfaktoren-zur-treibhausgasbilanzierung-von#erstellungsprozess",
+                    "title": "Emissionsfaktoren zur Treibhausgasbilanzierung von Organisationen",
+                    "authors": [],
+                    "description": "Emissionsfaktoren zur Treibhausgasbilanzierung Um es Unternehmen und anderen Organisationen zu erleichtern, ihre Emissionen von Treibhausgasen (THG) belastbar und passgenau zu ermitteln, veröffentlicht das Umweltbundesamt eine Liste von Emissionsfaktoren zur THG-Bilanzierung. Neben den Emissionsfaktoren für die meisten fossilen und erneuerbaren Brennstoffe enthält sie differenzierte Informationen, um die mit dem Verbrauch von Strom und Fernwärme verbundenen THG-Emissionen methodisch belastbar berechnen zu können, sowie einzelne Emissionsfaktoren für indirekte THG-Emissionen im Wertschöpfungsprozess. Damit wird nicht nur die Qualität der THG-Bilanzen verbessert, sondern auch deren Vergleichbarkeit erhöht.  Immer mehr Unternehmen und andere Organisationen (z.B. Verbände, Verwaltungen, NGOs) müssen oder wollen die Treibhausgasemissionen ermitteln, die direkt oder indirekt auf ihre Aktivitäten zurückzuführen sind, sei es aufgrund von EU-Vorgaben zur Nachhaltigkeitsberichterstattung, Regelungen des Bundes und der Länder zur klimafreundlichen Verwaltung oder Anforderungen wichtiger Vertragspartner und Kunden. Hierzu benötigen sie passgenaue Emissionsfaktoren für die Treibhausgasbilanzierung. Zwar gibt es bereits zahlreiche Quellen, in denen entsprechende Emissionsfaktoren angegeben sind. Meist sind diese jedoch nicht zentral zugänglich, für wirtschaftliche Aktivitäten in anderen Ländern konzipiert und ohne ausreichende Angaben zu Methodik, Passgenauigkeit und Konsistenz der Emissionsfaktoren. Dies führt nicht nur zu zusätzlichem Aufwand und Kosten, sondern auch zu sehr unterschiedlicher Qualität der Treibhausgasbilanzen.  Vor diesem Hintergrund stellt das ⁠UBA⁠ seit dem Jahr 2025 eine einheitliche, qualitätsgesicherte und regelmäßig fortgeschriebene Liste von Emissionsfaktoren für alle gängigen Brennstoffe sowie wesentliche klimaschädliche Aktivitäten und Prozesse von Organisationen bereit. Damit will das UBA nicht nur den Aufwand zur Ermittlung von organisationsbezogenen Treibhausgasemissionen verringern, sondern auch die methodische Basis der Treibhausgasbilanzen vereinheitlichen und deren Qualität verbessern. Die Liste der Emissionsfaktoren ist auch für die Anbieter von Tools und anderer Unterstützungsleistungen zur THG-Bilanzierung geeignet und trägt dazu bei, die derzeitigen, häufig intransparenten Methoden und Ansätze zur THG-Bilanzierung zu vereinheitlichen und weiterzuentwickeln.  Die aktuelle Liste der Emissionsfaktoren und alle vorherigen Versionen können unten kostenfrei und zur freien Nutzung heruntergeladen werden.  Die Liste enthält generische Emissionsfaktoren für viele Brennstoffe, den Verkehrsbereich, Industrieprozesse, verschiedene Dienstleistungen sowie das Treibhauspotenzial (Global Warming Potential – GWP) für Kältemittel. Der Fokus der Liste liegt dabei insbesondere auf Emissionen aus Quellen, die direkt von Organisationen verantwortet oder kontrolliert werden (Scope 1-Emissionen) und indirekten Treibhausgasemissionen aus eingekaufter Energie (Scope 2-Emissionen gemäß dem GHG Protocol Corporate Standard). Darüber hinaus enthält die Liste auch einzelne Scope 3-Emissionen.  Die Emissionsfaktoren kommen zu großen Teilen aus Forschungsvorhaben des Umweltbundesamtes und werden in der nationalen Treibhausgasberichterstattung (z.B. aufgrund des Paris Agreements) genutzt.  Erstellungsprozess und Weiterentwicklung der Liste Ein erster Entwurf der Liste wurde zwischen Mai und Juli 2025 durch ausgewählte Fachleute und Organisationen praktisch erprobt und im Hinblick auf Verständlichkeit, Praktikabilität und methodische Konsistenz bewertet. Die Rückmeldungen aus dieser Erprobung hat das ⁠UBA⁠ dazu genutzt, die Inhalte und Anwenderfreundlichkeit der Emissionsfaktorenliste zu verbessern. Darüber hinaus werden die Hinweise und Erweiterungsvorschläge aus der Erprobungsphase im Rahmen der geplanten Weiterentwicklungen genutzt, um die Emissionsfaktorenliste auch künftig zu verbessern.  Die Liste soll jährlich aktualisiert und nach Maßgabe neuester Erkenntnisse, des Bedarfs der Organisationen sowie der Möglichkeiten im UBA weiterentwickelt werden. Eine erste Aktualisierung ist bereits für Ende 2025 geplant, um die bis dahin vorliegenden neuesten Daten für das Bezugsjahr 2024 zu berücksichtigen.",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© 2025 Umweltbundesamt Dessau-Roßlau. Alle Rechte vorbehalten",
+                            "instruction": null,
+                            "copyrightStatement": "https://www.umweltbundesamt.de/impressum"
+                        }
+                    ],
+                    "publicationYear": "2025"
+                },
+                {
+                    "path": "https://www.umweltbundesamt.de/sites/default/files/medien/376/dokumente/uba_liste_ef_fuer_thg_bilanzierung_v1.0.csv_.zip",
+                    "title": "Emissionsfaktoren zur THG-Bilanzierung (csv-Format als zip-Datei)",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© 2025 Umweltbundesamt Dessau-Roßlau | CC0",
+                            "instruction": "Soweit nicht anders angegeben stehen die (Emissions-)Daten in der bereitgestellten Liste unter einer Nutzungslizenz CC01.0.",
+                            "copyrightStatement": "https://www.umweltbundesamt.de/themen/wirtschaft-konsum/wirtschaft-umwelt/umwelt-energiemanagement/emissionsfaktoren-zur-treibhausgasbilanzierung-von#erstellungsprozess"
+                        }
+                    ],
+                    "publicationYear": "2025"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000148",
+                    "name": "emission factor",
+                    "openModalButton": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "ghg",
+                "uba",
+                "thg"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": "© 2025 Umweltbundesamt Dessau-Roßlau | CC0",
+                    "instruction": "Soweit nicht anders angegeben stehen die (Emissions-)Daten in der bereitgestellten Liste unter einer Nutzungslizenz CC01.0.",
+                    "copyrightStatement": "https://www.umweltbundesamt.de/themen/wirtschaft-konsum/wirtschaft-umwelt/umwelt-energiemanagement/emissionsfaktoren-zur-treibhausgasbilanzierung-von#erstellungsprozess"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": "2023-01-01"
+            },
+            "languages": [
+                "de"
+            ],
+            "description": "Das UBA unterstützt Unternehmen und andere Organisationen bei der Bilanzierung ihrer Treibhausgasemissionen, indem es wichtige Emissionsfaktoren bereitstellt. Eine aktuelle und qualitätsgesicherte Liste von Emissionsfaktoren erleichtert die Klimaberichterstattung der Organisationen, verbessert deren Qualität und Vergleichbarkeit und hilft, das Angebot an Bilanzierungstools zu vereinfachen.",
+            "contributors": [
+                {
+                    "date": "2025-10-22",
+                    "path": null,
+                    "roles": [
+                        "dataCurator"
+                    ],
+                    "title": "Ludwig Hülk",
+                    "object": "data and metadata",
+                    "comment": "Upload data and create metadata",
+                    "organization": "RLI"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2025-09-30"
+        }
+    ],
+    "description": null,
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

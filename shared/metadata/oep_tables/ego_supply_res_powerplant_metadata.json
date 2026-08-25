@@ -1,0 +1,472 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "Renewable power plants in Germany -Status quo",
+            "path": "ego_supply_res_powerplant",
+            "type": "Table",
+            "title": null,
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Primary Key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "start_up_date",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "start-up date",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "electrical_capacity",
+                        "type": "",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "electrical capacity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_type",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "generation_type or main fuel type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_subtype",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "generation subtype",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "thermal_capacity",
+                        "type": "",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "thermal capacity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "city",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of city or location",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "postcode",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "postcode",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "address",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "address",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lon",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "longitude",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lat",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "latitude",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gps_accuracy",
+                        "type": "",
+                        "unit": "meter",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "gps accuracy in meter",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "validation",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "validation comments",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "notification_reason",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "notification reason from BNetzA sources",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "eeg_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "EEG id of Unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tso",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of Transmission system operator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tso_eic",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of Transmission system operator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dso_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Name of District system operator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dso",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of District system operator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "voltage_level",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "voltage level",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "network_node",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name or code of network node",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_plant_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "power plant id from BNetzA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "short Name of source: energymap or bnetza",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Further comment of changes",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "subst_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID of related substation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "otg_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID od related substation from osmTGmod",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "un_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unified ID of RES and CONV power plants",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "eeg_anlagenregister_2015.08.utf8.csv.zip,Meldungen_Aug-Dez2015.xls, 2016_01_Veroeff_AnlReg.xls",
+                    "title": "EnergyMap",
+                    "authors": [],
+                    "description": "16.03.2016; 31.12.2015",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "www.energymap.info",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Bundesnetzagentur (BNetzA)",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "www.bundesnetzagentur.de",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "open_eGo data-processing",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://github.com/openego/data_processing",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "postcode level",
+                    "resolutionValue": "minimum"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Database License (ODbL) v1.0",
+                    "path": "http://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "",
+                    "attribution": "ZNES EUF",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2015-12-31"
+            },
+            "languages": [
+                ""
+            ],
+            "description": "This table contains a list of renewable energy power plants in Germany. This data join two sources: energymap.info, a data platform of the ''Deutsche Gesellschaft fÃ¼r Sonnenenergie e.V.'' and Bundesnetzagentur, the regularor together.",
+            "contributors": [
+                {
+                    "date": "2016-03-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Wolf-Dieter Bunke",
+                    "object": null,
+                    "comment": "Created table",
+                    "organization": null
+                },
+                {
+                    "date": "2017-02-02",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Wolf-Dieter Bunke",
+                    "object": null,
+                    "comment": "change meta data",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

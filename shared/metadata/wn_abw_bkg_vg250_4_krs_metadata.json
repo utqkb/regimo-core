@@ -1,0 +1,487 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "wn_abw_bkg_vg250_4_krs",
+            "type": "Table",
+            "title": "BKG - Verwaltungsgebiete 1:250.000 - Kreise (KRS), data for ABW region only",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "reference_date",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Reference date",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ade",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Administrative Ebene",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gf",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geofaktor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bsg",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Besondere Gebiete",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rs",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Regionalschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Amtlicher Gemeindeschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sdv_rs",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Sitz der Verwaltung (Regionalschlüssel)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gen",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geografischer Name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bez",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Bezeichnung der Verwaltungseinheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ibz",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Identifikator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bem",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Bemerkung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nbd",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Namensbildung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_l",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Land",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_r",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Regierungsbezirk",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_k",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kreis",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_v1",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Verwaltungsgemeinschaft - vorderer Teil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sv_v2",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Verwaltungsgemeinschaft - hinterer Teil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_g",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Gemeinde",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "fk_s3",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Funktion der 3. Schlüsselstelle",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nuts",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Europäischer Statistikschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rs_0",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "aufgefüllter Regionalschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags_0",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "aufgefüllter Amtlicher Gemeindeschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wsk",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Wirksamkeit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "debkg_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "DLM-Identifikator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Dienstleistungszentrum des Bundes für Geoinformation und Geodäsie - Open Data",
+                    "authors": [],
+                    "description": "Dieser Datenbestand steht über Geodatendienste gemäß Geodatenzugangsgesetz (GeoZG) (http://www.geodatenzentrum.de/auftrag/pdf/geodatenzugangsgesetz.pdf) für die kommerzielle und nicht kommerzielle Nutzung geldleistungsfrei zum Download und zur Online-Nutzung zur Verfügung. Die Nutzung der Geodaten und Geodatendienste wird durch die Verordnung zur Festlegung der Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes (GeoNutzV) (http://www.geodatenzentrum.de/auftrag/pdf/geonutz.pdf) geregelt. Insbesondere hat jeder Nutzer den Quellenvermerk zu allen Geodaten, Metadaten und Geodatendiensten erkennbar und in optischem Zusammenhang zu platzieren. Veränderungen, Bearbeitungen, neue Gestaltungen oder sonstige Abwandlungen sind mit einem Veränderungshinweis im Quellenvermerk zu versehen. Quellenvermerk und Veränderungshinweis sind wie folgt zu gestalten. Bei der Darstellung auf einer Webseite ist der Quellenvermerk mit der URL http://www.bkg.bund.de zu verlinken. © GeoBasis-DE / BKG <Jahr des letzten Datenbezugs> © GeoBasis-DE / BKG <Jahr des letzten Datenbezugs> (Daten verändert) Beispiel: © GeoBasis-DE / BKG 2013",
+                    "sourceLicenses": [
+                        {
+                            "name": "Geodatenzugangsgesetz (GeoZG)",
+                            "path": "http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=14&gdz_user_id=0",
+                            "title": "",
+                            "attribution": "© GeoBasis-DE / BKG 2016 (Daten verändert)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Dienstleistungszentrum des Bundes für Geoinformation und Geodäsie - Open Data",
+                    "authors": [],
+                    "description": "Dieser Datenbestand steht über Geodatendienste gemäß Geodatenzugangsgesetz (GeoZG) (http://www.geodatenzentrum.de/auftrag/pdf/geodatenzugangsgesetz.pdf) für die kommerzielle und nicht kommerzielle Nutzung geldleistungsfrei zum Download und zur Online-Nutzung zur Verfügung. Die Nutzung der Geodaten und Geodatendienste wird durch die Verordnung zur Festlegung der Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes (GeoNutzV) (http://www.geodatenzentrum.de/auftrag/pdf/geonutz.pdf) geregelt. Insbesondere hat jeder Nutzer den Quellenvermerk zu allen Geodaten, Metadaten und Geodatendiensten erkennbar und in optischem Zusammenhang zu platzieren. Veränderungen, Bearbeitungen, neue Gestaltungen oder sonstige Abwandlungen sind mit einem Veränderungshinweis im Quellenvermerk zu versehen. Quellenvermerk und Veränderungshinweis sind wie folgt zu gestalten. Bei der Darstellung auf einer Webseite ist der Quellenvermerk mit der URL http://www.bkg.bund.de zu verlinken. © GeoBasis-DE / BKG <Jahr des letzten Datenbezugs> © GeoBasis-DE / BKG <Jahr des letzten Datenbezugs> (Daten verändert) Beispiel: © GeoBasis-DE / BKG 2013",
+                    "sourceLicenses": [
+                        {
+                            "name": "Geodatenzugangsgesetz (GeoZG)",
+                            "path": "http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=14&gdz_user_id=0",
+                            "title": "",
+                            "attribution": "© GeoBasis-DE / BKG 2016 (Daten verändert)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "BKG - Verwaltungsgebiete 1:250.000 (vg250)",
+                    "authors": [],
+                    "description": "Der Datenbestand umfasst sämtliche Verwaltungseinheiten aller hierarchischen Verwaltungsebenen vom Staat bis zu den Gemeinden mit ihren Verwaltungsgrenzen, statistischen Schlüsselzahlen und dem Namen der Verwaltungseinheit sowie der spezifischen Bezeichnung der Verwaltungsebene des jeweiligen Bundeslandes.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Geodatenzugangsgesetz (GeoZG)",
+                            "path": "http://www.bkg.bund.de",
+                            "title": "",
+                            "attribution": "© GeoBasis-DE / BKG 2016 (Daten verändert)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "vector"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Gesetz über den Zugang zu digitalen Geodaten (Geodatenzugangsgesetz - GeoZG)",
+                    "path": "http://www.gesetze-im-internet.de/bundesrecht/geozg/gesamt.pdf",
+                    "title": "Geändert durch Art. 1 G v. 7.11.2012",
+                    "attribution": "© GeoBasis-DE / BKG 2016 (Daten verändert)",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2016-01-01"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "Der Datenbestand umfasst die Verwaltungseinheiten der hierarchischen Verwaltungsebenen vom Staat bis zu den Gemeinden",
+            "contributors": [
+                {
+                    "date": "2016-09-02",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2016-11-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Add metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2017-03-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update metadata to v1.1",
+                    "organization": null
+                },
+                {
+                    "date": "2017-06-30",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update metadata to v1.3",
+                    "organization": null
+                },
+                {
+                    "date": "2017-11-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "nesnoj",
+                    "object": null,
+                    "comment": "Select Data for ABW region",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

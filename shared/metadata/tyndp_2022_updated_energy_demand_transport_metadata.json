@@ -1,0 +1,250 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tyndp_2022_updated_energy_demand_transport",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/tyndp_2022_updated_energy_demand_transport",
+            "type": "Table",
+            "title": "TYNDP 2022 updated Engergy Demand for the Transport Sector Global Ambition and Distributed Energy",
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_name",
+                        "type": "varchar",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of scenario for which the data was calculated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year for which the scenario data was calculated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "varchar",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Europe comprising EU27 Member States",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector",
+                        "type": "varchar",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Only transport sector considered",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_carrier",
+                        "type": "varchar",
+                        "unit": "electricity, hydrogene, methane, liquids",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The energy carriers condidered in the scenarios",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "varchar",
+                        "unit": "TWh/y",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The physical unit, in which the values are given",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Transmission System Operators for Gas Avenue de Cortenbergh 100 1000 Brussels, Belgium  www.entsog.eu  ENTSO-E European Network of Transmission System Operators for Electricity Rue de Spa, 8 1000 Brussels, Belgium  www.entsoe.eu",
+                "grantNo": "",
+                "homepage": "https://2022.entsos-tyndp-scenarios.eu/download/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "www.entsog.eu  www.entsoe.eu",
+                "fundingAgency": "",
+                "publisherLogo": null,
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://2022.entsos-tyndp-scenarios.eu/wp-content/uploads/2022/04/Updated-TYNDP-2022-Scenario-Report-Data_Figures.xlsx",
+                    "title": "TYNDP 2022 - Scenario Report",
+                    "authors": [],
+                    "description": "ENTSO-E and ENTSOG are committed to developing ­TYNDP scenarios that will support the European Union plans for energy infrastructure and to achieve the objectives of the EU Green Deal as well as the Paris Agreement, and to ensure a fair, affordable and secure transition towards a clean and decarbonised energy system. The TYNDP 2022 scenarios were developed over the last two years on this basis, and with extensive stakeholder engagement.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "EU27",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Total"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Europe",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "ENSTO-E",
+                "ENTSOG",
+                "Fraunhofer IEE",
+                "TYNDP"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "©ENTSO-E ©ENTSOG TYNDP 2022 Scenarios",
+                    "instruction": "You are free: To Share, To Adapt, Under the following terms: Attribution, No additional restrictions",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050-03-07",
+                        "start": "2030-03-07",
+                        "alignment": "",
+                        "resolutionUnit": "y",
+                        "aggregationType": "",
+                        "resolutionValue": "10"
+                    }
+                ],
+                "referenceDate": "2015-12-31"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table shows total energy demand for transport sector in the EU27 by energy carriers electricity, hydrogene, methane and liquids for the scenarios Global Ambition and Distributed Engergy (derived from draft report).",
+            "contributors": [
+                {
+                    "date": "2022-03-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ulf Mueller",
+                    "object": "Data, Metadata",
+                    "comment": "Upload data table, metadata.",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-03-07"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

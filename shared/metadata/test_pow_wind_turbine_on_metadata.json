@@ -1,0 +1,301 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "test_pow_wind_turbine_on",
+            "path": "SEDOS_test_pow_wind_turbine_on_commodity",
+            "type": "Table",
+            "title": "SEDOS concrete Datamodel to Parameter",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "int",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "",
+                                "name": "dataset version string"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "csv_name",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "int",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "amount",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tech",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020033",
+                                "name": "subregion"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Region in Germany",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "profile",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "marginal_cost",
+                        "type": "int",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Felix.Maurer@rl-institut.de",
+                "grantNo": null,
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project/oedatamodel/tree/main/parameter_datamodel",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/parameter_datamodel",
+                    "title": "Parameter datamodel from template for commodity",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "template",
+                "commodity",
+                "test",
+                "pow",
+                "wind",
+                "turbine",
+                "on"
+            ],
+            "licenses": [
+                {
+                    "name": "TestLicense",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": null,
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "datamodel, metadata and examples provided as datapackage",
+            "contributors": [
+                {
+                    "date": "2022-11-13",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "FelixMau",
+                    "object": "datapackage",
+                    "comment": "Test data from template",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-11-14"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

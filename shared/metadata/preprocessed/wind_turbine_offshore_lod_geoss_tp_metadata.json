@@ -1,0 +1,399 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "wind_turbine_offshore_lod_geoss_tp",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/wind_turbine_offshore_lod_geoss_tp",
+            "type": "Table",
+            "title": "wind_turbine_offshore_lod_geoss_tp",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "data",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the different years and uncertainties for the parameters of the wind turbine and sources and additional notes",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generating_capacity_for_one_unit_MW",
+                        "type": "string",
+                        "unit": "megawatt",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the generation capacity for one unit of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "average_annual_full_load_hours",
+                        "type": "string",
+                        "unit": "hours",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the average annual full load hours for the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "forced_outage",
+                        "type": "string",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains forced outage of the technology per year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "planned_outage",
+                        "type": "string",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains planned outage of the technology per year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "technical_lifetime_years",
+                        "type": "string",
+                        "unit": "years",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the technical lifetime of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "construction_time_years",
+                        "type": "string",
+                        "unit": "years",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the construction time of one unit of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "space_requirement_1000m2_MW",
+                        "type": "string",
+                        "unit": "1000 square metre per megawatt",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the space requirement of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "primary_regulation",
+                        "type": "string",
+                        "unit": "percent per 30 seconds",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains use of the technology for primary frequency regulation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "secondary_regulation",
+                        "type": "string",
+                        "unit": "percent per minute",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains use of the technology for secondary frequency regulation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nominal_investment",
+                        "type": "string",
+                        "unit": "million euro per megawatt",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the nominal investment of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "equipment_share_of_investment",
+                        "type": "string",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the cost share of the equipment to the investment costs of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "installation_share_of_investment",
+                        "type": "string",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the cost share of the installation to the investment costs of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "grid_connection_share_of_investment",
+                        "type": "string",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "The column contains the cost share of the grid connection to the investment costs of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "fixed_O_M",
+                        "type": "string",
+                        "unit": "euro per megawatt per year",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the fixed operation and maintainance costs of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "variable_O_M",
+                        "type": "string",
+                        "unit": "euro per megawatt-hours",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the variable costs of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rotor_diameter",
+                        "type": "string",
+                        "unit": "meter",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the rotor diameter of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hub_height",
+                        "type": "string",
+                        "unit": "meter",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the hub hight of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "specific_power",
+                        "type": "string",
+                        "unit": "watt per square meter",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the specific power output per area of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "average_capacity_factor",
+                        "type": "string",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the average capacity factor of the technology per year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "average_availability",
+                        "type": "string",
+                        "unit": "watt per square meter",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the average availability of the technology per year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "specific_area_coverage",
+                        "type": "string",
+                        "unit": "megawatt per square kilometer",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the specific area coverage of the technology",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_for_el_and_dh.xlsx",
+                    "title": "Technology Data Catalogue for Electricity and district heating production - Updated April 2020",
+                    "authors": [],
+                    "description": "2020, Data collection for electricity generation and district heating plants, last update: April 2020",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency 2021",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-generation-electricity-and",
+                    "title": "technology-data-generation-electricity-and",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency 2021",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2021-05-10"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This is the first dataset to test the technology data prototype",
+            "contributors": [
+                {
+                    "date": "2021-06-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christoph Muschner",
+                    "object": "Metadata",
+                    "comment": "transpose the original table",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-06-29"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

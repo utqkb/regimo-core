@@ -1,0 +1,1334 @@
+{
+    "@id": null,
+    "name": "scenariodata_investments_transportation_expol",
+    "title": "ariadne2_scenariodata_data_v10",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "scenariodata_investments_transportation_expol",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/file_1",
+            "title": "scenariodata_investments_transportation_expol",
+            "format": null,
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "nullable": false
+                    },
+                    {
+                        "name": "variable",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020167",
+                                "name": "inve"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140003",
+                                "name": "transpor",
+                                "value": "Investment|Energy Demand|Transportation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010277",
+                                "name": "bus",
+                                "value": "Investment|Energy Demand|Transportation|Bus"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "batter electric vehicle",
+                                "value": "Investment|Energy Demand|Transportation|Bus|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "FCE",
+                                "value": "Investment|Energy Demand|Transportation|Bus|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "inter com",
+                                "value": "Investment|Energy Demand|Transportation|Bus|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010059",
+                                "name": "domestic a",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "bev",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fc",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "i combust engi",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010062",
+                                "name": "domestic na",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "battery electric ",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fcev",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010276",
+                                "name": "vehicle",
+                                "value": "Investment|Energy Demand|Transportation|LDV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010276",
+                                "name": "car",
+                                "value": "Investment|Energy Demand|Transportation|LDV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320046",
+                                "name": "battery electric ca",
+                                "value": "Investment|Energy Demand|Transportation|LDV|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320046",
+                                "name": "battery electric ca",
+                                "value": "Investment|Energy Demand|Transportation|LDV|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320047",
+                                "name": "fuel cell electric ca",
+                                "value": "Investment|Energy Demand|Transportation|LDV|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320047",
+                                "name": "fuel cell electric ca",
+                                "value": "Investment|Energy Demand|Transportation|LDV|FCEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal e",
+                                "value": "Investment|Energy Demand|Transportation|LDV|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320050",
+                                "name": "plug-in hybrid electric c",
+                                "value": "Investment|Energy Demand|Transportation|LDV|PHEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320050",
+                                "name": "plug-in hybrid electric vehicle",
+                                "value": "Investment|Energy Demand|Transportation|LDV|PHEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010280",
+                                "name": "train",
+                                "value": "Investment|Energy Demand|Transportation|Rail"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "batter el",
+                                "value": "Investment|Energy Demand|Transportation|Rail|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fuel cell ele",
+                                "value": "Investment|Energy Demand|Transportation|Rail|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000240",
+                                "name": "internal com",
+                                "value": "Investment|Energy Demand|Transportation|Rail|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010278",
+                                "name": "truck",
+                                "value": "Investment|Energy Demand|Transportation|Truck"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010278",
+                                "name": "truc",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter elec",
+                                "value": "Investment|Energy Demand|Transportation|Truck|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter electric tru",
+                                "value": "Investment|Energy Demand|Transportation|Truck|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fce",
+                                "value": "Investment|Energy Demand|Transportation|Truck|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fce",
+                                "value": "Investment|Energy Demand|Transportation|Truck|FCEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal",
+                                "value": "Investment|Energy Demand|Transportation|Truck|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter ele",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter ele",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal ",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal combustion engine",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010030",
+                                "name": "plug-in hybrid electric v",
+                                "value": "Investment|Energy Demand|Transportation|Truck|PHEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010030",
+                                "name": "plug",
+                                "value": "Investment|Energy Demand|Transportation|Truck|PHEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140003",
+                                "name": "transpor",
+                                "value": "Investment|Energy Demand|Transportation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010277",
+                                "name": "bus",
+                                "value": "Investment|Energy Demand|Transportation|Bus"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "batter electric vehicle",
+                                "value": "Investment|Energy Demand|Transportation|Bus|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "FCE",
+                                "value": "Investment|Energy Demand|Transportation|Bus|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "inter com",
+                                "value": "Investment|Energy Demand|Transportation|Bus|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010059",
+                                "name": "domestic a",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "bev",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fc",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "i combust engi",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010062",
+                                "name": "domestic na",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "battery electric ",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fcev",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010276",
+                                "name": "vehicle",
+                                "value": "Investment|Energy Demand|Transportation|LDV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010276",
+                                "name": "car",
+                                "value": "Investment|Energy Demand|Transportation|LDV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320046",
+                                "name": "battery electric ca",
+                                "value": "Investment|Energy Demand|Transportation|LDV|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320046",
+                                "name": "battery electric ca",
+                                "value": "Investment|Energy Demand|Transportation|LDV|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320047",
+                                "name": "fuel cell electric ca",
+                                "value": "Investment|Energy Demand|Transportation|LDV|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320047",
+                                "name": "fuel cell electric ca",
+                                "value": "Investment|Energy Demand|Transportation|LDV|FCEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal e",
+                                "value": "Investment|Energy Demand|Transportation|LDV|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320050",
+                                "name": "plug-in hybrid electric c",
+                                "value": "Investment|Energy Demand|Transportation|LDV|PHEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320050",
+                                "name": "plug-in hybrid electric vehicle",
+                                "value": "Investment|Energy Demand|Transportation|LDV|PHEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010280",
+                                "name": "train",
+                                "value": "Investment|Energy Demand|Transportation|Rail"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "batter el",
+                                "value": "Investment|Energy Demand|Transportation|Rail|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fuel cell ele",
+                                "value": "Investment|Energy Demand|Transportation|Rail|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000240",
+                                "name": "internal com",
+                                "value": "Investment|Energy Demand|Transportation|Rail|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010278",
+                                "name": "truck",
+                                "value": "Investment|Energy Demand|Transportation|Truck"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010278",
+                                "name": "truc",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter elec",
+                                "value": "Investment|Energy Demand|Transportation|Truck|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter electric tru",
+                                "value": "Investment|Energy Demand|Transportation|Truck|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fce",
+                                "value": "Investment|Energy Demand|Transportation|Truck|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fce",
+                                "value": "Investment|Energy Demand|Transportation|Truck|FCEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal",
+                                "value": "Investment|Energy Demand|Transportation|Truck|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter ele",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter ele",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal ",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal combustion engine",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010030",
+                                "name": "plug-in hybrid electric v",
+                                "value": "Investment|Energy Demand|Transportation|Truck|PHEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010030",
+                                "name": "plug",
+                                "value": "Investment|Energy Demand|Transportation|Truck|PHEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Bus"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Bus|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Bus|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Bus|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|FCEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|PHEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|PHEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Rail"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Rail|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Rail|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Rail|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|FCEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|PHEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|PHEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Bus"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Bus|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Bus|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Bus|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Aviation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Domestic Navigation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|FCEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|PHEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|LDV|PHEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Rail"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Rail|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Rail|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Rail|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|FCEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|BEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|Overhead Line|ICE|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|PHEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                                "name": "energy demand",
+                                "value": "Investment|Energy Demand|Transportation|Truck|PHEV|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140003",
+                                "name": "transpor",
+                                "value": "Investment|Infrastructure|Transportation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010277",
+                                "name": "bus",
+                                "value": "Investment|Infrastructure|Transportation|Bus"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "batter electric vehicle",
+                                "value": "Investment|Infrastructure|Transportation|Bus|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "FCE",
+                                "value": "Investment|Infrastructure|Transportation|Bus|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "inter com",
+                                "value": "Investment|Infrastructure|Transportation|Bus|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010059",
+                                "name": "domestic a",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Aviation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "bev",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Aviation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fc",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Aviation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "i combust engi",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Aviation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010062",
+                                "name": "domestic na",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Navigation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "battery electric ",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Navigation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fcev",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Navigation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Navigation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010276",
+                                "name": "vehicle",
+                                "value": "Investment|Infrastructure|Transportation|LDV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320046",
+                                "name": "battery electric ca",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140006",
+                                "name": "private",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV|Private"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140007",
+                                "name": "public",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV|Public"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "bev",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV|Work"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320047",
+                                "name": "fuel cell electric ca",
+                                "value": "Investment|Infrastructure|Transportation|LDV|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010280",
+                                "name": "train",
+                                "value": "Investment|Infrastructure|Transportation|Rail"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010280",
+                                "name": "train",
+                                "value": "Investment|Infrastructure|Transportation|Rail|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "batter el",
+                                "value": "Investment|Infrastructure|Transportation|Rail|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fuel cell ele",
+                                "value": "Investment|Infrastructure|Transportation|Rail|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000240",
+                                "name": "internal com",
+                                "value": "Investment|Infrastructure|Transportation|Rail|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320018",
+                                "name": "rail tra",
+                                "value": "Investment|Infrastructure|Transportation|Rail|Railtracks"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320018",
+                                "name": "rail tr",
+                                "value": "Investment|Infrastructure|Transportation|Rail|Railtracks|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320017",
+                                "name": "road",
+                                "value": "Investment|Infrastructure|Transportation|Road"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320017",
+                                "name": "road",
+                                "value": "Investment|Infrastructure|Transportation|Road|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010278",
+                                "name": "truck",
+                                "value": "Investment|Infrastructure|Transportation|Truck"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                                "name": "batter elec",
+                                "value": "Investment|Infrastructure|Transportation|Truck|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                                "name": "fce",
+                                "value": "Investment|Infrastructure|Transportation|Truck|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010029",
+                                "name": "internal",
+                                "value": "Investment|Infrastructure|Transportation|Truck|Overhead Line"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Bus"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Bus|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Bus|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Bus|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Aviation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Aviation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Aviation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Aviation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Navigation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Navigation|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Navigation|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Domestic Navigation|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|LDV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV|Private"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV|Public"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV|Work"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|LDV|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Rail"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Rail|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Rail|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Rail|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Rail|ICE"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Rail|Railtracks"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Rail|Railtracks|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Road"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Road|Additional"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Truck"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Truck|BEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Truck|FCEV"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Infrastructure|Transportation|Truck|Overhead Line"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320016",
+                                "name": "Infrastructure",
+                                "value": "Investment|Transportation|Energiewende"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "batter ele",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV|Private"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010024",
+                                "name": "batter ele",
+                                "value": "Investment|Infrastructure|Transportation|LDV|BEV|Public"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "unit",
+                        "type": "varchar",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit"
+                            }
+                        ],
+                        "nullable": false
+                    },
+                    {
+                        "name": "year_2025",
+                        "type": "varchar",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenario yea"
+                            }
+                        ],
+                        "nullable": false
+                    },
+                    {
+                        "name": "year_2030",
+                        "type": "varchar",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenario yera"
+                            }
+                        ],
+                        "nullable": false
+                    },
+                    {
+                        "name": "year_2035",
+                        "type": "varchar",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenari yea"
+                            }
+                        ],
+                        "nullable": false
+                    },
+                    {
+                        "name": "year_2040",
+                        "type": "varchar",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenari yea"
+                            }
+                        ],
+                        "nullable": false
+                    },
+                    {
+                        "name": "year_2045",
+                        "type": "varchar",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenario yea"
+                            }
+                        ],
+                        "nullable": false
+                    },
+                    {
+                        "name": "year_2050",
+                        "type": "varchar",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenario year"
+                            }
+                        ],
+                        "nullable": false
+                    }
+                ],
+                "primaryKey": [],
+                "foreignKeys": []
+            },
+            "topics": [
+                "Investment",
+                "Energy Demand",
+                "Transport",
+                "Infrastructure"
+            ],
+            "context": {
+                "title": "Ariadne Scenario Explorer",
+                "contact": "Frederike Bartels (fbartels@pik-potsdam.de), Dominika Sörgel (dsoergel@pik-potsdam.de) and Gunnar Luderer (luderer@pik-potsdam.de)",
+                "grantNo": null,
+                "homepage": "https://explorer.ariadneprojekt.de/en/explorer",
+                "publisher": "Ariadne Konsortium",
+                "sourceCode": null,
+                "documentation": "https://explorer.ariadneprojekt.de/en/info",
+                "fundingAgency": "German Federal Ministry of Education and Research",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                    "name": "energy demand"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320017",
+                    "name": "road network"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320018",
+                    "name": "rail network"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020167",
+                    "name": "investment cost"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140003",
+                    "name": "transport"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000422",
+                    "name": "transport sector"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "Infastructure",
+                "Energiewende",
+                "Investments",
+                "Ariadne",
+                "Transport",
+                "Energy demand",
+                "DEU",
+                "Expol"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© 2025 Ariadne Konsortium",
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050",
+                        "start": "2025",
+                        "alignment": null,
+                        "resolutionUnit": "year",
+                        "aggregationType": null,
+                        "resolutionValue": "5"
+                    }
+                ],
+                "referenceDate": "2025-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": null,
+            "contributors": [],
+            "publicationDate": null
+        }
+    ],
+    "description": "This Dataset contains the scenario data from the Ariadne Szenario Explorer for investments in transport due to the expol scenario with the model \"Aladin v1\".",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": null,
+            "path": null,
+            "title": null
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

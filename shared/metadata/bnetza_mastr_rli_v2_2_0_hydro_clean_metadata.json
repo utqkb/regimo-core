@@ -1,0 +1,1191 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "supply.bnetza_mastr",
+            "path": "supply.bnetza_mastr_2_1_0",
+            "type": "Table",
+            "title": "Bundesnetzagentur - Marktstammdatenregister - Stromerzeuger",
+            "format": "csv",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/13",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "EinheitMastrNummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MaStR-Nummer der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lid",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "LID der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Name",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Einheitart",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Art der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Einheittyp",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Typ der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Standort",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Bruttoleistung",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Bruttoleistung der Einheiten",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Erzeugungsleistung",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Leistung der Gaserzeugungseinheit (Bei Wind immer 0)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "EinheitBetriebsstatus",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MaStR-Nummer der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Anlagenbetreiber",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Betrieber der Anlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "EegMastrNummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Die MaStR-Nummer der zugeordneten EEG-Anlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "KwkMastrNummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Die MaStR-Nummer der gewünschten EEG-Anlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "SpeMastrNummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MaStR-Nummer der verknüpften Speicheranlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "GenMastrNummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MaStR-Nummer der zu dieser Einheit zugeordneten Genehmigung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "BestandsanlageMastrNummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "NichtVorhandenInMigriertenEinheiten",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Angabe über das Nichtvorhandensein in den migrierten Einheiten",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timestamp",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lid_w",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "LID der Einheit (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Ergebniscode",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Als Ergebniscode wird angegeben, ob die Anfrage korrekt verarbeitet wurde oder ob Daten nicht gefunden werden können. Bei Listenabfragen wird ebenfalls angegeben, ob weitere Elemente der Liste vorhanden, aber nicht Bestandteil des aktuellen Abrufs sind.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AufrufVeraltet",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Zeichen, ob eine Version der Webdienste bereitgestellt wird und bereits auf dem Testsystem existiert",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AufrufLebenszeitEnde",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Datum, an dem diese Version des Webservice endet und durch eine neue ersetzt wird",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AufrufVersion",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Die Versionsnummer des Webdienstes",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "DatumLetzteAktualisierung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Datum der letzten Aktualisierung an diesem Objekt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "LokationMastrNummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MaStR-Nummer der Lokation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "NetzbetreiberpruefungStatus",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "NetzbetreiberpruefungDatum",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AnlagenbetreiberMastrNummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MaStR-Nummer des Betreibers der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Land",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Land",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Bundesland",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Bundesland",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Landkreis",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Landkreis",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Gemeinde",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Gemeinde",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Gemeindeschluessel",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Gemeindeschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Postleitzahl",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Postleitzahl",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Gemarkung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Gemarkung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "FlurFlurstuecknummern",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Flur und/oder Flurstücke",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Strasse",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Straße",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "StrasseNichtGefunden",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Angabe, dass die angegebene Straße nicht aus dem BKG-Adressdatenbestand stammt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Hausnummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Hausnummer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "HausnummerNichtGefunden",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Angabe, dass die angegebene Hausnummer nicht aus dem BKG-Adressdatenbestand stammt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Adresszusatz",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Adresszusatz",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Ort",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Standort der Einheit: Ort",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Laengengrad",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Koordinaten der Einheit: Längengrad",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Breitengrad",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Koordinaten der Einheit: Breitengrad",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "UtmZonenwert",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Koordinaten der Einheit: UTM-Zonenwert",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "UtmEast",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Koordinaten der Einheit: UTM-Ost",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "UtmNorth",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Koordinaten der Einheit: UTM-Nord",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "GaussKruegerHoch",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Koordinaten der Einheit: Gauß-Krüger-Hochwert",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "GaussKruegerRechts",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Koordinaten der Einheit: Gauß-Krüger-Rechtswert",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Meldedatum",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Meldedatum der Gaserzeugungseinheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "GeplantesInbetriebnahmedatum",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Inbetriebnahmedatum",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Datum der Inbetriebnahme",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "DatumEndgueltigeStilllegung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Datum der endgültigen Stilllegung der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "DatumBeginnVoruebergehendeStilllegung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Beginn der vorläufigen Stilllegung der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "DatumWiederaufnahmeBetrieb",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Datum der Wiederaufnahme des Betriebs",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "EinheitBetriebsstatus_w",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Betriebsstatus der Einheit (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "BestandsanlageMastrNummer_w",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "NichtVorhandenInMigriertenEinheiten_w",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Angabe über das Nichtvorhandensein in den migrierten Einheiten (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "NameStromerzeugungseinheit",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Weic",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "W-Code der Stromerzeugungseinheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "WeicDisplayName",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Displayname des W-EIC",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Kraftwerksnummer",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Bundesnetzagentur-Kraftwerksnummer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Energietraeger",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Energieträger der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Bruttoleistung_w",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Bruttoleistung in kW (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Nettonennleistung",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Nettonennleistung in kW",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AnschlussAnHoechstOderHochSpannung",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Schwarzstartfaehigkeit",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Schwarzstartfähigkeit der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Inselbetriebsfaehigkeit",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Inselbetriebsfähigkeit der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Einsatzverantwortlicher",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Marktpartner-ID des Einsatzverantwortlichen",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "FernsteuerbarkeitNb",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Fernsteuerbarkeit der Einheit durch einen Netzbetreiber",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "FernsteuerbarkeitDv",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Fernsteuerbarkeit der Einheit durch einen Direktvermarkter",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "FernsteuerbarkeitDr",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Fernsteuerbarkeit der Einheit durch Dritte",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Einspeisungsart",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Volleinspeisung oder Teileinspeisung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "PraequalifiziertFuerRegelenergie",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Einheit ist für die Vorhaltung und Erbringung von Regelenergie präqualifiziert",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "GenMastrNummer_w",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MaStR-Nummer der zu dieser Einheit zugeordneten Genehmigung (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "NameKraftwerk",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name des Kraftwerks",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ArtDerWasserkraftanlage",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Art der Stromerzeugung aus Wasserkraft",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AnzeigeEinerStilllegung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Anzeige einer Stilllegung nach §13b Abs.1 Satz 1",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ArtDerStilllegung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Art der Stilllegung nach §13b",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "DatumBeginnVorlaeufigenOderEndgueltigenStilllegung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Beginn der vorläufigen oder endgültigen Stilllegung der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "MinderungStromerzeugung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Auflagen, die zur Minderung der Stromerzeugung führen?",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "BestandteilGrenzkraftwerk",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Gehört die Stromerzeugungseinheit zu einem Grenzkraftwerk",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "NettonennleistungDeutschland",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Die höchste elektrische Dauerleistung unter Nennbedingungen dieser Stromerzeugungseinheit, die in ein deutsches Stromnetz eingespeist werden kann",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ArtDesZuflusses",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Welche Art von Zufluss wird zur Stromerzeugung verwendet",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "EegMastrNummer_w",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Die MaStR-Nummer der gewünschten EEG-Anlage (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version_w",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timestamp_w",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timestamp (power unit)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lid_e",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "LID der Einheit (eeg)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Ergebniscode_e",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Als Ergebniscode wird angegeben, ob die Anfrage korrekt verarbeitet wurde oder ob Daten nicht gefunden werden können. Bei Listenabfragen ebenfalls angegeben, ob weitere Elemente der Liste vorhanden, aber nicht Bestandteil des aktuellen Abrufs sind. (eeg)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AufrufVeraltet_e",
+                        "type": "boolean",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Zeichen, ob eine neue Version der Webdienste bereitgestellt wird und bereits auf dem Testsystem existiert (eeg)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AufrufLebenszeitEnde_e",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Datum, an dem diese Version des Webservice endet und durch eine neue ersetzt wird (eeg)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AufrufVersion_e",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Die Versionsnummer des Webdienstes (eeg)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Meldedatum_e",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Meldedatum der EEG-Anlage (eeg)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "DatumLetzteAktualisierung_e",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Datum der letzten Aktualisierung an diesem Object (eeg)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "EegInbetriebnahmedatum",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Inbetriebnahmedatum der EEG-Anlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AnlagenschluesselEeg",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Vom Netzbetreiber vergebene Kennziffer zur Identifikation der EEG-Anlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AnlagenkennzifferAnlagenregister",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "InstallierteLeistung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Installierte Nettonennleistung der EEG-Anlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "AnlageBetriebsstatus",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Ertuechtigung",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MaStR-Nummer der Einheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "VerknuepfteEinheit",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Die verknüpften Einheiten zu diesem Objekt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version_e",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version (eeg)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timestamp_e",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timestamp (eeg)",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "https://www.marktstammdatenregister.de/MaStR/Startseite/Kontakt",
+                "grantNo": "",
+                "homepage": "https://www.marktstammdatenregister.de/MaStR/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://www.marktstammdatenregister.de/MaStRHilfe/index.html",
+                "fundingAgency": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen",
+                "publisherLogo": "https://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/MaStR/MaStR_logo_long.svg?__blob=normal&v=4",
+                "fundingAgencyLogo": "https://www.bundesnetzagentur.de/DE/Home/home_node.html"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.marktstammdatenregister.de/MaStR/",
+                    "title": "Bundesnetzagentur - Marktstammdatenregister",
+                    "authors": [],
+                    "description": "Das Marktstammdatenregister ist das Register für den deutschen Strom- und Gasmarkt. Es wird MaStR abgekürzt. Im MaStR sind vor allem die Stammdaten zu Strom- und Gaserzeugungsanlagen zu registrieren. Außerdem sind die Stammdaten von Marktakteuren wie Anlagenbetreibern, Netzbetreibern und Energielieferanten zu registrieren. Das MaStR wird von der Bundesnetzagentur geführt.",
+                    "sourceLicenses": [
+                        {
+                            "name": "dl-de/by-2-0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "© Marktstammdatenregister 2019 | dl-de/by-2-0",
+                            "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://github.com/OpenEnergyPlatform/open-MaStR",
+                    "title": "RLI - open_MaStR",
+                    "authors": [],
+                    "description": "Scripts to download, process and publish the MaStR data set.",
+                    "sourceLicenses": [
+                        {
+                            "name": "AGPL-3.0",
+                            "path": "https://www.gnu.org/licenses/agpl-3.0.en.html",
+                            "title": "GNU Affero General Public License v3.0",
+                            "attribution": "open_MaStR © Reiner Lemoine Institut | AGPL-3.0",
+                            "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "mastr.log",
+                    "title": "RLI - open_MaStR - Logfile",
+                    "authors": [],
+                    "description": "Logging output",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Marktstammdatenregister 2019 | dl-de/by-2-0",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "vector"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "powerplants",
+                "renewables"
+            ],
+            "licenses": [
+                {
+                    "name": "dl-de/by-2-0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                    "attribution": "© Marktstammdatenregister 2019 | dl-de/by-2-0",
+                    "instruction": "Die bereitgestellten Daten und Metadaten dürfen für die kommerzielle und nicht kommerzielle Nutzung verwendet werden. Bei der Nutzung ist sicherzustellen, dass Angaben als Quellenvermerk enthalten sind.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2019-01-31"
+            },
+            "languages": [
+                "en-GB",
+                "de-DE"
+            ],
+            "description": "Download and process MaStR data",
+            "contributors": [
+                {
+                    "date": "2019-02-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-02-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "data",
+                    "comment": "Download and process data",
+                    "organization": null
+                },
+                {
+                    "date": "2019-06-05",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "oakca",
+                    "object": "metadata",
+                    "comment": "Add description of columns",
+                    "organization": null
+                },
+                {
+                    "date": "2019-09-26",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "Update metadata to OEP-1.4.0",
+                    "organization": null
+                },
+                {
+                    "date": "2019-11-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "data",
+                    "comment": "Download and process data version 2.1.0",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2019-01-31"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "@id": null,
+    "name": "2045_scenario",
+    "title": "2045_scenario",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "heat_low_decentral_demand_cts_profile",
+            "path": "data/sequences/heat_low_decentral-demand_cts_profile.csv",
+            "title": "heat_low_decentral-demand_cts_profile",
+            "extras": {
+                "oep:normalized_columns": {
+                    "timeindex": "timeindex",
+                    "r120640428428-heat_low_decentral-demand_cts-profile": "r120640428428_heat_low_decentral_demand_cts_profil",
+                    "r120640472472-heat_low_decentral-demand_cts-profile": "r120640472472_heat_low_decentral_demand_cts_profil",
+                    "r120670124124-heat_low_decentral-demand_cts-profile": "r120670124124_heat_low_decentral_demand_cts_profil",
+                    "r120670201201-heat_low_decentral-demand_cts-profile": "r120670201201_heat_low_decentral_demand_cts_profil"
+                },
+                "oep:normalized_table_name": "heat_low_decentral_demand_cts_profile"
+            },
+            "format": "csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "timeindex",
+                        "type": "datetime",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "r120640428428_heat_low_decentral_demand_cts_profil",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "r120640472472_heat_low_decentral_demand_cts_profil",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "r120670124124_heat_low_decentral_demand_cts_profil",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "r120670201201_heat_low_decentral_demand_cts_profil",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    }
+                ],
+                "primaryKey": [],
+                "missingValues": [
+                    ""
+                ]
+            },
+            "profile": "tabular-data-resource",
+            "encoding": "utf-8",
+            "keywords": [
+                "SLE",
+                "preprocessed"
+            ],
+            "mediatype": "text/csv"
+        }
+    ],
+    "description": null,
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,320 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "-",
+            "name": "biomass_capacities_eom_plus",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/biomass_capacities_eom_plus",
+            "type": "Table",
+            "title": "Biomass and biogas storage capacities aggregated for transmission grid in Germany, Status Quo (2022) and projection (2030)",
+            "format": "csv",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "string",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "type and class of biomass plant (see detailed data description) ",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "node_id",
+                        "type": "int",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier of transmission grid node",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "installed_capacity",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "plausible installed capacity from the sources MaStR and tender results",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rated_capacity",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "plausible rated electric capacity from the sources MaStR and annual EEG subsidy payments",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "biogas_storage_capacity",
+                        "type": "float",
+                        "unit": "MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "electrical equivalent of the maximum biogas storage capacity, source: own assumptions",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_year",
+                        "type": "int",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario year",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "tanja.mast@thi.de",
+                "grantNo": "03EI1012A",
+                "homepage": "https://www.thi.de/forschung/institut-fuer-neue-energie-systeme-ines",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz",
+                "publisherLogo": "https://www.thi.de/_assets/a92153751098915699a1afa17e77f864/Images/Site/thi_logo_wb_RGB.svg",
+                "fundingAgencyLogo": "https://de.wikipedia.org/wiki/Bundesministerium_f%C3%BCr_Wirtschaft_und_Klimaschutz#/media/Datei:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.marktstammdatenregister.de",
+                    "title": "Marktstammdatenregister (MaStR)",
+                    "authors": [],
+                    "description": "Data register for the German electricity and gas market with information on plants and market participants maintained                             by Bundesnetzagentur (BNetzA)",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/Ausschreibungen/Biomasse/BeendeteAusschreibungen/start.html",
+                    "title": "Liste der Zuschläge für Biomasseanlagen",
+                    "authors": [],
+                    "description": "List of awards in the completed tenders to determine the financial subsidy under the Renewable Energy Sources Act (EEG)                 for electricity from biomass plantsby Bundesnetzagentur (BNetzA)",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 4.0",
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/Ausschreibungen/Biomethan/BeendeteAusschreibungen/start.html",
+                    "title": "Liste der Zuschläge für Biomethananlagen",
+                    "authors": [],
+                    "description": "List of awards in the completed tenders to determine the financial subsidy under the Renewable Energy Sources Act (EEG)                 by Bundesnetzagentur (BNetzA)",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 4.0",
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.netztransparenz.de/de-de/Erneuerbare-Energien-und-Umlagen/EEG/EEG-Abrechnungen/EEG-Jahresabrechnungen/EEG-Jahresabrechnungen-2022-2000",
+                    "title": "EEG-Jahresabrechnungen",
+                    "authors": [],
+                    "description": "Annual data on the quantities of electricity remunerated and subsidy payments for all power plants subsidized under                 the Renewable Energy Sources Act (EEG), published by the four German transmission system operators",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-mit-einwohnerzahlen-stand-31-12-vg250-ew-31-12.html",
+                    "title": "Verwaltungsgebiete 1:250000 - VG250",
+                    "authors": [],
+                    "description": "The VG250 database of Bundesamt für Katografie und Geodäsie (BKG) includes the administrative units of the hierarchical                             administrative levels from the state to the municipalities with administrative boundaries, key figures, names and                             designations.",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": "Open Data Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "grid nodes",
+                    "resolutionValue": "transmission"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010262/",
+                    "name": "scenario projection"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010260/",
+                    "name": "parameterisation"
+                }
+            ],
+            "encoding": "latin1",
+            "keywords": [
+                "Biomass",
+                "EOM-Plus",
+                "Germany",
+                "Biogas",
+                "BMWK",
+                "2022",
+                "Renewable",
+                "Powerplant",
+                "THI",
+                "2030",
+                "mastr"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© THI",
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2023-01-23"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Status Quo (2022) and projection (2030) of biomass capacities aggregated for transmission grid in Germany for the EOM-Plus project.                     2022 data based on freely available data (e.g.  Marktstammdatenregister (MaStR), tendering results, Renewable Energy Sources Act (EEG) annual statements).                     Biomass plants divided into five categories: BGP_FF2=Biogas CHP not very flexible (with storage restriction),                     BGP_FF4=Biogas CHP very flexible (with storage restriction), BM=Biomass CHP plant (mainly wood) (without storage restriction),                      BME_ALT=Biomethane CHP existing (without storage restriction), BME_NEU=Biomethane CHP new construction (without storage restriction).                     Installed capacity = maximum active electrical capacity; rated capacity = balance of the kilowatt hours actually produced within                     a calendar year divided by the sum of the full hours in the year, corresponds to the constant inflow into the biogas storage facility;                     biogas storage capacity = maximum equivalent amount of electricity that can be stored in the biogas storage facility.                     2030 projections via linear interpolation of scenario B in NEP37/45 and tender volumes according to the EEG for biomass and biomethane                     until 2028. The development of the biomass stock is based on the assumption that currently very inflexible biogas CHP plants and                     biomass CHP plants < 10 MWel will shut down by 2030. The regionalization of new construction for biomethane from 2023 is assumed to be                     evenly distributed across all transmission grid nodes within the southern region defined under the EEG. The aggregation is based on                     the allocation of the municipal areas of all facilities to the nearest transmission network node.",
+            "contributors": [
+                {
+                    "date": "2024-04-04",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "THI",
+                    "object": "data, metadata",
+                    "comment": "initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-04-04"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

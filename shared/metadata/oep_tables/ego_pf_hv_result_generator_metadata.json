@@ -1,0 +1,396 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "ego_pf_hv_result_generator",
+            "type": "Table",
+            "title": "eGo hv powerflow results - generator",
+            "format": "sql",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "result_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique result id corresponding to result_meta",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generator_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID of corresponding generator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bus",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "id of associated bus",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dispatch",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Controllability of active power dispatch, must be flexible or variable.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "control",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "P,Q,V control strategy, must be PQ, PV or Slack.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_nom",
+                        "type": "",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Nominal power",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_nom_extendable",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Switch to allow capacity p_nom to be extended",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_nom_min",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If p_nom is extendable, set its minimum value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_nom_max",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If p_nom is extendable, set its maximum value (e.g. limited by potential)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_min_pu_fixed",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If control=flexible this gives the minimum output per unit of p_nom",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_max_pu_fixed",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If control=flexible this gives the maximum output per unit of p_nom, equivalent to a de-rating factor.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sign",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "power sign",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "prime mover energy carrier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "marginal_cost",
+                        "type": "",
+                        "unit": "EUR/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Marginal cost of production of 1 MWh",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capital_cost",
+                        "type": "",
+                        "unit": "EUR/MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Capital cost of extending p_nom by 1 MW",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "efficiency",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Ratio between primary energy and electrical energy",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_nom_opt",
+                        "type": "",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Optimised nominal power",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "eGo dataprocessing",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License Version 3 (AGPL-3.0)",
+                            "path": "https://github.com/openego/data_processing",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "OpenStreetMap",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "Open Database License (ODbL) v1.0",
+                            "path": "http://www.openstreetmap.org/",
+                            "title": "",
+                            "attribution": "© OpenStreetMap contributors",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Open Power System Data (OPSD)",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "MIT Licence",
+                            "path": "http://data.open-power-system-data.org/conventional_power_plants/2016-02-08/",
+                            "title": "",
+                            "attribution": "© 2016 Open Power System Data",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "EnergyMap",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License Version 3 (AGPL-3.0)",
+                            "path": "www.energymap.info",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Bundesnetzagentur (BNetzA)",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License Version 3 (AGPL-3.0)",
+                            "path": "http://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/Versorgungssicherheit/Erzeugungskapazitaeten/Kraftwerksliste/kraftwerksliste-node.html",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Data Commons Open Database License 1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "ODbL-1.0",
+                    "attribution": "© Flensburg University of Applied Sciences, Center for Sustainable Energy Systems",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Generators relevant for eGo hv powerflow",
+            "contributors": [
+                {
+                    "date": "2017-11-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Mariusves",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

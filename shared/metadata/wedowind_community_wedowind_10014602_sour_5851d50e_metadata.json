@@ -1,0 +1,129 @@
+{
+    "@id": "https://doi.org/10.5281/zenodo.10014602",
+    "name": "wedowind_community_wedowind_10014602",
+    "title": "Enhanced Field Rotor Aerodynamics - ECN",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_community_wedowind_10014602_sour_5851d50e",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_community_wedowind_10014602_sour_5851d50e",
+            "type": "table",
+            "title": "SourceDatabase.zip",
+            "format": "ZIP",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://zenodo.org/api/records/10014602/files/SourceDatabase.zip/content",
+                    "title": "SourceDatabase.zip",
+                    "authors": [],
+                    "description": "In these full scale aerodynamic test program local aerodynamic quantities (forces, inflow velocities, inflow angles) are measured at several radial positions along the blade. The aerodynamic experiments at ECN were performed in two different phases: The non-rotating phase (1993-1994). In this phase the blade was mounted vertically on a non-rotating facility in the free stream. This test aimed at acquiring data at free stream conditions without rotational effects. Furthermore the instrumentation could be tested relatively easy in order to prepare for the next phase. The rotating phase (1995-1997). In this phase the blade was mounted on the HAT-25 experimental wind turbine and data were acquired under rotation. Furthermore some non-rotating measurements have been repeated. In this report the measurements from the rotating phase are reported only. The HAT-25 wind turbine is located at ECN near Petten in the Netherlands. The prevailing wind direction is from South-West, at which most of the measurements are taken. In this direction, the terrain upstream of the turbine is obscured by dunes over around 600 m. As a result, the turbulence intensities at the site may depend strongly on the conditions. Generally, the values of the turbulence intensities are between 5% and 20%. Time series measurements are supplied, in which the angle of attack ranges from negative values to deep stall values. Also measurements at yaw misalignment and at stand still have been supplied. Also sectional profile coefficients under rotating and 2D conditions are stored.&nbsp; The SourceDatabase.zip archive contains original database with data file formats and conventions harmonized (across all IEA Task 18: Enhanced Field Rotor Aerodynamics experiments) in order to make the full database easy accessible (see \" Related works \"). The rotating phase measurements have been merged into two files: \"rottim_prof_merged.csv\" (containing profile, SCADA and SHM data) and \"rottim_p_merged.csv\" (containing aerodynamic pressure measurements) to facilitate import of all the data.&nbsp;",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2023"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "aerodynamics",
+                "wind_energy",
+                "zenodo_10014602",
+                "zenodo"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "In these full scale aerodynamic test program local aerodynamic quantities (forces, inflow velocities, inflow angles) are measured at several radial positions along the blade. The aerodynamic experiments at ECN were performed in two different phases: The non-rotating phase (1993-1994). In this phase the blade was mounted vertically on a non-rotating facility in the free stream. This test aimed at acquiring data at free stream conditions without rotational effects. Furthermore the instrumentation could be tested relatively easy in order to prepare for the next phase. The rotating phase (1995-1997). In this phase the blade was mounted on the HAT-25 experimental wind turbine and data were acquired under rotation. Furthermore some non-rotating measurements have been repeated. In this report the measurements from the rotating phase are reported only. The HAT-25 wind turbine is located at ECN near Petten in the Netherlands. The prevailing wind direction is from South-West, at which most of the measurements are taken. In this direction, the terrain upstream of the turbine is obscured by dunes over around 600 m. As a result, the turbulence intensities at the site may depend strongly on the conditions. Generally, the values of the turbulence intensities are between 5% and 20%. Time series measurements are supplied, in which the angle of attack ranges from negative values to deep stall values. Also measurements at yaw misalignment and at stand still have been supplied. Also sectional profile coefficients under rotating and 2D conditions are stored.&nbsp; The SourceDatabase.zip archive contains original database with data file formats and conventions harmonized (across all IEA Task 18: Enhanced Field Rotor Aerodynamics experiments) in order to make the full database easy accessible (see \" Related works \"). The rotating phase measurements have been merged into two files: \"rottim_prof_merged.csv\" (containing profile, SCADA and SHM data) and \"rottim_p_merged.csv\" (containing aerodynamic pressure measurements) to facilitate import of all the data.&nbsp;",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        "DataCollector"
+                    ],
+                    "title": "Schepers, J.G.",
+                    "object": "data",
+                    "comment": "Mapped from Zenodo creators",
+                    "organization": "Netherlands Energy Research Foundation"
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        "DataCollector"
+                    ],
+                    "title": "Brand, A.J.",
+                    "object": "data",
+                    "comment": "Mapped from Zenodo creators",
+                    "organization": "Netherlands Energy Research Foundation"
+                }
+            ],
+            "publicationDate": "2023-10-15"
+        }
+    ],
+    "description": "In these full scale aerodynamic test program local aerodynamic quantities (forces, inflow velocities, inflow angles) are measured at several radial positions along the blade. The aerodynamic experiments at ECN were performed in two different phases: The non-rotating phase (1993-1994). In this phase the blade was mounted vertically on a non-rotating facility in the free stream. This test aimed at acquiring data at free stream conditions without rotational effects. Furthermore the instrumentation could be tested relatively easy in order to prepare for the next phase. The rotating phase (1995-1997). In this phase the blade was mounted on the HAT-25 experimental wind turbine and data were acquired under rotation. Furthermore some non-rotating measurements have been repeated. In this report the measurements from the rotating phase are reported only. The HAT-25 wind turbine is located at ECN near Petten in the Netherlands. The prevailing wind direction is from South-West, at which most of the measurements are taken. In this direction, the terrain upstream of the turbine is obscured by dunes over around 600 m. As a result, the turbulence intensities at the site may depend strongly on the conditions. Generally, the values of the turbulence intensities are between 5% and 20%. Time series measurements are supplied, in which the angle of attack ranges from negative values to deep stall values. Also measurements at yaw misalignment and at stand still have been supplied. Also sectional profile coefficients under rotating and 2D conditions are stored.&nbsp; The SourceDatabase.zip archive contains original database with data file formats and conventions harmonized (across all IEA Task 18: Enhanced Field Rotor Aerodynamics experiments) in order to make the full database easy accessible (see \" Related works \"). The rotating phase measurements have been merged into two files: \"rottim_prof_merged.csv\" (containing profile, SCADA and SHM data) and \"rottim_p_merged.csv\" (containing aerodynamic pressure measurements) to facilitate import of all the data.&nbsp;",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

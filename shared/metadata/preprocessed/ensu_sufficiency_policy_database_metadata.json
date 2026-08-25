@@ -1,0 +1,450 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "ensu_sufficiency_policy_db",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/ensu_sufficiency_policy_database",
+            "type": "Table",
+            "title": "Energy Sufficiency Policy Database",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "policy_strategy",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Targeted goal of policy instrument ",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "measure",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Activity induced by policy instrument to reach the goal ",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "indicator",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Indicator(s) addressed by the policy instrument and/or that can serve to monitor policy impact",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sufficiency_type",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Adapted avoid/shift/improve (ASI)-framework, see Best et al. (2022)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "policy_instrument",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unique name of the policy instrument that explains the policy to some extent",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "policy_instrument_description",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Slightly more detailed description of the respective policy instrument",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "instrument_type",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Instrument types acc. to UNFCCC (2000)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "intro",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of person who inserted / proposed the policy",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "intro_date",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Date (mm/yyyy) of introduction of policy in the database",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "full_reference_with_page",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "url",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "time_horizon_implementation",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Rough estimate of time until possible implementation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "time_horizon_impact",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Rough estimate of time betw. implement. & impact",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "add_info_sector",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Additional information about the sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "add_info_policy_strategy",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Additional information about the policy strategy like quantifications or examples",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "add_info_measure_action",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Additional information about the measure / action like quantifications or examples",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "add_info_policy_instrument",
+                        "type": "varchar(8192)",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Additional information about the policy instrument like implementation examples, quantifications or co-effects \t",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "c.zell-ziegler@oeko.de",
+                "grantNo": "01UU2004 A+B+C",
+                "homepage": "https://energysufficiency.de/en/policy-database-en/",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": "https://energysufficiency.de/en/policy-database-en/",
+                "fundingAgency": "BMBF",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140150",
+                    "name": "policy"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010444",
+                    "name": "sufficiency"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140151",
+                    "name": "policy instrument"
+                },
+                {
+                    "@id": null,
+                    "name": null
+                },
+                {
+                    "@id": null,
+                    "name": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "policy",
+                "sufficiency",
+                "policy instrument",
+                "EnSu",
+                "energy sufficiency",
+                "housing / buildings",
+                "mobility / transport",
+                "consumption and production / industry",
+                "nutrition / land-use & food",
+                "cross-sectoral"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://spdx.org/licenses/CC-BY-4.0.html",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "Zell-Ziegler, C., Best, B., Thema, J., Wiese, F., Vogel, B., Cordroch, L., Lage, J., Schöpf, D. (2024). European Sufficiency Policy Database [Data set]. Energy Sufficiency Research Group",
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "EN"
+            ],
+            "description": "This is a snapshot of the Energy Sufficiency Policy Database of the energy sufficiency (EnSu) research group from September 18, 2024. The full up-to-date dataset is available on the homepage, see URL below.",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Carina Zell-Ziegler",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Benjamin Best",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Johannes Thema",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Frauke Wiese",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Bendix Vogel",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Luisa Cordroch",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonas Lage",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "David Schöpf",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-09-18"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

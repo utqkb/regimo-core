@@ -1,0 +1,216 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "modex_modexnet_supply",
+            "path": "http://openenergyplatform.org/dataedit/view/reference/modex_net_supply",
+            "type": "Table",
+            "title": "MODEX - MODEX-NET - Supply",
+            "format": null,
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/88",
+                "badge": "Bronze"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "03ET4074",
+                "homepage": "https://www.energiesystem-forschung.de/forschen/projekte/modex-net",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie (BMWi)",
+                "publisherLogo": "",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg;jsessionid=7C329FD594B914D85D84649345B95756?__blob=normal&v=3"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://data.open-power-system-data.org/ninja_pv_wind_profiles/2020-09-16",
+                    "title": "Renewables.ninja PV and Wind Profiles - Renewable profiles for the year 2016 from European Power System Data",
+                    "authors": [],
+                    "description": "2020, Feed_in_profiles_for_solar_PV_wind_onshore_and_offshore, urldate = {2021-04-30}, institution = {Open Power System}, date = {2020}",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-NC-4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "Creative Commons Attribution-NonCommercial 4.0 International",
+                            "attribution": "For academic and professional use (presentations, journal articles, trade publications, etc): Please cite the papers describing our methods [1, 2] and, if possible, link to www.renewables.ninja.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://data.open-power-system-data.org",
+                    "title": "Scaled renewable Profiles for the year 2030 based on European Power System Data for the year 2016",
+                    "authors": [],
+                    "description": "2020, Feed_in_profiles_for_solar_PV_wind_onshore_and_offshore, urldate = {2021-04-30}, institution = {Open Power System}, date = {2020}",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-NC-4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "Creative Commons Attribution-NonCommercial 4.0 International",
+                            "attribution": "For academic and professional use (presentations, journal articles, trade publications, etc): Please cite the papers describing our methods [1, 2] and, if possible, link to www.renewables.ninja.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "erneuerbare",
+                "menge",
+                "elektrizität",
+                "profil"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB",
+                "de-DE"
+            ],
+            "description": "Fluktuierende EE-Stromerzeugung: Historische Profile und Erzeugungsmengen für EE-Strom; Skaliertee Profile und Erzeugungsmengen für EE-Strom basierend auf dem Wetter- und Basisjahr 2016",
+            "contributors": [
+                {
+                    "date": "2021-07-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "jh-RLI",
+                    "object": "Metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-11-30",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "Metadata",
+                    "comment": "Review and update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-07-19"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

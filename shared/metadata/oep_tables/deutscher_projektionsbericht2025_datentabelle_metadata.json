@@ -1,0 +1,153 @@
+{
+    "id": "deutscher_projektionsbericht2025_datentabelle",
+    "@id": null,
+    "name": "deutscher_projektionsbericht2025_datentabelle",
+    "title": "Datentabelle zu den Treibhausgas-Projektionen 2025",
+    "$schema": "https://openenergyplatform.org/static/metaedit/schema.json",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "deutscher_projektionsbericht2025_datentabelle",
+            "path": "deutscher_projektionsbericht2025_datentabelle",
+            "type": "Table",
+            "title": "Datentabelle zu den Treibhausgas-Projektionen 2025",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "scenario"
+            ],
+            "context": {
+                "title": "THG-Projektionen: Weiterentwicklung der Methoden und Umsetzung der Europäischen Governance-Verordnung und des Bundesklimaschutzgesetzes (\"Politikszenarien XII\") ",
+                "contact": "oedb@oeko.de",
+                "grantNo": "FKZ 37K2442010",
+                "homepage": "https://www.oeko.de/projekte/detail/thg-projektionen-weiterentwicklung-der-methoden-und-umsetzung-der-europaeischen-governance-verordnung-und-des-bundesklimaschutzgesetzes-politikszenarien-xii",
+                "publisher": "Umweltbundesamt, Open Energy Platform",
+                "sourceCode": null,
+                "documentation": "https://openenergyplatform.org/scenario-bundles/id/93f1cdf6-a09a-c973-f948-138beeacd3df",
+                "fundingAgency": "Umweltbundesamt",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "All data",
+                    "authors": [
+                        "Öko-Institut, Fraunhofer-ISI, IREES, M-Five, prognos, Thünen-Institut"
+                    ],
+                    "description": "Outputs eigener Modellrechnungen",
+                    "sourceLicenses": [],
+                    "publicationYear": "2025"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [],
+            "encoding": null,
+            "keywords": [
+                "treibhausgasprojektionen",
+                "dl_de_by_2_0",
+                "projektionsbericht",
+                "2025",
+                "deutschland",
+                "eu_governance_verordnung",
+                "klimaschutzgesetz"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE->BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                    "attribution": "Öko-Institut, Fraunhofer ISI, IREES, Prognos, M-Five, Thünen-Institut (2025): Treibhausgas-Projektionen 2025 für Deutschland - Datentabelle",
+                    "instruction": "see https://www.govdata.de/dl-de/by-2-0",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050-01-01",
+                        "start": "2025-01-01",
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                "DE_de"
+            ],
+            "description": "Für die Treibhausgas-Projektionen sind die Treibhausgas-Emissionen der wesentliche Indikator, um die Erreichung der Klimaschutzziele zu kontrollieren. Allerdings umfassen klima- und energiepolitische Strategien der Bundesregierung weitere Ziele und Indikatoren. Deshalb haben das beauftragte Forschungskonsortium, das Thünen-Institut und das Umweltbundesamt neben Treibhausgas-Emissionen und Rahmendaten weitere Projektionsdaten im Sinne eines Nachschlagewerks zusammengestellt, um Steuerungsmöglichkeiten aufzuzeigen. Thematisch beziehen sich die Projektionsdaten auf die Bereiche Energiebezogene Indikatoren, neue Brennstoffe, Energiewirtschaft, Industrie, Gebäude, Verkehr, Landwirtschaft, Abfallwirtschaft sowie Landnutzung, Landnutzungsänderung und Forstwirtschaft (LULUCF). Sie bieten unter anderem Informationen zu möglichen Entwicklungen von Angebot und Nachfrage sowie der installierten Leistung wichtiger Energieträger, Kosten und Produktionsmengen von Industriegütern, der Verkehrsleistung sowie zu Emissionen, Flächennutzung und Düngereinsatz in der Land-, Forst- und Abfallwirtschaft.",
+            "contributors": [
+                {
+                    "date": "2025-07-01",
+                    "path": null,
+                    "roles": [],
+                    "title": "Öko-Institut",
+                    "object": "data upload, metadata",
+                    "comment": "publication on OEP as addition to UBA datacube",
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "Für die Treibhausgas-Projektionen sind die Treibhausgas-Emissionen der wesentliche Indikator, um die Erreichung der Klimaschutzziele zu kontrollieren. Allerdings umfassen klima- und energiepolitische Strategien der Bundesregierung weitere Ziele und Indikatoren. Deshalb haben das beauftragte Forschungskonsortium, das Thünen-Institut und das Umweltbundesamt neben Treibhausgas-Emissionen und Rahmendaten weitere Projektionsdaten im Sinne eines Nachschlagewerks zusammengestellt, um Steuerungsmöglichkeiten aufzuzeigen. Thematisch beziehen sich die Projektionsdaten auf die Bereiche Energiebezogene Indikatoren, neue Brennstoffe, Energiewirtschaft, Industrie, Gebäude, Verkehr, Landwirtschaft, Abfallwirtschaft sowie Landnutzung, Landnutzungsänderung und Forstwirtschaft (LULUCF). Sie bieten unter anderem Informationen zu möglichen Entwicklungen von Angebot und Nachfrage sowie der installierten Leistung wichtiger Energieträger, Kosten und Produktionsmengen von Industriegütern, der Verkehrsleistung sowie zu Emissionen, Flächennutzung und Düngereinsatz in der Land-, Forst- und Abfallwirtschaft.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,293 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "forwind_oeko_renewable_capacity_per_federalstate",
+            "type": "Table",
+            "title": "Data record for generic feed-in time series from 2020 to 2050 for PV, wind onshore and wind offshore per federal state",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "technology",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "renewable PV, wind onshore, wind offshore",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "factor",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "normiert (standardised), skaliert (scaled)",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Öko-Institut e.V.",
+                    "authors": [],
+                    "description": "Daten zur Einspeisung erneuerbarer Energien",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.oeko.de/aktuelles/2016/daten-zur-einspeisung-erneuerbarer-energien/",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Öko-Institut e.V.",
+                    "authors": [],
+                    "description": "ForWind & Öko-Institut (2016): Generische Einspeisezeitreihen der Photovoltaik auf Bundeslandebene für Deutschland im Zeitraum 2020 bis 2050.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.oeko.de/aktuelles/2016/daten-zur-einspeisung-erneuerbarer-energien/",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Öko-Institut e.V.",
+                    "authors": [],
+                    "description": "Datensatz_fuer_generische_Einspeisezeitreihen_der_Offshore_Windenergie_2020_bis_2050.xlsx",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.oeko.de/aktuelles/2016/daten-zur-einspeisung-erneuerbarer-energien/",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Öko-Institut e.V.",
+                    "authors": [],
+                    "description": "Datensatz_fuer_generische_Einspeisezeitreihen_der_Onshore_Windenergie_2020_bis_2050.xlsx",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.oeko.de/aktuelles/2016/daten-zur-einspeisung-erneuerbarer-energien/",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Öko-Institut e.V.",
+                    "authors": [],
+                    "description": "Datensatz_fuer_generische_Einspeisezeitreihen_der_Photovoltaik_2020_bis_2050.xlsx",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.oeko.de/aktuelles/2016/daten-zur-einspeisung-erneuerbarer-energien/",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "state",
+                    "resolutionValue": "federal"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY-SA 3.0",
+                    "path": "https://creativecommons.org/licenses/by-sa/3.0/",
+                    "title": "GPL-3.0",
+                    "attribution": "",
+                    "instruction": "Dieses Werk bzw. dieser Inhalt steht unter einer Creative Commons Namensnennung, Weitergabe unter gleichen Bedingungen 3.0 Lizenz (CC-BY-SA 3.0) - Öko-Institut e.V. 2016",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2016-11-23"
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "Datensatz fuer generische Einspeisezeitreihen 2020 bis 2050 für PV, Wind Onshore und Wind Offshore pro Bundesland",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludwig Hülk",
+                    "object": null,
+                    "comment": "import data",
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludwig Hülk",
+                    "object": null,
+                    "comment": "updated metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2017-10-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Kilian Zimmerer",
+                    "object": null,
+                    "comment": "Update metadata to v1.3",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

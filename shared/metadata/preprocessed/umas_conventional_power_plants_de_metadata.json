@@ -1,0 +1,628 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://energy.databus.dbpedia.org/chrwm/LOD-GEOSS_use_case_oemof-B3/umas_conventional_power_plants_de",
+            "name": "umas_conventional_power_plants_de",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/umas_conventional_power_plants_de",
+            "type": "Table",
+            "title": "umas_conventional_power_plants_de",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id_bentza",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "column shows the specific number of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name_bnetza",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the name given by bundesnetzagentur",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "block_bnetza",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000334",
+                                "name": "power generating unit"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the block of power plant given by bundesnetzagentur",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name_uba",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the name given by umweltbundesamt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "company",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the company which runs the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "street",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the street of power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "postcode",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the postcode of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "city",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the city where the power plant is located",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "state",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the state in which the power plant is located",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "country",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the country of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_net_bnetza",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                                "name": "power capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the net capacity of the power plant by the bundesnetzagentur",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_gross_uba",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                                "name": "power capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the gross capacity of the power plant by the umweltbundesamt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_source",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140078",
+                                "name": "primary energy carrier"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the source of the energy",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "technology",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000407",
+                                "name": "technology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the technology used in the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "chp",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00240009",
+                                "name": "combined heat and power generation"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows if the power plant produces heat and electricity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "chp_capacity_uba",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00240009",
+                                "name": "combined heat and power generation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                                "name": "power capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the capacity of the heat and power combined",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "commissioned",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the year in which the power plant was commisioned",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "commissioned_original",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the date of the comission",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "retrofit",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the year of retrofit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "shutdown",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the year of shutdown",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "status",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the status of activity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the type of the power plant (CHP/IPP)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lat",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the latitude of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lon",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the longitude of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "eic_code_plant",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the code of the power plant given by european innovation council",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "eic_code_block",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the code of the block given by european innovation council",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "efficiency_data",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140050",
+                                "name": "efficiency value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the efficiency of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "efficiency_source",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140050",
+                                "name": "efficiency value"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000353",
+                                "name": "reference"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the source of the column efficiency_data",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "efficiency_estimate",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140050",
+                                "name": "efficiency value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the estimated efficiency for power plants without data/source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_source_level_1",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows general energy source of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_source_level_2",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the specific energy source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_source_level_3",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the energy source very differentiated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "eeg",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows if the power plant is part of the renewable energy sources act",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "network_node",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000296",
+                                "name": "grid node"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the network node of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "voltage",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the voltage of the power plant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "network_operator",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column shows the company operating the network",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "merge_comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column for comments on merging",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "column for comments",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://data.open-power-system-data.org/conventional_power_plants/2020-10-01",
+                    "title": "Data Platform",
+                    "authors": [],
+                    "description": "Conventional power plants",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "@Open Power System Data",
+                            "instruction": "You are free: To Share, To Adapt; As long as you: Attribute",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "UMAS",
+                "raw",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "2022-09-15",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Oskar",
+                    "object": "metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-12-05",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "monika-o",
+                    "object": "metadata",
+                    "comment": "Annotate metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

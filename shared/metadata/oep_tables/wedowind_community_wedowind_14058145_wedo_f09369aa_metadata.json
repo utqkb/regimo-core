@@ -1,0 +1,116 @@
+{
+    "@id": "https://doi.org/10.5281/zenodo.14058145",
+    "name": "wedowind_community_wedowind_14058145",
+    "title": "WindPROFILE: Wind Energy Project Process and Life-cycle Taxonomy",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_community_wedowind_14058145_wedo_f09369aa",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_community_wedowind_14058145_wedo_f09369aa",
+            "type": "table",
+            "title": "WeDoWind/wind-energy-project-lifecycle-taxonomy-0.0.2.zip",
+            "format": "ZIP",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://zenodo.org/api/records/14058145/files/WeDoWind/wind-energy-project-lifecycle-taxonomy-0.0.2.zip/content",
+                    "title": "WeDoWind/wind-energy-project-lifecycle-taxonomy-0.0.2.zip",
+                    "authors": [],
+                    "description": "Improved Taxonomy based on community feedback and IEA Wind Task 43 WG 1.2 discussions",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2024"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "zenodo_14058145",
+                "zenodo"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Improved Taxonomy based on community feedback and IEA Wind Task 43 WG 1.2 discussions",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        "DataCollector"
+                    ],
+                    "title": "IEA Wind Task 43",
+                    "object": "data",
+                    "comment": "Mapped from Zenodo creators",
+                    "organization": "Agence internationale de l'énergie"
+                }
+            ],
+            "publicationDate": "2024-11-08"
+        }
+    ],
+    "description": "Improved Taxonomy based on community feedback and IEA Wind Task 43 WG 1.2 discussions",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,531 @@
+{
+    "@id": null,
+    "name": "parallelinstrumente_h2_und_ptx",
+    "title": "Nationale und Internationale Instrumente zur Förderung des Hochlaufes der Wasserstoff- und PtX Witschaft",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "parallelinstrumente_h2_und_ptx",
+            "path": "https://openenergyplatform.org/database/tables/parallelinstrumente_h2_und_p2x",
+            "type": null,
+            "title": "Parallelinstrumente für Wasserstoff und PtX",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "instrument",
+                        "type": "varchar(600)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Bezeichnung/Name eines Instrumentes",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "land",
+                        "type": "varchar(500)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Land, in dem das Instrument wirkt",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "typ",
+                        "type": "varchar(600)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Art des Instruments",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wertschoepfungsstufe",
+                        "type": "varchar(600)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Wertschöpfungsstufe auf die ein Instrument wirkt",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "anwendungsbereiche",
+                        "type": "varchar(600)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Bereich in dem ein Instruemnt wirkt (z.B. Industrie, Verkehr,...)",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "ankuendigungsjahr",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Jahr der Ankündigung des Instruments",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wirksamkeitsbeginn",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Jahr des Inkrafttreten des Instruments",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "status",
+                        "type": "varchar(500)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Status des Instruments",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "jurisdiction",
+                        "type": "varchar(500)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Wirkbereich eines Instruments (z.B. national, International,...)",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "beschreibung",
+                        "type": "varchar(10000)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Eine kurze Beschreibung des Instruments",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quelle1",
+                        "type": "varchar(800)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Datenquelle",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quelle2",
+                        "type": "varchar(800)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Datenquelle",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quelle3",
+                        "type": "varchar(800)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Datenquelle",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quelle4",
+                        "type": "varchar(800)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Datenquelle",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quelle5",
+                        "type": "varchar(800)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Datenquelle",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quelle6",
+                        "type": "varchar(800)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Datenquelle",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "quelle7",
+                        "type": "varchar(800)",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Datenquelle",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "Wasserstoff",
+                "Power to X",
+                "Förderung",
+                "Instrumente"
+            ],
+            "context": {
+                "title": "IMA-GH2: Instrumente zur Beschleunigung des Markthochlaufs grünen Wasserstoffs und seiner Derivate",
+                "contact": null,
+                "grantNo": null,
+                "homepage": "https://fenes.oth-regensburg.de/projekte/ima-gh2",
+                "publisher": null,
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "f_rderinstrumente",
+                "energiewirtschaft",
+                "wasserstoff",
+                "power_to_x"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://spdx.org/licenses/CC-BY-4.0.html",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                "German"
+            ],
+            "description": "Diese Liste beihaltet politische und regulatorische Instrumente, die den Hochlauf der Wasserstoffwirtschaft fördern",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [],
+                    "title": "Forschungsstelle für Energienetze und Energiespeicher (FENES)OTH Regensburg",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [],
+                    "title": "Energy Systems und Market Design Lab UTN",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2026-06-16"
+        }
+    ],
+    "description": "Dieses Dataset enthält strukturierte Informationen zu wirtschaftlichen, politischen und regulatorischen Instrumenten, die zur Förderung, Steuerung oder Regulierung von Märkten und Technologien eingesetzt werden. Erfasst werden unter anderem finanzielle Förderprogramme, steuerliche Anreize, Emissionshandelssysteme, Quotenregelungen, Carbon Contracts for Difference (CCfDs), Aktionspläne sowie weitere regulatorische Maßnahmen. Für jedes Instrument werden relevante Merkmale wie Zielsetzung, Anwendungsbereich, Fördermechanismus, rechtliche Grundlage, geografischer Geltungsbereich und spezifische Anforderungen dokumentiert. Das Dataset ermöglicht vergleichende Analysen von Politikinstrumenten und deren Rolle bei der Erreichung energie-, klima- und industriepolitischer Ziele.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": null,
+            "path": null,
+            "title": null
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,707 @@
+{
+    "@id": "62548495-d213-4003-a2da-bec1be42d2eb",
+    "name": "funded_h2_projects_de_eu",
+    "title": "List of publically funded hydrogen projects within selected German or EU-wide support chemes",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "publically_funded_h2_projects_de_eu",
+            "path": "https://openenergyplatform.org/database/tables/publically_funded_h2_projects_de_eu",
+            "type": null,
+            "title": "List of publically funded hydrogen projects within selected German or EU-wide support chemes",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "project_code",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Original project identifier or short code from the source dataset",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "status",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Project implementation, award, or cancellation status as recorded in the dataset",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "instrument",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Public funding, support, or award instrument under which the project is listed",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "project",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Project name",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "project_type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Project category or hydrogen value-chain segment, for example production, use, infrastructure, storage, research and development, or manufacturing",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "coordinator",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Project coordinator, beneficiary, or lead organisation",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "wave",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Funding call, programme wave, auction window, or related allocation round",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "project_key",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Programme-specific project key or reference identifier",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "country",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Country associated with the project",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "continent",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Continent associated with the project country",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "bid_price_eur_per_kg",
+                        "type": "numeric",
+                        "unit": "EUR/kg_H2",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Bid price for hydrogen where reported",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "total_volume_value",
+                        "type": "numeric",
+                        "unit": "total_volume_unit",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Total supported, contracted, or reported hydrogen volume value where available",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "total_volume_unit",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Unit for total_volume_value",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "annual_production_value",
+                        "type": "numeric",
+                        "unit": "annual_production_unit",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Annual hydrogen production or planned output value where available",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "annual_production_unit",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Unit for annual_production_value",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "electrolysis_capacity_mwe",
+                        "type": "numeric",
+                        "unit": "MWel",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Electrical capacity of electrolysis facilities where reported",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "storage_capacity_m_nm3",
+                        "type": "numeric",
+                        "unit": "million Nm3",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Hydrogen storage capacity where reported",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "electrolyser_manufacturing_capacity_mwe",
+                        "type": "numeric",
+                        "unit": "MWel",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Manufacturing capacity for electrolysers where reported",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "co2_avoided_value",
+                        "type": "numeric",
+                        "unit": "co2_avoided_unit",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Reported avoided greenhouse-gas or carbon-dioxide-equivalent emissions value",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "co2_avoided_unit",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Unit and time basis for co2_avoided_value",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "length_km",
+                        "type": "numeric",
+                        "unit": "km",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Length of pipeline, corridor, or other linear infrastructure where reported",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "public_funding_m_eur",
+                        "type": "numeric",
+                        "unit": "million EUR",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Public funding amount committed or approved for the project",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "year_of_funding_approved",
+                        "type": "integer",
+                        "unit": "year",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Year associated with the funding decision, award, source entry, or dataset record",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "link_budget",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Main source link, document reference, or budget/funding source used for the row",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "additional_source_links",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Additional source links, titles, notes, or evidence used for the row",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    "project_code"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "policy"
+            ],
+            "context": {
+                "title": "IMA-GH2",
+                "contact": "markus.albuscheit@utn.de",
+                "grantNo": "03EI1078A",
+                "homepage": "https://www.utn.de/departments/department-liberal-arts-and-social-sciences/energy-systems-and-market-design/ima-gh2-instrumente-zur-beschleunigung/",
+                "publisher": "niversity of Technology Nuremberg, Chair of Energy Systems and Market Design",
+                "sourceCode": null,
+                "documentation": "https://www.utn.de/departments/department-liberal-arts-and-social-sciences/energy-systems-and-market-design/ima-gh2-instrumente-zur-beschleunigung/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.utn.de/",
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Row-level source references in link_budget and additional_source_links",
+                    "authors": [
+                        null
+                    ],
+                    "description": "The dataset contains row-level source references in the columns link_budget and additional_source_links. These include European Commission state-aid documents, European Hydrogen Bank and Innovation Fund material, IPCEI Clean Hydrogen Observatory entries, company and project webpages, and additional news or institutional references.",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": "European Union",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "Country",
+                    "resolutionValue": "1"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010379",
+                    "name": "electrolytic hydrogen"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010380",
+                    "name": "renewable electrolytic hydrogen"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010458",
+                    "name": "regulatory instrument"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140151",
+                    "name": "policy instrument"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010129",
+                    "name": "EU climate policy"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "ipcei",
+                "european_hydrogen_bank",
+                "klimaschutzvertr_ge",
+                "state_aid",
+                "european_union",
+                "hydrogen",
+                "germany",
+                "h2global",
+                "ceeag",
+                "innovation_fund",
+                "public_funding",
+                "ima_gh2"
+            ],
+            "licenses": [
+                {
+                    "name": "ODbL-1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1-0/index.html",
+                    "title": "Open Data Commons Open Database License 1.0",
+                    "attribution": "IMA-GH2 Projekt, ESMD @ UTN",
+                    "instruction": "You are free to share and change, but you must attribute, and share derivations under the same license. See https://tldrlegal.com/license/odc-open-database-license-(odbl) for further information.",
+                    "copyrightStatement": "https://github.com/OpenEnergyPlatform/oemetadata/blob/production/LICENSE.txt"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": "2026-06-22"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Dataset of publicly funded hydrogen projects with selectedsupport instruments in Germany and the European Union. The selected instruments are the Innovations Fund Calls and Auctions (the latter usually called the European Hydrogen Bank (EHB)), the Important Projects of Common European Interest (IPCEI) scheme, the The Climate, Energy and Environmental Aid Guidelines (CEEAG), H2Global and the Klimaschutzverträge (KSV).",
+            "contributors": [
+                {
+                    "date": "2026-06-22",
+                    "path": "https://orcid.org/0009-0007-1998-9620",
+                    "roles": [],
+                    "title": "Markus Albuscheit",
+                    "object": "funded_h2_projects_de_eu.csv",
+                    "comment": "Uploaded the first draft of our funded h2-project list.",
+                    "organization": "University of Technology Nuremberg"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2026-06-22"
+        }
+    ],
+    "description": "Dataset of publicly funded hydrogen projects with selectedsupport instruments in Germany and the European Union. The selected instruments are the Innovations Fund Calls and Auctions (the latter usually called the European Hydrogen Bank (EHB)), the Important Projects of Common European Interest (IPCEI) scheme, the The Climate, Energy and Environmental Aid Guidelines (CEEAG), H2Global and the Klimaschutzverträge (KSV).",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": null,
+            "path": null,
+            "title": null
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

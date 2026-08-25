@@ -1,0 +1,328 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "hackathon_demand",
+            "path": "ID31hackathon_demand",
+            "type": "Table",
+            "title": "hackathon concrete Datamodel to Parameter",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text array",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020033",
+                                "name": "subregion"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Region in Germany",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020166",
+                                "name": "methodology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "name": "data source"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "None",
+                                "name": "comment"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_start",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00030031",
+                                "name": "start time"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Start timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_stop",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00030032",
+                                "name": "ending time"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Stop timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_resolution",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020122",
+                                "name": "temporal resolution"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Timesteps",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unknown",
+                        "type": "float array",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "name": "bandwidth type"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Bandwith Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "name": "dataset version string"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Felix.Maurer@rl-institut.de",
+                "grantNo": "",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project/oedatamodel/tree/main/parameter_datamodel",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/parameter_datamodel",
+                    "title": "Parameter datamodel",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140146",
+                    "name": "energy demand"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "oedatamodel",
+                "datapackage",
+                "general energy dataformat",
+                "hackathon",
+                "ID31",
+                "parameter_datamodel",
+                "hackathon",
+                "demand"
+            ],
+            "licenses": [
+                {
+                    "name": "TestLicense",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "",
+                    "attribution": "",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "datamodel, metadata and examples provided as datapackage",
+            "contributors": [
+                {
+                    "date": "2022-11-13",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "FelixMau",
+                    "object": "datapackage",
+                    "comment": "From hackathon concrete to uploadable parametermodel",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-11-14"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

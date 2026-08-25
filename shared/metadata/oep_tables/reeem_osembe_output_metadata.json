@@ -1,0 +1,415 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "reeem_osembe_output",
+            "type": "Table",
+            "title": "REEEM OSeMBE Output",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Row id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dfid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Internal dataframe id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pathway",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM pathway",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "framework",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM framework",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "schema",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "1. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "2. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tags",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Free classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "field",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Old classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "indicator",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "",
+                        "unit": "unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "aggregation",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "True if aggregated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "updated",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Data source",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "OSeMOSYS OSEMBE",
+                    "authors": [],
+                    "description": "The Open-Source energy Model Base for the European Union",
+                    "sourceLicenses": [
+                        {
+                            "name": "Apache License 2.0 (Apache-2.0)",
+                            "path": "http://www.osemosys.org/osembe.html",
+                            "title": "",
+                            "attribution": "tba",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "OSeMBE – An open-source engagement model",
+                    "authors": [],
+                    "description": "Model documentation",
+                    "sourceLicenses": [
+                        {
+                            "name": "Apache License 2.0 (Apache-2.0)",
+                            "path": "http://www.osemosys.org/uploads/1/8/5/0/18504136/osembe_documentation.pdf",
+                            "title": "",
+                            "attribution": "tba",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "OSeMBE input data",
+                    "authors": [],
+                    "description": "Data",
+                    "sourceLicenses": [
+                        {
+                            "name": "Open Data Commons Attribution License 1.0 (ODC-BY-1.0)",
+                            "path": "http://www.osemosys.org/uploads/1/8/5/0/18504136/osembe_v1_20180821.zip",
+                            "title": "",
+                            "attribution": "© Hauke Henke",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Europe (EU28+NO+CH)",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Creative Commons Attribution 4.0 International",
+                    "path": "https://spdx.org/licenses/CC-BY-4.0.html",
+                    "title": "CC-BY-4.0",
+                    "attribution": "© Hauke Henke",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050",
+                        "start": "2015",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "15 timeslices per year"
+                    }
+                ],
+                "referenceDate": "2015"
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Output parameters:",
+            "contributors": [
+                {
+                    "date": "2017-07-24",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2017-11-14",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update structure and metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2018-01-30",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "New naming structure",
+                    "organization": null
+                },
+                {
+                    "date": "2018-10-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update table name and metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-07-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "4lm",
+                    "object": null,
+                    "comment": "Update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

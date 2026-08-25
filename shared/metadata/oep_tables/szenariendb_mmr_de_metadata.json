@@ -1,0 +1,409 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "szenariendb_mmr_de",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/szenariendb_mmr_de",
+            "type": "Table",
+            "title": "Emission scenario data submitted in 2019 by Germany under Regulation (EU) 525/2013",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/58",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00030009",
+                                "name": "emission scenario"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Name of the scenario: with existing measures scenario = WEM, with additional measures scenario = WAM, without measures scenario = WOM",
+                        "valueReference": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020311",
+                                "name": "with existing measures scenario",
+                                "value": "WEM"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020312",
+                                "name": "with additional measures scenario",
+                                "value": "WAM"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "member_state",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/BFO_0000006",
+                                "name": "spatial region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "ISO-alpha-2 memberstate code",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "submission_year",
+                        "type": "integer",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "year that data was submitted by Member State",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000339",
+                                "name": "program parameter"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Parameter that is reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "crf_sector",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010402",
+                                "name": "CRF-based sector division"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Sector according to the Common Reporting Format (CRF)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gas",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000020",
+                                "name": "greenhouse gas"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Name of gas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "default_unit",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Default unit data should be reported in",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "additional_unit_information",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Unit data was reported in",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020097",
+                                "name": "scenario year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Year for which data is reported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "float",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000350",
+                                "name": "quantity value of"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Value of data",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "notation_key",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Notation key that was used in case cell is empty",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "is_baseyear",
+                        "type": "boolean",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Indicates with 1 if this is the base year used for the projection",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "helpdesk@eionet.europa.eu",
+                "grantNo": "",
+                "homepage": "https://eur-lex.europa.eu/eli/reg/2013/525/oj",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014R0749&from=EN#d1e32-67-1",
+                "fundingAgency": "",
+                "publisherLogo": null,
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://cdr.eionet.europa.eu/de/eu/mmr/art04-13-14_lcds_pams_projections/projections/",
+                    "title": "EIONET Central Data Repository",
+                    "authors": [],
+                    "description": "The Central Data Repository  is a reporting infrastructure and serves as a bookshelf that holds data reports on the environment.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Attribution 2.5 Denmark",
+                            "path": "https://creativecommons.org/licenses/by/2.5/dk/deed.en_GB",
+                            "title": "CC BY 2.5 DK",
+                            "attribution": "(c) EIONET Central Data Repository",
+                            "instruction": "free to share and adapt under attibution",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "national"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010262",
+                    "name": "scenario projection"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "monitoring_mechanism_regulation",
+                "european_environment_agency",
+                "cc_by_2_5_dk",
+                "szenariendb",
+                "eu_legislation",
+                "ko_institut",
+                "emission_projection",
+                "parameters",
+                "germany",
+                "Emission projections",
+                "Key parameters",
+                "Emission scenarios",
+                "Article 14",
+                "Assumptions"
+            ],
+            "licenses": [
+                {
+                    "name": "Attribution 2.5 Denmark",
+                    "path": "https://creativecommons.org/licenses/by/2.5/dk/deed.en_GB",
+                    "title": "CC BY 2.5 DK",
+                    "attribution": "(c) Öko-Institut",
+                    "instruction": "free to share and adapt under attibution",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table holds emission projections and corresponding parameters, submitted by Germany in 2019 under Article 14 of Regulation (EU) 525/2013",
+            "contributors": [
+                {
+                    "date": "2020-03-11",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "metadata",
+                    "comment": "Initial version metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2020-10-13",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "metadata",
+                    "comment": "amended metadata for missing information",
+                    "organization": null
+                },
+                {
+                    "date": "2021-01-18",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "metadata",
+                    "comment": "enhanced metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2023-11-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institit",
+                    "object": "Metadata",
+                    "comment": "ontology annotation",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2020-03-11"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

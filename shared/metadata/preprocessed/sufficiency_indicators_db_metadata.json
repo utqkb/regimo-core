@@ -1,0 +1,429 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "sufficiency_indicators_db",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/sufficiency_indicators_db",
+            "type": "Table",
+            "title": "Database of indicators and sufficiency studies",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000119",
+                                "name": "source"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geographic_scope",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000189",
+                                "name": "geo"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "geographic_scope",
+                        "valueReference": [
+                            {
+                                "@id": " https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Ireland",
+                                "name": "Ireland",
+                                "value": "IE"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000009",
+                                "name": "France",
+                                "value": "FR"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Germany",
+                                "name": "Germany",
+                                "value": "DE"
+                            },
+                            {
+                                "@id": "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/UnitedKingdomOfGreatBritainAndNorthernIreland",
+                                "name": "United Kingdom of Great Britain and Northern Ireland",
+                                "value": "UK"
+                            },
+                            {
+                                "@id": " https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Ukraine",
+                                "name": "Ukraine",
+                                "value": "UKR"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "scenario_name_historic_dls",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000227",
+                                "name": "Industry",
+                                "value": "Industry"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000128",
+                                "name": "Energy sector",
+                                "value": "Energy"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140005",
+                                "name": "freig",
+                                "value": "Freight"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140003",
+                                "name": "transport",
+                                "value": "Mobility"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010034",
+                                "name": "buildings",
+                                "value": "buildings"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "varchar",
+                        "unit": "year",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000027",
+                                "name": "celcius",
+                                "value": "°C"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000187",
+                                "name": "percen",
+                                "value": "%"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "value",
+                        "type": "varchar",
+                        "unit": "float",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "model_source_dls",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "original_value_combined_value_calculated",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000119",
+                                "name": "data descriptor"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "frauke.wiese@uni-flensburg.de",
+                "grantNo": "01UU2004A (FW) and 01UU2004C (CZZ)",
+                "homepage": "https://iopscience.iop.org/article/10.1088/2515-7620/ad966e",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": " German Federal Ministry of Education and Research (BMBF)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "https://doi.org/10.1038/s41467-024-53393-0",
+                    "title": "The key role of sufficiency for low demand-based carbon neutrality and energy security across Europe",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010444",
+                    "name": "suffi"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00240024",
+                    "name": "energy demand "
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "sufficiency scenario",
+                "energy service demand",
+                "energy demand",
+                "reducing demand",
+                "2050",
+                "Germany",
+                "Ireland ",
+                "Great Britain",
+                "EU27",
+                "EU28",
+                "Ukraine"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2024-05-16"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Supplementary material to the manuscript titled \"Reducing demand - A quantitative analysis of energy service demand indicators in sufficiency-oriented scenarios\", submitted to ERL",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Frauke Wiese, Europa-Universität Flensburg",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Carina Zell-Ziegler, Öko-Institut and TU Berlin",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Celia Burghardt, INATECH, University of Freiburg",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Yannick Kloos, INATECH, University of Freiburg",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Mirko Schäfer, INATECH, University of Freiburg",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-12-05"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

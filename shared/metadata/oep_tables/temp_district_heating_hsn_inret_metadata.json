@@ -1,0 +1,473 @@
+{
+    "id": "temp_district_heating_hsn_inret",
+    "name": "temp_district_heating_hsn_inret",
+    "title": "Temperature values describing the forward and return temperatures of the district heating network as a function of the outside temperature.",
+    "resources": [
+        {
+            "name": "temp_district_heating_hsn_inret",
+            "path": "",
+            "type": "table",
+            "title": "temp_district_heating_hsn_inret",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "-",
+                        "nullable": false,
+                        "description": "identification number"
+                    },
+                    {
+                        "name": "model_id",
+                        "type": "string",
+                        "unit": "-",
+                        "nullable": true,
+                        "description": "model identification number"
+                    },
+                    {
+                        "name": "T_VL_U_2025",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the upper limit of the outside temperature in 2025"
+                    },
+                    {
+                        "name": "T_VL_U_2030",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the upper limit of the outside temperature in 2030"
+                    },
+                    {
+                        "name": "T_VL_U_2035",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the upper limit of the outside temperature in 2035"
+                    },
+                    {
+                        "name": "T_VL_U_2040",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the upper limit of the outside temperature in 2040"
+                    },
+                    {
+                        "name": "T_VL_U_2045",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the upper limit of the outside temperature in 2045"
+                    },
+                    {
+                        "name": "T_VL_U_2050",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the upper limit of the outside temperature in 2050"
+                    },
+                    {
+                        "name": "T_VL_L_2025",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the lower limit of the outside temperature in 2025"
+                    },
+                    {
+                        "name": "T_VL_L_2030",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the lower limit of the outside temperature in 2030"
+                    },
+                    {
+                        "name": "T_VL_L_2035",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the lower limit of the outside temperature in 2035"
+                    },
+                    {
+                        "name": "T_VL_L_2040",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the lower limit of the outside temperature in 2040"
+                    },
+                    {
+                        "name": "T_VL_L_2045",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the lower limit of the outside temperature in 2045"
+                    },
+                    {
+                        "name": "T_VL_L_2050",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Flow temperature from the lower limit of the outside temperature in 2050"
+                    },
+                    {
+                        "name": "T_RL_2025",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Return temperature in 2025"
+                    },
+                    {
+                        "name": "T_RL_2030",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Return temperature in 2030"
+                    },
+                    {
+                        "name": "T_RL_2035",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Return temperature in 2035"
+                    },
+                    {
+                        "name": "T_RL_2040",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Return temperature in 2040"
+                    },
+                    {
+                        "name": "T_RL_2045",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Return temperature in 2045"
+                    },
+                    {
+                        "name": "T_RL_2050",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Return temperature in 2050"
+                    },
+                    {
+                        "name": "T_L",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Lower ambient temperature limit"
+                    },
+                    {
+                        "name": "T_U",
+                        "type": "float",
+                        "unit": "°C",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                                "name": "temperature"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Upper ambient temperature limit"
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ]
+            },
+            "topics": [
+                "boundaries"
+            ],
+            "context": {
+                "title": "ToDo",
+                "contact": "Hochschule Nordhausen - Institut für Regenerative Energietechnik",
+                "grantNo": "",
+                "homepage": "https://hs-nordhausen.de/",
+                "publisher": "ToDo",
+                "sourceCode": "https://github.com/in-RET",
+                "documentation": "https://hs-nordhausen.de",
+                "fundingAgency": "Thüringer Ministerium für Umwelt, Energie, Naturschutz und Forsten",
+                "publisherLogo": "ToDo",
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": ","
+            },
+            "subject": [
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00010453",
+                    "name": "temperature"
+                }
+            ],
+            "encoding": "utf8",
+            "keywords": [
+                "oemof",
+                "hsn_in_ret",
+                "zo_rro_ii",
+                "climate_neutrality",
+                "thuringia"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Common Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2025-01-01T00:00:00+00:00",
+                        "start": "2025-01-01T00:00:00+00:00",
+                        "alignment": null,
+                        "resolutionUnit": "a",
+                        "aggregationType": null,
+                        "resolutionValue": "5"
+                    }
+                ],
+                "referenceDate": "2025-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Temperature values describing the forward and return temperatures of the district heating network as a function of the outside temperature.; data based on literature data. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Sciences.",
+            "contributors": [
+                {
+                    "date": "2024-12-31",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Amèlie Oberdorfer",
+                    "object": null,
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "DataManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Andreas Lubojanski",
+                    "object": null,
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0000-0002-4269-3779",
+                    "roles": [
+                        "ContactPerson",
+                        "DataCurator",
+                        "Distributor",
+                        "ProjectManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Christoph Schmidt",
+                    "object": null,
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Rohith Krishnan Bala Krishnan",
+                    "object": null,
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "ProjectMember"
+                    ],
+                    "title": "Theresa Reinhardt",
+                    "object": null,
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "Distributor",
+                        "ProjectLeader",
+                        "ProjectMember"
+                    ],
+                    "title": "Viktor Wesselak",
+                    "object": null,
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": null,
+                    "roles": [
+                        "DataManager"
+                    ],
+                    "title": "Stefan Kirsch",
+                    "object": null,
+                    "comment": null,
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Ernst-Abbe-Hochschule Jena"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": null,
+                    "roles": [
+                        "DataManager"
+                    ],
+                    "title": "Kevin Lindt",
+                    "object": null,
+                    "comment": null,
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Technische Universität Ilmenau"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2025-11-19"
+        }
+    ],
+    "description": "Temperature values describing the forward and return temperatures of the district heating network as a function of the outside temperature.; data based on literature data. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Sciences.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

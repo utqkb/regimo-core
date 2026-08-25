@@ -1,0 +1,294 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "x2x_delivery_ethanol",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/x2x_delivery_ethanol",
+            "type": "Table",
+            "title": "sedos_x2x_delivery_ethanol",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_ethanol_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Conversion factor ethanol before transport.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_ethanol",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Conversion factor ethanol after transport.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_var_e",
+                        "type": "float array",
+                        "unit": "EUR/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Variable costs in cost per unit of a certain good.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "g.mueller@fz-juelich.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://energycentral.com/system/files/ece/nodes/577977/e-fuels.pdf",
+                    "title": "E-Fuels: A technoeconomic assessment of European domestic production and imports towards 2050.",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "copyright. 2022 Concawe.",
+                            "instruction": "Reproduction permitted with due acknowledgement.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "europe",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020001",
+                    "name": "ethanol"
+                },
+                {
+                    "@id": null,
+                    "name": "filling station"
+                },
+                {
+                    "@id": null,
+                    "name": "transport network"
+                },
+                {
+                    "@id": null,
+                    "name": "pipeline"
+                },
+                {
+                    "@id": null,
+                    "name": "truck"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "AP5",
+                "X2X",
+                "oedatamodel-parameter",
+                "input_data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": null,
+                    "instruction": "You are free: To Share, To Create, To Adapt",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Techno-economic parameter for the transportation of ethanol from refinery to central depot by pipeline and from central depot to fuel station by truck.",
+            "contributors": [
+                {
+                    "date": "2024-04-08",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Gian Müller, FZJ",
+                    "object": "data and metadata",
+                    "comment": "Data for transport process of ethanol by pipeline from refinery to central depot and from central depot to fuel station by truck.",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-04-08"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

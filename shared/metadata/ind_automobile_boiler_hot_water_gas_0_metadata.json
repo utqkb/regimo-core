@@ -1,0 +1,538 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "ind_automobile_boiler_hot_water_gas_0",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/ind_automobile_boiler_hot_water_gas_0",
+            "type": "Table",
+            "title": "sedos_ind_automobile_boiler_hot_water_gas_0",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_auto_hot_water",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00140049/",
+                                "name": "energy conversion efficiency"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_ch4_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00000148/",
+                                "name": "emission factor"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_co2_f_ind",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00000148/",
+                                "name": "emission factor"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_n2o_f_ind",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00000148/",
+                                "name": "emission factor"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_hydrogen",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00140056/",
+                                "name": "flow potential"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Maximum share of flow commodity c based upon the sum of individual flows defined by the commodity group cg belonging to process p.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_abs_new_max",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Absolute upper bound on level of investment in new weight capacity for a period.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00020178/",
+                                "name": "operational life time"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_inst_0",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Existing weight capacity of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_methane",
+                        "type": "float",
+                        "unit": "PJ/PJ",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00140049/",
+                                "name": "energy conversion efficiency"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_hydrogen",
+                        "type": "float",
+                        "unit": "PJ/PJ",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00140049/",
+                                "name": "energy conversion efficiency"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "text",
+                        "unit": "%",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "ulrich.fahl@ier.uni-stuttgart.de",
+                "grantNo": "03EI1040A",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fÃ¼r Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "TAM Industry Model",
+                    "authors": [],
+                    "description": "TAM Industry is based on TIMES and focuses on German industry energy system",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution 4.0 International",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC BY 4.0",
+                            "attribution": "@Energy Economics and Social Analysis(ESA), IER, University of Stuttgart 2024",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://data.jrc.ec.europa.eu/dataset/8141a398-41a8-42fa-81a4-5b825a51761b#description",
+                    "title": "01_JRC-EU-TIMES Full model. European Commission, Joint Research Centre (JRC) [Dataset] ",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution 4.0 International",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC BY 4.0",
+                            "attribution": "© European Union, 2019",
+                            "instruction": "You are free to: Share- copy and redistribute the material in any medium or format for any purpose, even commercially. Adapt - remix, transform, and build upon the material for any purpose, even commercially. ",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ier.uni-stuttgart.de/forschung/projekte/abgeschlossen/dezentral/downloads/BMWi-03ET4026_Schlussbericht_Dezentral.pdf",
+                    "title": "Optimale Struktur von dezentralen und zentralen Technologien im Systemverbund – Intelligente dezentrale Energiesysteme",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© Institut für Energiewirtschaft und Rationelle Energieanwendung (IER), Universität Stuttgart",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.umweltbundesamt.de/sites/default/files/medien/11850/publikationen/29_2023_cc_submission_under_the_united_nations_framework_convention.pdf",
+                    "title": "Submission under the United Nations Framework Convention on Climate Change and the Kyoto Protocol 2023, National Inventory Report for the German Greenhouse Gas Inventory 1990 – 2021",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "©  Umweltbundesamt 2023",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://op.europa.eu/en/publication-detail/-/publication/271b7d56-7812-11ec-9136-01aa75ed71a1/language-en",
+                    "title": "Blending hydrogen from electrolysis into the European gas grid",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution 4.0 International",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC BY 4.0",
+                            "attribution": "© European Union 2022",
+                            "instruction": "You are free to: Share- copy and redistribute the material in any medium or format for any purpose, even commercially. Adapt - remix, transform, and build upon the material for any purpose, even commercially. ",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-industrial-process-heat",
+                    "title": "Technology Data for Industrial Process Heat (Version 0004)",
+                    "authors": [],
+                    "description": "This Technology Catalogue describes technologies that can supply heat for different industrial processes and temperature levels. It contains a number of boilers, heat pumps and other electrical alternatives, alongside assessments of their respective maximum application potentials.",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© Danish Energy Agency 2022",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ag-energiebilanzen.de/daten-und-fakten/bilanzen-1990-bis-2030/?wpv-jahresbereich-bilanz=2021-2030",
+                    "title": "Bilanzen 1990 bis 2030",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© AGEB 2023",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000227/",
+                    "name": "Industry Sector"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010275",
+                    "name": "Automobile"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "input_data",
+                "final",
+                "Industry",
+                "Automobile",
+                "oedatamodel-parameter"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": "You are free to: Share- copy and redistribute the material in any medium or format for any purpose, even commercially. Adapt - remix, transform, and build upon the material for any purpose, even commercially.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Dataset describes scalar techno-economic and scenario data of technology/process: Industry, Automobile, Hot water boiler, Gas, BASE",
+            "contributors": [
+                {
+                    "date": "2025-03-11",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Anik Islam",
+                    "object": "data and metadata for Automobile industry",
+                    "comment": "Processed data and Metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-03-11"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

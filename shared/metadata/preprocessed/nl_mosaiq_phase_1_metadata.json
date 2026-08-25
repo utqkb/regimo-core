@@ -1,0 +1,486 @@
+{
+    "@id": "",
+    "name": "energy_simulation_nl_phase_1_oem",
+    "title": "Netherlands Phase 1 – Building-level Energy Simulation Dataset",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "",
+            "name": "energy_sim_nl_phase1",
+            "path": "https://github.com/PhilKrien/nl_building_data_phase_1/blob/main/oep_nl_metadata.md",
+            "type": "Table",
+            "title": "Netherlands Phase 1 Building Energy Dataset",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "data_type": "bigserial",
+                        "description": "Incrementally generated id of this building in the DB",
+                        "primary_key": true
+                    },
+                    {
+                        "name": "size_class",
+                        "type": "varchar(18)",
+                        "unit": null,
+                        "nullable": true,
+                        "data_type": "varchar(18)",
+                        "description": "Size/morphology class of the building (SFH/TH/MFH/AB), derived from party-wall area and number of dwellings (BAG3D)"
+                    },
+                    {
+                        "name": "tabula_key",
+                        "type": "varchar(18)",
+                        "unit": null,
+                        "nullable": true,
+                        "data_type": "varchar(18)",
+                        "description": "TABULA type key (building type x construction period), used to look up TABULA heat demand intensities"
+                    },
+                    {
+                        "name": "construction_year",
+                        "type": "integer",
+                        "unit": "year",
+                        "nullable": true,
+                        "data_type": "integer",
+                        "description": "Construction year of the building (BAG3D)"
+                    },
+                    {
+                        "name": "refurbishment_state",
+                        "type": "integer",
+                        "unit": null,
+                        "nullable": true,
+                        "data_type": "integer",
+                        "description": "Individual refurbishment state of the building (1 = existing, 2 = usual refurbishment, 3 = advanced refurbishment) -- always set, never null: unlabelled buildings default to 1"
+                    },
+                    {
+                        "name": "refurbishment_state_src",
+                        "type": "varchar(18)",
+                        "unit": null,
+                        "nullable": true,
+                        "data_type": "varchar(18)",
+                        "description": "Source of refurbishment_state: \"ep-online\" (derived from an individual EP-Online energy label) or \"assumption\" (conservative default for buildings without a label)"
+                    },
+                    {
+                        "name": "living_area",
+                        "type": "float",
+                        "unit": "m2",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Conditioned reference floor area (TABULA A_C,ref), summed from pure-woonfunctie BAG verblijfsobjecten (VBO) of the building"
+                    },
+                    {
+                        "name": "heat_demand_1",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Annual heat demand at refurbishment state 1 (existing), from TABULA x living_area"
+                    },
+                    {
+                        "name": "heat_demand_2",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Annual heat demand at refurbishment state 2 (usual refurbishment), from TABULA x living_area"
+                    },
+                    {
+                        "name": "heat_demand_3",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Annual heat demand at refurbishment state 3 (advanced refurbishment), from TABULA x living_area"
+                    },
+                    {
+                        "name": "heat_demand",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Annual heat demand at the building's actual, individual refurbishment state (reads heat_demand_1/2/3 via refurbishment_state)"
+                    },
+                    {
+                        "name": "heat_cluster_1",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Cluster-mean of heat_demand_1, assigned into the cluster bins fitted on heat_demand (no separate clustering fit; see heat_cluster)"
+                    },
+                    {
+                        "name": "heat_cluster_2",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Cluster-mean of heat_demand_2, assigned into the cluster bins fitted on heat_demand"
+                    },
+                    {
+                        "name": "heat_cluster_3",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Cluster-mean of heat_demand_3, assigned into the cluster bins fitted on heat_demand"
+                    },
+                    {
+                        "name": "heat_cluster",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Cluster-mean annual heat demand at the building's actual refurbishment state (1-D k-means over heat_demand, per building type)"
+                    },
+                    {
+                        "name": "heat_technology",
+                        "type": "varchar(18)",
+                        "unit": null,
+                        "nullable": true,
+                        "data_type": "varchar(18)",
+                        "description": "Heuristically assigned heating technology (\"gas\" / \"district_heat\" / \"hp\"), based on neighbourhood-level (wijk) CBS/Klimaatmonitor heating-installation shares"
+                    },
+                    {
+                        "name": "elec_demand",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Annual electricity demand of the building, from CBS national consumption tables (construction-year class x household-size class x building type), scaled by dwelling count for MFH/AB"
+                    },
+                    {
+                        "name": "elec_cluster",
+                        "type": "float",
+                        "unit": "kWh/a",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Cluster-mean annual electricity demand (1-D k-means over elec_demand, per building type)"
+                    },
+                    {
+                        "name": "roof_type",
+                        "type": "varchar(18)",
+                        "unit": null,
+                        "nullable": true,
+                        "data_type": "varchar(18)",
+                        "description": "Roof form of the building: \"flat\" (avg_tilt_deg < 10 deg) or \"gabled\", following the same convention as the NRW dataset"
+                    },
+                    {
+                        "name": "roof_orientation",
+                        "type": "varchar(18)",
+                        "unit": null,
+                        "nullable": true,
+                        "data_type": "varchar(18)",
+                        "description": "Dominant roof orientation for PV siting: \"south\" if roof_area_south > 0, else \"east-west\" (the same distinction that decides whether a building's non-zero value ends up in roof_cluster_south or roof_cluster_eastwest; for flat roofs this is a side effect of the same comparison and does not carry the same physical meaning as for gabled roofs)"
+                    },
+                    {
+                        "name": "roof_area_south",
+                        "type": "float",
+                        "unit": "m2",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Dominant south-facing roof area for gabled roofs (0 if the east/west side is dominant instead); not meaningful for flat roofs"
+                    },
+                    {
+                        "name": "roof_area_eastwest",
+                        "type": "float",
+                        "unit": "m2",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Dominant east/west-facing roof area for gabled roofs (0 if the south side is dominant instead); not meaningful for flat roofs"
+                    },
+                    {
+                        "name": "roof_cluster_south",
+                        "type": "float",
+                        "unit": "m2",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Cluster-mean roof area relevant for south-facing PV: for gabled roofs, the building's dominant south roof area; for flat roofs, the total roof area -- flat roofs have no meaningful orientation, so their cluster is stored here rather than in a separate field. 0 (not null) where the clustering did not reach a building"
+                    },
+                    {
+                        "name": "roof_cluster_eastwest",
+                        "type": "float",
+                        "unit": "m2",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Cluster-mean roof area relevant for east/west-facing PV, for gabled roofs whose east/west area is dominant; 0 for flat roofs and for gabled roofs whose south side is dominant"
+                    },
+                    {
+                        "name": "lon",
+                        "type": "float",
+                        "unit": "degree",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Longitude of the building footprint centroid, WGS84 (EPSG:4326) -- stored as a plain float rather than a PostGIS geometry column, since the target OEP table does not support bounding-box spatial queries; spatial filtering is done sequentially on lon/lat instead"
+                    },
+                    {
+                        "name": "lat",
+                        "type": "float",
+                        "unit": "degree",
+                        "nullable": true,
+                        "data_type": "float",
+                        "description": "Latitude of the building footprint centroid, WGS84 (EPSG:4326) -- see lon"
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "building energy",
+                "heat demand",
+                "electricity demand",
+                "PV roof area",
+                "building stock",
+                "Netherlands",
+                "heating technology",
+                "refurbishment state"
+            ],
+            "context": {
+                "title": "Energy Simulation Data – Netherlands Building Stock",
+                "contact": "philippe.krienelke@fh-muenster.de",
+                "grantNo": "",
+                "homepage": "https://github.com/PhilKrien/nl_building_data_phase_1",
+                "publisher": "FH Münster, Labor für Energiesystemmodellierung",
+                "sourceCode": "https://github.com/PhilKrien/nl_building_data_phase_1",
+                "documentation": "https://github.com/PhilKrien/nl_building_data_phase_1/blob/main/oep_nl_metadata.md",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://3dbag.nl/",
+                    "title": "3DBAG / BAG3D – 3D building model of the Netherlands",
+                    "authors": [
+                        "3DGI / TU Delft 3D geoinformation group"
+                    ],
+                    "description": "LoD2.2 3D building models for all buildings in the Netherlands, derived from BAG footprints and AHN point clouds. Provides per-building roof geometry (facet tilt, azimuth, area) used to derive building type morphology inputs and roof-orientation area (north/east/south/west/total).",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "3DBAG, TU Delft 3D geoinformation group / Kadaster",
+                            "instruction": "You are free to share and adapt the material for any purpose, even commercially, as long as you give appropriate credit.",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2024"
+                },
+                {
+                    "path": "https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag",
+                    "title": "BAG (Basisregistratie Adressen en Gebouwen) – Verblijfsobjecten",
+                    "authors": [
+                        "Kadaster (Landelijke Voorziening BAG), namens Ministerie van BZK"
+                    ],
+                    "description": "Official Dutch building and address register. Provides gebruiksdoel (use function) and oppervlakte (usable floor area) per verblijfsobject (VBO), used to derive reference floor area and dwelling counts per building.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+                            "title": "Publiek domein / CC0 1.0 -- free use, no restrictions",
+                            "attribution": "Kadaster, BAG",
+                            "instruction": "Free use, no restrictions. Provided by Kadaster (Landelijke Voorziening BAG) on behalf of the Ministry of the Interior and Kingdom Relations (BZK). Accessed via PDOK; bulk retrieval via the BAG Geopackage/Extract is recommended for large-scale queries -- the individual WMS/WFS/API is not intended for bulk retrieval.",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2025"
+                },
+                {
+                    "path": "https://webtool.building-typology.eu/#bm",
+                    "title": "TABULA – Typology Approach for Building Stock Energy Assessment",
+                    "authors": [
+                        "TABULA Project Team"
+                    ],
+                    "description": "TABULA building archetypes providing specific heat demand values (space heating and DHW) per building type, construction period, and refurbishment state (existing / usual refurbishment / advanced refurbishment), Netherlands sheet.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "TABULA Project Team (2012)",
+                            "instruction": "You are free to share and adapt the material for any purpose, even commercially, as long as you give appropriate credit.",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2012"
+                },
+                {
+                    "path": "https://klimaatmonitor.databank.nl/",
+                    "title": "Klimaatmonitor – Isolatiekwaliteit woningen naar woningtype",
+                    "authors": [
+                        "Rijkswaterstaat / Klimaatmonitor"
+                    ],
+                    "description": "Municipality-level shares of dwellings per insulation-quality class (goed/redelijk/slecht), per dwelling type (Grondgebonden/Appartement), for five building components (roof, facade, floor, living-room window, bedroom window). Used, together with EP-Online, to derive an individual refurbishment state per building.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Publiek-domein",
+                            "path": "https://data.overheid.nl/",
+                            "title": "Publiek domein (data.overheid.nl) / Klimaatmonitor reuse terms",
+                            "attribution": "Klimaatmonitor, Rijkswaterstaat",
+                            "instruction": "Public domain / free reuse with attribution. This is Klimaatmonitor's own published aggregate product (municipality x dwelling-type distributions); the underlying individual EP-Online labels it is computed from carry no open license, but Rijkswaterstaat as data controller publishes the aggregated indicator under these more permissive terms.",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2024"
+                },
+                {
+                    "path": "https://www.ep-online.nl/",
+                    "title": "EP-Online – Energielabel database (NTA 8800)",
+                    "authors": [
+                        "RVO"
+                    ],
+                    "description": "Register of individual Dutch energy labels (NTA 8800), providing Gebouwtype (dwelling-form ground truth), GebruiksoppervlakteThermischeZone (thermal-zone floor area), and Energieklasse per address. Used both to validate the morphological building-type classification and reference area, and to assign an individual refurbishment state per labelled building.",
+                    "sourceLicenses": [
+                        {
+                            "name": "RVO-API-ToS",
+                            "path": "https://epbdwebservices.rvo.nl/",
+                            "title": "RVO EP-Online API terms of service (personal API key)",
+                            "attribution": "EP-Online, RVO",
+                            "instruction": "Free use per RVO API-key terms of service, provided individual-level label data is not passed on to third parties in bulk in an identity-inferable way (indirect aggregate use, e.g. on real-estate platforms, is explicitly permitted by RVO). No cost. Access via a personal API key (https://epbdwebservices.rvo.nl/); the key is personal and must not be shared. Usage here: individual labels are used only as intermediate input to compute a derived, non-identifying per-building refurbishment score (refurbishment_state); no individual label data is stored, exported, or redistributed.",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2026"
+                },
+                {
+                    "path": "https://opendata.cbs.nl/",
+                    "title": "CBS StatLine – Elektriciteitslevering aan woningen",
+                    "authors": [
+                        "Centraal Bureau voor de Statistiek (CBS)"
+                    ],
+                    "description": "National electricity consumption per dwelling, by construction-year class, household-size class, and building type (detached/terraced house vs. apartment). Used, together with municipality-level dwelling occupancy, to estimate annual electricity demand per building.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "CBS StatLine, opendata.cbs.nl",
+                            "instruction": "Reuse of CBS website content is permitted provided CBS is cited as the source, unless a copyright exception applies to a specific part (e.g. a document).",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2025"
+                },
+                {
+                    "path": "https://klimaatmonitor.databank.nl/",
+                    "title": "CBS / Klimaatmonitor – Wijken: warmtevoorzieningstechnologie",
+                    "authors": [
+                        "Centraal Bureau voor de Statistiek (CBS) / Klimaatmonitor"
+                    ],
+                    "description": "Neighbourhood-level (wijk) shares of heating installation type (aardgas/blokverwarming/elektrisch zonder aardgasverbruik/onbekend). Used to heuristically assign a heating technology (gas/district_heat/hp) to every building.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "CBS / Klimaatmonitor",
+                            "instruction": "You are free to share and adapt the material for any purpose, even commercially, as long as you give appropriate credit.",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2024"
+                },
+                {
+                    "path": "https://www.pdok.nl/introductie/-/article/bestuurlijke-gebieden",
+                    "title": "PDOK Bestuurlijke Gebieden – administrative boundaries (gemeente/provincie)",
+                    "authors": [
+                        "Kadaster (derived from Basisregistratie Kadaster/BRK), via PDOK"
+                    ],
+                    "description": "Official municipality (gemeente, 2025) and neighbourhood (wijk, 2024) boundary geometries, used for the spatial joins that assign each building to a gemeente (refurbishment state, electricity demand) and wijk (heating technology).",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+                            "title": "CC0 / open data -- free use, including commercial, attribution recommended but not required",
+                            "attribution": "Kadaster / PDOK",
+                            "instruction": "Free use, including commercial use; attribution recommended but not required. Access via WFS/WMS/OGC API: https://service.pdok.nl/kadaster/bestuurlijkegebieden/",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2025"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "crs": "EPSG:4326",
+                    "name": "Netherlands (Nederland)"
+                }
+            },
+            "subject": [
+                {
+                    "@id": "https://openenergy-platform.org/ontology/oeo/OEO_00000150",
+                    "name": "building energy demand"
+                }
+            ],
+            "keywords": [
+                "klimaatmonitor",
+                "electricity_demand",
+                "building_specific",
+                "heating_technology",
+                "building_stock",
+                "tabula",
+                "refurbishment_state",
+                "cbs_statline",
+                "heat_demand",
+                "3dbag",
+                "netherlands",
+                "nta_8800",
+                "bag",
+                "ep_online",
+                "pv_roof_area"
+            ],
+            "licenses": [
+                {
+                    "name": "ODbL-1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1-0/",
+                    "title": "ODC Open Database License v1.0",
+                    "attribution": "Philippe Krienelke, FH Münster Labor für Energiesystemmodellierung, 2026",
+                    "instruction": "You are free to share, modify, and use this database, as long as you attribute the source, share any adapted database under the same license, and keep the database open.",
+                    "copyrightStatement": "© 2026 Philippe Krienelke, FH Münster"
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Per-building classification, TABULA construction period, individual refurbishment state, annual heat demand (existing/usual/advanced refurbishment), annual electricity demand, PV-relevant roof area by orientation, and heuristically assigned heating technology for all residential buildings in the Netherlands. Based on 3DBAG/BAG3D, BAG/VBO (Kadaster), TABULA typology, Klimaatmonitor insulation data, EP-Online (RVO) energy labels, and CBS (Statistics Netherlands) consumption and occupancy statistics.",
+            "contributors": [
+                {
+                    "date": "2026-07-30",
+                    "path": "https://github.com/PhilKrien",
+                    "roles": [
+                        "DataCollector",
+                        "DataCurator",
+                        "DataProcessor",
+                        "Author"
+                    ],
+                    "title": "Philippe Krienelke",
+                    "object": "dataset",
+                    "comment": "Created the Netherlands building-level energy simulation dataset.",
+                    "organization": "FH Münster, Labor für Energiesystemmodellierung"
+                }
+            ],
+            "publicationDate": "2026-07-30"
+        }
+    ],
+    "description": "Building-level dataset for all residential buildings in the Netherlands, providing per-building type classification, TABULA construction period, individual refurbishment state, annual heat demand (three refurbishment scenarios), annual electricity demand, PV-relevant roof area by orientation, and heuristically assigned heating technology.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

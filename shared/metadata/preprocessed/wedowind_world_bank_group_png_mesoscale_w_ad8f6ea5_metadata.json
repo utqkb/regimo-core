@@ -1,0 +1,116 @@
+{
+    "@id": "https://www.esmap.org/re-mapping/papua-new-guinea",
+    "name": "wedowind_world_bank_group_png_mesoscale_w_2797756e",
+    "title": "PNG - Mesoscale Wind Mapping Phase1",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_world_bank_group_png_mesoscale_w_ad8f6ea5",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_world_bank_group_png_mesoscale_w_ad8f6ea5",
+            "type": "table",
+            "title": "GIS Data",
+            "format": "ZIP",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://datacatalogfiles.worldbank.org/ddh-published/0040770/1/DR0050860/gisfilespapuanewguineawindmappingphase1wbgesmap20151026.zip",
+                    "title": "GIS Data",
+                    "authors": [],
+                    "description": "This dataset contains GIS data and LIB files from an initial wind resource assessment for Papua New Guinea. For more information please visit the country webpage: https://www.esmap.org/re-mapping/papua-new-guinea",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2017"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "ckan_png_mesoscale_wind_mapping_46926225",
+                "ckan"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset contains GIS data and LIB files from an initial wind resource assessment for Papua New Guinea. For more information please visit the country webpage: https://www.esmap.org/re-mapping/papua-new-guinea",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        "DataCollector"
+                    ],
+                    "title": "Clara Ivanescu",
+                    "object": "data",
+                    "comment": "Mapped from CKAN author",
+                    "organization": "civanescu@worldbank.org"
+                }
+            ],
+            "publicationDate": "2017-07-11"
+        }
+    ],
+    "description": "This dataset contains GIS data and LIB files from an initial wind resource assessment for Papua New Guinea. For more information please visit the country webpage: https://www.esmap.org/re-mapping/papua-new-guinea",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

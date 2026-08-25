@@ -1,0 +1,322 @@
+{
+    "@id": null,
+    "name": "instrument_list_de_eu",
+    "title": "Hydrogen policy and support instruments in Germany, the EU and selected contexts",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "instrument_list_de_eu",
+            "path": "https://openenergyplatform.org/database/tables/instrument_list_de_eu",
+            "type": null,
+            "title": "Hydrogen policy and support instruments in Germany, the EU and selected contexts",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "instrument",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Name of the policy, funding, regulatory, market, financing or support instrument",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "abkuerzung",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Abbreviation or acronym of the instrument",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "typ",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Instrument type or support category, for example grant, loan, regulatory instrument or cap-and-trade mechanism.",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Geographic or political region where the instrument applies.",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "website",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Primary source URL or website for the instrument",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "weitere_website",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "dditional source URL or website for the instrument, where available",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "policy"
+            ],
+            "context": {
+                "title": "IMA-GH2",
+                "contact": "markus.albuscheit@utn.de",
+                "grantNo": "03EI1078A",
+                "homepage": "https://www.utn.de/departments/department-liberal-arts-and-social-sciences/energy-systems-and-market-design/ima-gh2-instrumente-zur-beschleunigung/",
+                "publisher": "University of Technology Nuremberg - Energy System and Market Design",
+                "sourceCode": null,
+                "documentation": "https://www.utn.de/departments/department-liberal-arts-and-social-sciences/energy-systems-and-market-design/ima-gh2-instrumente-zur-beschleunigung/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Row-level source URLs in website and additional_website",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": null,
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany and the EU",
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000220",
+                    "name": "hydrogen"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140151",
+                    "name": "policy instrument"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010456",
+                    "name": "economic instrument"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010458",
+                    "name": "regulatory instrument"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "european_union",
+                "regulatory_instruments",
+                "hydrogen_policy",
+                "germany",
+                "industrial_decarbonisation",
+                "policy_instruments"
+            ],
+            "licenses": [
+                {
+                    "name": "ODbL-1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1-0/index.html",
+                    "title": "Open Data Commons Open Database License 1.0",
+                    "attribution": "IMA-GH2 project",
+                    "instruction": "You are free to share and change, but you must attribute, and share derivations under the same license. See https://tldrlegal.com/license/odc-open-database-license-(odbl) for further information.",
+                    "copyrightStatement": "https://github.com/OpenEnergyPlatform/oemetadata/blob/production/LICENSE.txt"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": "2026-06-26"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "List of policy, funding, financing, regulatory, market and support instruments relevant to hydrogen and industrial decarbonisation.",
+            "contributors": [
+                {
+                    "date": "2026-06-26",
+                    "path": "0009-0007-1998-9620",
+                    "roles": [],
+                    "title": "Markus Albuscheit",
+                    "object": "metadata",
+                    "comment": null,
+                    "organization": "University of Technology Nuremberg"
+                },
+                {
+                    "date": "2026-06-26",
+                    "path": "https://www.utn.de/person/dennis-strempler/",
+                    "roles": [],
+                    "title": "Dennis Strempler",
+                    "object": "data",
+                    "comment": null,
+                    "organization": "University of Technology Nuremberg"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2026-06-26"
+        }
+    ],
+    "description": "List of policy, funding, financing, regulatory, market and support instruments relevant to hydrogen and industrial decarbonisation.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": null,
+            "path": null,
+            "title": null
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

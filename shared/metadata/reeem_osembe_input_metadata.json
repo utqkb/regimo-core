@@ -1,0 +1,999 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "reeem_osembe_input",
+            "type": "Table",
+            "title": "REEEM OSeMBE Input",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Row id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dfid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Internal dataframe id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pathway",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM pathway",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "framework",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM framework",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "schema",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "1. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "2. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tags",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Free classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "field",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Old classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "indicator",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "",
+                        "unit": "unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "aggregation",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "True if aggregated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "updated",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Data source",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Energy Technology Reference Indicator (ETRI) projections for 2010-2050",
+                    "authors": [],
+                    "description": "The Strategic Energy Technology Plan (SET-Plan) is the technology pillar of the EU's energy and climate policy. This report contains assessments of energy technology reference indicators (ETRI) and it is aimed at providing independent and up-to-date cost and performance characteristics of the present and future European energy technology portfolio.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://publications.europa.eu/en/publication-detail/-/publication/79a2ddbd-5ba1-4380-93af-2ce274a840f0/language-en",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Catalog of CHP Technologies",
+                    "authors": [],
+                    "description": "The five technologies described in the Guide make up 97 percent of the CHP projects in place today and 99 percent of the total installed CHP electric capacity.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.energy.gov/sites/prod/files/2016/09/f33/catalog_of_chp_technologies.pdf",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "WEIO 2014 PG Assumptions",
+                    "authors": [],
+                    "description": "Power Generation in the New Policies and 450 Scenarios, Assumed investment costs, operation and maintenance costs and efficiencies in the IEA World Energy Investment Outlook 2014",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "no longer available",
+                            "title": "",
+                            "attribution": "OECD/IEA",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "EU Reference Scenario 2016",
+                    "authors": [],
+                    "description": "This report is an update of the previous Reference Scenario published in 2013. It focuses on the EU energy system, transport and greenhouse gas (GHG) emission developments, including specific sections on emission trends not related to energy, and on the various interactions among policies in these sectors.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://publications.europa.eu/en/publication-detail/-/publication/aed45f8e-63e3-47fb-9440-a0a14370f243/language-en",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "IEA ETSAP - Technology Brief E03",
+                    "authors": [],
+                    "description": "Technology brief on Nuclear power",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://109.73.233.125/~ieaetsap/E-TechDS/PDF/E03-Nuclear-Power-GS-AD-gct.pdf",
+                            "title": "",
+                            "attribution": "IEA ETSAP",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Renewable Energy prospects: Germany, REmap 2030 analysis",
+                    "authors": [],
+                    "description": "IRENA REmap report identifying the gap between national renewable targets and the national renewable potential.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.irena.org/publications/2015/Nov/Renewable-Energy-Prospects-Germany",
+                            "title": "",
+                            "attribution": "IRENA",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "REmap 2030 Renewable Energy Prospects for Poland",
+                    "authors": [],
+                    "description": "IRENA REmap report identifying the gap between national renewable targets and the national renewable potential.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.irena.org/publications/2015/Oct/REmap-2030-Renewable-Energy-Prospects-for-Poland",
+                            "title": "",
+                            "attribution": "IRENA",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Platts World Electric Power Plants Database",
+                    "authors": [],
+                    "description": "Data base of power plants with unit aggregation.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.platts.com/products/world-electric-power-plants-database",
+                            "title": "",
+                            "attribution": "S&P Global Platts",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Wind in power",
+                    "authors": [],
+                    "description": "Annual report by the European Wind Energy Association, now WindEurope, on wind power statistics and installed wind power capacities.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://windeurope.org/about-wind/statistics/european/wind-in-power-2015/",
+                            "title": "",
+                            "attribution": "WindEurope asbl/vzw",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Renewable Energy Statistics 2017",
+                    "authors": [],
+                    "description": "Statistics on renewable production, capacities and related financial flows.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.irena.org/DocumentDownloads/Publications/IRENA_Renewable_Energy_Statistics_2017.pdf",
+                            "title": "",
+                            "attribution": "IRENA",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Renewable Power Generation Costs in 2014",
+                    "authors": [],
+                    "description": "Report on the the cost of renewable power generation, used for deriving biomass costs",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.irena.org/publications/2015/Jan/Renewable-Power-Generation-Costs-in-2014",
+                            "title": "",
+                            "attribution": "IRENA",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Production of Liquid Biofuels",
+                    "authors": [],
+                    "description": "Technology brief on the production of biofuels and its costs.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://iea-etsap.org/E-TechDS/PDF/P10IR_Liq%20Biof_GS_Jan2013_final_GSOK.pdf",
+                            "title": "",
+                            "attribution": "IEA-ETSAP and IRENA",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "DECC 2015 Fossil Fuel Price Assumptions",
+                    "authors": [],
+                    "description": "The report updates DECC’s long-term price projections for oil, gas and coal.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Open Government License",
+                            "path": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/477958/2015_DECC_fossil_fuel_price_assumptions.pdf",
+                            "title": "",
+                            "attribution": "Crown copyright",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "The Economics of Nuclear Power",
+                    "authors": [],
+                    "description": "Webpage providing information on the operating cost of nuclear PP including the fuel cost.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.world-nuclear.org/information-library/economic-aspects/economics-of-nuclear-power.aspx",
+                            "title": "",
+                            "attribution": "World Nuclear Association",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "ENTSO-E Transparency Platform",
+                    "authors": [],
+                    "description": "Central collection and publication of electricity generation, transportation and consumption data and information for the pan-European market.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://transparency.entsoe.eu/dashboard/show",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Renewables-ninja",
+                    "authors": [],
+                    "description": "Renewables.ninja allows you to run simulations of the hourly power output from wind and solar power plants located anywhere in the world.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY-NC 4.0",
+                            "path": "www.renewables.ninja",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "EU Emissions Trading System (ETS) data viewer",
+                    "authors": [],
+                    "description": "The EU ETS data viewer provides an easy access to emission trading data contained in the European Union Transaction Log (EUTL).",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 2.5 DK",
+                            "path": "https://www.eea.europa.eu/data-and-maps/dashboards/emissions-trading-viewer-1",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Total gross electricity generation",
+                    "authors": [],
+                    "description": "Data on the total gross electricity generation in the EU.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&plugin=1&language=en&pcode=ten00087",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "CO2 emission intensity",
+                    "authors": [],
+                    "description": "CO2 emission intensity of electricity in the EU by year.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 2.5 DK",
+                            "path": "https://www.eea.europa.eu/data-and-maps/daviz/co2-emission-intensity-3",
+                            "title": "",
+                            "attribution": "European Environment Agency (EEA)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Forecast of energy demand in Norway towards 2050",
+                    "authors": [],
+                    "description": "The projection of energy demand is based on current policies, and is made for all energy carriers, and includes both stationary energy demand and transport for the analysis period 2010-2050.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.ntnu.edu/documents/1261967833/1262617931/Energy+demand+in+Norway+towards+2050.pdf/80f05210-7380-4c19-b9ed-52801b9d3fe1",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "CenSES Energy demand projections towards 2050 - Reference path",
+                    "authors": [],
+                    "description": "A Position Paper prepared by FME CenSES",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.ntnu.edu/documents/1261967833/1262617931/Position-paper_Energy-Projections_utenbleed.pdf/0949b222-5d1b-4b06-9217-9287cb578b6a",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Electricity statistics",
+                    "authors": [],
+                    "description": "The electricity statistics evaluate the production of electricity and the consumption of electrical energy in Switzerland.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.bfe.admin.ch/themen/00526/00541/00542/00630/index.html?lang=en&dossier_id=04840",
+                            "title": "",
+                            "attribution": "Swiss federal authorities",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Geothermal energy Switzerland",
+                    "authors": [],
+                    "description": "Collection of information geothermal energy in general and in specific for Switzerland.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.bfe.admin.ch/themen/00490/00501/index.html?lang=en",
+                            "title": "",
+                            "attribution": "Swiss federal authorities",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Potenzial - Geothermie Schweiz",
+                    "authors": [],
+                    "description": "Estimation of the potential of geothermal-energy in Switzerland useable for electricity production",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://geothermie-schweiz.ch/waermestrom/petrothermal/potenzial/",
+                            "title": "",
+                            "attribution": "Geothermie-Schweiz.ch",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Wasserkraftpotenzial der Schweiz",
+                    "authors": [],
+                    "description": "Report on current situation and potential of hydro power in Switzerland",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.swv.ch/wp-content/uploads/2018/03/Faktenblatt-Wasserkraftpotenzial_SWV.pdf",
+                            "title": "",
+                            "attribution": "Schweizerischer Wasserwirtschaftsverband",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "OECD iLibrary - Waste",
+                    "authors": [],
+                    "description": "This database provides the latest and most comprehensive statistics across OECD countries on waste.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.oecd-ilibrary.org/environment/data/oecd-environment-statistics/municipal-waste_data-00601-en",
+                            "title": "",
+                            "attribution": "OECD",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Facts 2015 Energy and water resources in Norway",
+                    "authors": [],
+                    "description": "Report on energy and water resources in Norway",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.regjeringen.no/en/aktuelt/fakta-2015-energi--og-vannressurser-i-norge/id2395568/",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Wind Energy in Estonia",
+                    "authors": [],
+                    "description": "Status of Wind power in Estonia reported on the webpage of the Estonian Wind power Association",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.tuuleenergia.ee/en/windpower-101/statistics-of-estonia/",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Wind energy statistics in Finland",
+                    "authors": [],
+                    "description": "Report on installed wind power capacities and power generation by wind power.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.vttresearch.com/services/low-carbon-energy/wind-energy/wind-energy-statistics-in-finland",
+                            "title": "",
+                            "attribution": "VTT",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Wind energy assessment considering geographic and environmental restrictions in Sweden: A GIS-based approach",
+                    "authors": [],
+                    "description": "Journal paper on wind power potential in Sweden.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.sciencedirect.com/science/article/pii/S0360544215001991?via%3Dihub",
+                            "title": "",
+                            "attribution": "Elsevier Ltd.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Gesetz über die friedliche Verwendung der Kernenergie und den Schutz gegen ihre Gefahren (Atomgesetz)",
+                    "authors": [],
+                    "description": "Atomgesetz in der Fassung der Bekanntmachung vom 15. Juli 1985 (BGBI. I S. 1565), das zuletzt durch Artikel 1 des Gesetzes vom 10. Juli 2018 (BGBI. I S. 1122) geändert worden ist",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.gesetze-im-internet.de/atg/AtG.pdf",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Potenziale, Kosten und Umweltauswirkungen von Stromproduktionsanlagen - Synthese",
+                    "authors": [],
+                    "description": "Report on the potentials of different power generation technologies in Switzerland.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.newsd.admin.ch/newsd/message/attachments/50263.pdf",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Nuclear energy",
+                    "authors": [],
+                    "description": "Description of history and current situation of nuclear energy for electricity generation in Switzerland.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.bfe.admin.ch/themen/00511/index.html?lang=en",
+                            "title": "",
+                            "attribution": "Swiss federal authorities",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "National generation capacity",
+                    "authors": [],
+                    "description": "Open Source power system data, installed power generation capacities in Europe",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://data.open-power-system-data.org/national_generation_capacity/2019-02-22",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "FE08: Average Cost of Fuels and Energy Consumed by Enterprises by Type of Fuel/Energy",
+                    "authors": [],
+                    "description": "Fuel cost of oil shale in Estonia",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://pub.stat.ee/px-web.2001/Dialog/varval.asp?ma=FE08&lang=1",
+                            "title": "",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Statistics World - Total Primary Energy Supply (TPES) by source (table)",
+                    "authors": [],
+                    "description": "Electricity generation by source an country",
+                    "sourceLicenses": [
+                        {
+                            "name": "non-exclusive",
+                            "path": "https://www.iea.org/statistics/?country=WORLD&year=2016&category=Energy%20supply&indicator=TPESbySource&mode=table&dataTable=ELECTRICITYANDHEAT",
+                            "title": "",
+                            "attribution": "OECD/IEA",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Nuclear Power in Poland",
+                    "authors": [],
+                    "description": "A history, status and look out on nuclear power in Poland.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.world-nuclear.org/information-library/country-profiles/countries-o-s/poland.aspx",
+                            "title": "",
+                            "attribution": "2016-2020 World Nuclear Association",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Nuclear Power in Slovenia",
+                    "authors": [],
+                    "description": "A history, status and look out on nuclear power in Slovenia.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.world-nuclear.org/information-library/country-profiles/countries-o-s/slovenia.aspx",
+                            "title": "",
+                            "attribution": "2016-2020 World Nuclear Association",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Creative Commons Attribution 4.0 International",
+                    "path": "https://spdx.org/licenses/CC-BY-4.0.html",
+                    "title": "CC-BY-4.0",
+                    "attribution": "© Hauke Henke",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2060",
+                        "start": "2015",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "15 timeslices per year"
+                    }
+                ],
+                "referenceDate": "2015"
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Input parameters: Service Demands, Fuel Prices, Potentials",
+            "contributors": [
+                {
+                    "date": "2017-07-24",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2017-11-14",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update structure and metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2018-01-30",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "New naming structure",
+                    "organization": null
+                },
+                {
+                    "date": "2019-07-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "4lm",
+                    "object": null,
+                    "comment": "Update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

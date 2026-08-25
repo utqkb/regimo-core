@@ -1,0 +1,479 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "bnetza_vorhaben_enlag",
+            "type": "Table",
+            "title": "Stromleitungsvorhaben des EnLAG in Deutschland",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "MultiLineString der Leitungsvorhaben",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "object_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Object id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rechtsgrundlage",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Vorhaben auf Basis genannter Rechtsgrundlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "vorhabennummer",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Vorhabennummer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nova",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "NOVA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "vorhabenbezeichnung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Vorhabenbezeichnung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zustaendigkeit",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Zuständigkeit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "technik",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Technik",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "abschnitt",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Abschnitt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "anfangspunkt",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Anfangspunkt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "endpunkt",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Endpunkt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "abschnittsbezeichnung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Abschnittsbezeichnung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "art_der_geometrie",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Art der geometrie",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "status_der_geometrie",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Status der Geometrie",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erdkabelvorrang",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Erdkabelvorrang",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erdkabelpilot",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Erdkabelpilot",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung_a1",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung A1",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung_a2",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung A2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung_b",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung B",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung_c",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung C",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung_d",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung D",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung_e",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung E",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung_f",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung F",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennzeichnung_Strich",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Kennzeichnung Strich",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "stand_des_vorhabens",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Stand des Vorhabens",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id_a",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unbekannte weitere ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "vgi",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "VGI",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "vgi_nr",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "VGI_Nr",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "vorhabentraeger",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Vorhabenträger",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "spannung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Spannung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "shape_length",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Shape_Length",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bezugsmassstab",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Bezugsmaßstab",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hinweis",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Hinweis",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Vorhaben des EnLAG",
+                    "authors": [],
+                    "description": "Vorhaben des EnLAG, BNetzA, Stand 1. Quatal 2017",
+                    "sourceLicenses": [
+                        {
+                            "name": "GeoNutzV",
+                            "path": "www.netzausbau.de/enlag",
+                            "title": "",
+                            "attribution": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen (BNetzA)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "GeoNutzV",
+                    "path": "https://www.gesetze-im-internet.de/geonutzv/BJNR054700013.html",
+                    "title": "19.03.2013",
+                    "attribution": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen (BNetzA)",
+                    "instruction": "Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen (BNetzA)",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2017-06-13"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "Der Datensatz enthält die Netzausbauvorhaben des Energieleitungsausbaugesetz (EnLAG) als Linienploygon und weiteren Vorhabeninformationen zum Verfahrensstand Ende des 1. Quartals 2017. \n Für weitergehende, aktuelle Informationen zu den Vorhaben bitte auf die Webseiten www.netzausbau.de/bbplg bzw. www.netzausbau.de/enlag gehen.",
+            "contributors": [
+                {
+                    "date": "2017-07-31",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": null,
+                    "object": null,
+                    "comment": "Create table and comments",
+                    "organization": null
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

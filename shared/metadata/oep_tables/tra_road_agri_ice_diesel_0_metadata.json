@@ -1,0 +1,500 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tra_road_agri_ice_diesel_0",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/tra_road_agri_ice_diesel_0",
+            "type": "Table",
+            "title": "sedos_tra_road_agri_ice_diesel_0",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0020000",
+                                "name": "identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020032",
+                                "name": "study region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/BFO_0000015",
+                                "name": "process"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_road_agri_diesel",
+                        "type": "float",
+                        "unit": "kWh",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140049",
+                                "name": "energy conversion efficiency"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010035",
+                                "name": "agriculture, forestry and land use sector"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Specific transport demand.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_diesel",
+                        "type": "float",
+                        "unit": "kWh",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140049",
+                                "name": "energy conversion efficiency"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010242",
+                                "name": "diesel fuel"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Specific diesel fuel demand.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_diesel_emi_ch4_f_tra",
+                        "type": "float",
+                        "unit": "kg/TJ",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000148",
+                                "name": "emission factor"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242",
+                                "name": "diesel fuel"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000025",
+                                "name": "methane"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "CH4 emission factor for diesel.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_diesel_emi_co2_f_tra",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000148",
+                                "name": "emission factor"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242",
+                                "name": "diesel fuel"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000006",
+                                "name": "carbon dioxide"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "CO2 emission factor for diesel.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_diesel_emi_n2o_f_tra",
+                        "type": "float",
+                        "unit": "kg/TJ",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000148",
+                                "name": "emission factor"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242",
+                                "name": "diesel fuel"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010002",
+                                "name": "nitrogen oxides"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "N2O emission factor for diesel.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000129",
+                                "name": "version number"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020166",
+                                "name": "methodology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000085",
+                                "name": "citation reference"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
+                                "name": "comment"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Hans-Christian.Gils@dlr.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "https://www.dlr.de/static/media/Logo-de.697a8e1f.svg",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.umweltbundesamt.de/sites/default/files/medien/11850/publikationen/29_2023_cc_submission_under_the_united_nations_framework_convention.pdf",
+                    "title": "Submission under the United Nations Framework Convention on Climate Change and the Kyoto Protocol 2023: National Inventory Report for the German Greenhouse Gas Inventory 1990 -- 2021",
+                    "authors": [],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010276",
+                    "name": "internal combustion vehicle"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242",
+                    "name": "diesel fuel"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "input_data",
+                "transport",
+                "final"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset describes the scalar techno-economic as well as scenario data for the technology: internal combustion vehicle diesel fuel.",
+            "contributors": [
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hedda Gardian",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Samuel Hasselwander",
+                    "object": "data and metadata for cars",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fabia Miorelli",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Niklas Wulff",
+                    "object": "data for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Eugenio Salvador Arellano Ruiz",
+                    "object": "metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hans Christian Gils",
+                    "object": "data for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Patrick Jochem",
+                    "object": "data and metadata road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Carsten Hoyer-Click",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-04-01"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

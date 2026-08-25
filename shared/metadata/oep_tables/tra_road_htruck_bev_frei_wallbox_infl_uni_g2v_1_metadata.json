@@ -1,0 +1,573 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tra_road_htruck_bev_frei_wallbox_infl_uni_g2v_1",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/tra_road_htruck_bev_frei_wallbox_infl_uni_g2v_1",
+            "type": "Table",
+            "title": "sedos_tra_road_htruck_bev_frei_wallbox_infl_uni_g2v_1",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0020000",
+                                "name": "identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020032",
+                                "name": "study region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/BFO_0000015",
+                                "name": "process"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_timeseries_fixed",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "missing",
+                                "name": "missing"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Time series of fixed capacity factor in relation to installed capacity. Normalized to maximum.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_abs_new_max",
+                        "type": "float",
+                        "unit": "kW",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010257",
+                                "name": "power capacity"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010256",
+                                "name": "maximum value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Absolute upper bound on level of investment in new power output capacity for a period.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_unit",
+                        "type": "float",
+                        "unit": "kW/vehicle",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000189",
+                                "name": "count unit"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Capacity of fixed unit.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec_distr",
+                        "type": "float",
+                        "unit": "kWh",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140049",
+                                "name": "energy conversion efficiency"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020204",
+                                "name": "electrical energy amount value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Specific distributed electricity demand.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec_htruck_infl_uni",
+                        "type": "float",
+                        "unit": "kWh",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140049",
+                                "name": "energy conversion efficiency"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020204",
+                                "name": "electrical energy amount value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Specific electricity demand from a charged vehicle.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_p",
+                        "type": "float",
+                        "unit": "EUR/kW",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_000201673",
+                                "name": "investment cost"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Investment costs for power units.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020178",
+                                "name": "operational life time"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00240021",
+                                "name": "discount rate"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000129",
+                                "name": "version number"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020166",
+                                "name": "methodology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000085",
+                                "name": "citation reference"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
+                                "name": "comment"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Hans-Christian.Gils@dlr.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "https://www.dlr.de/static/media/Logo-de.697a8e1f.svg",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "",
+                    "title": "ownAssumption",
+                    "authors": [],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. DLR. 2023",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "",
+                    "title": "ownCalculation",
+                    "authors": [],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. DLR. 2023",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.virta.global/de/blog/dc-ladestation-kosten-lieferzeiten-ideale-einsatzorte",
+                    "title": "DC Ladestation -- Kosten, Lieferzeiten {&} ideale Einsatzorte",
+                    "authors": [],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. Virta. 2023",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.mdpi.com/1996-1073/15/12/4186",
+                    "title": "A Comprehensive Electric Vehicle Model for Vehicle-to-Grid Strategy Development",
+                    "authors": [],
+                    "description": "A comprehensive electric vehicle model is developed to characterize the behavior of the Smart e.d. (2013) while driving, charging and providing vehicle-to-grid services. To facilitate vehicle-to-grid strategy development, the EV model is completed with the measurement of the on board charger efficiency and the charging control behavior upon external set-point request via IEC 61851-1. The battery model is an electro-thermal model with a dual polarization equivalent circuit electrical model coupled with a lumped thermal model with active liquid cooling. The aging trend of the EVs 50 Ah large format pouch cell with NMC chemistry is evaluated via accelerated aging tests in the laboratory. Performance of the model is validated using laboratory pack tests, charging and driving field data. The RMSE of the cell voltage was between 18.49~mV and 67.17~mV per cell for the validation profiles. Cells stored at 100% SOC and 40 degree celsius reached end-of-life (80% of initial capacity) after 431--589 days. The end-of-life for a cell cycled with 80% DOD around an SOC of 50% is reached after 3634 equivalent full cycles which equates to a driving distance of over 420,000 km. The full parameter set of the model is provided to serve as a resource for vehicle-to grid strategy development.",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. Ruecker, Schoeneberger, Wilmschen, Chahbaz, Dechent, Hildenbrand, Barbers, Kuipers, Figgener, Sauer. 2022",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320051",
+                    "name": "battery electric truck"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320064",
+                    "name": "charging"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "input_data",
+                "transport",
+                "final"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset describes the scalar techno-economic as well as scenario data for the technology: battery electric truck charging.",
+            "contributors": [
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hedda Gardian",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Samuel Hasselwander",
+                    "object": "data and metadata for cars",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fabia Miorelli",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Niklas Wulff",
+                    "object": "data for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Eugenio Salvador Arellano Ruiz",
+                    "object": "metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hans Christian Gils",
+                    "object": "data for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Patrick Jochem",
+                    "object": "data and metadata road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Carsten Hoyer-Click",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-04-01"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

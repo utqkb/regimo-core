@@ -1,0 +1,436 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "boundaries.vg250_sta",
+            "path": "WILL_BE_SET_AT_PUBLICATION",
+            "type": "Table",
+            "title": "BKG - Verwaltungsgebiete 1:250.000 - Staat (STA)",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Index",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ade",
+                        "type": "integer",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Administrative level",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gf",
+                        "type": "integer",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geofactor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bsg",
+                        "type": "integer",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Particular areas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ars",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Territorial code",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Official Municipality Key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sdv_ars",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Seat of the administration (territorial code)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gen",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geographical name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bez",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Designation of the administrative unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ibz",
+                        "type": "integer",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bem",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Note",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nbd",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name generation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_l",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Land (state)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_r",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Administrative district",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_k",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "District",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_v1",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Administrative association – front part",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_v2",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Administrative association – rear part",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_g",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Municipality",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "fk_s3",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Function of the 3rd key digit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nuts",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "European statistics key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ars_0",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Filled territorial code",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags_0",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Filled Official Municipality Key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wsk",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Effectiveness",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "debkg_id",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "DLM identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rs",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Territorial code (deprecated column)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sdv_rs",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Seat of the administration (territorial code, deprecated column)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rs_0",
+                        "type": "string",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Filled territorial code (deprecated column)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geometry",
+                        "type": "Geometry(Polygon, srid=4326)",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry of areas as WKB",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "https://ego-n.org/partners/",
+                "grantNo": "03EI1002",
+                "homepage": "https://ego-n.org/",
+                "publisher": "",
+                "sourceCode": "https://github.com/openego/eGon-data",
+                "documentation": "https://egon-data.readthedocs.io/en/latest/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://ego-n.org/images/eGon_logo_noborder_transbg.svg",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg?__blob=normal&v=3"
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/2020/vg250_01-01.geo84.shape.ebenen.zip",
+                    "title": "Verwaltungsgebiete 1:250 000 (Ebenen)",
+                    "authors": [],
+                    "description": "Der Datenbestand umfasst sämtliche Verwaltungseinheiten der hierarchischen Verwaltungsebenen vom Staat bis zu den Gemeinden mit ihren Grenzen, statistischen Schlüsselzahlen, Namen der Verwaltungseinheit sowie die spezifische Bezeichnung der Verwaltungsebene des jeweiligen Landes.",
+                    "sourceLicenses": [
+                        {
+                            "name": "dl-by-de/2.0",
+                            "path": "www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "© Bundesamt für Kartographie und Geodäsie 2020 (Daten verändert)",
+                            "instruction": "Jede Nutzung ist unter den Bedingungen dieser „Datenlizenz Deutschland - Namensnennung - Version 2.0 zulässig.\nDie bereitgestellten Daten und Metadaten dürfen für die kommerzielle und nicht kommerzielle Nutzung insbesondere:(1) vervielfältigt, ausgedruckt, präsentiert, verändert, bearbeitet sowie an Dritte übermittelt werden;\n (2) mit eigenen Daten und Daten Anderer zusammengeführt und zu selbständigen neuen Datensätzen verbunden werden;\n (3) in interne und externe Geschäftsprozesse, Produkte und Anwendungen in öffentlichen und nicht öffentlichen elektronischen Netzwerken eingebunden werden.\nBei der Nutzung ist sicherzustellen, dass folgende Angaben als Quellenvermerk enthalten sind:\n(1) Bezeichnung des Bereitstellers nach dessen Maßgabe,\n(2) der Vermerk Datenlizenz Deutschland – Namensnennung – Version 2.0 oder dl-de/by-2-0 mit Verweis auf den Lizenztext unter www.govdata.de/dl-de/by-2-0 sowie\n(3) einen Verweis auf den Datensatz (URI).Dies gilt nur soweit die datenhaltende Stelle die Angaben(1) bis (3) zum Quellenvermerk bereitstellt.\nVeränderungen, Bearbeitungen, neue Gestaltungen oder sonstige Abwandlungen sind im Quellenvermerk mit dem Hinweis zu versehen, dass die Daten geändert wurden.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "1:250000"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [],
+            "licenses": [
+                {
+                    "name": "dl-by-de/2.0",
+                    "path": "www.govdata.de/dl-de/by-2-0",
+                    "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                    "attribution": "© Bundesamt für Kartographie und Geodäsie 2020 (Daten verändert)",
+                    "instruction": "Jede Nutzung ist unter den Bedingungen dieser „Datenlizenz Deutschland - Namensnennung - Version 2.0 zulässig.\nDie bereitgestellten Daten und Metadaten dürfen für die kommerzielle und nicht kommerzielle Nutzung insbesondere:(1) vervielfältigt, ausgedruckt, präsentiert, verändert, bearbeitet sowie an Dritte übermittelt werden;\n (2) mit eigenen Daten und Daten Anderer zusammengeführt und zu selbständigen neuen Datensätzen verbunden werden;\n (3) in interne und externe Geschäftsprozesse, Produkte und Anwendungen in öffentlichen und nicht öffentlichen elektronischen Netzwerken eingebunden werden.\nBei der Nutzung ist sicherzustellen, dass folgende Angaben als Quellenvermerk enthalten sind:\n(1) Bezeichnung des Bereitstellers nach dessen Maßgabe,\n(2) der Vermerk Datenlizenz Deutschland – Namensnennung – Version 2.0 oder dl-de/by-2-0 mit Verweis auf den Lizenztext unter www.govdata.de/dl-de/by-2-0 sowie\n(3) einen Verweis auf den Datensatz (URI).Dies gilt nur soweit die datenhaltende Stelle die Angaben(1) bis (3) zum Quellenvermerk bereitstellt.\nVeränderungen, Bearbeitungen, neue Gestaltungen oder sonstige Abwandlungen sind im Quellenvermerk mit dem Hinweis zu versehen, dass die Daten geändert wurden.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2020-01-01"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "BKG - Verwaltungsgebiete 1:250.000 - Staat (STA)",
+            "contributors": [
+                {
+                    "date": "2023-03-12",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Guido Pleßmann",
+                    "object": null,
+                    "comment": "Imported data",
+                    "organization": null
+                },
+                {
+                    "date": "2023-03-12",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonathan Amme",
+                    "object": null,
+                    "comment": "Metadata extended",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2023-03-12"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

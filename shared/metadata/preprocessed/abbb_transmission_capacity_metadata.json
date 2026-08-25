@@ -1,0 +1,271 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "abbb_transmission_capacity",
+            "type": "Table",
+            "title": "Transmission capacities related to scenarios",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "from_region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Region with end node related to the transmission capacity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "to_region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Region with end node related to the transmission capacity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity",
+                        "type": "",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "transmission capacity",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "appBBB",
+                    "authors": [],
+                    "description": "An oemof application to model the heat and power systems of Brandenburg and Berlin",
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU General Public License v3.0",
+                            "path": "https://github.com/rl-institut/appBBB",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Dokumentation_AppBBB",
+                    "authors": [],
+                    "description": "Oemof Application Berlin Brandenburg documentation",
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU General Public License v3.0",
+                            "path": "https://github.com/rl-institut/appBBB/blob/master/Dokumentation_AppBBB.pdf",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Brandenburg and Berlin",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "Planungsgemeinschaften und Berlin",
+                    "resolutionValue": "Regionale"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Data Commons Open Database License 1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "ODbL-1.0",
+                    "attribution": "© Reiner Lemoine Institut",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "Transmission capacities with end nodes from and to a region",
+            "contributors": [
+                {
+                    "date": "2016-09-08",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludwig Hülk",
+                    "object": null,
+                    "comment": "Created table, added description",
+                    "organization": null
+                },
+                {
+                    "date": "2017-10-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Kilian Zimmerer",
+                    "object": null,
+                    "comment": "Update metadata to v1.3",
+                    "organization": null
+                },
+                {
+                    "date": "2018-09-18",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonas Huber",
+                    "object": null,
+                    "comment": "OEP Data Review",
+                    "organization": null
+                },
+                {
+                    "date": "2018-09-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christian Hofmann",
+                    "object": null,
+                    "comment": "update metadata (v1.3); fixed comment",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

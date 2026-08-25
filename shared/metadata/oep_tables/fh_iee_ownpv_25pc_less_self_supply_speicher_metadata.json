@@ -1,0 +1,288 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "model_draft.fh_iee_ownpv_25pc_less_self_supply_speicher",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/fh_iee_ownpv_25pc_less_self_supply_speicher",
+            "type": "Table",
+            "title": "Fraunhofer-Institut für Energiewirtschaft und Energiesystemtechnik OwnPV-Outlook PV-Eigenstrom als nachhaltiges, robustes und effizientes Element des zukünftigen Energiesystems - Speicher",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "szenario",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of the scenario",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "szenariojahr",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country to which the value applies",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kennwert",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Top category in the classification of technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unterkennwert",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Middle category in the classification of technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sektor",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Lowest category in the classification of technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energietraeger",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Substances whose energy content is used for energy conversion processes",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "technologie",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "einheit",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit of measure",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wert",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kommentar",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment on the value",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "sarah.becker@iee.fraunhofer.de",
+                "grantNo": "03EI1031A",
+                "homepage": "https://www.iee.fraunhofer.de/de/projekte/suche/laufende/OwnPV-Outlook.html",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://www.iee.fraunhofer.de/de/projekte/suche/laufende/OwnPV-Outlook.html",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz",
+                "publisherLogo": "https://www.iee.fraunhofer.de/content/dam/iee/energiesystemtechnik/fraunhofer-iee.gif",
+                "fundingAgencyLogo": "https://de.wikipedia.org/wiki/Bundesministerium_f%C3%BCr_Wirtschaft_und_Klimaschutz#/media/Datei:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "AUT, BEL, CHE, CZE, DEU, DNK, ESP, FRA, GBR, ITA, LUX, NLD, NOR, POL SVK, SVN, SWE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Europe",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Fraunhofer IEE",
+                "Fh IEE OwnPV-Outlook",
+                "fh_iee_ownpv_25pc_less_self_supply",
+                "BMWK",
+                "PV self-supply",
+                "SCOPE",
+                "Europe",
+                "Germany",
+                "2012",
+                "2030",
+                "2040",
+                "2050",
+                "storage"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE-BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Data licence Germany – attribution – version 2.0",
+                    "attribution": "© Fraunhofer IEE 2022",
+                    "instruction": "Die bereitgestellten Daten und Metadaten dürfen für die kommerzielle und nicht kommerzielle Nutzung übermittelt werden",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2012-01-01"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "This table gives an overview of storage systems in Europe in scenario \"Fh IEE OwnPV-Outlook\" (\"PV self-supply as a sustainable, robust and efficient element of the future energy system\") (25pc less PV self-supply scenario). It contains the power and energy capacities of different storage systems.",
+            "contributors": [
+                {
+                    "date": "2022-12-14",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fraunhofer IEE",
+                    "object": "Metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-12-14"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

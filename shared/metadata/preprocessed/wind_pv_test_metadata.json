@@ -1,0 +1,366 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "wind_pv",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/wind_pv_test",
+            "type": "Table",
+            "title": "sedos_wind_pv",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "process",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_inst",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Existing throughput power output capacity per process in a certain year.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_max",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum allowed throughput power output capacity per process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_min",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum required throughput power output capacity per process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "shared_potential_id",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_capacity_p",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Operation independent costs for existing and new throughput power output capacity.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_capacity_p",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Investment costs for new throughput power output capacity.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_var",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Variable costs per throughput output unit (excluding fuel costs).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_timeseries_max",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "viktor.slednev@kit.edu",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "https://de.m.wikipedia.org/wiki/Datei:Logo_KIT.svg",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Europe",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000333",
+                    "name": "power"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00030004",
+                    "name": "renewable"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "input_data",
+                "AP4"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "2024-12-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Viktor Slednev",
+                    "object": null,
+                    "comment": "Data processing",
+                    "organization": null
+                },
+                {
+                    "date": "2024-07-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Wenxuan Hu",
+                    "object": null,
+                    "comment": "Created Metadata, Data upload",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-07-16"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

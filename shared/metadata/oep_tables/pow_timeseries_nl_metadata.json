@@ -1,0 +1,990 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "pow_timeseries_nl",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/pow_timeseries_nl",
+            "type": "Table",
+            "title": "sedos_pow_timeseries_nl",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_start",
+                        "type": "timestamp",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Start timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_stop",
+                        "type": "timestamp",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Stop timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_resolution",
+                        "type": "interval",
+                        "unit": "Percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timesteps",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_0_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for existing PV",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_1_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aggregated PV investment options",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_12",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for CTS rooftop PV investment option 2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_13",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for CTS rooftop PV investment option 3",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_14",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for CTS rooftop PV investment option 4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_15",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for CTS rooftop PV investment option 5",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_16",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for CTS rooftop PV investment option 6",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_17",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for CTS rooftop PV investment option 7",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_18",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for CTS rooftop PV investment option 8",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_19",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for CTS rooftop PV investment option 9",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_cts_roof_1_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aggregated CTS rooftop PV investment options",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_0",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for existing ground-mounted PV",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_11",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 1",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_12",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_13",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 3",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_14",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_15",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 5",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_16",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 6",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_17",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 7",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_18",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 8",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_19",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for ground-mounted PV investment option 9",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_fiel_gm_1_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aggregated ground-mounted PV investment options",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_0",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for existing households rooftop PV",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_11",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 1",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_12",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_13",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 3",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_14",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_15",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 5",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_16",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 6",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_17",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 7",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_18",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 8",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_19",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for households rooftop PV investment option 9",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_hh_roof_1_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aggregated households rooftop PV investment options",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_12",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for industry rooftop PV investment option 2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_13",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for industry rooftop PV investment option 3",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_14",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for industry rooftop PV investment option 4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_15",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for industry rooftop PV investment option 5",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_16",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for industry rooftop PV investment option 6",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_17",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for industry rooftop PV investment option 7",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_18",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for industry rooftop PV investment option 8",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_19",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for industry rooftop PV investment option 9",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_photovoltaic_ind_roof_1_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aggregated industry rooftop PV investment options",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_0_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for existing wind turbines",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_1_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aggregated wind turbines investment options",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_0",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for existing fixed-based wind offshore turbines",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_11",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 1",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_12",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_13",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 3",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_14",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_15",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 5",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_16",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 6",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_17",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 7",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_18",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 8",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_19",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for fixed-based wind offshore turbines investment option 9",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_off_fb_1_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aggregated fixed-based wind offshore turbines investment options",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_0",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for existing wind onshore turbines",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_11",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 1",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_12",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_13",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 3",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_14",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_15",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 5",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_16",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 6",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_17",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 7",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_18",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 8",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_19",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for wind onshore turbines investment option 9",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pow_wind_turbine_on_1_ag",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aggregated wind onshore turbines investment options",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pri_hydro_energy",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for run-of-river and pondage electricity generators",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pri_hydro_nat_io",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for nature inflow into openloop hydro pump storages",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pri_hydro_nat_is",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for nature inflow into seasonal hydro storages",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "viktor.slednev@kit.edu",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "https://de.m.wikipedia.org/wiki/Datei:Logo_KIT.svg",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                    "title": "Technology Data for power and heat production plants",
+                    "authors": [],
+                    "description": "Technology Data for power and heat production plants by the Danish Energy Agency",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "Â© Danish Energy Agency 2022",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "NL",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Netherlands",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000333",
+                    "name": "power"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "Power",
+                "input_data",
+                "AP4"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2020-12-31T23:00:00",
+                        "start": "2020-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2021-12-31T23:00:00",
+                        "start": "2021-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2024-12-31T23:00:00",
+                        "start": "2024-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2027-12-31T23:00:00",
+                        "start": "2027-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2030-12-31T23:00:00",
+                        "start": "2030-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2035-12-31T23:00:00",
+                        "start": "2035-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2040-12-31T23:00:00",
+                        "start": "2040-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2045-12-31T23:00:00",
+                        "start": "2045-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2050-12-31T23:00:00",
+                        "start": "2050-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2060-12-31T23:00:00",
+                        "start": "2060-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2070-12-31T23:00:00",
+                        "start": "2070-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset describes avaliable time series data for wind, PV, hydro which is not specified in other sectors",
+            "contributors": [
+                {
+                    "date": "2023-12-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Viktor Slednev",
+                    "object": " ",
+                    "comment": "Data processing",
+                    "organization": null
+                },
+                {
+                    "date": "2024-05-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Wenxuan Hu",
+                    "object": null,
+                    "comment": "Created Metadata, Data upload",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-05-23"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

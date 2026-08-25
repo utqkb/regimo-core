@@ -1,0 +1,196 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "renewables_ninja_feedin",
+            "path": "renewables_ninja_feedin",
+            "type": "Table",
+            "title": "EE-Einspeisezeitreihen",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "local_time",
+                        "type": "date",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power",
+                        "type": "decimal",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "https://reiner-lemoine-institut.de/ueber-uns/kontakt/",
+                "grantNo": null,
+                "homepage": "https://abw.rl-institut.de",
+                "publisher": "",
+                "sourceCode": "https://github.com/rl-institut/apipe/",
+                "documentation": "https://digiplan.readthedocs.io",
+                "fundingAgency": "https://www.region-gestalten.bund.de",
+                "publisherLogo": "https://reiner-lemoine-institut.de//wp-content/uploads/2015/09/rlilogo.png",
+                "fundingAgencyLogo": "https://www.region-gestalten.bund.de/Region/SiteGlobals/Frontend/Images/logo.svg"
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "hhttps://www.renewables.ninja/",
+                    "title": "renewables.ninja_feedin",
+                    "authors": [],
+                    "description": "Einspeisezeitreihen für Erneuerbare Energien, normiert auf 1 MW bzw. 1 p.u. Als Wetterjahr wird 2011 verwendet",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY-NC 4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "Data licence Germany – attribution – version 2.0",
+                            "attribution": "© www.renewables.ninja, 2023",
+                            "instruction": "you are free to copy, redistribute and adapt them for non-commercial purposes, provided you give appropriate credit. Note that the data is made available as-is and without warranty. We cannot guarantee its accuracy, and accept no responsibility for any liability arising from its use. You are advised to examine the quality of the data for your intended purposes, and to consult the publications linked on this page.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "utf-8",
+            "keywords": [
+                "Erneuerbare",
+                "Energien",
+                "Einspeisezeitreihen",
+                "renewables.ninja"
+            ],
+            "licenses": [
+                {
+                    "name": "CC BY-NC 4.0",
+                    "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                    "title": "Data licence Germany – attribution – version 2.0",
+                    "attribution": "© www.renewables.ninja, 2023",
+                    "instruction": "you are free to copy, redistribute and adapt them for non-commercial purposes, provided you give appropriate credit. Note that the data is made available as-is and without warranty. We cannot guarantee its accuracy, and accept no responsibility for any liability arising from its use. You are advised to examine the quality of the data for your intended purposes, and to consult the publications linked on this page.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2011-12-31T23:00:00+01:00",
+                        "start": "2011-01-01T00:00:00+01:00",
+                        "alignment": "left",
+                        "resolutionUnit": "h",
+                        "aggregationType": null,
+                        "resolutionValue": "1"
+                    }
+                ],
+                "referenceDate": "2023-04-14"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "Einspeisezeitreihen für Erneuerbare Energien, normiert auf 1 MW bzw. 1 p.u. Als Wetterjahr wird 2011 verwendet",
+            "contributors": [
+                {
+                    "date": "2023-09-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "aaronschilling",
+                    "object": "metadata",
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2016-09-21"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

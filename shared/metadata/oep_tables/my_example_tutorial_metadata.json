@@ -1,0 +1,52 @@
+{
+    "@id": null,
+    "name": "PV_Example_Data",
+    "title": "Date and Power Tutorial Example",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "my_example_tutorial",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/my_example_tutorial",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "nullable": false
+                    },
+                    {
+                        "name": "time",
+                        "type": "timestamp",
+                        "nullable": false
+                    },
+                    {
+                        "name": "power",
+                        "type": "float",
+                        "nullable": false
+                    }
+                ],
+                "primaryKey": []
+            },
+            "keywords": [],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://spdx.org/licenses/CC-BY-4.0.html",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": "Data PRovided by Anis Koubaa"
+                }
+            ]
+        }
+    ],
+    "description": "This dataset was provided by Anis Koubaa in the HMC tutorial",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": null,
+            "path": null,
+            "title": null
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

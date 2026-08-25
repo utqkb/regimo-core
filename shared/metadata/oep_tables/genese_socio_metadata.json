@@ -1,0 +1,19 @@
+{
+    "name": "genese_socio",
+    "resources": [
+        {
+            "name": "genese_socio",
+            "keywords": [
+                "genese"
+            ]
+        }
+    ],
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

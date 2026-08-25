@@ -1,0 +1,409 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "openfred_series",
+            "path": "https://openenergy-platform.org/dataedit/view/climate/openfred_series",
+            "type": "Table",
+            "title": "coastDat3_COSMO-CLM_MERRA2 - open_FRED Weatherdata",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/47",
+                "badge": "Gold"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "values",
+                        "type": "double precision array",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "values of the measurement",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "height",
+                        "type": "double precision",
+                        "unit": "metre",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "height of the measuring point",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timespan_id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "timespan and resolution",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "location_id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Geographical location of the measuring point",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "variable_id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "measurement variables",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "timespan_id"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "id"
+                            ],
+                            "resource": "climate.openfred_timespans"
+                        }
+                    },
+                    {
+                        "fields": [
+                            "location_id"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "id"
+                            ],
+                            "resource": "climate.openfred_locations"
+                        }
+                    },
+                    {
+                        "fields": [
+                            "variable_id"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "id"
+                            ],
+                            "resource": "climate.openfred_variables"
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "ronny.petrik@hzg.de",
+                "grantNo": "0324006A-C",
+                "homepage": "https://reiner-lemoine-institut.de/open_fred-open-feed-time-series-based-renewable-energy-database/",
+                "publisher": "",
+                "sourceCode": "https://github.com/open-fred",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie (BMWi)",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/data_access/",
+                    "title": "MERRA2",
+                    "authors": [],
+                    "description": "Modern-Era Retrospective analysis for Research and Applications, Version 2",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://www.ngdc.noaa.gov/mgg/topo/globe.html",
+                    "title": "noaa_globe",
+                    "authors": [],
+                    "description": "Global Land One-km Base Elevation Project (GLOBE)",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://www.ngdc.noaa.gov/mgg/topo/globe.html",
+                    "title": "ecjrc_glc2000",
+                    "authors": [],
+                    "description": "Global Land Cover 2000",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://gacp.giss.nasa.gov/data/time_ser/",
+                    "title": "nasa_aerosols",
+                    "authors": [],
+                    "description": "GACP aerosol optical thickness and Angstrom exponent dataset",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.adv-sci-res.net/16/57/2019/",
+                    "title": "gldb",
+                    "authors": [],
+                    "description": "Global Lake Database (GLDB)",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://land.copernicus.eu/pan-european/corine-land-cover/clc-2012?tab=download",
+                    "title": "copernicus_clc",
+                    "authors": [],
+                    "description": "Copernicus Land Monitoring Services - CORINE Land Cover (CLC) - CLC 2012",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://www.fao.org/soils-portal/soil-survey/soil-maps-and-databases/harmonized-world-soil-database-v12/en/",
+                    "title": "fao_hwsd",
+                    "authors": [],
+                    "description": "Harmonised World Soil Database",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.umb.edu/spectralmass/terra_aqua_modis/modis_brdf_albedo_product_mcd43",
+                    "title": "modis_albedo",
+                    "authors": [],
+                    "description": "Filled Land Surface Albedo Product",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany (generous)",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "(~6.6 km)",
+                    "resolutionValue": "0.0625°"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "COSMO-CLM",
+                "hindcast",
+                "MERRA2",
+                "Open Data",
+                "regional modelling",
+                "renewable energy"
+            ],
+            "licenses": [
+                {
+                    "name": "ODC-By-1.0",
+                    "path": "https://opendatacommons.org/licenses/by/1.0/",
+                    "title": "Open Data Commons Attribution License v1.0",
+                    "attribution": "© Helmholtz-Zentrum Geesthacht",
+                    "instruction": "https://opendatacommons.org/licenses/by/summary/index.html",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2018",
+                        "start": "2002",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "15 min -- 60 min (depending on parameter)"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB",
+                "de-DE"
+            ],
+            "description": "This is an atmospheric hindcast for Western Europe and the North Atlantic using COSMO-CLM version 5.0 with spectral nudging from 2002-2017. MERRA2 reanalysis data are used as forcing. Additionally transient and monthly aerosol data of the MACv2 climatology are prescribed. The model uses a rotated grid with 566 x 481 grid points and a grid point distance of 0.0625 degrees, the rotated North pole is located at 162.0 W, 39.25 N. The published data excludes the sponge zone and have 526 x 441 grid points. In rotated coordinates the published simulation data extends from 22.64 W to 10.18 E, 11.2 S to 16.3 N, in geographical coordinates this corresponds to about 12 W to 30 E, 39 N to 60 N.",
+            "contributors": [
+                {
+                    "date": "2020-02-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2020-02-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonas Huber",
+                    "object": "metadata",
+                    "comment": "Update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2020-02-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "Update license information",
+                    "organization": null
+                },
+                {
+                    "date": "2020-04-30",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "Update metadata information",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2020-02-06"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

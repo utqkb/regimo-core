@@ -1,0 +1,396 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "model_draft.x2x_x2gas_mpyr",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/x2x_x2gas_mpyr",
+            "type": "Table",
+            "title": "Techno-economic parameter methane pyrolysis",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "operational_temperature",
+                        "type": "float array",
+                        "unit": "°C",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Operational Temperature",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "investment_cost",
+                        "type": "float array",
+                        "unit": "EUR/kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Methanation reactor investment cost",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "fixed_cost",
+                        "type": "float array",
+                        "unit": "% of investment_cost",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Fixed operation and maintenance costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "electricity_demand",
+                        "type": "float array",
+                        "unit": "kWh/m3",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity demand of methanation reactor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "process_efficiency",
+                        "type": "float array",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Efficiency of the entire methanation process based on the LHV.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "operational_life_time",
+                        "type": "float array",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Lifetime of methanation reactor in operation.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "minimal_load",
+                        "type": "float array",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimal load of methanation reactor beneath which no steady operation can be guaranteed.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "g.mueller@fz-juelich.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://dechema.de/dechema_media/Downloads/Positionspapiere/Studie+Ammoniak.pdf",
+                    "title": "Perspective Europe 2030 Technology options for CO2- emission reduction of hydrogen feedstock in ammonia production",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.1016/j.rser.2023.113323",
+                    "title": "A review of methane pyrolysis technologies for hydrogen production",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© 2023 Elsevier Ltd. All rights reserved.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www2.deloitte.com/content/dam/Deloitte/at/Documents/presse/at-deloitte-wasserstoffstudie-2023.pdf",
+                    "title": "Green hydrogen: Energizing the path to net zero",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_for_renewable_fuels.pdf",
+                    "title": "Technology Data for Renewable Fuels",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://cadmus.eui.eu/bitstream/handle/1814/70971/210426%20PB_Snapshot_Glachant&Dos%20Reis.pdf?sequence=1",
+                    "title": "A Snapshot of Clean Hydrogen Costs in 2030 and 2050",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© European University Institute, 2021.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.1016/j.apenergy.2021.117481",
+                    "title": "Estimating long-term global supply costs for low-carbon hydrogen",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© 2021 Elsevier Ltd. All rights reserved.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Global",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": "",
+                    "instruction": "You are free: To Share, To Create, To Adapt",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Techno-economic parameter for methane pyrolysis.",
+            "contributors": [
+                {
+                    "date": "2023-09-18",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Gian Müller, FZJ",
+                    "object": "data and metadata",
+                    "comment": "Data for mini-system steel industry for methane pyrolysis process.",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2023-11-29"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

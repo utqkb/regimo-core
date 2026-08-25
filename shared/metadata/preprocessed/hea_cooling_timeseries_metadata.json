@@ -1,0 +1,357 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "hea_cooling_timeseries",
+            "path": null,
+            "type": "Table",
+            "title": "sedos_hea_cooling_timeseries",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_start",
+                        "type": "timestamp",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Start timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_stop",
+                        "type": "timestamp",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Stop timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_resolution",
+                        "type": "interval",
+                        "unit": "Percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timesteps",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_aircon",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for aircon",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_refrigerator",
+                        "type": "float array",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time series data for refrigerator",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "g.mueller@fz-juelich.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "Heat",
+                "input_data",
+                "AP6"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2021-12-31T23:00:00",
+                        "start": "2021-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2024-12-31T23:00:00",
+                        "start": "2024-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2027-12-31T23:00:00",
+                        "start": "2027-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2030-12-31T23:00:00",
+                        "start": "2030-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2035-12-31T23:00:00",
+                        "start": "2035-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2040-12-31T23:00:00",
+                        "start": "2040-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2045-12-31T23:00:00",
+                        "start": "2045-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2050-12-31T23:00:00",
+                        "start": "2050-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2060-12-31T23:00:00",
+                        "start": "2060-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2070-12-31T23:00:00",
+                        "start": "2070-01-01T00:00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "null",
+                        "resolutionValue": "hourly"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset describes avaliable time series data for cooling devices",
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-02-06"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

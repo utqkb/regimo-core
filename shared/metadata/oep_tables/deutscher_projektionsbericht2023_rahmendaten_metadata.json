@@ -1,0 +1,446 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "deutscher_projektionsbericht2023_rahmendaten",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/deutscher_projektionsbericht2023_rahmendaten",
+            "type": "Table",
+            "title": "Rahmendaten für den Projektionsbericht 2023 (Datentabelle)",
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigserial",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tabelle",
+                        "type": "varchar(8)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000030",
+                                "name": "information content entity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Tabelle im Bericht",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000030",
+                                "name": "information content entity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Name des Parameters",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "einheit",
+                        "type": "varchar(128)",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Einheit des Parameters",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "jahr",
+                        "type": "integer",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Jahr für das unter Spalte `wert` der Wert Parameters gilt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wert",
+                        "type": "float",
+                        "unit": "unit is given in column \"Einheit des Parameters\"",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000350",
+                                "name": "quantity value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Wert des Parameters",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "FKZ 3722415110",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Umweltbundesamt",
+                "publisherLogo": null,
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://reportnet.europa.eu/public/dataflow/113, https://commission.europa.eu/legal-notice_en#copyright-notice",
+                    "title": "Recommended parameters for reporting on GHG projections in 2023, Version after consultation of WG2 under the Climate Change Committee on 10 March 2022, sharing of draft recommendation on 30 March 2022 and consultation of National Experts designated by members of WG2 on 26 April 2022,",
+                    "authors": [],
+                    "description": "This document provides guidance to European Member States on which parameter calibrations are recommended / suggested for their projections. The data are made available every reporting year on reportnet under datflow 113 linked to a zip file. Reportnet is maintained by the European Environment Agency. Information from it was used for the parameter calibration for population and real GDP growth rate (population all years, GDP for the years 2031-2050).",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "Creative Commons Attribution 4.0 International (CC BY 4.0) licence",
+                            "attribution": "European Commission (2022):Recommended parameters for reporting on GHG projections in 2023, Version after consultation of WG2 under the Climate Change Committee on 10 March 2022",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.destatis.de/DE/Themen/Wirtschaft/Volkswirtschaftliche-Gesamtrechnungen-Inlandsprodukt/_inhalt.html",
+                    "title": "Volkswirtschaftliche Gesamtrechnungen, Bruttoinlandsprodukt",
+                    "authors": [],
+                    "description": "This document provides information on real GDP growth rate which was taken into account for the years 2020 and 2021.",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE->BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland 2.0",
+                            "attribution": "Statistisches Bundesamt(2022):Volkswirtschaftliche Gesamtrechnungen, Bruttoinlandsprodukt",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bmwk.de/Redaktion/DE/Downloads/G/gesamtwirtschaftliches-produktionspotenzial-herbstprojektion-2022.pdf?__blob=publicationFile&v=6",
+                    "title": "Gesamtwirtschaftliches Produktionspotenzial und Konjunkturkomponenten, Datengrundlagen und Ergebnisse der Schätzungen der Bundesregierung. Stand: Herbstprojektion der Bundesregierung vom 12. Oktober 2022",
+                    "authors": [],
+                    "description": "This document provides information on real GDP growth rate which was taken into account for the years 2022-2027",
+                    "sourceLicenses": [
+                        {
+                            "name": "n/a",
+                            "path": "n/a",
+                            "title": "n/a",
+                            "attribution": "BMWK, BMF(2022:Gesamtwirtschaftliches Produktionspotenzial und Konjunkturkomponenten, Datengrundlagen und Ergebnisse der Schätzungen der Bundesregierung. Stand: Herbstprojektion der Bundesregierung vom 12. Oktober 2022",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bafa.de/DE/Energie/Rohstoffe/Drittlandskohlepreis/drittlandskohlepreis_node.html",
+                    "title": "Drittlandskohlepreis, Drittlandskohlebezüge und durchschnittliche Preise frei deutsche Grenze für Kraftwerkssteinkohle",
+                    "authors": [],
+                    "description": "Information from this data source was used as input data for historical values of steam coal prices´.(latest update 13.10.2022, latest check 31.10.2022)",
+                    "sourceLicenses": [
+                        {
+                            "name": "n/a",
+                            "path": "n/a",
+                            "title": "n/a",
+                            "attribution": "BAFA(2022):Drittlandskohlepreis, Drittlandskohlebezüge und durchschnittliche Preise frei deutsche Grenze für Kraftwerkssteinkohle",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Erdgasstatistik, Entwicklung der Grenzübergangspreise ab 1999",
+                    "authors": [],
+                    "description": "Information from this data source was used as input data for historical values of natural gas prices.(latest update 13.10.2022, latest check 31.10.2022)",
+                    "sourceLicenses": [
+                        {
+                            "name": "n/a",
+                            "path": "n/a",
+                            "title": "n/a",
+                            "attribution": "BAFA(2022): Erdgasstatistik, Entwicklung der Grenzübergangspreise ab 1999",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.wasserstoffrat.de/fileadmin/wasserstoffrat/media/Dokumente/2022/221222_Bottom_Up_Studie_final-1.pdf",
+                    "title": "Bottom-Up Studie zur Dekarbonisierung des Wärmesektors.",
+                    "authors": [],
+                    "description": "This study provides information on the H2 price considered in the projected assumptions.",
+                    "sourceLicenses": [
+                        {
+                            "name": "n/a",
+                            "path": "n/a",
+                            "title": "n/a",
+                            "attribution": "Thomsen, J.; Fuchs, N.; Meyer R.; Wanapinit, N.; Ulffers, J.; Bavia Bampi, B.; Lohmeier, D.; Prade,E.; Gorbach, G.; Sanina, N.; Engelmann, P.; Herkel, S.; Kost, C.; Braun, M.; Lenz, M. (2022): Bottom-Up Studie zu Pfadoptionen einer effizienten und sozialverträglichen Dekarbonisierung desWärmesektors. Studie im Auftrag des Nationalen Wasserstoffrats. Freiburg, Kassel: Fraunhofer ISE, Fraunhofer IEE (Hrsg.).",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.theice.com/products/243/API2-Rotterdam-Coal-Futures, https://www.theice.com/products/219/Brent-Crude-Futures",
+                    "title": "ICE Futures Europe, API2 Rotterdam Coal Futures.",
+                    "authors": [],
+                    "description": "Information from this report was used as input data for making the projected assumptions on steam coal prices.",
+                    "sourceLicenses": [
+                        {
+                            "name": "n/a",
+                            "path": "n/a",
+                            "title": "n/a",
+                            "attribution": "ICE - Intercontinental Exchange(2022): ICE Futures Europe, API2 Rotterdam Coal Futures.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.eex.com/de/marktdaten/erdgas/futures#%7B%22snippetpi-cker%22%3A%22EEX%20THE%20Natural%20Gas%20Futures%22%7D",
+                    "title": "EEX Natural Gas Futures.",
+                    "authors": [],
+                    "description": "Information from this report was used as input data for making the projected assumptions on crude oil prices.",
+                    "sourceLicenses": [
+                        {
+                            "name": "n/a",
+                            "path": "n/a",
+                            "title": "n/a",
+                            "attribution": "EEX (2022): Erdgas Futures, European Energy Exchange AG.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://carbon-pulse.com/179556/",
+                    "title": "POLL EU-ETS Price projections.",
+                    "authors": [],
+                    "description": "Information from this report was used as input data for making the projected assumptions on CO2 prices in the EU-ETS.",
+                    "sourceLicenses": [
+                        {
+                            "name": "n/a",
+                            "path": "n/a",
+                            "title": "n/a",
+                            "attribution": "POLL (2022): Analysts cut short-, medium-term EU carbon price forecasts on worsening outlook.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bmwk.de/Redaktion/DE/Pressemitteilungen/2022/10/20221028-habeck-wir-gehen-beim-co2-preis-bedachter-vor-und-entlasten-private-haushalte-und-unternehmen.html",
+                    "title": "Wir gehen beim CO2-Preis bedachter vor und entlasten private Haushalte und Unternehmen.",
+                    "authors": [],
+                    "description": "Information from this report was used as input data for making the projected assumptions on emissions prices in the national emissions trading system.",
+                    "sourceLicenses": [
+                        {
+                            "name": "n/a",
+                            "path": "n/a",
+                            "title": "n/a",
+                            "attribution": "BMWK - Bundesministerium für Wirtschaft und Klimaschutz (2022): Wir gehen beim CO2-Preis bedachter vor und entlasten private Haushalte und Unternehmen.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://iea.blob.core.windows.net/assets/830fe099-5530-48f2-a7c1-11f35d510983/WorldEnergyOutlook2022.pdf",
+                    "title": "World Energy Outlook 2022.",
+                    "authors": [],
+                    "description": "Information from this report was used as input data for making the projected assumptions on primary energy and CO2 prices. (latest check 01.11.2022)",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 4.0 (report)",
+                            "path": "https://www.iea.org/terms/creative-commons-cc-licenses",
+                            "title": "Creative Commons (CC) licenses, Notice for CC-licensed Content",
+                            "attribution": "IEA(2022): World Energy Outlook 2022",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Deutschland",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000339",
+                    "name": "program parameter"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "Klimaschutzgesetz",
+                "DL-DE->BY-2.0",
+                "2023",
+                "EU Governance-Verordnung",
+                "Projektionsbericht",
+                "Deutschland",
+                "Treibhausgasprojektionen"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE->BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                    "attribution": "Öko-Institut (2023):Rahmendaten für den Projektionsbericht 2023(Datentabelle)",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050-01-01",
+                        "start": "2021-01-01",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "Zentrale Rahmendaten für den Projektionsbericht 2023. Die Veröffentlichung erfolgt im Rahmen des Vorhabens: Weiterentwicklung der Methoden und Umsetzung der Europäischen Governance-Verordnung und des Bundes-Klimaschutzgesetzes im Projektionsbericht 2023 ('Politikszenarien XI') FKZ 3722 41 511 0",
+            "contributors": [
+                {
+                    "date": "2023-01-20",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "data, metadata",
+                    "comment": "initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2023-11-16",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "Metadata",
+                    "comment": "ontology annotation",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

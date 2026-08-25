@@ -1,0 +1,361 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "reeem_energypro_output",
+            "type": "Table",
+            "title": "REEEM EnergyPRO Output",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Model id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dfid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Row id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pathway",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM pathway",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "framework",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM framework",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "month",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Month",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "field",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "2. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "3. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "indicator",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "",
+                        "unit": "unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "aggregation",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "True if aggregated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tags",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Free classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "updated",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "schema",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "1. classification",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "EnergyPro",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://openenergy-platform.org/factsheets/models/147/",
+                            "title": "",
+                            "attribution": "EMD International A/S",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "city"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "erratic(PL-Warsaw;FI-Helsinki)",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Creative Commons Attribution 4.0 International",
+                    "path": "http://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "CC-BY-4.0",
+                    "attribution": "© Aalto University",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050",
+                        "start": "2020",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "erratic(2020;2030;2050)"
+                    }
+                ],
+                "referenceDate": "2020"
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "2018-10-25",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2018-10-31",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update metadata and license",
+                    "organization": null
+                },
+                {
+                    "date": "2019-01-31",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "4lm",
+                    "object": null,
+                    "comment": "Alter table, add missing columns",
+                    "organization": null
+                },
+                {
+                    "date": "2019-05-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "4lm",
+                    "object": null,
+                    "comment": "Update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,10 @@
+# Secrets & local configs
+config/neo_config.py
+config/hkg_config.py
+
+# Byte-compiled / Python cache
+__pycache__/
+*.pyc
+
+# Local result data
+shared/results/

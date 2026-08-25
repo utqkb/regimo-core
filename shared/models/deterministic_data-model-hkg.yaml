@@ -1,0 +1,164 @@
+id: https://w3id.org/kit/research-records
+name: research-records-schema
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  dc: http://purl.org/dc/elements/1.1/
+  oai: http://www.openarchives.org/OAI/2.0/
+
+types:
+  NonEmptyString:
+    typeof: string
+    uri: xsd:string
+    pattern: '.*\S.*'
+
+classes:
+  ResearchRecordContainer:
+    slots:
+      - records
+    slot_usage:
+      records:
+        multivalued: true
+        range: ResearchRecord
+        required: true
+        inlined_as_list: true
+
+  ResearchRecord:
+    slots:
+      - content
+      - harvested_date
+      - harvester_type
+      - id
+      - pid
+      - source
+    slot_usage:
+      content:
+        required: true
+
+  Content:
+    slots:
+      - record
+      - schema
+      - record_structured
+    slot_usage:
+      record_structured:
+        required: true
+
+  Record:
+    slots:
+      - title
+      - creators
+      - contributors
+      - subjects
+      - description
+      - publisher
+      - date
+      - identifiers
+      - rights
+      - types
+      - sources
+      - formats
+      - language
+      - relation
+      - xmlns_dc
+      - xmlns_oai_dc
+      - xsi_schema_location
+
+slots:
+  records:
+    range: ResearchRecord
+  content:
+    range: Content
+  harvested_date:
+    range: datetime
+  harvester_type:
+    range: string
+  id:
+    range: string
+  pid:
+    range: integer
+    identifier: true
+  source:
+    range: uri
+  record:
+    range: string
+  schema:
+    range: string
+  record_structured:
+    range: Record
+    required: true
+  title:
+    range: string
+    slot_uri: dc:title
+    alias: dc:title
+  creators:
+    multivalued: true
+    range: string
+    slot_uri: dc:creator
+    alias: dc:creator
+    required: true
+  contributors:
+    multivalued: true
+    range: string
+    slot_uri: dc:contributor
+    alias: dc:contributor
+  subjects:
+    multivalued: true
+    slot_uri: dc:subject
+    alias: dc:subject
+  rights:
+    multivalued: true
+    range: uri
+    slot_uri: dc:rights
+    alias: dc:rights
+  sources:
+    multivalued: true
+    range: string
+    slot_uri: dc:source
+    alias: dc:source
+  relation:
+    multivalued: true
+    range: string
+    slot_uri: dc:relation
+    alias: dc:relation
+  language:
+    multivalued: true
+    range: string
+    slot_uri: dc:language
+    alias: dc:language
+  description:
+    range: string
+    slot_uri: dc:description
+    alias: dc:description
+  publisher:
+    range: string
+    slot_uri: dc:publisher
+    alias: dc:publisher
+  date:
+    range: date
+    slot_uri: dc:date
+    alias: dc:date
+  identifiers:
+    multivalued: true
+    range: uri
+    slot_uri: dc:identifier
+    alias: dc:identifier
+  types:
+    multivalued: true
+    range: string
+    slot_uri: dc:type
+    alias: dc:type
+  formats:
+    range: string
+    slot_uri: dc:format
+    alias: dc:format
+  xmlns_dc:
+    range: string
+    alias: '@xmlns:dc'
+  xmlns_oai_dc:
+    range: string
+    alias: '@xmlns:oai_dc'
+  xsi_schema_location:
+    range: string
+    alias: '@xsi:schemaLocation'

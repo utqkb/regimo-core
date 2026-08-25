@@ -1,0 +1,233 @@
+{
+    "@id": "",
+    "name": "2045_scenario",
+    "title": "2045_scenario",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": "",
+            "name": "biomass_solid_commodity",
+            "path": "data/elements/biomass_solid-commodity.csv",
+            "type": "",
+            "title": "Solid Biomass Commodity",
+            "format": "",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "nullable": false
+                    },
+                    {
+                        "name": "bus",
+                        "type": "string",
+                        "nullable": false
+                    },
+                    {
+                        "name": "capacity",
+                        "type": "number",
+                        "nullable": false
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "string",
+                        "nullable": false
+                    },
+                    {
+                        "name": "marginal_cost",
+                        "type": "number",
+                        "nullable": false
+                    },
+                    {
+                        "name": "output_parameters",
+                        "type": "object",
+                        "nullable": false
+                    },
+                    {
+                        "name": "region",
+                        "type": "string",
+                        "nullable": false
+                    },
+                    {
+                        "name": "tech",
+                        "type": "string",
+                        "nullable": false
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "nullable": false
+                    }
+                ],
+                "primaryKey": [
+                    "name"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "bus"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "name"
+                            ],
+                            "resource": "bus"
+                        }
+                    }
+                ]
+            },
+            "topics": [],
+            "context": {
+                "title": "Stadt-Land-Energie: Robustheit und Übertragbarkeit von interkommunalen Energiewendeszenarien im Stadt-Land-Nexus ",
+                "contact": "sarah.berendes@rl-institut.de",
+                "grantNo": "03EI1051A",
+                "homepage": "https://reiner-lemoine-institut.de/projekt/stadt-land-energie-robustheit-und-uebertragbarkeit-von-interkommunalen-energiewendeszenarien-im-stadt-land-nexus/",
+                "publisher": "Open Energy Platform (OEP)",
+                "sourceCode": "https://github.com/rl-institut/apipe/tree/sle-features/case-study-1",
+                "documentation": "https://reiner-lemoine-institut.de/projekt/stadt-land-energie-robustheit-und-uebertragbarkeit-von-interkommunalen-energiewendeszenarien-im-stadt-land-nexus/",
+                "fundingAgency": "Federal Ministry for Economic Affairs and Energy",
+                "publisherLogo": "https://github.com/OpenEnergyPlatform/organisation/blob/production/logo/OpenEnergyFamily_Logo_OpenEnergyPlatform.svg",
+                "fundingAgencyLogo": "https://upload.wikimedia.org/wikipedia/commons/8/83/Federal_Ministry_for_Economic_Affairs_and_Energy_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/rl-institut/apipe/blob/sle-features/case-study-1/apipe/store/raw/technology_data/dataset.md",
+                    "title": "Technology Data",
+                    "authors": [
+                        "nesnoj",
+                        "MaGering",
+                        "aaronschilling",
+                        "dvdstrzl",
+                        "hedwiglieselotte",
+                        "srhbrnds"
+                    ],
+                    "description": "A dataset.md for the assumptions and sources of the components within the energy system.",
+                    "sourceLicenses": [
+                        {
+                            "name": "AGPL-3.0 license ",
+                            "path": "https://github.com/rl-institut/apipe/blob/dev/LICENSE",
+                            "title": "GNU Affero General Public License v3.0",
+                            "attribution": "© 2025 GitHub, Inc",
+                            "instruction": "This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.",
+                            "copyrightStatement": "https://docs.github.com/de/site-policy/github-terms/github-terms-of-service"
+                        }
+                    ],
+                    "publicationYear": "2025"
+                },
+                {
+                    "path": "",
+                    "title": "2025-10-08-SLE_resources",
+                    "authors": [
+                        "srhbrnds"
+                    ],
+                    "description": "A bibtex file containing sources for the data and assumptions used in the case studies.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": "2025"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": "",
+                    "crs": "",
+                    "name": "Oderland-Spree",
+                    "boundingBox": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": "",
+                    "address": "",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000332",
+                    "name": "solid biofuel"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020067",
+                    "name": "commodity"
+                }
+            ],
+            "encoding": "",
+            "keywords": [
+                "capacity",
+                "commodity",
+                "solid_biomass",
+                "preprocessed",
+                "sle"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0 ",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": "",
+                    "instruction": "You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. ",
+                    "copyrightStatement": ""
+                }
+            ],
+            "temporal": {
+                "timeseries": [],
+                "referenceDate": "2045-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "A dataset with specifications of technical and economic parameters for a solid biomass commodity for regions in Oderland-Spree.",
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        "DataCollector",
+                        "DataCurator"
+                    ],
+                    "title": "Sarah Berendes",
+                    "object": "",
+                    "comment": "",
+                    "organization": "Reiner Lemoine institut"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": ""
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

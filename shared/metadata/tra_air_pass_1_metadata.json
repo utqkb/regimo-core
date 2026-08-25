@@ -1,0 +1,573 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tra_air_pass_1",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/tra_air_pass_1",
+            "type": "Table",
+            "title": "sedos_tra_air_pass_1",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_kerosene",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_hydrogen",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_air_natio_pkm",
+                        "type": "float",
+                        "unit": "Bpkm/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_air_europ_pkm",
+                        "type": "float",
+                        "unit": "Bpkm/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_air_inter_pkm",
+                        "type": "float",
+                        "unit": "Bpkm/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_tra_max",
+                        "type": "float",
+                        "unit": "vehicles",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum expansion of fleet per vehicle type per process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_tra",
+                        "type": "float",
+                        "unit": "EUR/(vehicle*a)",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Operation independent costs for existing and new vehicle units.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_tra",
+                        "type": "float",
+                        "unit": "EUR/(vehicle*a)",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Investment costs for new vehicle unit.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_var_tra",
+                        "type": "float",
+                        "unit": "EUR/(vehicle*a)",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Operation dependent costs for existing and new vehicle units.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "market_share_range",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Market share",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "mileage",
+                        "type": "float",
+                        "unit": "km/a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Yearly mileage of a vehicle.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "occupancy_rate",
+                        "type": "float",
+                        "unit": "person",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Occupancy rate of a vehicle.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "text",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_kerosene_emi_co2_f_tra",
+                        "type": "text",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor of specific fuel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_kerosene_emi_ch4_f_tra",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor of specific fuel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_kerosene_emi_n2o_f_tra",
+                        "type": "float",
+                        "unit": "Kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor of specific fuel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "ulrich.fahl@ier.uni-stuttgart.de",
+                "grantNo": null,
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fÃ¼r Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Times Transport Model",
+                    "authors": [],
+                    "description": "Times Transport Model is based on TIMES and focuses on German industry energy system",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution 4.0 International",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC BY 4.0",
+                            "attribution": "@Energy Economics and Social Analysis(ESA), IER, University of Stuttgart 2024",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://bmdv.bund.de/SharedDocs/DE/Artikel/G/fahrzeugbestand.html",
+                    "title": "BMDV Fahrzeugbestand",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Hydrogen-powered aviation",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Technologischer Wandel in der Luftfahrt: Techno-/ökonomishce Bewertung der Einsatzmöglichkeiten von Wasserstoff und Efuels in der Luftfahrt",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "National Inventory Report for the German Greenhouse Gas Inventory 1990 – 2021\n",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "National Inventory Report for the German Greenhouse Gas Inventory 1990 – 2021\n",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Opportunities for hydrogen in commercial aviation",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://investor-relations.lufthansagroup.com/de/fakten-zum-unternehmen/flotte.html",
+                    "title": "Aviation Stock in Germany",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000422/",
+                    "name": "Transport Sector"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010282",
+                    "name": "Passenger Train"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "input_data",
+                "AP8",
+                "Transport",
+                "oedatamodel-parameter"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": "You are free to: Share- copy and redistribute the material in any medium or format for any purpose, even commercially. Adapt - remix, transform, and build upon the material for any purpose, even commercially.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Dataset describes scalar techno-economic and scenario data of technology/process: Air transport new",
+            "contributors": [
+                {
+                    "date": "2025-03-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Felicitas Ortlieb",
+                    "object": "data and metadata for transport",
+                    "comment": "Provided data and metadata for train transport",
+                    "organization": null
+                },
+                {
+                    "date": "2025-03-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Kerstin Haler",
+                    "object": "data and metadata for transport",
+                    "comment": "Provided data and metadata for air and ship transport",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-03-29"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

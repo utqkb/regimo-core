@@ -1,0 +1,138 @@
+{
+    "@id": "https://globalwindatlas.info/",
+    "name": "wedowind_world_bank_group_pakistan_wind_m_e094bd87",
+    "title": "Pakistan - Wind Measurement Data",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_world_bank_group_pakistan_wind_m_035898b4",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_world_bank_group_pakistan_wind_m_035898b4",
+            "type": "table",
+            "title": "Wind-Measurements_Pakistan_Peshawar_WB-ESMAP_QC.csv",
+            "format": "CSV",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    },
+                    {
+                        "name": "time_a20_wind_speed_min_a20_wind_speed_ma_c637687f",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "",
+                                "name": ""
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": [
+                            {
+                                "@id": "",
+                                "name": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://energydata.info/dataset/520eb754-84de-45fb-8d2c-7b2eaa2f7b6e/resource/33f3edc6-b349-49f1-ad77-b0b9730418c5/download/wind-measurements_pakistan_peshawar_wb-esmap_qc.csv",
+                    "title": "Wind-Measurements_Pakistan_Peshawar_WB-ESMAP_QC.csv",
+                    "authors": [],
+                    "description": "Data repository for measurements from 12 wind masts in Pakistan. Data transmits daily reports for wind speed, wind direction, air pressure, relative humidity and temperature. Please refer to the country project page for additional outputs and reports, including the installation reports: http://esmap.org/node/3058. For access to maps and GIS layers, please visit the Global Wind Atlas: https://globalwindatlas.info/ Please cite as: [Data/information/map obtained from the] “World Bank via ENERGYDATA.info, under a project funded by the Energy Sector Management Assistance Program (ESMAP).",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2017"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "measurement_data",
+                "ckan",
+                "wind",
+                "renewable_energy",
+                "ckan_pakistan_wind_measurement_data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Data repository for measurements from 12 wind masts in Pakistan. Data transmits daily reports for wind speed, wind direction, air pressure, relative humidity and temperature. Please refer to the country project page for additional outputs and reports, including the installation reports: http://esmap.org/node/3058. For access to maps and GIS layers, please visit the Global Wind Atlas: https://globalwindatlas.info/ Please cite as: [Data/information/map obtained from the] “World Bank via ENERGYDATA.info, under a project funded by the Energy Sector Management Assistance Program (ESMAP).",
+            "publicationDate": "2017-02-23"
+        }
+    ],
+    "description": "Data repository for measurements from 12 wind masts in Pakistan. Data transmits daily reports for wind speed, wind direction, air pressure, relative humidity and temperature. Please refer to the country project page for additional outputs and reports, including the installation reports: http://esmap.org/node/3058. For access to maps and GIS layers, please visit the Global Wind Atlas: https://globalwindatlas.info/ Please cite as: [Data/information/map obtained from the] “World Bank via ENERGYDATA.info, under a project funded by the Energy Sector Management Assistance Program (ESMAP).",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

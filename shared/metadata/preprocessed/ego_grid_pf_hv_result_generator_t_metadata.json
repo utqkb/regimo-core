@@ -1,0 +1,245 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "hv powerflow generator_t results",
+            "path": "ego_grid_pf_hv_result_generator_t",
+            "type": "Table",
+            "title": null,
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "result_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Result ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generator_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique id for generators",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_set",
+                        "type": "",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "active power set point",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "q_set",
+                        "type": "",
+                        "unit": "MVar",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "reactive power set point",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_min_pu",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If control=variable this gives the minimum output for each snapshot per unit of p_nom for the OPF",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p_max_pu",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If control=variable this gives the maximum output for each snapshot per unit of p_nom for the OPF, relevant e.g. if for renewables the power output is limited by the weather",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p",
+                        "type": "",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "active power at bus (positive if net generation at bus)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "q",
+                        "type": "",
+                        "unit": "MVar",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "reactive power (positive if net generation at bus)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "status",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Status (1 is on, 0 is off). Only outputted if committable is True.",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "ego_dp_powerflow_hv_setup.sql",
+                    "title": "open_eGo data-processing",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://github.com/openego/data_processing",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Germany"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": "Results of generators_t considered in hv powerflow; add licence",
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

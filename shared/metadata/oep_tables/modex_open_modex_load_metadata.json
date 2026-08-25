@@ -1,0 +1,237 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "modex_open_modex_load",
+            "path": "https://openenergy-platform.org/dataedit/view/reference/modex_open_modex_load",
+            "type": "Table",
+            "title": "MODEX - open_MODEX - Load",
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "sarah.berendes@rl-institut.de",
+                "grantNo": "03ET4076",
+                "homepage": "https://www.energiesystem-forschung.de/forschen/projekte/open_MODEX",
+                "publisher": "",
+                "sourceCode": "https://github.com/open-modex",
+                "documentation": "https://github.com/open-modex/models",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie (BMWi)",
+                "publisherLogo": "https://avatars2.githubusercontent.com/u/47811754?s=200&v=4",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg;jsessionid=7C329FD594B914D85D84649345B95756?__blob=normal&v=3"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://doi.org/10.1016/j.energy.2021.121901",
+                    "title": "Chances and barriers for Germany's low carbon transition - Quantifying uncertainties in key influential factors",
+                    "authors": [],
+                    "description": "[oed-table:timeseries],[Bibtexkey:Löffler2022] - A free and open platform for power system modelling.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/deed.en",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "© 2021 The Author(s). Published by Elsevier Ltd.",
+                            "instruction": "You are free: To Share, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://transparency.entsoe.eu/transmission-domain/physicalFlow/show?name=&defaultValue=false&viewType=TABLE&areaType=BORDER_CTY&atch=false&dateTime.dateTime=01.01.2016%2000:00|CET|DAY&border.values=CTY|10Y1001A1001A83F!CTY_CTY|10Y1001A1001A83F_CTY_CTY|10YAT-APG------L&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET%20(UTC%201)%20/%20CEST%20(UTC%202)",
+                    "title": "Cross-Border Physical Flow, Physical Flows [12.1.G]",
+                    "authors": [],
+                    "description": "[oed-table:timeseries],[Bibtexkey:ENTSOE2021] - Cross-Border Physical Flow, Physical Flows [12.1.G]",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://transparency.entsoe.eu/content/static_content/download?path=/Static%20content/terms%20and%20conditions/201030_TP%20list%20of%20data.pdf",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "© ENTSO-E",
+                            "instruction": "Pursuant to Article 5 of the General Terms and Conditions of Use of ENTSO-E Transparency Platform, ENTSO-E below publishes the list of data which can be freely re-used by the Data Users with no need to seek for the  prior  agreement  of  the  respective  Primary  Owner  of  Data  (Transmission  System  Operators  and Transmission Capacity Allocators).",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.pegelonline.wsv.de/gast/start",
+                    "title": "Gewässerkundliches Informationssystem der Wasserstraßen- und Schifffahrtsverwaltung des Bundes",
+                    "authors": [],
+                    "description": "[oed-table:timeseries],[Bibtexkey:IZT2020] - Water levels in German rivers in hourly resolution",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/deed.en",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "© Wasserstraßen- und Schifffahrtsverwaltung des Bundes (WSV) im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur.",
+                            "instruction": "You are free: To Share, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://mediatum.ub.tum.de/doc/1544410/337152716379.pdf",
+                    "title": "Szenarien für die bayrische Stromversorgung bis 2040",
+                    "authors": [],
+                    "description": "[oed-table:timeseries],[Bibtexkey:Gawlick2020] - Hourly electricity trade and price data",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/deed.en",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "© IHK München und Oberbayern; ifo Institut; Technical University Munich.",
+                            "instruction": "You are free: To Share, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "modex",
+                "open_modex"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB",
+                "de-DE"
+            ],
+            "description": "[Multipble topics]: Electricity demand Germany; Hourly electricity trade with Germany's neighbouring countries;",
+            "contributors": [
+                {
+                    "date": "2022-01-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christoph",
+                    "object": "Metadata",
+                    "comment": "Create metadata and group sources",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

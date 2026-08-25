@@ -1,0 +1,231 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "model_draft.emsig_energy_storage_systems",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/emsig_energy_storage_systems",
+            "type": "Table",
+            "title": "Metadata for the table emsig_energy_storage_systems",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "model",
+                        "type": "Text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Model of the ESS",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "vendor",
+                        "type": "Text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Vendor of the ESS",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity",
+                        "type": "integer",
+                        "unit": "kWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Capacity of the battery",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power",
+                        "type": "integer",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Power rating of the battery",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "battery_type",
+                        "type": "Text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of the battery",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "stefan.feilmeier@fenecon.de, hermann.demeer@uni-passau.de",
+                "grantNo": "IUK-1801-0005//IUK553/002",
+                "homepage": "https://openems.io/research/emsig/",
+                "publisher": "",
+                "sourceCode": "https://github.com/OpenEMS/openems/blob/develop/README.md",
+                "documentation": "https://openems.github.io/openems.io/openems/latest/introduction.html",
+                "fundingAgency": "https://www.iuk-bayern.de/",
+                "publisherLogo": "",
+                "fundingAgencyLogo": "https://vdivde-it.de/de"
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://openems.io/association",
+                    "title": "OpenEMS Association e.V.",
+                    "authors": [],
+                    "description": "Recordings of a productive Energy Management System based on OpenEMS Edge",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "DACH region",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF8",
+            "keywords": [
+                "energy storage system",
+                "battery",
+                "ess"
+            ],
+            "licenses": [
+                {
+                    "name": "ODbL-1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1-0/index.html",
+                    "title": "Open Data Commons Open Database License 1.0",
+                    "attribution": "© OpenEMS Association e.V.",
+                    "instruction": "You are free to share and change, but you must attribute, and share derivations under the same license.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Energy storage systems with their respective model, vendor, capacity, power and battery type",
+            "contributors": [
+                {
+                    "date": "2021-04-12",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jan Seidemann",
+                    "object": "Metadata",
+                    "comment": "Created metadata file",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-04-15"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

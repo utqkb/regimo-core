@@ -1,0 +1,296 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "Line list for the transmission grid in Germany and interconnectors in 2030 (lines_eom_plus)",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/lines_transmission_germany_eomplus",
+            "type": "Table",
+            "title": "Line list for the transmission grid in Germany and interconnectors in 2030 (lines_eom_plus)",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID number of lines",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "startnode",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Starting node (see nodes list!)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "endnode",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Ending node (see nodes list!)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "susceptance",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Line susceptance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cap",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum transmission capacity per hour",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "intrazonal",
+                        "type": "boolean",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "1/0, if line is intrazonal",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dc",
+                        "type": "boolean",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "1/0, if line is DC",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "lukas.m.lang@fau.de",
+                "grantNo": "3EI1012A",
+                "homepage": "https://www.wirtschaftstheorie.rw.fau.de/projekte/verbundvorhaben-eom-plus/",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": null,
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "https://www.tennet.eu/de/strommarkt/transparenz-deutschland",
+                    "title": "Statisches Netzmodell TenneT",
+                    "authors": [],
+                    "description": "Statisches Netzmodell TenneT",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.amprion.net/Strommarkt/Engpassmanagement/Statisches-Netzmodell/",
+                    "title": "Statisches Netzmodell Amprion",
+                    "authors": [],
+                    "description": "Statisches Netzmodell Amprion",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.50hertz.com/de/Transparenz/Kennzahlen/Netzdaten/StatischesNetzmodell",
+                    "title": "Statisches Netzmodell 50Hertz",
+                    "authors": [],
+                    "description": "Statisches Netzmodell 50Hertz",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.jao.eu/static-grid-model",
+                    "title": "Static grid model",
+                    "authors": [],
+                    "description": "Static grid model",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "grid and substations",
+                    "resolutionValue": "transmission"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Europe",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010262",
+                    "name": "scenario projection"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010260",
+                    "name": "parameterisation"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "Transmission lines",
+                "Electricity",
+                "Germany",
+                "EOM-Plus"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "FAU ©",
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2024-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Transmission line list for the transmission grid in Germany and interconnectors in 2030. Specifications: Line ID, start node, end node, susceptance, line cap, identification of interzonal interconnectors and DC-lines",
+            "contributors": [
+                {
+                    "date": "2024-09-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Lehrstuhl für Wirtschaftstheorie, Friedrich-Alexander-Universität Erlangen-Nürnberg",
+                    "object": "data",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-09-06"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

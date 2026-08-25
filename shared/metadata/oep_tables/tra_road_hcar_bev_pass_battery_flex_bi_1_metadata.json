@@ -1,0 +1,613 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tra_road_hcar_bev_pass_battery_flex_bi_1",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/tra_road_hcar_bev_pass_battery_flex_bi_1",
+            "type": "Table",
+            "title": "sedos_tra_road_hcar_bev_pass_battery_flex_bi_1",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0020000",
+                                "name": "identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020032",
+                                "name": "study region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/BFO_0000015",
+                                "name": "process"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_e_unit",
+                        "type": "float",
+                        "unit": "kWh/vehcicle",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00230000",
+                                "name": "storage capacity"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Storage capacity per verhicle.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "efficiency_sto_in",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140050",
+                                "name": "efficiency value"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020183",
+                                "name": "is energy input to"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320064",
+                                "name": "charging"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020367",
+                                "name": "electrical energy storage technology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Energy efficiency of electricity storage charging.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "efficiency_sto_out",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140050",
+                                "name": "efficiency value"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020184",
+                                "name": "is energy output of"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020367",
+                                "name": "electrical energy storage technology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Energy efficiency of power output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020178",
+                                "name": "operational life time"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sto_max_timeseries",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020367",
+                                "name": "electrical energy storage technology"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010256",
+                                "name": "maximum value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Time series of max battery level.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sto_min_timeseries",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020367",
+                                "name": "electrical energy storage technology"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Time series of min battery level.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sto_self_discharge",
+                        "type": "float",
+                        "unit": "%/h",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020367",
+                                "name": "electrical energy storage technology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Self discharge of storage per hour.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000129",
+                                "name": "version number"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020166",
+                                "name": "methodology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000085",
+                                "name": "citation reference"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
+                                "name": "comment"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Hans-Christian.Gils@dlr.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "https://www.dlr.de/static/media/Logo-de.697a8e1f.svg",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.kba.de/SharedDocs/Downloads/DE/Statistik/Fahrzeuge/FZ4/fz4_2020.xlsx;jsessionid=1A5416490BAEAE4B6C9E2BE07C2CB5F6.live11291?__blob=publicationFile&v=4",
+                    "title": "Neuzulassungen von Kraftfahrzeugen und Kraftfahrzeuganhaengern nach Herstellern und Handelsnamen (FZ 4), Jahr 2020",
+                    "authors": [],
+                    "description": "Tabular data of vehice specific data of the German fleet of 2020.",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. Kraftfahrt-Bundesamt. 2021",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.kba.de/SharedDocs/Downloads/DE/Statistik/Fahrzeuge/Fachartikel/alter_20110415.pdf?__blob=publicationFile&v=1",
+                    "title": "Fachartikel: Fahrzeugalter",
+                    "authors": [],
+                    "description": "Mit Zunahme des Durchschnittsalters steigt auch der Anteil der Fahrzeuge, bei denen anlaesslich der HU ueberproportional oft Maengel festgestellt werden. Diese Zahlen lassen isoliert keine Aussage ueber die Auswirkungen auf die Verkehrssicherheit zu. Gleichwohl bieten sie Untersuchungsansaetze, wie z. B. fuer die Verkehrsunfallstatistik des Statistischen Bundesamtes - Destatis (www.destatis.de). Durch Kombination mit dem Lebensalter der Halter koennten beispielsweise Unfallbeteiligten die Altersklassen von Fahrzeugen zugeordnet werden. Der proportionale Anteil junger Verkehrsteilnehmer an z. B. maengelgefaehrdeten Fahrzeugen der Altersgruppe ueber neun Jahre koennte so fuer weitere Analysen verknuepft werden.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "",
+                    "title": "Electric vehicle batteries alone could satisfy short-term grid storage demand by as early as 2030",
+                    "authors": [],
+                    "description": "The energy transition will require a rapid deployment of renewable energy (RE) and electric vehicles (EVs) where other transit modes are unavailable. EV batteries could complement RE generation by providing short-term grid services. However, estimating the market opportunity requires an understanding of many socio-technical parameters and constraints. We quantify the global EV battery capacity available for grid storage using an integrated model incorporating future EV battery deployment, battery degradation, and market participation. We include both in-use and end-of-vehicle-life use phases and find a technical capacity of 32--62 terawatt-hours by 2050. Low participation rates of 12%--43% are needed to provide short-term grid storage demand globally. Participation rates fall below 10% if half of EV batteries at end-of-vehicle-life are used as stationary storage. Short-term grid storage demand could be met as early as 2030 across most regions. Our estimates are generally conservative and offer a lower bound of future opportunities.",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. Xu, Behrens, Gasper, Smith, Hu, Tukker, Steubing. 2023",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "",
+                    "title": "Fahrzeugdatenbank 2023",
+                    "authors": [],
+                    "description": "Fahrzeugdatenbank 2023",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. ADAC. 2023",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "",
+                    "title": "ownAssumption",
+                    "authors": [],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. DLR. 2023",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://mediatum.ub.tum.de/doc/1355829/file.pdf",
+                    "title": "Aging of Lithium-Ion Batteries in Electric Vehicles",
+                    "authors": [],
+                    "description": "Based on the findings of the different aging studies, recommendations for optimized operational strategies are derived which enable a long battery life. This thesis demonstrates that at moderate operating temperatures, the required battery life can already be achieved with the state-of-the-art battery types. However, operating at low temperatures of 10degree celsius and below remains challenging. Iproved types of lithium-ion cells and constructive means of thermal conditioning have to be eveloped to overcome the cycle life limitations at low temperatures.",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. Keil. 2017",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320046",
+                    "name": "battery electric car"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_0000024",
+                    "name": "lithium-ion battery"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "input_data",
+                "transport",
+                "final"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset describes the scalar techno-economic as well as scenario data for the technology: battery electric car lithium-ion battery.",
+            "contributors": [
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hedda Gardian",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Samuel Hasselwander",
+                    "object": "data and metadata for cars",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fabia Miorelli",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Niklas Wulff",
+                    "object": "data for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Eugenio Salvador Arellano Ruiz",
+                    "object": "metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hans Christian Gils",
+                    "object": "data for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Patrick Jochem",
+                    "object": "data and metadata road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Carsten Hoyer-Click",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-04-01"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

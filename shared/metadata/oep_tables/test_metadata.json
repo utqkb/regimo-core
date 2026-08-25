@@ -1,0 +1,224 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://databus.dbpedia.org/kurzum/mastr/bnetza-mastr/01.04.00",
+            "name": "test",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/test",
+            "type": "Table",
+            "title": "Example title for metadata example - Version 1.5.1",
+            "format": null,
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues",
+                "badge": "Platinum"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "test",
+                                "name": "test"
+                            },
+                            {
+                                "@id": "test",
+                                "name": "test"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": [
+                            {
+                                "@id": "test",
+                                "name": "test",
+                                "value": "2"
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "https://github.com/Ludee",
+                "grantNo": "03EI1005",
+                "homepage": "https://reiner-lemoine-institut.de/lod-geoss/",
+                "publisher": "",
+                "sourceCode": "https://github.com/OpenEnergyPlatform/oemetadata/tree/master",
+                "documentation": "https://openenergy-platform.org/tutorials/jupyter/OEMetadata/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz",
+                "publisherLogo": "https://reiner-lemoine-institut.de//wp-content/uploads/2015/09/rlilogo.png",
+                "fundingAgencyLogo": "https://commons.wikimedia.org/wiki/File:BMWi_Logo_2021.svg#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "title": "OpenEnergyPlatform Metadata Example",
+                    "authors": [],
+                    "description": "Metadata description",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.openstreetmap.org/",
+                    "title": "OpenStreetMap",
+                    "authors": [],
+                    "description": "A collaborative project to create a free editable map of the world",
+                    "sourceLicenses": [
+                        {
+                            "name": "ODbL-1.0",
+                            "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                            "title": "Open Data Commons Open Database License 1.0",
+                            "attribution": "© OpenStreetMap contributors",
+                            "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "m",
+                    "resolutionValue": "100"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "https://openenergy-platform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                },
+                {
+                    "@id": "https://openenergy-platform.org/ontology/oeo/OEO_00000408",
+                    "name": "test dataset"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "example",
+                "test",
+                "energy",
+                "template",
+                "KS95"
+            ],
+            "licenses": [
+                {
+                    "name": "ODbL-1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "Open Data Commons Open Database License 1.0",
+                    "attribution": "© Reiner Lemoine Institut © OpenStreetMap contributors",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2017-12-31T23:00:00+01:00",
+                        "start": "2017-01-01T00:00:00+01:00",
+                        "alignment": "left",
+                        "resolutionUnit": "h",
+                        "aggregationType": "sum",
+                        "resolutionValue": "1"
+                    },
+                    {
+                        "end": "2019-06-01T23:00:00+01:00",
+                        "start": "2018-01-01T00:00:00+01:00",
+                        "alignment": "right",
+                        "resolutionUnit": "min",
+                        "aggregationType": "sum",
+                        "resolutionValue": "15"
+                    }
+                ],
+                "referenceDate": "2016-01-01"
+            },
+            "languages": [
+                "en-GB",
+                "en-US",
+                "de-DE",
+                "fr-FR"
+            ],
+            "description": "This is an metadata example for example data. There is a corresponding table on the OEP for each metadata version.",
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-02-15"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

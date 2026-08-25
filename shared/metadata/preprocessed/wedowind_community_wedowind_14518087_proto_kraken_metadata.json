@@ -1,0 +1,104 @@
+{
+    "@id": "https://doi.org/10.5281/zenodo.14518087",
+    "name": "wedowind_community_wedowind_14518087",
+    "title": "Aventa AV-7 Taggenberg Wind Turbine and AeroSense Measurement Campaign - Blade Aerodynamics (Metadata Record)",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_community_wedowind_14518087_proto_kraken",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_community_wedowind_14518087_proto_kraken",
+            "type": "table",
+            "title": "proto-kraken.json",
+            "format": "JSON",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://zenodo.org/api/records/14518087/files/proto-kraken.json/content",
+                    "title": "proto-kraken.json",
+                    "authors": [],
+                    "description": "This is a rich metadata record for the \"AeroSense Measurements: Aventa AV-7 Taggenberg Winter 2022-2023 Campaign\".&nbsp; See: \"Related works\", for the data itself. The record contains wind turbine, sensor location, and sensor properties metadata enchoded as JSON files. Wind turbine metadata follows&nbsp; WindIO schema . Pressure sensor location metadata follows AeroSense sensor geometry schema .",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2024"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "wind_turbine",
+                "zenodo_14518087",
+                "zenodo"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This is a rich metadata record for the \"AeroSense Measurements: Aventa AV-7 Taggenberg Winter 2022-2023 Campaign\".&nbsp; See: \"Related works\", for the data itself. The record contains wind turbine, sensor location, and sensor properties metadata enchoded as JSON files. Wind turbine metadata follows&nbsp; WindIO schema . Pressure sensor location metadata follows AeroSense sensor geometry schema .",
+            "publicationDate": "2024-12-18"
+        }
+    ],
+    "description": "This is a rich metadata record for the \"AeroSense Measurements: Aventa AV-7 Taggenberg Winter 2022-2023 Campaign\".&nbsp; See: \"Related works\", for the data itself. The record contains wind turbine, sensor location, and sensor properties metadata enchoded as JSON files. Wind turbine metadata follows&nbsp; WindIO schema . Pressure sensor location metadata follows AeroSense sensor geometry schema .",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

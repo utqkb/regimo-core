@@ -1,0 +1,624 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "x2x_x2liquid_oref_1",
+            "path": null,
+            "type": "Table",
+            "title": "sedos_x2x_x2liquid_oref_1",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_abs_new_max",
+                        "type": "float array",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum commissioning",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_crude_oil_emi_co2_f_x2x",
+                        "type": "float array",
+                        "unit": "kg/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Process-specific emissions factor for CO2 for crude oil.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_crude_oil_emi_ch4_f_x2x",
+                        "type": "float array",
+                        "unit": "kg/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Process-specific emissions factor for CH4 for crude oil.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_crude_oil_emi_n2o_f_x2x",
+                        "type": "float array",
+                        "unit": "kg/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Process-specific emissions factor for N2O for crude oil.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_crude_oil",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of crude oil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_gasoline_fos_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of gasoline",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_diesel_fos_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of diesel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_kerosene_fos_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of kerosene",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_lpg_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of LPG",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_naphtha_fos_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of naphtha",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_heavy_fuel_oil_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of heavy fuel oil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_refinery_gas",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of refinery gas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_heat_low",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of low temperature heat",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_gasoline_fos_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum flow share of gasoline with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_gasoline_fos_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum flow share of gasoline with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_diesel_fos_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum flow share of diesel with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_diesel_fos_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum flow share of diesel with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_kerosene_fos_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum flow share of kerosene with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_kerosene_fos_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum flow share of kerosene with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_lpg_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum flow share of LPG with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_lpg_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum flow share of LPG with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_naphtha_fos_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum flow share of naphtha with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_naphtha_fos_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum flow share of naphtha with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_heavy_fuel_oil_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum flow share of heavy fuel oil with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_heavy_fuel_oil_orig",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum flow share of heavy fuel oil with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_refinery_gas",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum flow share of refinery gas with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_refinery_gas",
+                        "type": "float array",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum flow share of refinery gas with respect to the total output.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_p",
+                        "type": "float array",
+                        "unit": "EUR/MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Investment cost per capacity for oil refinery.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_p",
+                        "type": "float array",
+                        "unit": "EUR/MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Fixed operation and maintenance costs for oil refinery.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_var_e",
+                        "type": "float array",
+                        "unit": "EUR/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Variable costs for oil refining.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float array",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Lifetime in operation.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "text",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "g.mueller@fz-juelich.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://iea-etsap.org/E-TechDS/PDF/P04_Oil%20Ref_KV_Apr2014_GSOK.pdf",
+                    "title": "Oil Refineries",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "copyright. IEA ETSAP, 2014.",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://iea.blob.core.windows.net/assets/cbf37dfc-5fe1-4854-b248-95e6a2e5240a/Refining_Margin_Supplement_OMRAUG_12SEP2012.pdf",
+                    "title": "IEA Refinery Margins - Methodology Notes",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "copyright. IEA, 2012.",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://link.springer.com/10.1007/978-3-030-86884-0_3",
+                    "title": "Economics of Oil Refining",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0 DEED",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": null,
+                            "attribution": "copyright. Favennec, 2022.",
+                            "instruction": "You are free to: Share, Adapt. You must give appropriate credit.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://sciencebasedtargets.org/resources/legacy/2020/08/OG-Annex-H-CH4-2.pdf",
+                    "title": "Annex H - CH4 emissions analysis and scenarios",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "copyright. Science Based Targets, 2020.",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://climate.ec.europa.eu/system/files/2016-11/bm_study-refineries_en.pdf",
+                    "title": "Methodology for the free allocation of emission allowances in the EU ETS post 2012 - Sector report for the refinery industry",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "copyright. Ecofys, 2009.",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.1021/acs.est.6b05531",
+                    "title": "Assessing the Methane Emissions from Natural Gas-Fired Power Plants and Oil Refineries",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "Standard ACS AuthorChoice/Editors Choice Usage Agreement",
+                            "path": null,
+                            "title": null,
+                            "attribution": "copyright. The American Chemical Society, 2017.",
+                            "instruction": "For non-commercial research and education purposes only, You may access, download, copy, display and redistribute articles as well as adapt, translate, text and data mine content contained in articles.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "europe",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010315",
+                    "name": "mineral oil refining process"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "AP5",
+                "X2X",
+                "oedatamodel-parameter",
+                "input_data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": null,
+                    "instruction": "You are free: To Share, To Create, To Adapt",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Techno-economic parameter for new oil refineries.",
+            "contributors": [
+                {
+                    "date": "2023-04-08",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Gian Müller, FZJ",
+                    "object": "data and metadata",
+                    "comment": "Data for new oil refineries.",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2023-04-15"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

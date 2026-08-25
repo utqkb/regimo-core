@@ -1,0 +1,646 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tra_road_bus_fcev_pass_hydrogen_0_ag",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/tra_road_bus_fcev_pass_hydrogen_0_ag",
+            "type": "Table",
+            "title": "sedos_tra_road_bus_fcev_pass_hydrogen_0_ag",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0020000",
+                                "name": "identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020032",
+                                "name": "study region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/BFO_0000015",
+                                "name": "process"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_tra_inst_0",
+                        "type": "float",
+                        "unit": "vehicles",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010023",
+                                "name": "vehicle"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000189",
+                                "name": "count unit"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Existing number of vehicles.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_road_bus_pkm",
+                        "type": "float",
+                        "unit": "pkm",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140049",
+                                "name": "energy conversion efficiency"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010277",
+                                "name": "bus"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320002",
+                                "name": "passenger-kilometre"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Specific transport demand.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_hydrogen",
+                        "type": "float",
+                        "unit": "kWh/km",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140049",
+                                "name": "energy conversion efficiency"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000220",
+                                "name": "hydrogen"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Specific fuel demand.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_tra",
+                        "type": "float",
+                        "unit": "EUR/(vehicle*a)",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020168",
+                                "name": "fixed cost"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010023",
+                                "name": "vehicle"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Operation independent costs for existing and new vehicle units.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_tra",
+                        "type": "float",
+                        "unit": "EUR/vehicle",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020167",
+                                "name": "investment cost"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010023",
+                                "name": "vehicle"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Investment costs for new vehicle unit.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_var_tra",
+                        "type": "float",
+                        "unit": "EUR/pkm",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020145",
+                                "name": "variable cost"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010023",
+                                "name": "vehicle"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Variable costs per throughput output unit (excluding fuel costs).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020178",
+                                "name": "operational life time"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "mileage",
+                        "type": "float",
+                        "unit": "km/(vehicle*a)",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320061",
+                                "name": "vehicle-kilometre"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020161",
+                                "name": "annual"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Yearly mileage of a vehicle.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "occupancy_rate",
+                        "type": "float",
+                        "unit": "persons/vehicle",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000189",
+                                "name": "count unit"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000323",
+                                "name": "person"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010023",
+                                "name": "vehicle"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Occupancy rate of a vehicle.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00240021",
+                                "name": "discount rate"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000129",
+                                "name": "version number"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020166",
+                                "name": "methodology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000085",
+                                "name": "citation reference"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
+                                "name": "comment"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Hans-Christian.Gils@dlr.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "https://www.dlr.de/static/media/Logo-de.697a8e1f.svg",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://nbn-resolving.de/urn:nbn:de:0001-20231004075821157-6862514-3",
+                    "title": "Deployment of fuel cell vehicles in road transport and the expansion of the hydrogen refueling station network: 2023 Update",
+                    "authors": [],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. Samsun, Rex. 2023",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://elib.uni-stuttgart.de/handle/11682/1993",
+                    "title": "The future role of alternative powertrains and fuels in the German transport sector : a model based scenario analysis with respect to technical, economic and environmental aspects with a focus on road transport: A model based scenario analysis with respect to technical, economic and environmental aspects with a focus on road transport",
+                    "authors": [],
+                    "description": "The transport sector is facing the challenges of satisfying the ever increasing transport demand on the one hand and achieving greenhouse gas (GHG) emission reduction targets without compromising economic development on the other hand. There are various alternative fuels and powertrains which might play a role in the future of the German transport sector. Amongst these options, biofuels are considered to help lower GHG emissions. However, they are severely criticized to create an additional strain for the energy system and particularly for the transport sector with land area requirement for energy crop production, which may imply a competition with food production. This study aims to assess the future role of alternative fuels and powertrains in the German transport sector in terms of their costs, efficiencies, GHG emissions and land area requirement for energy crops. To fulfill this aim, a techno-economic analysis of all relevant fuels and powertrain options was performed and a model based approach was employed. The utilized model belongs to the TIMES (The Integrated MARKAL EFOM System) family and is a bottom-up linear cost optimization energy system model. A scenario analysis was employed in order to assess the effect of different technological, economic, environmental and political conditions on the overall system. The results of the scenario analysis indicated that the transport system will still be dominated by conventional powertrains in 2030. Alternative powertrains are projected to play only a secondary role until 2030. It is not expected that fuel cell or battery electric passenger cars will be introduced into the market until 2030 in Germany. Nevertheless, hybrid electric powertrains have to be used in the German passenger car sector under ambitious GHG emission reduction targets and high oil prices. The introduction of alternative powertrains (such as hybrid electric and fuel cell powertrain) is much more likely in the bus sector (especially for public buses) than in passenger cars or in the road freight sector. Furthermore conventional fuels are expected to remain an important part of the German transport system until 2030. However, not only conventional fuels will be utilized in the future, but also biofuels and hydrogen are required. It is concluded that the transport sector should not be the first sector to reduce GHG emissions within an overall GHG emission mitigation strategy. However, with the ambitious GHG emission reduction targets (such as self-commitment of the German government) some contributions should also come from the transport sector. Der Transportsektor steht vor der Herausforderung, einerseits den steigenden Transportbedarf zu befriedigen und andererseits die Treibhausgasreduktionsziele zu erreichen, ohne seine wirtschaftliche Entwicklung zu gefaehrden. Verschiedene Alternativkraftstoffe und alternative Antriebssysteme koennten im zukuenftigen Transportsektor Deutschlands eine Rolle spielen. Biokraftstoffe als eine dieser Optionen werden als Massnahme zur Verringerung der Treibhausgasemissionen angesehen. Sie stehen jedoch in der Kritik, eine zusaetzliche Belastung fuer das Energiesystem, insbesondere fuer den Transportsektor zu schaffen, wo der Flaechenverbrauch fuer den Energiepflanzenanbau im Wettbewerb mit der Lebensmittelproduktion stehen koennte. Diese Studie hat zum Ziel, die zukuenftige Rolle von Alternativkraftstoffen und antriebssystemen im deutschen Transportsektor hinsichtlich ihrer Kosten, Effizienz, Treibhausgasemissionen und Flaechenverbrauchs fuer Energiepflanzen zu bewerten. Um dieses Ziel zu erfuellen, wurde eine technisch-oekonomische Analyse aller relevanten Kraftstoff- und Antriebsoptionen durchgefuehrt und ein modellbasierter Ansatz angewendet. Das verwendete Modell gehoert zur Familie der TIMES (The Integrated MARKAL EFOM System) und ist ein bottom-up, lineares, kostenoptimierendes Energiesystemmodell. Eine Szenarioanalyse wurde zur Bewertung der Auswirkungen verschiedener technologischer, oekonomischer, politischer und Umweltfaktoren auf das Gesamtsystem eingesetzt. Die Ergebnisse der Szenarioanalyse zeigen, dass das Transportsystem 2030 noch von konventionellen Antrieben dominiert sein wird. Alternativantriebe werden bis 2030 voraussichtlich nur eine sekundaere Rolle spielen. Es wird nicht erwartet, dass Brennstoffzellen oder batteriebetriebene PKW vor 2030 in den deutschen Markt eingefuehrt werden. Dessen ungeachtet muessen bei ambitionierten Treibhausgasreduktionszielen und hohen Oelpreisen hybride, elektrische Antriebe im deutschen PKW-Sektor eingesetzt werden. Die Einfuehrung alternativer Antriebssysteme (wie elektrohybride und Brennstoffzellenantriebe) ist im Bussektor (vor allem oeffentliche Busse) viel wahrscheinlicher als im PKW- oder Strassengueterverkehr. Es wird erwartet, dass konventionelle Kraftstoffe weiterhin ein wichtiger Teil des deutschen Transportsystems bis 2030 bleiben. Trotzdem werden zukuenftig neben konventionellen Kraftstoffen allein auch Biokraftstoffe und Wasserstoff benoetigt. Daraus folgt, dass der Transportsektor nicht der erste Sektor zur Reduzierung der Treibhausgasemissionen innerhalb der gesamten Emissionsvermeidungsstrategie sein sollte. Bei den ehrgeizigen Emissionsreduktionszielen (wie der Selbstverpflichtung der deutschen Regierung) sollten trotzdem einige Beitraege auch aus dem Transportsektor kommen.",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. Oezdemir. 2011",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bast.de/DE/Publikationen/Berichte/unterreihe-v/2018-2017/v290.html;jsessionid=3F33AFFF84753764A7C4E8E967829799.live21301?nn=1836400",
+                    "title": "Fahrleistungserhebung 2014 -- Inlaenderfahrleistung",
+                    "authors": [],
+                    "description": "Die Gesamtfahrleistung von Kraftfahrzeugen (Kfz), also die Summe der Kilometer, die von einer bestimmten Fahrzeuggesamtheit innerhalb eines festgelegten Zeitraumes auf einem in raeumlicher und sachlicher Hinsicht abgegrenzten Strassennetz zurueckgelegt werden, ist eine zentrale Kenngroesse zur Beschreibung der Inanspruchnahme der Strassenverkehrsinfrastruktur. In der Gesamtfahrleistung spiegelt sich unmittelbar das Ausmass der raeumlichen Austauschbeziehungen innerhalb von Wirtschaft und Gesellschaft wider. Mit der Fahrleis tungserhebung (FLE) 2014 liegt fuer die Bundes republik Deutschland erstmals wieder seit 2002 detailliertes statistisches Datenmaterial zur Fahr leistung von Kraftfahrzeugen vor.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Transport/technology_data_for_commercial_freight_and_passenger_transport.pdf",
+                    "title": "Technology Data: Commercial freight- and passenger transport",
+                    "authors": [],
+                    "description": "This catalogue presents technologies applying to on-road Heavy Duty Vehicles(HDV), more specifically, trucks and buses with a maximum authorized weight of more than 3.5 tons1. Heavy duty vehicles, in particular trucks, have a high degree of diversity, i.e., they present a wide variety of different applications, requirements and driving patterns.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "",
+                    "title": "ownAssumption",
+                    "authors": [],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. DLR. 2023",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010277",
+                    "name": "bus"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010025",
+                    "name": "fuel cell electric vehicle"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "input_data",
+                "transport",
+                "final"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset describes the scalar techno-economic as well as scenario data for the technology: bus fuel cell electric vehicle.",
+            "contributors": [
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hedda Gardian",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Samuel Hasselwander",
+                    "object": "data and metadata for cars",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fabia Miorelli",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Niklas Wulff",
+                    "object": "data for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Eugenio Salvador Arellano Ruiz",
+                    "object": "metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hans Christian Gils",
+                    "object": "data for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Patrick Jochem",
+                    "object": "data and metadata road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2025-04-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Carsten Hoyer-Click",
+                    "object": "data and metadata for road transport",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-04-01"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

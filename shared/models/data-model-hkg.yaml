@@ -1,0 +1,188 @@
+id: https://w3id.org/kit/research-records
+name: research-records-schema
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  dc: http://purl.org/dc/elements/1.1/
+  oai: http://www.openarchives.org/OAI/2.0/
+
+types:
+  NonEmptyString:
+    description: Must not be empty or contain only whitespace. / Inhalt/Wert darf nicht leer sein
+    typeof: string
+    uri: xsd:string
+    pattern: '.*\S.*'
+
+classes:
+  ResearchRecordContainer:
+    description: A container for a list of harvested research records.
+    slots:
+      - records
+    slot_usage:
+      records:
+        multivalued: true
+        range: ResearchRecord
+        required: true
+        inlined_as_list: true # Without this, records with an identifier (pid) collapse to just their pid integer
+
+  ResearchRecord:
+    description: A wrapper for the metadata and metadata schema.
+    slots:
+      - content
+      - harvested_date
+      - harvester_type
+      - id
+      - pid
+      - source
+    slot_usage:
+      content:
+        required: true
+
+  Content:
+    slots:
+      - record
+      - schema
+      - record_structured  # This slot is usable after structuring the xml-records into dicts
+    slot_usage:
+      record_structured:
+        required: true
+
+  Record:
+    description: Bibliographic metadata for a research publication.
+    slots:
+      - title
+      - creators
+      - contributors
+      - subjects
+      - description
+      - publisher
+      - date
+      - identifiers
+      - rights
+      - types
+      - sources
+      - formats
+      - language
+      - relation
+      - xmlns_dc
+      - xmlns_oai_dc
+      - xsi_schema_location
+
+slots:
+  records:
+    range: ResearchRecord
+  content:
+    range: Content
+  harvested_date:
+    range: datetime
+  harvester_type:
+    range: string
+  id:
+    range: string
+  pid:
+    range: integer
+    identifier: true
+  source:
+    range: uri
+  record:
+    range: string
+  schema:
+    range: string
+  record_structured:
+    description: Structured metadata parsed from XML.
+    range: Record
+    required: true
+  title:
+    range: string
+    slot_uri: dc:title
+    alias: dc:title
+  creators:
+    slot_uri: dc:creator
+    alias: dc:creator
+    required: true
+    any_of:
+      - range: string
+      - range: string
+        multivalued: true
+  subjects:
+    multivalued: true
+    slot_uri: dc:subject
+    alias: dc:subject
+    description: >
+      dc:subject item type is intentionally left unconstrained (no 'range') because
+      the source XML sometimes contains empty subject elements, which xmltodict
+      parses as None. Declaring range: string here would reject those nulls.
+  description:
+    range: string
+    slot_uri: dc:description
+    alias: dc:description
+  publisher:
+    range: string
+    slot_uri: dc:publisher
+    alias: dc:publisher
+  date:
+    range: date
+    slot_uri: dc:date
+    alias: dc:date
+  identifiers:
+    range: uri
+    multivalued: true
+    slot_uri: dc:identifier
+    alias: dc:identifier
+  rights:
+    slot_uri: dc:rights
+    alias: dc:rights
+    any_of:
+      - range: uri
+      - range: uri
+        multivalued: true
+  types:
+    range: string
+    multivalued: true
+    slot_uri: dc:type
+    alias: dc:type
+  sources:
+    slot_uri: dc:source
+    alias: dc:source
+    any_of:
+      - range: string
+      - range: string
+        multivalued: true
+  relation:
+    slot_uri: dc:relation
+    alias: dc:relation
+    any_of:
+      - range: string
+      - range: string
+        multivalued: true
+  formats:
+    range: string
+    slot_uri: dc:format
+    alias: dc:format
+  language:
+    slot_uri: dc:language
+    alias: dc:language
+    any_of:
+      - range: string
+      - range: string
+        multivalued: true
+  contributors:
+    slot_uri: dc:contributor
+    alias: dc:contributor
+    any_of:
+      - range: string
+      - range: string
+        multivalued: true
+  xmlns_dc:
+    description: XML namespace declaration carried over from the source OAI-PMH record.
+    range: string
+    alias: '@xmlns:dc'
+  xmlns_oai_dc:
+    description: XML namespace declaration carried over from the source OAI-PMH record.
+    range: string
+    alias: '@xmlns:oai_dc'
+  xsi_schema_location:
+    description: XML schema location attribute carried over from the source OAI-PMH record.
+    range: string
+    alias: '@xsi:schemaLocation'

@@ -1,0 +1,539 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "szenariendb_gwp",
+            "path": "https://openenergy-platform.org/dataedit/view/climate/szenariendb_gwp",
+            "type": "Table",
+            "title": "Global warming potentials from IPCC Assessment Reports",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/40",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "greenhouse_gas",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000020",
+                                "name": "greenhouse gas"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Name of the greenhouse gas given as common name, chemical name and/or industrial abbreviation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gas_group",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000020",
+                                "name": "greenhouse gas"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Gas group a gas is belonging to. The gas groups were harmonized across the various IPCC Assessment Reports.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "chemical_formula",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Chemical formula of the respective greenhouse gas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ipcc_report",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020012",
+                                "name": "study report"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source of the GWP value. AR1 meaning the First Assessment Report, AR2 the second Assessment Report etc.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000119",
+                                "name": "definition source"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source table within the respective IPCC Assessment Report",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "time_horizon",
+                        "type": "integer",
+                        "unit": "null",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/BFO_0000008",
+                                "name": "temporal region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Time horizon for which the GWP of a greenhouse gas was calculated. If unsure: a time horizon of 100 years is most commonly used.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "global_warming_potential",
+                        "type": "float",
+                        "unit": "kg CO2 equivalent per kg gas",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010078",
+                                "name": "global warming potential"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Global warming potential of a greenhouse gas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "inequality_sign",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "For some gases the Assessment Reports can only give lower or upper limits of the GWP values. In this case this column provides information whether the GWP is below or above a specific value.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "covered_by_unfccc",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "This column indicates whether a specific gas is covered by the United Nations Framework Convention on Climate Change (UNFCCC).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "covered_by_montreal_protocol",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "This column indicates whether a specific gas is covered by the Montreal Protocol on Substances that Deplete the Ozone Layer.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "covered_by_eu_f_gas_regulation",
+                        "type": "varchar",
+                        "unit": "null",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "This column indicates whether a specific gas is covered by the EU F-gas regulation (Regulation (EU) No 517/2014 of the European Parliament and of the Council of 16 April 2014 on fluorinated greenhouse gases and repealing Regulation (EC) No 842/2006).",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03ET4057",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.oeko.de/typo3conf/ext/wwt3_sitepackage/Resources/Public/frontend/assets/images/logo.svg",
+                "fundingAgencyLogo": "https://commons.wikimedia.org/wiki/File:BMWi_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.ipcc.ch/report/ar1/wg1/",
+                    "title": "Climate Change: The IPCC Scientific Assessment",
+                    "authors": [],
+                    "description": "Report Prepared for IPCC by Working Group 1",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ipcc.ch/report/ar2/wg1/",
+                    "title": "Climate Change 1995: The Science of Climate Change",
+                    "authors": [],
+                    "description": "Contribution of Working Group I to the Second Assessment Report of the Intergovernmental Panel on Climate Change",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ipcc.ch/report/ar3/wg1/",
+                    "title": "Climate Change 2001: The Scientific Basis",
+                    "authors": [],
+                    "description": "Contribution of Working Group I to the Third Assessment Report of the Intergovernmental Panel on Climate Change",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ipcc.ch/report/ar4/wg1/",
+                    "title": "Climate Change 2007: The Physical Science Basis",
+                    "authors": [],
+                    "description": "Working Group I Contribution to the Fourth Assessment Report of the Intergovernmental Panel on Climate Change",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ipcc.ch/report/ar5/wg1/",
+                    "title": "Climate Change 2013: The Physical Science Basis",
+                    "authors": [],
+                    "description": "Working Group I Contribution to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://unfccc.int/process-and-meetings/transparency-and-reporting/reporting-and-review-under-the-convention/greenhouse-gas-inventories-annex-i-parties/reporting-requirements",
+                    "title": "Reporting Requirements",
+                    "authors": [],
+                    "description": "The  UNFCCC reporting guidelines on annual inventories for Parties included in Annex I to the Convention (Annex I Parties) require each Annex I Party [...] to provide its annual GHG inventory covering emissions and removals of direct GHGs (carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), perfluorocarbons (PFCs), hydrofluorocarbons (HFCs), sulphur hexafluoride (SF6) and nitrogen trifluoride (NF3)) [...].",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ozone.unep.org/sites/default/files/2019-06/MP_Handbook_2019_W.pdf",
+                    "title": "Handbook for the Montreal Protocol on Substances that Deplete the Ozone Layer (Thirteenth edition, 2019)",
+                    "authors": [],
+                    "description": "Published by the Ozone Secretariat (The Secretariat for the Vienna Convention for the Protection of the Ozone Layer and for the Montreal Protocol on Substances that Deplete the Ozone Layer of the United Nations Environment Programme)",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://data.europa.eu/eli/reg/2014/517/oj",
+                    "title": "Regulation (EU) No 517/2014 of the European Parliament and of the Council of 16 April 2014 on fluorinated greenhouse gases and repealing Regulation (EC) No 842/2006",
+                    "authors": [],
+                    "description": "EU F-Gas Regulation",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "global",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010078",
+                    "name": "global warming potential"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "IPCC",
+                "Global warming potential",
+                "GWP",
+                "Greenhouse gas"
+            ],
+            "licenses": [
+                {
+                    "name": "dl-de-by-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Data licence Germany – attribution – version 2.0",
+                    "attribution": "© Öko-Institut",
+                    "instruction": "https://www.govdata.de/dl-de/by-2-0",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table holds global warming potentials (GWP) published in the IPCC Assessment reports.",
+            "contributors": [
+                {
+                    "date": "2019-09-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Lukas Emele",
+                    "object": "data",
+                    "comment": "Collection of data from IPCC assessment reports",
+                    "organization": null
+                },
+                {
+                    "date": "2019-09-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Lukas Emele",
+                    "object": "metadata",
+                    "comment": "Creation of metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-10-04",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Mirjam Stappel",
+                    "object": "metadata",
+                    "comment": "review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-10-08",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christian Hofmann",
+                    "object": "metadata",
+                    "comment": "review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-10-08",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonas Huber",
+                    "object": "metadata",
+                    "comment": "review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2020-05-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Juli Reithinger",
+                    "object": "data",
+                    "comment": "Assistance whith compiling the improved table.",
+                    "organization": null
+                },
+                {
+                    "date": "2020-05-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Lukas Emele",
+                    "object": "data",
+                    "comment": "Extension of the table, now covering all gases. Three additional columns showing which greenhouse gas is covered by which reporting obligation.",
+                    "organization": null
+                },
+                {
+                    "date": "2020-05-12",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Lukas Emele",
+                    "object": "metadata",
+                    "comment": "Bug fixes in metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-01-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hannah Förster",
+                    "object": "metadata",
+                    "comment": "Correct link BMWi logo",
+                    "organization": null
+                },
+                {
+                    "date": "2023-11-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "Metadata",
+                    "comment": "ontology annotation",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2019-09-09"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

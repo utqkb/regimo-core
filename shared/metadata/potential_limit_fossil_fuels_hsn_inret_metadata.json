@@ -1,0 +1,253 @@
+{
+    "id": "potential_limit_fossil_fuels_hsn_inret",
+    "name": "potential_limit_fossil_fuels_hsn_inret",
+    "title": "Potential limit of fossil fuels",
+    "resources": [
+        {
+            "name": "potential_limit_fossil_fuels_hsn_inret",
+            "path": "",
+            "type": "table",
+            "title": "potential_limit_fossil_fuels_hsn_inret",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "-",
+                        "nullable": false,
+                        "description": "identification number"
+                    },
+                    {
+                        "name": "model_id",
+                        "type": "string",
+                        "unit": "-",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "model identification number"
+                    },
+                    {
+                        "name": "Menge_Steinkohle",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00140058",
+                                "name": "technological flow potential"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Potential limit of hard coal"
+                    },
+                    {
+                        "name": "Menge_Braunkohle",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00140058",
+                                "name": "technological flow potential"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Potential limit of lignite"
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "ZO.RRO II - Zero Carbon Cross Energy System",
+                "contact": "Hochschule Nordhausen - Institut für Regenerative Energietechnik; ret@hs-nordhausen.de",
+                "grantNo": "",
+                "homepage": "https://zorro-thueringen.de/",
+                "publisher": "Open Energy Platform",
+                "sourceCode": "https://github.com/in-RET/ZO.RRO2",
+                "documentation": "ToDo",
+                "fundingAgency": "Thüringer Ministerium für Umwelt, Energie, Naturschutz und Forsten",
+                "publisherLogo": "https://github.com/OpenEnergyPlatform/organisation/blob/production/logo/OpenEnergyFamily_Logo_OpenEnergyPlatform.svg",
+                "fundingAgencyLogo": "https://github.com/in-RET/ZO.RRO2/blob/main/TH_UENF_4c.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": ","
+            },
+            "subject": [
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00140058",
+                    "name": "technological flow potential"
+                },
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00000251",
+                    "name": "lignite"
+                },
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00000204",
+                    "name": "hard coal"
+                }
+            ],
+            "encoding": "utf8",
+            "keywords": [
+                "oemof",
+                "hsn_in_ret",
+                "zo_rro_ii",
+                "climate_neutrality",
+                "thuringia"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Common Attribution 4.0 International",
+                    "attribution": "© Hochschule Nordhausen - Institut für Regenerative Energietechnik, © ZO.RRO II Project Team",
+                    "instruction": "You are free to use, share and modify; As long as you attribute, include copyright and state changes",
+                    "copyrightStatement": ""
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2025-01-01T00:00:00+00:00",
+                        "start": "2025-01-01T00:00:00+00:00",
+                        "alignment": null,
+                        "resolutionUnit": "a",
+                        "aggregationType": "average",
+                        "resolutionValue": "5a"
+                    }
+                ],
+                "referenceDate": "2025-01-01"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Potential limit of fossil fuels (lignite and hard coal); A constant reference over 8760 hours is assumed. Therefore, the potential is specified as power; data based on literature data. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Sciences.",
+            "contributors": [
+                {
+                    "date": "2024-12-31",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Amèlie Oberdorfer",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0009-0004-7229-2118",
+                    "roles": [
+                        "DataManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Andreas Lubojanski",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0000-0002-4269-3779",
+                    "roles": [
+                        "ContactPerson",
+                        "DataCurator",
+                        "Distributor",
+                        "ProjectManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Christoph Schmidt",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Rohith Krishnan Bala Krishnan",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0009-0004-8449-3443",
+                    "roles": [
+                        "ProjectMember"
+                    ],
+                    "title": "Theresa Reinhardt",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "Distributor",
+                        "ProjectLeader",
+                        "ProjectMember"
+                    ],
+                    "title": "Viktor Wesselak",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": "https://orcid.org/0009-0004-0638-4639",
+                    "roles": [
+                        "Other"
+                    ],
+                    "title": "Stefan Kirsch",
+                    "object": "metadata",
+                    "comment": "consulting on FAIR data publication",
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Ernst-Abbe-Hochschule Jena"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": "https://orcid.org/0000-0003-3633-1349",
+                    "roles": [
+                        "Other"
+                    ],
+                    "title": "Kevin Lindt",
+                    "object": "metadata",
+                    "comment": "consulting on FAIR data publication",
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Technische Universität Ilmenau"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2025-11-19"
+        }
+    ],
+    "description": "Potential limit of fossil fuels (lignite and hard coal); A constant reference over 8760 hours is assumed. Therefore, the potential is specified as power; data based on literature data. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Sciences.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

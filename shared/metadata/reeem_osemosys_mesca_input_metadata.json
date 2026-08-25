@@ -1,0 +1,393 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "reeem_osemosys_mesca_input",
+            "type": "Table",
+            "title": "REEEM OSeMOSYS MESCA Input",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Row id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dfid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Internal dataframe id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pathway",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM pathway",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "framework",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM framework",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "schema",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "1. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "field",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "2. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "3. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "indicator",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "",
+                        "unit": "unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "aggregation",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "True if aggregated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tags",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Free classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "updated",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Data source",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "TIMES PanEU",
+                    "authors": [],
+                    "description": "TIMES is an energy system model generator which is a further development of the model generators MARKAL and EFOM-ENV, written in GAMS. TIMES is a bottom-up linear optimization model based on a technical approach. The aim of the model is to optimize the energy system cost according to the given energy demands, energy technologies, and policy requirements. The Pan-European TIMES energy system model (TIMES PanEU) is a 30 region partial equilibrium energy system model. The model covers the EU-28 countries, with addition of Norway and Switzerland. The base year is 2010 and the time horizon ends in 2050. The current structure accounts for 12 time slices, 4 seasonal and 3 daily.  The model is split in 5-year time steps. Both greenhouse gas emissions (CO2, CH4, N2O, SF6) and local air pollutant emissions (SO2, CO, NOx, NMVOC, PM10, PM2.5) are included. TIMES PanEU contains the country specific data covering all the sectors related to energy supply and demand. The system commences from the potential of different energy sources in a particular country and includes public and industrial generation of electricity, industry, agriculture, refineries, inventory power stations and the end-use service demands such as heating, lighting and transportation.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Open Data Commons Attribution License 1.0 (ODC-BY-1.0)",
+                            "path": "http://openenergyplatform.org/factsheets/models/41/",
+                            "title": "",
+                            "attribution": "© Institut für Energiewirtschaft und Rationelle Energieanwendung (IER) der Universität Stuttgart",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "MESSAGE",
+                    "authors": [],
+                    "description": "Model for Energy Supply Strategy Alternatives and their General Environmental Impacts",
+                    "sourceLicenses": [
+                        {
+                            "name": "Open Data Commons Attribution License 1.0 (ODC-BY-1.0)",
+                            "path": "http://www.iiasa.ac.at/web/home/research/researchPrograms/Energy/MESSAGE.en.html",
+                            "title": "",
+                            "attribution": "© Institut für Energiewirtschaft und Rationelle Energieanwendung (IER) der Universität Stuttgart",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Technology data catalogue, 2018",
+                    "authors": [],
+                    "description": "Technology Data provides information about technology, economy and environment for a number of energy installations and are among other things used by the Danish Energy Agency for energy projections.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Open Data Commons Attribution License 1.0 (ODC-BY-1.0)",
+                            "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                            "title": "",
+                            "attribution": "© Institut für Energiewirtschaft und Rationelle Energieanwendung (IER) der Universität Stuttgart",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "EE, FI, LT, LV",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Creative Commons Attribution 4.0 International",
+                    "path": "http://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "CC-BY-4.0",
+                    "attribution": "© Lithuanian Energy Institute",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050",
+                        "start": "2015",
+                        "alignment": "",
+                        "resolutionUnit": "years",
+                        "aggregationType": "",
+                        "resolutionValue": "1"
+                    }
+                ],
+                "referenceDate": "2015"
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Input parameters: Costs, Lifetime, Efficiency, Final demand",
+            "contributors": [
+                {
+                    "date": "2019-01-28",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table and metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-01-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Linas",
+                    "object": null,
+                    "comment": "Update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2019-06-04",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "4lm",
+                    "object": null,
+                    "comment": "Update sources in metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

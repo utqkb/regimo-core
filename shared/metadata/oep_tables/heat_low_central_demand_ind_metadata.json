@@ -1,0 +1,125 @@
+{
+    "@id": null,
+    "name": "2045_scenario",
+    "title": "2045_scenario",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "heat_low_central_demand_ind",
+            "path": "data/elements/heat_low_central-demand_ind.csv",
+            "title": "heat_low_central-demand_ind",
+            "extras": {
+                "oep:normalized_columns": {
+                    "bus": "bus",
+                    "name": "name",
+                    "tech": "tech",
+                    "type": "type",
+                    "amount": "amount",
+                    "region": "region",
+                    "carrier": "carrier",
+                    "profile": "profile"
+                },
+                "oep:normalized_table_name": "heat_low_central_demand_ind"
+            },
+            "format": "csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "amount",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "bus",
+                        "type": "string",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "string",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "profile",
+                        "type": "string",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "region",
+                        "type": "string",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "tech",
+                        "type": "string",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "format": "default",
+                        "nullable": true
+                    }
+                ],
+                "primaryKey": [
+                    "name"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "bus"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "name"
+                            ],
+                            "resource": "bus"
+                        }
+                    },
+                    {
+                        "fields": [
+                            "profile"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "profile"
+                            ],
+                            "resource": "heat_low_central_demand_ind_profile"
+                        }
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            },
+            "profile": "tabular-data-resource",
+            "encoding": "utf-8",
+            "keywords": [
+                "SLE",
+                "preprocessed"
+            ],
+            "mediatype": "text/csv"
+        }
+    ],
+    "description": null,
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

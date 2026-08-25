@@ -1,0 +1,102 @@
+{
+    "name": "wedowind_world_bank_group_the_netherlands_0ddc23c5",
+    "title": "The Netherlands - Wind Speed and Wind Power Potential Maps",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_world_bank_group_the_netherlands_19d70f74",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_world_bank_group_the_netherlands_19d70f74",
+            "type": "table",
+            "title": "The Netherlands - Wind Speed and Wind Power Potential Maps - GIS",
+            "format": "HTML",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://globalwindatlas.info/area/Netherlands",
+                    "title": "The Netherlands - Wind Speed and Wind Power Potential Maps - GIS",
+                    "authors": [],
+                    "description": "Maps with wind speed, wind rose and wind power density potential in The Netherlands. The GIS data stems from the Global Wind Atlas (http://globalwindatlas.info/). GIS data is available as JSON and CSV. The second link provides poster size (.pdf) and midsize maps (.png).",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2026"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "ckan_the_netherlands_wind_speed_4605e0fc",
+                "ckan"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Maps with wind speed, wind rose and wind power density potential in The Netherlands. The GIS data stems from the Global Wind Atlas (http://globalwindatlas.info/). GIS data is available as JSON and CSV. The second link provides poster size (.pdf) and midsize maps (.png).",
+            "publicationDate": "2026-01-21"
+        }
+    ],
+    "description": "Maps with wind speed, wind rose and wind power density potential in The Netherlands. The GIS data stems from the Global Wind Atlas (http://globalwindatlas.info/). GIS data is available as JSON and CSV. The second link provides poster size (.pdf) and midsize maps (.png).",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

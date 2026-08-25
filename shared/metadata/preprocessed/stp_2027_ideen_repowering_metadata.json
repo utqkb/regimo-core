@@ -1,0 +1,294 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "rpg_abw_regional_plan",
+            "path": "rpg_abw_regional_plan",
+            "type": "Table",
+            "title": "Regionalplan Anhalt-Bitterfeld-Wittenberg",
+            "format": "gpkg",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "pk",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "vr",
+                        "type": "string",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "planzeichen",
+                        "type": "string",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ebene",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bezeich",
+                        "type": "string",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bezeich_2",
+                        "type": "string",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bezeich_3",
+                        "type": "string",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bezeich_4",
+                        "type": "string",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "plan_status",
+                        "type": "string",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "d_beschluss",
+                        "type": "date",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "d_genehmigung",
+                        "type": "date",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "d_inkraft",
+                        "type": "date",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geometry",
+                        "type": "geometry",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "BLA",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "https://reiner-lemoine-institut.de/ueber-uns/kontakt/",
+                "grantNo": null,
+                "homepage": "https://abw.rl-institut.de",
+                "publisher": "",
+                "sourceCode": "https://github.com/rl-institut/apipe/",
+                "documentation": "https://digiplan.readthedocs.io",
+                "fundingAgency": "https://www.region-gestalten.bund.de",
+                "publisherLogo": "https://reiner-lemoine-institut.de//wp-content/uploads/2015/09/rlilogo.png",
+                "fundingAgencyLogo": "https://www.region-gestalten.bund.de/Region/SiteGlobals/Frontend/Images/logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "https://www.planungsregion-abw.de/regionalplanung/teilplan-windenergie/teilplan-2018/",
+                    "title": "Regionalplan Anhalt-Bitterfeld-Wittenberg",
+                    "authors": [],
+                    "description": "GeodatensÃ¤tze aus TeilplÃ¤nen Wind 2018 und 2027 der Regionalen Planungsgemeinschaft Anhalt-Bitterfeld-Wittenberg.",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE-BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Data licence Germany â€“ attribution â€“ version 2.0",
+                            "attribution": "Â© Regionale Planungsgemeinschaft Anhalt-Bitterfeld-Wittenberg / Jahr",
+                            "instruction": "The data and meta-data provided may, for commercial and non-commercial use, in particular be copied, printed, presented, altered, processed and transmitted to third parties; be merged with own data and with the data of others and be combined to form new and independent datasets; be integrated in internal and external business processes, products and applications in public and non-public electronic networks.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "ABW",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "ABW",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "utf-8",
+            "keywords": [
+                "GeodatensÃ¤tze",
+                "TeilplÃ¤ne",
+                "PLanungsgemeinschaft"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE-BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Data licence Germany â€“ attribution â€“ version 2.0",
+                    "attribution": "Â© Regionale Planungsgemeinschaft Anhalt-Bitterfeld-Wittenberg / Jahr",
+                    "instruction": "The data and meta-data provided may, for commercial and non-commercial use, in particular be copied, printed, presented, altered, processed and transmitted to third parties; be merged with own data and with the data of others and be combined to form new and independent datasets; be integrated in internal and external business processes, products and applications in public and non-public electronic networks.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2023-03-03"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "GeodatensÃ¤tze aus TeilplÃ¤nen Wind 2018 und 2027 der Regionalen Planungsgemeinschaft Anhalt-Bitterfeld-Wittenberg.",
+            "contributors": [
+                {
+                    "date": "2023-09-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "aaronschilling",
+                    "object": "metadata",
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2018-05-30"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

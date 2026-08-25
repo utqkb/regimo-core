@@ -1,0 +1,368 @@
+{
+    "id": "scaled_household_electricity_load_profiles_swest",
+    "name": "scaled_household_electricity_load_profiles_swest",
+    "title": "Scaled household electricity load profiles swest",
+    "resources": [
+        {
+            "name": "Scaled_household_electricity_load_profiles_HSN_inRET_swest",
+            "path": "",
+            "type": "table",
+            "title": "Scaled_household_electricity_load_profiles_HSN_inRET swest",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030033",
+                                "name": "index"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Index column.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year_2020",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scaled household electricity load profiles for the region for the year 2020.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year_2025",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scaled household electricity load profiles for the region for the year 2025.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year_2030",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scaled household electricity load profiles for the region for the year 2030.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year_2035",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scaled household electricity load profiles for the region for the year 2035.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year_2040",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scaled household electricity load profiles for the region for the year 2040.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year_2045",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scaled household electricity load profiles for the region for the year 2045.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year_2050",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scaled household electricity load profiles for the region for the year 2050.",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "demand"
+            ],
+            "context": {
+                "title": "ZO.RRO II - Zero Carbon Cross Energy System",
+                "contact": "Hochschule Nordhausen - Institut für Regenerative Energietechnik; ret@hs-nordhausen.de",
+                "grantNo": "",
+                "homepage": "https://zorro-thueringen.de/",
+                "publisher": "Open Energy Platform",
+                "sourceCode": "https://github.com/in-RET/ZO.RRO2",
+                "documentation": "ToDo",
+                "fundingAgency": "Thüringer Ministerium für Umwelt, Energie, Naturschutz und Forsten",
+                "publisherLogo": "https://github.com/OpenEnergyPlatform/organisation/blob/production/logo/OpenEnergyFamily_Logo_OpenEnergyPlatform.svg",
+                "fundingAgencyLogo": "https://github.com/in-RET/ZO.RRO2/blob/main/TH_UENF_4c.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": ","
+            },
+            "sources": [
+                {
+                    "path": "https://doi.org/10.1016/j.energy.2019.04.097",
+                    "title": "Generating high-resolution multi-energy load profiles for remote areas with an open-source stochastic model",
+                    "authors": [
+                        "Lombardi, F.",
+                        "Balderrama, S.",
+                        "Quoilin, S.",
+                        "Colombo, E."
+                    ],
+                    "description": "{1}}",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": "Elsevier Ltd.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2019"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "EPSG:4326",
+                    "name": "Hildburghausen",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "m",
+                    "resolutionValue": "1"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Untere Braugasse 16, 98646 Hildburghausen",
+                    "latitude": "50.4265",
+                    "longitude": "10.7316"
+                }
+            },
+            "subject": [
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00000145",
+                    "name": "electricity sector"
+                },
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00000214",
+                    "name": "household sector"
+                },
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00320062",
+                    "name": "electricity demand"
+                },
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                    "name": "time series"
+                }
+            ],
+            "encoding": "utf8",
+            "keywords": [
+                "oemof",
+                "hsn_in_ret",
+                "zo_rro_ii",
+                "climate_neutrality",
+                "thuringia"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Common Attribution 4.0 International",
+                    "attribution": "© Hochschule Nordhausen - Institut für Regenerative Energietechnik, © ZO.RRO II Project Team",
+                    "instruction": "You are free to use, share and modify; As long as you attribute, include copyright and state changes",
+                    "copyrightStatement": ""
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2025-01-01T00:00:00+00:00",
+                        "start": "2025-01-01T00:00:00+00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "h",
+                        "aggregationType": "current",
+                        "resolutionValue": "1"
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Scaled household electricity load profiles for the various planning region Hildburghausen (swest). These are generic load profiles created using the RAMP software {1}. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Science.",
+            "contributors": [
+                {
+                    "date": "2024-12-31",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Amèlie Oberdorfer",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0009-0004-7229-2118",
+                    "roles": [
+                        "DataManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Andreas Lubojanski",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0000-0002-4269-3779",
+                    "roles": [
+                        "ContactPerson",
+                        "DataCurator",
+                        "Distributor",
+                        "ProjectManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Christoph Schmidt",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Rohith Krishnan Bala Krishnan",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0009-0004-8449-3443",
+                    "roles": [
+                        "ProjectMember"
+                    ],
+                    "title": "Theresa Reinhardt",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "Distributor",
+                        "ProjectLeader",
+                        "ProjectMember"
+                    ],
+                    "title": "Viktor Wesselak",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": "https://orcid.org/0009-0004-0638-4639",
+                    "roles": [
+                        "Other"
+                    ],
+                    "title": "Stefan Kirsch",
+                    "object": "metadata",
+                    "comment": "consulting on FAIR data publication",
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Ernst-Abbe-Hochschule Jena"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": "https://orcid.org/0000-0003-3633-1349",
+                    "roles": [
+                        "Other"
+                    ],
+                    "title": "Kevin Lindt",
+                    "object": "metadata",
+                    "comment": "consulting on FAIR data publication",
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Technische Universität Ilmenau"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2025-12-02"
+        }
+    ],
+    "description": "Scaled household electricity load profiles for the various planning region Hildburghausen (swest). These are generic load profiles created using the RAMP software {1}. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Science.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

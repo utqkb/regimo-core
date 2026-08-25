@@ -1,0 +1,116 @@
+{
+    "@id": "https://doi.org/10.5281/zenodo.13692002",
+    "name": "wedowind_community_wedowind_13692002",
+    "title": "Taxonomy of Wind Energy Project Lifecycle Stages",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_community_wedowind_13692002_iea_5a38042d",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_community_wedowind_13692002_iea_5a38042d",
+            "type": "table",
+            "title": "IEA-Task-43/wind-energy-asset-lifecycle-taxonomy-0.0.1.zip",
+            "format": "ZIP",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://zenodo.org/api/records/13692002/files/IEA-Task-43/wind-energy-asset-lifecycle-taxonomy-0.0.1.zip/content",
+                    "title": "IEA-Task-43/wind-energy-asset-lifecycle-taxonomy-0.0.1.zip",
+                    "authors": [],
+                    "description": "First release based on the results of the workshop held during IEA Wind Task 43 annual meeting.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2024"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "zenodo_13692002",
+                "zenodo"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "First release based on the results of the workshop held during IEA Wind Task 43 annual meeting.",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        "DataCollector"
+                    ],
+                    "title": "IEA Wind Task 43",
+                    "object": "data",
+                    "comment": "Mapped from Zenodo creators",
+                    "organization": null
+                }
+            ],
+            "publicationDate": "2024-09-05"
+        }
+    ],
+    "description": "First release based on the results of the workshop held during IEA Wind Task 43 annual meeting.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

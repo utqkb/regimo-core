@@ -1,0 +1,465 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "ind_automobile_hcv_bev_btry_0",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/ind_automobile_hcv_bev_btry_0",
+            "type": "Table",
+            "title": "sedos_ind_automobile_hcv_bev_btry_0",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_auto_btry_hcv_bev",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00140049/",
+                                "name": "energy conversion efficiency"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec_ind",
+                        "type": "float",
+                        "unit": "PJ/Million units",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00140049/",
+                                "name": "energy conversion efficiency"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_iip_steam",
+                        "type": "float",
+                        "unit": "PJ/Million units",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00140049/",
+                                "name": "energy conversion efficiency"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_w_abs_new_max",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Absolute upper bound on level of investment in new weight capacity for a period.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergyplatform.org/ontology/oeo/OEO_00020178/",
+                                "name": "operational life time"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_w_inst_0",
+                        "type": "float",
+                        "unit": "Million units",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Existing weight capacity of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "text",
+                        "unit": "%",
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "ulrich.fahl@ier.uni-stuttgart.de",
+                "grantNo": "03EI1040A",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fÃ¼r Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": null,
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "TAM Industry Model",
+                    "authors": [],
+                    "description": "TAM Industry is based on TIMES and focuses on German industry energy system",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution 4.0 International",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC BY 4.0",
+                            "attribution": "@Energy Economics and Social Analysis(ESA), IER, University of Stuttgart 2024",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://greet.anl.gov/greet.models",
+                    "title": "GREET2 MODEL(Version: GREET2_2022)",
+                    "authors": [],
+                    "description": "R&D GREET Excel is the traditional multidimensional spreadsheet model that provides a comprehensive, life-cycle-based approach to compare the energy use and emissions of conventional and advanced vehicle technologies. It includes two sub-models named Fuel-Cycle Model (R&D GREET 1, contains data on fuel cycles and vehicle operations) and Vehicle-Cycle Model (R&D GREET 2, evaluates the energy and emission effects associated with vehicle material recovery and production, vehicle component fabrication, vehicle assembly, and vehicle disposal/recycling)",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "CC BY-NC 4.0",
+                            "attribution": null,
+                            "instruction": "You are free to: Share- copy and redistribute the material in any medium or format, Adapt-  remix, transform, and build upon the material ",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://greet.anl.gov/publication-greet-2021-summary",
+                    "title": "Summary of Expansions and Updates in GREET® 2021",
+                    "authors": [],
+                    "description": "The GREET® (Greenhouse gases, Regulated Emissions, and Energy use in Technologies) model has been developed by Argonne National Laboratory (Argonne) with the support of the U.S. Department of Energy (DOE). GREET is a life-cycle analysis (LCA) tool, structured to systematically examine the energy and environmental effects of a wide variety of transportation fuels and vehicle technologies in major transportation sectors (i.e; road, air, marine, and rail) and other end-use sectors, and energy systems.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution-NonCommercial 4.0 International",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "CC BY-NC 4.0",
+                            "attribution": null,
+                            "instruction": "You are free to: Share- copy and redistribute the material in any medium or format, Adapt-  remix, transform, and build upon the material ",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.ier.uni-stuttgart.de/forschung/projekte/abgeschlossen/dezentral/downloads/BMWi-03ET4026_Schlussbericht_Dezentral.pdf",
+                    "title": "Optimale Struktur von dezentralen und zentralen Technologien im Systemverbund – Intelligente dezentrale Energiesysteme",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© Institut für Energiewirtschaft und Rationelle Energieanwendung (IER), Universität Stuttgart",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bmwk.de/Redaktion/DE/Publikationen/Studien/automobile-wertschoepfung-2030-2050.pdf?__blob=publicationFile&v=16",
+                    "title": "Automobile Wertschöpfung 2030/2050",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© IPE Institut für Politikevaluation GmbH, fka GmbH und Roland Berger GmbH 2019",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ag-energiebilanzen.de/daten-und-fakten/bilanzen-1990-bis-2030/?wpv-jahresbereich-bilanz=2021-2030",
+                    "title": "Bilanzen 1990 bis 2030",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": "© AGEB 2023",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "DE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000227/",
+                    "name": "Industry Sector"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010275",
+                    "name": "Automobile"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "input_data",
+                "final",
+                "Industry",
+                "Automobile",
+                "oedatamodel-parameter"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": null,
+                    "instruction": "You are free to: Share- copy and redistribute the material in any medium or format for any purpose, even commercially. Adapt - remix, transform, and build upon the material for any purpose, even commercially.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Dataset describes scalar techno-economic and scenario data of technology/process: Industry, Automobile, Battery ( Lead-Acid & Li-Ion) Production Process- Heavy Commercial Vehicle, BEV, BASE",
+            "contributors": [
+                {
+                    "date": "2025-03-11",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Anik Islam",
+                    "object": "data and metadata for Automobile industry",
+                    "comment": "Processed data and Metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2025-03-11"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

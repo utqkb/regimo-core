@@ -1,0 +1,388 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "reeem_message_input",
+            "type": "Table",
+            "title": "REEEM MESSAGE Input",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Row id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dfid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Internal dataframe id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pathway",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM pathway",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "framework",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM framework",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "REEEM version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "schema",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "1. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "category",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "2. classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tags",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Free classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "field",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Old classification",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "indicator",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "",
+                        "unit": "unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "aggregation",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "True if aggregated",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "updated",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Data source",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Lietuvos energetikos sektoriaus pletros tyrimas",
+                    "authors": [],
+                    "description": "Report discusses energy supply options in Lithuania and overviews other countries in the region",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.lei.lt/_img/_up/File/atvir/2016/NES/2-Technine_ekonomine_energetikos_sektoriaus_pletros_analize-2015.11.16.pdf",
+                            "title": "",
+                            "attribution": "© 2015, Lithuanian Energy Institute. All rights reserved.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Technology Data for Energy Plants for Electricity and District heating generation",
+                    "authors": [],
+                    "description": "Technology data catalogue",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_catalogue_for_el_and_dh_-_aug_2016_upd_oct18.pdf",
+                            "title": "",
+                            "attribution": "Danish Energy Agency",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "NORDPOOL",
+                    "authors": [],
+                    "description": "Nordpool market data",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.nordpoolgroup.com/Market-data1#/",
+                            "title": "",
+                            "attribution": "© Nord Pool 2017",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Eurostat",
+                    "authors": [],
+                    "description": "Large statistical database that includes aggregated capacities, historical energy production, import and export flows, etc.,",
+                    "sourceLicenses": [
+                        {
+                            "name": "free re-use, both for non-commercial and commercial purposes (https://ec.europa.eu/eurostat/about/policies/copyright)",
+                            "path": "https://ec.europa.eu/eurostat/data/database",
+                            "title": "",
+                            "attribution": "© European Union, 1995 - today",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Creative Commons Attribution 4.0 International",
+                    "path": "http://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "CC-BY-4.0",
+                    "attribution": "© Lithuanian Energy Institute",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2060",
+                        "start": "2015",
+                        "alignment": "",
+                        "resolutionUnit": "year",
+                        "aggregationType": "",
+                        "resolutionValue": "1"
+                    }
+                ],
+                "referenceDate": "2015"
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Input parameters: Service Demands, Fuel Prices, Potentials",
+            "contributors": [
+                {
+                    "date": "2019-01-22",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table and metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

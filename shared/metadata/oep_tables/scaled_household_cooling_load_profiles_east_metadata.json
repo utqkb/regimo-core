@@ -1,0 +1,265 @@
+{
+    "id": "scaled_household_cooling_load_profiles_east",
+    "name": "scaled_household_cooling_load_profiles_east",
+    "title": "Scaled household cooling load profiles east",
+    "resources": [
+        {
+            "name": "scaled_household_cooling_load_profiles_east",
+            "path": "",
+            "type": "table",
+            "title": "Scaled household cooling load profiles east",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030033",
+                                "name": "index"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Index column.",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "east",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Scaled household cooling load profiles for the region near Gera.",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "demand"
+            ],
+            "context": {
+                "title": "ZO.RRO II - Zero Carbon Cross Energy System",
+                "contact": "Hochschule Nordhausen - Institut für Regenerative Energietechnik; ret@hs-nordhausen.de",
+                "grantNo": "",
+                "homepage": "https://zorro-thueringen.de/",
+                "publisher": "Open Energy Platform",
+                "sourceCode": "https://github.com/in-RET/ZO.RRO2",
+                "documentation": "ToDo",
+                "fundingAgency": "Thüringer Ministerium für Umwelt, Energie, Naturschutz und Forsten",
+                "publisherLogo": "https://github.com/OpenEnergyPlatform/organisation/blob/production/logo/OpenEnergyFamily_Logo_OpenEnergyPlatform.svg",
+                "fundingAgencyLogo": "https://github.com/in-RET/ZO.RRO2/blob/main/TH_UENF_4c.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": ","
+            },
+            "sources": [],
+            "spatial": {
+                "extent": {
+                    "crs": "EPSG:4326",
+                    "name": "Gera",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "m",
+                    "resolutionValue": "1"
+                },
+                "location": {
+                    "address": "Ronneburger Str. 74, 07546 Gera",
+                    "latitude": "50.8821",
+                    "longitude": "12.13"
+                }
+            },
+            "subject": [
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00000213",
+                    "name": "heating and cooling sector"
+                },
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00000214",
+                    "name": "household sector"
+                },
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                    "name": "time series"
+                },
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00140146",
+                    "name": "energy demand"
+                }
+            ],
+            "encoding": "utf8",
+            "keywords": [
+                "oemof",
+                "hsn_in_ret",
+                "zo_rro_ii",
+                "climate_neutrality",
+                "thuringia"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Common Attribution 4.0 International",
+                    "attribution": "© Hochschule Nordhausen - Institut für Regenerative Energietechnik, © ZO.RRO II Project Team",
+                    "instruction": "You are free to use, share and modify; As long as you attribute, include copyright and state changes",
+                    "copyrightStatement": ""
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2025-01-01T00:00:00+00:00",
+                        "start": "2025-01-01T00:00:00+00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "h",
+                        "aggregationType": "current",
+                        "resolutionValue": "1"
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Scaled household cooling load profiles for the planning region Gera (east). These are generic load profiles created using the 5R1C Building Simulation Model {1}. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Science.",
+            "contributors": [
+                {
+                    "date": "2024-12-31",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Amèlie Oberdorfer",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0009-0004-7229-2118",
+                    "roles": [
+                        "DataManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Andreas Lubojanski",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0000-0002-4269-3779",
+                    "roles": [
+                        "ContactPerson",
+                        "DataCurator",
+                        "Distributor",
+                        "ProjectManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Christoph Schmidt",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Rohith Krishnan Bala Krishnan",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0009-0004-8449-3443",
+                    "roles": [
+                        "ProjectMember"
+                    ],
+                    "title": "Theresa Reinhardt",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "Distributor",
+                        "ProjectLeader",
+                        "ProjectMember"
+                    ],
+                    "title": "Viktor Wesselak",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": "https://orcid.org/0009-0004-0638-4639",
+                    "roles": [
+                        "Other"
+                    ],
+                    "title": "Stefan Kirsch",
+                    "object": "metadata",
+                    "comment": "consulting on FAIR data publication",
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Ernst-Abbe-Hochschule Jena"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": "https://orcid.org/0000-0003-3633-1349",
+                    "roles": [
+                        "Other"
+                    ],
+                    "title": "Kevin Lindt",
+                    "object": "metadata",
+                    "comment": "consulting on FAIR data publication",
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Technische Universität Ilmenau"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2025-12-02"
+        }
+    ],
+    "description": "Scaled household cooling load profiles for the planning region Gera (east). These are generic load profiles created using the 5R1C Building Simulation Model {1}. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Science.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,19 @@
+
+from shared_utils.project_handling import find_project_root
+
+URI = "bolt://localhost:7687"
+USER = "neo4j"
+PASSWORD = "EnergyUp"
+
+BASE_DIR = find_project_root()                   # path to root
+MODELS_DIR = BASE_DIR / "models"
+RESULT_DIR = BASE_DIR / "results"
+RESULT_DIR.mkdir(parents=True, exist_ok=True)
+
+FILENAME = "gathered_0_24000_KIT.json" # something_offset_limit_center.json
+PROCESSED_FILENAME = "processed_0_24000_KIT.json"
+
+BATCH_SIZE = 100
+MAX_WORKERS = 16  # Adjust based on your CPU cores
+
+PARALLEL_PROCESSING = True

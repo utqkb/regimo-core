@@ -1,0 +1,464 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "pow_combustion_st_biogas_b_1",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/pow_combustion_st_biogas_b_1",
+            "type": "Table",
+            "title": "sedos_pow_combustion_st_biogas_b_1",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_inst_0",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Existing throughput power output capacity per process in a certain year.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_max",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum allowed throughput power output capacity per process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_min",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum required throughput power output capacity per process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_p",
+                        "type": "float",
+                        "unit": "EUR/(MW*a)",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Operation independent costs for existing and new throughput power output capacity.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_p",
+                        "type": "float",
+                        "unit": "EUR/MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Investment costs for new throughput power output capacity.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_constant",
+                        "type": "float",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Constant output ratio in relation to installed capacity.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_var_e",
+                        "type": "float",
+                        "unit": "EUR/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Variable costs per throughput output unit (excluding fuel costs).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Technical lifetime of a process.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_sewage_g_b",
+                        "type": "float",
+                        "unit": "PJ/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_biogas_b",
+                        "type": "float",
+                        "unit": "PJ/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_natural_gas_b",
+                        "type": "float",
+                        "unit": "PJ/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec_b",
+                        "type": "float",
+                        "unit": "PJ/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity-specific conversion factor (multiplication of input and output factors yields the efficiency of the process).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_sewage_g_b_emi_co2_f_pow_b",
+                        "type": "text",
+                        "unit": "g/GJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per input.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_biogas_b_emi_co2_f_pow_b",
+                        "type": "text",
+                        "unit": "g/GJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per input.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_sewage_g_b_emi_ch4_f_pow_b",
+                        "type": "text",
+                        "unit": "g/GJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per input.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_biogas_b_emi_ch4_f_pow_b",
+                        "type": "text",
+                        "unit": "g/GJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per input.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_natural_gas_b_emi_ch4_f_pow_b",
+                        "type": "text",
+                        "unit": "g/GJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per input.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_sewage_g_b_emi_n2o_f_pow_b",
+                        "type": "text",
+                        "unit": "g/GJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per input.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_biogas_b_emi_n2o_f_pow_b",
+                        "type": "text",
+                        "unit": "g/GJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per input.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_natural_gas_b_emi_n2o_f_pow_b",
+                        "type": "text",
+                        "unit": "g/GJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission factor for a process flow per input.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_abs_new_max",
+                        "type": "float",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Absolute upper bound on level of investment in new power output capacity for a period.",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "viktor.slednev@kit.edu",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": "https://de.m.wikipedia.org/wiki/Datei:Logo_KIT.svg",
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                    "title": "Technology Data for power and heat production plants",
+                    "authors": [],
+                    "description": "Technology Data for power and heat production plants by the Danish Energy Agency",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "Danish Energy Agency 2022",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "B",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Aggregated from {ES, FR, PT}",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000333",
+                    "name": "power"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140038",
+                    "name": "combustion"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "Power",
+                "input_data",
+                "AP4"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset describes the scalar techno-economic as well as scenario data for power generation technology based on the combustion of fuels",
+            "contributors": [
+                {
+                    "date": "2023-12-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Viktor Slednev",
+                    "object": null,
+                    "comment": "Data processing",
+                    "organization": null
+                },
+                {
+                    "date": "2024-05-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Wenxuan Hu",
+                    "object": null,
+                    "comment": "Created Metadata, Data upload",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-05-23"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

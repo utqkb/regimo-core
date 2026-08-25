@@ -1,0 +1,42 @@
+{
+    "@id": null,
+    "name": "Omi_data",
+    "title": "Dataset",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "table",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/table",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "nullable": false
+                    },
+                    {
+                        "name": "time",
+                        "type": "text",
+                        "nullable": false
+                    },
+                    {
+                        "name": "power",
+                        "type": "float",
+                        "nullable": false
+                    }
+                ],
+                "primaryKey": []
+            },
+            "keywords": []
+        }
+    ],
+    "description": "Opendata_trial",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": null,
+            "path": null,
+            "title": null
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

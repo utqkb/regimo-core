@@ -1,0 +1,116 @@
+{
+    "@id": " https://www.esmap.org/re_mapping_maldives",
+    "name": "wedowind_world_bank_group_maldives_mesosc_aa0d0f02",
+    "title": "Maldives - Mesoscale Wind Mapping Phase1",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_world_bank_group_maldives_mesosc_e9db6539",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_world_bank_group_maldives_mesosc_e9db6539",
+            "type": "table",
+            "title": "GIS Data",
+            "format": "ZIP",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://datacatalogfiles.worldbank.org/ddh-published/0042275/1/DR0052876/gisfilesmaldiveswindmappingphase1wbgesmap20150710.zip",
+                    "title": "GIS Data",
+                    "authors": [],
+                    "description": "This dataset contains GIS data and LIB files from an initial wind resource assessment for the Maldives. For more information please visit the country webpage: https://www.esmap.org/re_mapping_maldives",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2017"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "ckan_maldives_mesoscale_wind_ma_e89503b3",
+                "ckan"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset contains GIS data and LIB files from an initial wind resource assessment for the Maldives. For more information please visit the country webpage: https://www.esmap.org/re_mapping_maldives",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        "DataCollector"
+                    ],
+                    "title": "Clara Ivanescu",
+                    "object": "data",
+                    "comment": "Mapped from CKAN author",
+                    "organization": "civanescu@worldbank.org"
+                }
+            ],
+            "publicationDate": "2017-07-11"
+        }
+    ],
+    "description": "This dataset contains GIS data and LIB files from an initial wind resource assessment for the Maldives. For more information please visit the country webpage: https://www.esmap.org/re_mapping_maldives",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

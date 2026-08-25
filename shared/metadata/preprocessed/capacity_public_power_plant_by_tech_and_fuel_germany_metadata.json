@@ -1,0 +1,294 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "capacity_public_power_plant_by_tech_and_fuel_germany",
+            "path": "capacity_public_power_plant_by_tech_and_fuel_germany",
+            "type": "Table",
+            "title": "capacity_public_power_plant_by_tech_and_fuel_germany",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Technology index for the type of power plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "varchar",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of the technology of the type of power plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value_2020",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Capacity of public power plants per technology for the year 2020",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value_2025",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Capacity of public power plants per technology for the year 2025",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value_2030",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Capacity of public power plants per technology for the year 2030",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "vera.sehn@ier.uni-stuttgart.de",
+                "grantNo": "",
+                "homepage": "https://www.ier.uni-stuttgart.de/",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://ec.europa.eu/eurostat/web/energy/data/database",
+                    "title": "Base year calibration",
+                    "authors": [],
+                    "description": "Detailled energy balances for 2010 and 2015 are used to calibrate the model",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://ec.europa.eu/info/legal-notice_en#copyright-notice",
+                            "title": "Creative Commons Attribution 4.0 International",
+                            "attribution": "EUROSTAT, 2010-2015",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://service.destatis.de/bevoelkerungspyramide/#!y=1975&v=2",
+                    "title": "Ergebnisse der 13. koordinierten Bevölkerungsvorausrechnung bis 2060",
+                    "authors": [],
+                    "description": "Fortschreibung der Bevölkerung Deutschlands bis ins Jahr 2060 gemäß der demographischen Entwicklungsvariante G1-L2-W2 (basierend auf: Statistisches Bundesamt, „Varianten und Modellrechnungen der 13. koordinierten Bevölkerungsvorausberechnung für Deutschland“)",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE->BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "Statistisches Bundesamt (DESTATIS)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Bruttowertschöpfungszuwachsprognosen der Industriebranchen, PKW- und Güterverkehr-Flotte Europa mit Zuwachsprognosen, Wohnflächenberechnungen mit Fortschreibung",
+                    "authors": [],
+                    "description": "Berechnungsgrundlagen für die Energieservice-Dienstleistungen und deren zukünftige Fortschreibung",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://ec.europa.eu/info/legal-notice_en#copyright-notice",
+                            "title": "In-house data set",
+                            "attribution": "Universtität Stuttgart, Institut für Energiewirtschaft und rationelle Energieanwendung, Systemanalytische Methoden und Wärmemarkt (SAM)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "resolution",
+                    "resolutionValue": "country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "electricity sector",
+                "capacity",
+                "germany",
+                "public power plants",
+                "2020",
+                "2025",
+                "2030",
+                "TIMES PanEU"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0 1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "title": "CC0 1.0 Universal Public Domain Dedication",
+                    "attribution": "Universtität Stuttgart, Institut für Energiewirtschaft und rationelle Energieanwendung, Systemanalytische Methoden und Wärmemarkt (SAM)",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2030-08-25",
+                        "start": "2020-08-25",
+                        "alignment": "middle",
+                        "resolutionUnit": "years",
+                        "aggregationType": "average",
+                        "resolutionValue": "5"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Simulated capacity of public power plants by technology and fuel for the years 2020, 2025 and 2030 for Germany in yearly time resolution.",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Vera Sehn",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Felix Kattelmann",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Markus Blesl",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Alexander Burkhardt",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

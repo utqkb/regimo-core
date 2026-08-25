@@ -1,0 +1,570 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "ego_dp_supply_res_powerplant",
+            "type": "Table",
+            "title": "Renewable power plants in Germany by Scenario",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "preversion",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "preversion number of data preprocessing",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "start_up_date",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "start_up date of unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "electrical_capacity",
+                        "type": "",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "electrical capacity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_type",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "generation_type or main fuel type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generation_subtype",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "generation subtype",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "thermal_capacity",
+                        "type": "",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "preversion number of data preprocessing",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "city",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of city or location",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "postcode",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "postcode",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "address",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "address",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lon",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "longitude",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lat",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "latitude",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gps_accuracy",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "gps accuracy in meter",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "validation",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "validation comments",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "notification_reason",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "notification reason from BNetzA sources",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "eeg_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "EEG id of Unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tso",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of Transmission system operator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tso_eic",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of Transmission system operator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dso_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Name of District system operator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dso",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of District system operator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "voltage_level_var",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "German voltage level",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "network_node",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name or code of network node",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "power_plant_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Power plant id from BNetzA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Short Name of source: energymap or bnetza",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Further comment of changes",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "subst_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier of related substation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "otg_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier of related substation from osmTGmod",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "un_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier of RES and CONV power plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "voltage_level",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "voltage level as number code",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "la_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier of related .... ???",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "mvlv_subst_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier of related ... ???",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rea_sort",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "res sort entry",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rea_flag",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Flag comment of rea method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rea_geom_line",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry line between original and processed data",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rea_geom_new",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry of new position",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of scenario",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flag",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Flag of scenario changes of an power plant unit (repowering, decommission or commissioning).",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nuts",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "NUTS ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "w_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID of corresponding weather cell",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "eGo data processing",
+                    "authors": [],
+                    "description": "Scripts with allocate Geometry by OpenStreetMap Objects or create future scenarios by high resolution geo-allocation",
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License Version 3 (AGPL-3.0)",
+                            "path": "https://github.com/openego/data_processing",
+                            "title": "",
+                            "attribution": "© ZNES Europa-Universität Flensburg",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "EnergyMap.info",
+                    "authors": [],
+                    "description": "Data provider how collects and clean TSO and DSO data of Germany",
+                    "sourceLicenses": [
+                        {
+                            "name": "unknown",
+                            "path": "http://www.energymap.info/download.html",
+                            "title": "",
+                            "attribution": "Deutsche Gesellschaft für Sonnenenergie e.V.",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Bundesnetzagentur (BNetzA)",
+                    "authors": [],
+                    "description": "The Federal Network Agency for Electricity, Gas, Telecommunications, Posts and Railway Data is in Germany data provider of power plant",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Namensnennung-Keine Bearbeitung 3.0 Deutschland Lizenz",
+                            "path": "https://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/ErneuerbareEnergien/Anlagenregister/Anlagenregister_Veroeffentlichung/Anlagenregister_Veroeffentlichungen_node.html",
+                            "title": "",
+                            "attribution": "© Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen; Pressestelle",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "100m"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Data Commons Open Database License 1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "ODbL-1.0",
+                    "attribution": "©  ZNES Europa-Universität Flensburg",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2049-12-31",
+                        "start": "1900-01-01",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2016-01-01"
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "Liste of renewable power plants in Germany by Scenario status quo, NEP 2035 and 2050 of the eGo project",
+            "contributors": [
+                {
+                    "date": "2017-06-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "wolfbunke",
+                    "object": null,
+                    "comment": "Create and restructure scripts and table",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

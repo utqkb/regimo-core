@@ -1,0 +1,564 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "ego_loadarea",
+            "type": "Table",
+            "title": "eGo Load Area",
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "version",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "version id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "subst_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "substation id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "area_ha",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "area in hectar",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nuts",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "nuts id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rs_0",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geimeindeschlüssel, municipality key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags_0",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geimeindeschlüssel, municipality key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "otg_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "states the id of respective bus in osmtgmod",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zensus_sum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "population",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zensus_count",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "number of population rasters",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zensus_density",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "average population per raster (zensus_sum/zensus_count)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_area_residential",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "aggregated residential area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_area_retail",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "aggregated retail area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_area_industrial",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "aggregated industrial area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_area_agricultural",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "aggregated agricultural area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_area_sum",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "aggregated sector area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_share_residential",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "percentage of residential area per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_share_retail",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "percentage of retail area per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_share_industrial",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "percentage of industrial area per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_share_agricultural",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "percentage of agricultural area per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_share_sum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "percentage of sector area per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_count_residential",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "number of residential areas per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_count_retail",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "number of retail areas per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_count_industrial",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "number of industrial areas per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_count_agricultural",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "number of agricultural areas per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_count_sum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "number of sector areas per load area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_consumption_residential",
+                        "type": "",
+                        "unit": "GWh",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "electricity consumption of residential sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_consumption_retail",
+                        "type": "",
+                        "unit": "GWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "electricity consumption of retail sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_consumption_industrial",
+                        "type": "",
+                        "unit": "GWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "electricity consumption of industrial sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_consumption_agricultural",
+                        "type": "",
+                        "unit": "GWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "electricity consumption of agricultural sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector_consumption_sum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "version id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom_centroid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "centroid (can be outside the polygon)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom_surfacepoint",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "point on surface",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom_centre",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "centroid and point on surface when centroid outside the polygon",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "geometry",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "OSM",
+                    "authors": [],
+                    "description": "OSM",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.openstreetmap.de",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "BKG vg250",
+                    "authors": [],
+                    "description": "borders",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.openstreetmap.de",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Statistisches Bundesamt (Destatis)",
+                    "authors": [],
+                    "description": "Population raster",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.destatis.de/DE/Methoden/Zensus_/Zensus.html",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "eGoDataProcessing",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://github.com/openego/data_processing",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Gemany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "tba",
+                    "path": "tba",
+                    "title": "tba",
+                    "attribution": "",
+                    "instruction": "tba",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "Load Area with electrical consumption",
+            "contributors": [
+                {
+                    "date": "2016-10-02",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludwig Hülk",
+                    "object": null,
+                    "comment": "create loadareas",
+                    "organization": null
+                },
+                {
+                    "date": "2016-10-25",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ilka Cussmann",
+                    "object": null,
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2017-01-15",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludwig Hülk",
+                    "object": null,
+                    "comment": "updated metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

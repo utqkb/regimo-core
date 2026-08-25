@@ -1,0 +1,271 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "tso_nep_scenario_framework_2021_2035_scenario",
+            "path": "tba",
+            "type": "Table",
+            "title": "TSO NEP Scenario Framework 2021-2035 Scenarios",
+            "format": "csv",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/71",
+                "badge": "silver"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "scenario_id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "tba",
+                "grantNo": "tba",
+                "homepage": "https://www.netzausbau.de/5schritte/szenariorahmen/de.html",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://www.netzausbau.de/bedarfsermittlung/2035_2021/szenariorahmen/de.html",
+                "fundingAgency": "tba",
+                "publisherLogo": "tba",
+                "fundingAgencyLogo": "tba"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/OpenEnergyPlatform/oedatamodel/tree/develop/oedatamodel",
+                    "title": "Open energy datamodel",
+                    "authors": [],
+                    "description": "oedatamodel for energy model data",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.bmwi.de/Redaktion/DE/Artikel/Energie/energiedaten-gesamtausgabe.html",
+                    "title": "BMWi Energiedaten Gesamtausgabe - Stand: September 2019",
+                    "authors": [],
+                    "description": "Woher kommen unsere Energieträger, wie viel Energie verbrauchen wir und wie groß sind die weltweiten Reserven? Die Energiedaten geben umfangreiche Antworten auf aktuelle Fragen zur Energieversorgung. Sie bieten darüber hinaus Informationen zur Energieversorgung aus zuverlässigen Quellen.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© 2020 Bundesministerium für Wirtschaft und Energie (BMWi)",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "state",
+                    "resolutionValue": "Federal"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "NEP",
+                "Szenariorahmen",
+                "2021-2035"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "tba",
+                    "instruction": "https://tldrlegal.com/license/creative-commons-attribution-4.0-international-(cc-by-4)",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2040-10-15",
+                        "start": "2018-10-15",
+                        "alignment": "middle",
+                        "resolutionUnit": "",
+                        "aggregationType": "tba",
+                        "resolutionValue": "2020; 2035; 2040"
+                    }
+                ],
+                "referenceDate": "2018-10-15"
+            },
+            "languages": [
+                "de-DE",
+                "en-GB"
+            ],
+            "description": "In the draft scenario framework 2021-2035, the transmission system operators outlined four possible scenarios for the likely development of the electricity sector up to the years 2035 and 2040.",
+            "contributors": [
+                {
+                    "date": "2020-08-11",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "TSO",
+                    "object": "data",
+                    "comment": "Provide data",
+                    "organization": null
+                },
+                {
+                    "date": "2020-08-24",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "metadata",
+                    "comment": "Create oemetadata",
+                    "organization": null
+                },
+                {
+                    "date": "2020-08-24",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": "data",
+                    "comment": "Transform data in oedatamodel",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2020-09-02"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

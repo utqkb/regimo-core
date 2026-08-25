@@ -1,0 +1,278 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "destatis_zensus_population_per_ha",
+            "type": "Table",
+            "title": "DESTATIS - Zensus 2011 - Population per hectar",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "gid",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "grid_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Grid number of source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "x_mp",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Latitude of centroid in (ETRS89 - LAEA; EPSG:3035)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "y_mp",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Longitude of centroid in (ETRS89 - LAEA; EPSG:3035)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "population",
+                        "type": "",
+                        "unit": "resident",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Number of registred residents",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom_point",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry centroid",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometry",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Statistisches Bundesamt (Destatis) - Ergebnisse des Zensus 2011 zum Download",
+                    "authors": [],
+                    "description": "Als Download bieten wir Ihnen auf dieser Seite zusätzlich zur Zensusdatenbank CSV- und teilweise Excel-Tabellen mit umfassenden Personen-, Haushalts- und Familien- sowie Gebäude- und Wohnungs­merkmalen. Die Ergebnisse liegen auf Bundes-, Länder-, Kreis- und Gemeinde­ebene vor. Außerdem sind einzelne Ergebnisse für Gitterzellen verfügbar.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.zensus2011.de/SharedDocs/Aktuelles/Ergebnisse/DemografischeGrunddaten.html;jsessionid=E0A2B4F894B258A3B22D20448F2E4A91.2_cid380?nn=3065474",
+                            "title": "",
+                            "attribution": "© Statistische Ämter des Bundes und der Länder 2014",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Dokumentation - Zensus 2011 - Methoden und Verfahren",
+                    "authors": [],
+                    "description": "Diese Publikation beschreibt ausführlich die Methoden und Verfahren des registergestützten Zensus 2011; von der Datengewinnung und -aufbereitung bis hin zur Ergebniserstellung und Geheimhaltung. Der vorliegende Band wurde von den Statistischen Ämtern des Bundes und der Länder im Juni 2015 veröffentlicht.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellenangabe gestattet.",
+                            "path": "https://www.destatis.de/DE/Publikationen/Thematisch/Bevoelkerung/Zensus/ZensusBuLaMethodenVerfahren5121105119004.pdf?__blob=publicationFile",
+                            "title": "",
+                            "attribution": "© Statistisches Bundesamt, Wiesbaden, 2015 (im Auftrag der Herausgebergemeinschaft)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "ha",
+                    "resolutionValue": "1"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Datenlizenz by-2-0",
+                    "path": "www.govdata.de/dl-de/by-2-0",
+                    "title": "dl-de/by-2-0",
+                    "attribution": "Statistisches Bundesamt, Wiesbaden, Genesis-Online; Datenlizenz by-2-0; eigene Berechnung",
+                    "instruction": "Empfohlene Zitierweise des Quellennachweises: Datenquelle: Statistisches Bundesamt, Wiesbaden, Genesis-Online, <optional> Abrufdatum; Datenlizenz by-2-0. Quellenvermerk bei eigener Berechnung / Darstellung: Datenquelle: Statistisches Bundesamt, Wiesbaden, Genesis-Online, <optional> Abrufdatum; Datenlizenz by-2-0; eigene Berechnung/eigene Darstellung. In elektronischen Werken ist im Quellenverweis dem Begriff (Datenlizenz by-2-0) der Link www.govdata.de/dl-de/by-2-0 als Verknüpfung zu hinterlegen.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2011"
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "National census in Germany in 2011",
+            "contributors": [
+                {
+                    "date": "2016-02-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2016-10-25",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Moved table and add metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2017-06-30",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Update metadata to v1.3",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

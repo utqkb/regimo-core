@@ -1,0 +1,55 @@
+{
+    "@id": null,
+    "name": "ariadne_scenariodata",
+    "title": "Ariadne Szenariendaten",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "ariadne2_scenariodata_variables_v10",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/ariadne2_scenariodata_variables_v10",
+            "title": "Ariadne Szenariendaten Variablen V1.0",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "nullable": false
+                    },
+                    {
+                        "name": "variable",
+                        "type": "text",
+                        "nullable": false
+                    },
+                    {
+                        "name": "unit",
+                        "type": "text",
+                        "nullable": false
+                    },
+                    {
+                        "name": "definition",
+                        "type": "text",
+                        "nullable": false
+                    }
+                ],
+                "primaryKey": []
+            },
+            "topics": [
+                "scenario"
+            ],
+            "keywords": [
+                "CC-BY-4.0",
+                "Ariadne"
+            ],
+            "publicationDate": "2025-05-05"
+        }
+    ],
+    "description": null,
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": null,
+            "path": null,
+            "title": null
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "@id": null,
+    "name": "Openenergy_exercise",
+    "title": "dataset1",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "my_table_4",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/my_table_4",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "nullable": false
+                    },
+                    {
+                        "name": "time",
+                        "type": "text",
+                        "nullable": false
+                    },
+                    {
+                        "name": "power",
+                        "type": "float",
+                        "nullable": false
+                    }
+                ],
+                "primaryKey": []
+            },
+            "keywords": []
+        }
+    ],
+    "description": "This dataset contains time and power measurement.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": null,
+            "path": null,
+            "title": null
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

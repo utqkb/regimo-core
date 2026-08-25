@@ -1,0 +1,295 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "fh_iee_trafo_fw_viel_dez_bio_hohe_sani_verkehr",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/fh_iee_trafo_fw_viel_dez_bio_hohe_sani_verkehr",
+            "type": "Table",
+            "title": "Overview of the number of vehicles in Germany in scenario \"Fh IEE Trafo FW\" (\"Pathways of transformation in the heating sector\") with a high proportion of decentralized biomass and a high degree of renovation in the building sector",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/wiki",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Szenario",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of the scenario",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Szenariojahr",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country to which the value applies",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Kennwert",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Top category in the classification of technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Unterkennwert",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Middle category in the classification of technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Sektor",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Lowest category in the classification of technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Energieträger",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Substances whose energy content is used for energy conversion processes",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Technologie",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Einheit",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit of measure",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Wert",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Kommentar",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment on the value",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "norman.gerhardt@iee.fraunhofer.de",
+                "grantNo": "03MAP359",
+                "homepage": "https://www.iee.fraunhofer.de/de/projekte/suche/laufende/transformationspfade-im-waermesektor.html",
+                "publisher": "",
+                "sourceCode": "not available",
+                "documentation": "https://www.iee.fraunhofer.de/content/dam/iee/energiesystemtechnik/de/Dokumente/Veroeffentlichungen/2019/2019_Feb_Bericht_Fraunhofer_IEE_-_Transformation_Waerme_2030_2050.pdf",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Energie",
+                "publisherLogo": "https://www.iee.fraunhofer.de/content/dam/iee/energiesystemtechnik/fraunhofer-iee.gif",
+                "fundingAgencyLogo": "https://www.innovation-beratung-foerderung.de/INNO/Redaktion/DE/Bilder/Titelbilder/titel_foerderlogo_bmwi.jpg?__blob=poster&v=2"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ","
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Own projection",
+                    "authors": [],
+                    "description": "Details see report provided under URL",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.iee.fraunhofer.de/content/dam/iee/energiesystemtechnik/de/Dokumente/Veroeffentlichungen/2019/2019_Feb_Bericht_Fraunhofer_IEE_-_Transformation_Waerme_2030_2050.pdf",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "EU28 without Malta and Cyprus, but with Norway and Switzerland. Focus on Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "ISO-8859-1",
+            "keywords": [
+                "Fraunhofer IEE",
+                "BMWi",
+                "Pathways of transformation in the heatin",
+                "Trafo",
+                "Weather year 2012",
+                "Scenario year 2030",
+                "Scenario year 2050",
+                "Europe",
+                "Germany",
+                "District heating",
+                "Sector coupling",
+                "Overall energy supply system",
+                "transport"
+            ],
+            "licenses": [
+                {
+                    "name": "dl-de-by-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Data licence Germany \\u2013 attribution \\u2013 version 2.0",
+                    "attribution": "© Fraunhofer IEE 2019",
+                    "instruction": "https://www.govdata.de/dl-de/by-2-0",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050-12-31",
+                        "start": "2030-01-01",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "Hourly for 2030 and 2050"
+                    }
+                ],
+                "referenceDate": "2012-01-01"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "This table gives an overview of the number of vehicles in Germany in scenario \"Fh IEE Trafo FW\" (\"Pathways of transformation in the heating sector\") with a high proportion of decentralized biomass and a high degree of renovation in the building sector. A distinction is made between cars and trucks and their respective types of drive",
+            "contributors": [
+                {
+                    "date": "2020-09-10",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fraunhofer IEE",
+                    "object": "Metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2019-02-01"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,578 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://energy.databus.dbpedia.org/chrwm/LOD-GEOSS_use_case_oemof-B3/umas_2021_05_18_pv_agri_bb_kreise_epsg32633",
+            "name": "umas_2021_05_18_pv_agri_bb_kreise_epsg32633",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/umas_2021_05_18_pv_agri_bb_kreise_epsg32633",
+            "type": "Table",
+            "title": "umas_2021_05_18_pv_agri_bb_kreise_epsg32633",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "fid",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "id_csv",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "fid_2",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ade",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Adminstrative Fläche",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gf",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geofaktor",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bsg",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/BFO_0000006",
+                                "name": "spatial region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Besondere Gebiete",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ars",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Amtlicher Regionalschlüssel, formerly RS",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Amtlicher Gemeindeschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sdv_ars",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Sitz der Verwaltung (ARS), formerly SDV_RS",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gen",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Geografischer Name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bez",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Bezeichnung der Verwaltungseinheit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ibz",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Identifikator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bem",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Bemerkung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nbd",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Namensbildung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_l",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "structural components of ARS or AGS: Land",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_r",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "structural components of ARS or AGS: Regierungsbezirk",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_k",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "structural components of ARS or AGS: Kreis",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_v1",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "structural components of ARS or AGS: Verwaltungsgemeinschaft - vorderer Teil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_v2",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "structural components of ARS or AGS: Verwaltungsgemeinschaft - hinterer Teil",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sn_g",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "structural components of ARS or AGS: Gemeinde",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "fk_s3",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Funktion der 3. Schlüsselstelle",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nuts",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Europäischer Statistikschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ars_0",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Aufgefüllter Amtlicher Regionalschlüssel, formerly RS_0",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ags_0",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Aufgefüllter Amtlicher Gemeindeschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wsk",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Wirksamkeit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "debkg_id",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Digitaler Landschaftsmodell Indikator",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rs",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Regionalschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sdv_rs",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Sitz der Verwaltung (ARS)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "rs_0",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Aufgefüllter Amtlicher Regionalschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "area",
+                        "type": "float",
+                        "unit": "m²",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00290000",
+                                "name": "potential"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "potential area",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "overlap_pv_road_railway_area",
+                        "type": "float",
+                        "unit": "m²",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000348",
+                                "name": "PV panel"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010060",
+                                "name": "CRF sector (IPCC 2006): road transportation"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020143",
+                                "name": "area value"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010061",
+                                "name": "CRF sector (IPCC 2006): railways"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "overlapped area with pv_road_railway_potential area in square meters",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "overlap_pv_road_railway_percent",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "overlapped area with pv_road_railway_potential area in percent",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "overlap_wind_area",
+                        "type": "float",
+                        "unit": "m²",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020143",
+                                "name": "area value"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000044",
+                                "name": "wind energy converting unit"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "overlapped area with wind area in square meters",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "overlap_wind_percent",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "overlapped area with wind area in percent",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://zenodo.org/record/6728382#.YyHSrFrP2V4",
+                    "title": "Der Photovoltaik- und Windflächenrechner - Geodaten Potenzialflächen",
+                    "authors": [],
+                    "description": "Eligible areas for onshore wind turbines and ground-mounted PV from the web application 'Photovoltaik- und Windflächenrechner'. Developed by the Reiner Lemoine Institute for Agora Energiewende with support of the Reiner Lemoine Foundation.",
+                    "sourceLicenses": [
+                        {
+                            "name": "(ODbL) v1.0",
+                            "path": "https://opendatacommons.org/licenses/odbl/1-0/",
+                            "title": "Open Data Commons Open Database License",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Brandenburg",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "UMAS",
+                "raw",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": null,
+            "contributors": [
+                {
+                    "date": "2022-09-14",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "hedwiglieselotte",
+                    "object": "metadata",
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "sabinehaas",
+                    "object": "data",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "stefanienguyen",
+                    "object": "metadata",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-12-05",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "monika-o",
+                    "object": "metadata",
+                    "comment": "Annotate metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

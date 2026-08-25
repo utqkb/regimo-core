@@ -1,0 +1,145 @@
+{
+    "@id": "https://doi.org/10.5281/zenodo.8253010",
+    "name": "wedowind_community_wedowind_8253010",
+    "title": "Penmanshiel wind farm data",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_community_wedowind_8253010_penma_cf7fa280",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_community_wedowind_8253010_penma_cf7fa280",
+            "type": "table",
+            "title": "Penmanshiel_WT_static.csv",
+            "format": "CSV",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    },
+                    {
+                        "name": "wind_farm_title_alternative_title_identit_d50338ca",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "",
+                                "name": ""
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": [
+                            {
+                                "@id": "",
+                                "name": "",
+                                "value": ""
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://zenodo.org/api/records/8253010/files/Penmanshiel_WT_static.csv/content",
+                    "title": "Penmanshiel_WT_static.csv",
+                    "authors": [],
+                    "description": "This dataset contains: A kmz file for Penmanshiel wind farm in the UK (for opening in e.g. Google Earth ) Static data including turbine coordinates and turbine details (rated power, rotor diameter, hub height, etc.) 10-minute SCADA and events data from the 14 Senvion MM82&#39;s at Penmanshiel wind farm, grouped by year from 2016 to mid-2021, which was extracted from our secondary SCADA system (Greenbyte). Note not all signals are available for the entire period, and there is no turbine WT03 Data mappings from primary SCADA to csv signal names Site substation/PMU meter data where available for the same period Site fiscal/grid meter data where available for the same period The dataset has been released by Cubico Sustainable Investments Ltd under a CC-BY-4.0 open data license and is provided as is. However, please provide any feedback you might have on the dataset and format of the data. Feel free to use the data according to the license, however, it would be helpful to me if you could let me know where, how and why you are using the data, so that I can highlight this to the business (and renewables industry) and hopefully promote similar data sharing initiatives. I am particularly interested in performance analysis/improvement opportunities, how the dataset can be augmented with other (open) datasets, and sharing more generally within the renewables industry. If you have any questions or want to discuss open data and this or other initiatives, please either: Contact me on LinkedIn , and I will endeavour to help Or in the WeDoWind platform in the ODE space I would like to thank Cubico&#39;s Senior Legal Advisor &amp; Compliance Officer, IT Director, UK Asset Management Team, Executive Committee and my manager and team for supporting this initiative, as well as our partners GLIL for agreeing to release this data under an open license. I would also like to thank those I have talked to during the process of releasing this data under an open license and the encouragement and advice I have had on the way. You can also access data from Kelmarsh wind farm here .",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2022"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "electricity",
+                "penmanshiel",
+                "farm",
+                "zenodo_8253010",
+                "energy",
+                "wind",
+                "cubico",
+                "turbine",
+                "zenodo",
+                "uk",
+                "renewable",
+                "scada"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This dataset contains: A kmz file for Penmanshiel wind farm in the UK (for opening in e.g. Google Earth ) Static data including turbine coordinates and turbine details (rated power, rotor diameter, hub height, etc.) 10-minute SCADA and events data from the 14 Senvion MM82&#39;s at Penmanshiel wind farm, grouped by year from 2016 to mid-2021, which was extracted from our secondary SCADA system (Greenbyte). Note not all signals are available for the entire period, and there is no turbine WT03 Data mappings from primary SCADA to csv signal names Site substation/PMU meter data where available for the same period Site fiscal/grid meter data where available for the same period The dataset has been released by Cubico Sustainable Investments Ltd under a CC-BY-4.0 open data license and is provided as is. However, please provide any feedback you might have on the dataset and format of the data. Feel free to use the data according to the license, however, it would be helpful to me if you could let me know where, how and why you are using the data, so that I can highlight this to the business (and renewables industry) and hopefully promote similar data sharing initiatives. I am particularly interested in performance analysis/improvement opportunities, how the dataset can be augmented with other (open) datasets, and sharing more generally within the renewables industry. If you have any questions or want to discuss open data and this or other initiatives, please either: Contact me on LinkedIn , and I will endeavour to help Or in the WeDoWind platform in the ODE space I would like to thank Cubico&#39;s Senior Legal Advisor &amp; Compliance Officer, IT Director, UK Asset Management Team, Executive Committee and my manager and team for supporting this initiative, as well as our partners GLIL for agreeing to release this data under an open license. I would also like to thank those I have talked to during the process of releasing this data under an open license and the encouragement and advice I have had on the way. You can also access data from Kelmarsh wind farm here .",
+            "publicationDate": "2022-02-07"
+        }
+    ],
+    "description": "This dataset contains: A kmz file for Penmanshiel wind farm in the UK (for opening in e.g. Google Earth ) Static data including turbine coordinates and turbine details (rated power, rotor diameter, hub height, etc.) 10-minute SCADA and events data from the 14 Senvion MM82&#39;s at Penmanshiel wind farm, grouped by year from 2016 to mid-2021, which was extracted from our secondary SCADA system (Greenbyte). Note not all signals are available for the entire period, and there is no turbine WT03 Data mappings from primary SCADA to csv signal names Site substation/PMU meter data where available for the same period Site fiscal/grid meter data where available for the same period The dataset has been released by Cubico Sustainable Investments Ltd under a CC-BY-4.0 open data license and is provided as is. However, please provide any feedback you might have on the dataset and format of the data. Feel free to use the data according to the license, however, it would be helpful to me if you could let me know where, how and why you are using the data, so that I can highlight this to the business (and renewables industry) and hopefully promote similar data sharing initiatives. I am particularly interested in performance analysis/improvement opportunities, how the dataset can be augmented with other (open) datasets, and sharing more generally within the renewables industry. If you have any questions or want to discuss open data and this or other initiatives, please either: Contact me on LinkedIn , and I will endeavour to help Or in the WeDoWind platform in the ODE space I would like to thank Cubico&#39;s Senior Legal Advisor &amp; Compliance Officer, IT Director, UK Asset Management Team, Executive Committee and my manager and team for supporting this initiative, as well as our partners GLIL for agreeing to release this data under an open license. I would also like to thank those I have talked to during the process of releasing this data under an open license and the encouragement and advice I have had on the way. You can also access data from Kelmarsh wind farm here .",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

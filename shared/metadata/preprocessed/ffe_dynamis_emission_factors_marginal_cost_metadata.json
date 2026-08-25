@@ -1,0 +1,287 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "ffe_dynamis_emission_factors_marginal_cost",
+            "path": "ffe_dynamis_emission_factors_marginal_cost",
+            "type": "Table",
+            "title": "Emission factors and marginal cost, Dynamis Project Forschungsstelle für Energiewirtschaft (FfE)",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario descritption",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Parameter description",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "energy_carrier",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Energy carrier (electricity/district heating)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Simulation year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "avg_value",
+                        "type": "double precision",
+                        "unit": "€/MWh or t/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Emission or load weighted anual average value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hourly_value",
+                        "type": "double precision[]",
+                        "unit": "€/MWh or t/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Array of hourly values",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "03ET4037A",
+                "homepage": "www.ffe.de/dynamis",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.mdpi.com/journal/energies/special_issues/Model_Coupling_and_Energy_Systems",
+                    "title": "Hourly CO2 emission factors and marginal costs of energy carriers in future multi-energy systems (in submission)",
+                    "authors": [],
+                    "description": "open access paper, documentation of input data",
+                    "sourceLicenses": [
+                        {
+                            "name": "open access paper",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© FfE, Dynamis Project",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Dynamis",
+                "FfE",
+                "emission factors",
+                "marginal cost",
+                "scenario",
+                "Germany"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© FfE, Dynamis Project",
+                    "instruction": "https://tldrlegal.com/license/creative-commons-attribution-4.0-international-(cc-by-4)",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050",
+                        "start": "2020",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Dataset of emission factors and marginal cost for electricity and district heating in Germany regarding the years 2020-2050. All additional information can be found in the paper linked in the sources section. This research was conducted as part of the Dynamis project, which is supported by the German Federal Ministry for Economic Affairs and Energy under grant no. 03ET4037A",
+            "contributors": [
+                {
+                    "date": "2019-05-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Felix Böing",
+                    "object": null,
+                    "comment": "System modelling, input data, concept",
+                    "organization": null
+                },
+                {
+                    "date": "2019-05-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Anika Regett",
+                    "object": null,
+                    "comment": "Emission balancing, project administration",
+                    "organization": null
+                },
+                {
+                    "date": "2019-05-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Steffen Fattler",
+                    "object": null,
+                    "comment": "project administration",
+                    "organization": null
+                },
+                {
+                    "date": "2019-05-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jochen Conrad",
+                    "object": null,
+                    "comment": "project administration",
+                    "organization": null
+                },
+                {
+                    "date": "2019-05-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Alexander Murmann",
+                    "object": null,
+                    "comment": "Software, implementation, result processing",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

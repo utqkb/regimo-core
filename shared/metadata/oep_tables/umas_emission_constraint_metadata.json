@@ -1,0 +1,522 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://energy.databus.dbpedia.org/chrwm/LOD-GEOSS_use_case_oemof-B3/umas_emission_constraint",
+            "name": "umas_emission_constraint",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/umas_emission_constraint",
+            "type": "Table",
+            "title": "umas_emission_constraint",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id_scal",
+                        "type": "int",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "unique identifier of scalar",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_key",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000364",
+                                "name": "scenario"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of scenario as key",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "name of region and type of carrier imported or exported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_name",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000435",
+                                "name": "variable"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/IAO_0000590",
+                                "name": "written name"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "variable name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "carrier",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020039",
+                                "name": "energy carrier"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of carrier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020032",
+                                "name": "study region"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "indicator for region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tech",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000407",
+                                "name": "technology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of transmission",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "type of tech",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_value",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "variable value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "var_unit",
+                        "type": "text",
+                        "unit": "kg_CO2_eq/MWh",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000435",
+                                "name": "variable"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "unit of measurement"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "variable unit",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000353",
+                                "name": "reference"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "type of sources used",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "general comments on data and data type",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://green-planet-energy.de/fileadmin/user_upload/broschuere-wasserstoff.pdf",
+                    "title": "Blauer Wasserstoff Lösung oder Problem der Energiewende?",
+                    "authors": [],
+                    "description": "Fakten, Hintergründe, Argumente",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.linde-gas.at/de/images/1007_rechnen_sie_mit_wasserstoff_v110_tcm550-169419.pdf",
+                    "title": "Rechnen Sie mit Wasserstoff",
+                    "authors": [],
+                    "description": "Die Datentabelle zu Wasserstoff",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.eib.org/attachments/publications/eib_project_carbon_footprint_methodologies_2022_en.pdf",
+                    "title": "EIB Project Carbon Footprint Methodologies",
+                    "authors": [],
+                    "description": "Methodologies for the assessment of project greenhouse gas emissions and emission variations Version 11.2 February 2022",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://www.eib.org/attachments/publications/eib_project_carbon_footprint_methodologies_2022_en.pdf",
+                            "title": "Copyright European Investment Bank",
+                            "attribution": "© European Investment Bank, 2022",
+                            "instruction": "All rights reserved. All questions on rights and licensing should be addressed to publications@eib.org.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.iet.hsr.ch/fileadmin/user_upload/iet.hsr.ch/Power-to-Gas/Kurzberichte/10_Heiz-_und_Brennwerte.pdf",
+                    "title": "Heiz- und Brennwerte",
+                    "authors": [],
+                    "description": "Factsheet 10 von Erneuerbares Methan für Transport und Mobilität. Diese Dokument zeigt auf, wie die Werte zustande kommen und welchen Einfluss sie auf die Berechnung eines Wirkungsgrades haben.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://enertile-explorer.isi.fraunhofer.de:8443/open-view/10277/f9a716ac8221de8599bbdd5f340421ae",
+                    "title": "Emissionsfaktoren Brennstoffe",
+                    "authors": [],
+                    "description": "Emissionsfaktoren nach Emissionsbilanz in Deutschland",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://download.statistik-berlin-brandenburg.de/a55e41345076fc3a/3131a11bf647/SB_E04-04-00_2018j01_BB.pdf",
+                    "title": "Statistischer Bericht",
+                    "authors": [],
+                    "description": "Energie- und CO₂-Bilanz im Land Brandenburg 2018",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 3.0 DE",
+                            "path": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+                            "title": "Attribution 3.0 Germany",
+                            "attribution": "CC BY 3.0 DE",
+                            "instruction": "You are free to share and adapt, but you must give appropriate credit, provide a link to the license, and indicate if changes were made.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://download.statistik-berlin-brandenburg.de/fc700d859bd0decc/4fabc08d4580/SB_E04-04-00_2018j01_BE.pdf",
+                    "title": "Statistischer Bericht",
+                    "authors": [],
+                    "description": "Energie- und CO₂-Bilanz in Berlin 2018",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 3.0 DE",
+                            "path": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+                            "title": "Attribution 3.0 Germany",
+                            "attribution": "CC BY 3.0 DE",
+                            "instruction": "You are free to share and adapt, but you must give appropriate credit, provide a link to the license, and indicate if changes were made.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.umweltbundesamt.de/daten/klima/treibhausgas-emissionen-in-deutschland#nationale-und-europaische-klimaziele",
+                    "title": "Nationale Trendtabellen in der Abgrenzung der Sektoren des Klimaschutzgesetzes (KSG)",
+                    "authors": [],
+                    "description": "Daten der Treibhausgasemissionen des Jahres 2020 nach KSG",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.umweltbundesamt.de/daten/klima/treibhausgas-emissionen-in-deutschland#nationale-und-europaische-klimaziele",
+                    "title": "Nationale Trendtabellen in der Abgrenzung der Sektoren des Klimaschutzgesetzes (KSG)",
+                    "authors": [],
+                    "description": "Daten der Treibhausgasemissionen des Jahres 2020 nach KSG",
+                    "sourceLicenses": [
+                        {
+                            "name": "dl-de/by-2-0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Data licence Germany – attribution – Version 2.0",
+                            "attribution": "dl-de/by-2-0",
+                            "instruction": "You are free to copy, print, present, alter, process and transmit to third parties; merge with your own or other data; integrate in internal and external business processes, products and applications in public and non-public electronic networks, but you must provide the name, the annotation referring to the license and reference the dataset.Changes, editing, new designs or other amendments must be marked as such in the source note.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Berlin Brandenburg",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "UMAS",
+                "raw",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "List of emission factors for energy carriers for different scenarios, total emissions in base year and emission reduction factors.",
+            "contributors": [
+                {
+                    "date": "2022-09-15",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "hedwiglieselotte",
+                    "object": "metadata",
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "stefanienguyen",
+                    "object": "data and metadata",
+                    "comment": "data referring to total emissions",
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-19",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "sabinehaas",
+                    "object": "data and metadata",
+                    "comment": "data referring to the emission factor and total emissions",
+                    "organization": null
+                },
+                {
+                    "date": "2022-10-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "chrwm",
+                    "object": "metadata",
+                    "comment": "Review metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-11-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "monika-o",
+                    "object": "metadata",
+                    "comment": "Annotate metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

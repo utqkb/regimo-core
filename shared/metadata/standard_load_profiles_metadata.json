@@ -1,0 +1,324 @@
+{
+    "id": "standard_load_profiles",
+    "name": "standard_load_profiles",
+    "title": "standard load profiles",
+    "resources": [
+        {
+            "name": "standard_load_profiles_HSN_inRET",
+            "path": "",
+            "type": "table",
+            "title": "standard_load_profiles_HSN_inRET",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030033",
+                                "name": "index"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Index column.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "G0",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Standard load profile G0 ‘General commercial’of the BDEW {3}",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "G3",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "The BDEW's {3} standard load profile G3 reflects the electricity consumption of continuous commercial operations.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "HA4",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "The standard load profile HA4 ‘Commercial, retail, wholesale’ from Thüringer Energienetze GmbH {1} is used for space heating and domestic hot water heating requirements.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Prozessgas",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "The standard load profile ‘Process Gas’ from AGCS Gas Clearing and Settlement AG {2} is used for the load profile of process heat consumption.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "T24",
+                        "type": "float",
+                        "unit": "MWh/MW",
+                        "isAbout": [
+                            {
+                                "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                                "name": "time series"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "The standard load profile T24 ‘Multi-family houses’ from Thüringer Energienetze GmbH {1} is used for the demand for space heating and domestic hot water.",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [
+                    "index"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            null
+                        ],
+                        "reference": {
+                            "fields": [
+                                null
+                            ],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                "demand"
+            ],
+            "context": {
+                "title": "ZO.RRO II - Zero Carbon Cross Energy System",
+                "contact": "Hochschule Nordhausen - Institut für Regenerative Energietechnik; ret@hs-nordhausen.de",
+                "grantNo": "",
+                "homepage": "https://zorro-thueringen.de/",
+                "publisher": "Open Energy Platform",
+                "sourceCode": "https://github.com/in-RET/ZO.RRO2",
+                "documentation": "ToDo",
+                "fundingAgency": "Thüringer Ministerium für Umwelt, Energie, Naturschutz und Forsten",
+                "publisherLogo": "https://github.com/OpenEnergyPlatform/organisation/blob/production/logo/OpenEnergyFamily_Logo_OpenEnergyPlatform.svg",
+                "fundingAgencyLogo": "https://github.com/in-RET/ZO.RRO2/blob/main/TH_UENF_4c.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": ","
+            },
+            "sources": [
+                {
+                    "title": "Standardlastprofilverfahren Erdgas",
+                    "authors": [
+                        "Thüringer Energienetze"
+                    ],
+                    "description": "{1}"
+                },
+                {
+                    "title": "Basisdaten der neuen Gaslastprofile",
+                    "authors": [
+                        "Gas Clearing and Settlement AG"
+                    ],
+                    "description": "{2}"
+                },
+                {
+                    "title": "Standardlastprofile“ 2018.",
+                    "authors": [
+                        "BDEW"
+                    ],
+                    "description": "{3}"
+                }
+            ],
+            "subject": [
+                {
+                    "id": "https://openenergyplatform.org/ontology/oeo/OEO_00030034",
+                    "name": "time series"
+                }
+            ],
+            "encoding": "utf8",
+            "keywords": [
+                "oemof",
+                "hsn_in_ret",
+                "zo_rro_ii",
+                "climate_neutrality",
+                "thuringia"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Common Attribution 4.0 International",
+                    "attribution": "© Hochschule Nordhausen - Institut für Regenerative Energietechnik, © ZO.RRO II Project Team",
+                    "instruction": "You are free to use, share and modify; As long as you attribute, include copyright and state changes",
+                    "copyrightStatement": ""
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2025-01-01T00:00:00+00:00",
+                        "start": "2025-01-01T00:00:00+00:00",
+                        "alignment": "left",
+                        "resolutionUnit": "h",
+                        "aggregationType": "current",
+                        "resolutionValue": "1"
+                    }
+                ],
+                "referenceDate": null
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Standard load profiles for describing load curves for various sectors. The data was taken from the following sources: {1-3}. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Science.",
+            "contributors": [
+                {
+                    "date": "2024-12-31",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Amèlie Oberdorfer",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0009-0004-7229-2118",
+                    "roles": [
+                        "DataManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Andreas Lubojanski",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0000-0002-4269-3779",
+                    "roles": [
+                        "ContactPerson",
+                        "DataCurator",
+                        "Distributor",
+                        "ProjectManager",
+                        "ProjectMember"
+                    ],
+                    "title": "Christoph Schmidt",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "DataCollector",
+                        "ProjectMember"
+                    ],
+                    "title": "Rohith Krishnan Bala Krishnan",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": "https://orcid.org/0009-0004-8449-3443",
+                    "roles": [
+                        "ProjectMember"
+                    ],
+                    "title": "Theresa Reinhardt",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2026-06-30",
+                    "path": null,
+                    "roles": [
+                        "Distributor",
+                        "ProjectLeader",
+                        "ProjectMember"
+                    ],
+                    "title": "Viktor Wesselak",
+                    "object": "data and metadata",
+                    "comment": null,
+                    "organization": "University of Applied Sciences Nordhausen - Institute for Renewable Energy Technology"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": "https://orcid.org/0009-0004-0638-4639",
+                    "roles": [
+                        "Other"
+                    ],
+                    "title": "Stefan Kirsch",
+                    "object": "metadata",
+                    "comment": "consulting on FAIR data publication",
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Ernst-Abbe-Hochschule Jena"
+                },
+                {
+                    "date": "2025-09-01",
+                    "path": "https://orcid.org/0000-0003-3633-1349",
+                    "roles": [
+                        "Other"
+                    ],
+                    "title": "Kevin Lindt",
+                    "object": "metadata",
+                    "comment": "consulting on FAIR data publication",
+                    "organization": "Thüringer Kompetenzzentrum Forschungsdatenmanagement, Technische Universität Ilmenau"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2025-12-02"
+        }
+    ],
+    "description": "Standard load profiles for describing load curves for various sectors. The data was taken from the following sources: {1-3}. The data was collected in the ZO.RRO II project by Nordhausen University of Applied Science.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

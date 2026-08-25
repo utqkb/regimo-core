@@ -1,0 +1,236 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "hv powerflow bus_t result",
+            "path": "ego_grid_pf_hv_result_bus_t",
+            "type": "Table",
+            "title": null,
+            "format": null,
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "result_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Result ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bus_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique id for bus, equivalent to id from osmtgmod",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "v_mag_pu_set",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Voltage magnitude set point, per unit of v_nom",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "p",
+                        "type": "",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "active power at bus (positive if net generation at bus)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "q",
+                        "type": "",
+                        "unit": "MVar",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "reactive power (positive if net generation at bus)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "v_mag_pu",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Voltage magnitude, per unit of v_nom",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "v_ang",
+                        "type": "",
+                        "unit": "radians",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Voltage angle",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "marginal_price",
+                        "type": "",
+                        "unit": "currency",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Locational marginal price from LOPF from power balance constraint",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": "ego_dp_powerflow_hv_setup.sql",
+                    "title": "open_eGo data-processing",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://github.com/openego/data_processing",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "Germany"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": "Results of bus_t considered in hv powerflow calculation; Add licence",
+            "contributors": [
+                {
+                    "date": "",
+                    "path": "",
+                    "roles": [
+                        ""
+                    ],
+                    "title": "",
+                    "object": "",
+                    "comment": "",
+                    "organization": ""
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,395 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "simulated_regional_electricity_demand_germany_2030",
+            "path": "simulated_regional_electricity_demand_germany_2030",
+            "type": "Table",
+            "title": "Simulated Regional Electricity Demand Germany 2030",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Timestep index for hour of the year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_0",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average demand per timestep for cluster 0",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_1",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average demand per timestep for cluster 1",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_2",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average demand per timestep for cluster 2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_3",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average demand per timestep for cluster 3",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_4",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average demand per timestep for cluster 4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_5",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average demand per timestep for cluster 5",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_6",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average demand per timestep for cluster 6",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_7",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average demand per timestep for cluster 7",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "t.gross@fz-juelich.de",
+                "grantNo": "",
+                "homepage": "https://www.fz-juelich.de/iek/iek-3/EN/Home/home_node.html",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "http://opendata.ffe.de/dataset/forecast-of-employees-by-economic-sectors-scenario-basis-german-districts/",
+                    "title": "Forecast of Employees by WZ2008, scenario Basis (German Districts)",
+                    "authors": [],
+                    "description": "Forecast of employees per district (2014..2030), scenario Basis; based on the BMAS study. FfE: regional distribution per district.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY-NC 4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "Attribution-NonCommercial 4.0 International",
+                            "attribution": "FfE 2019; Statistik der Bundesagentur für Arbeit; Bundesministerium für Arbeit und Soziales; Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://opendata.ffe.de/dataset/industrial-electricity-consumption-per-economic-sector-wz2008/",
+                    "title": "Industrial Electricity Consumption per Economic Sector WZ2008 (Germany)",
+                    "authors": [],
+                    "description": "Survey on the use of energy in manufacturing, mining and quarrying; Table 2: Energy consumption by energy source: electricity consumption per economic sector (WZ2008).",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE->BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "Statistisches Bundesamt (DESTATIS), 2008-2017",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://opendata.ffe.de:4000/v_demandregio_spatial_lk401?id_spatial=eq.48",
+                    "title": "Regionalisierte Bevölkerungsvorausrechnung bis 2060",
+                    "authors": [],
+                    "description": "Fortschreibung der Bevölkerung Deutschlands bis ins Jahr 2060 gemäß der demographischen Entwicklungsvariante G2-L2-W2 (basierend auf: Statistisches Bundesamt, „Varianten und Modellrechnungen der 14. koordinierten Bevölkerungsvorausberechnung für Deutschland“)",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE->BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "Statistisches Bundesamt (DESTATIS); Forschungszentrum Jülich GmbH; Forschungsstelle für Energiewirtschaft e.V.; Technical University of Berlin",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://opendata.ffe.de:4000/v_demandregio_spatial_lk401?id_spatial=eq.45&&year=eq.2015&&internal_id=eq.{1}",
+                    "title": "Einkommen 2015 pro Kopf, NUTS-3",
+                    "authors": [],
+                    "description": "Einkommen pro Kopf des Jahres 2015 für jede NUTS-3 Region in Deutschland",
+                    "sourceLicenses": [
+                        {
+                            "name": "DL-DE->BY-2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "Statistisches Bundesamt (DESTATIS), Forschungszentrum Jülich GmbH, Forschungsstelle für Energiewirtschaft e.V., Technical University of Berlin",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Private PKW-Flotte Deutschland",
+                    "authors": [],
+                    "description": "Regionale Verteilung der Nutzung von PKW auf NUTS3-Ebene",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY-NC 4.0",
+                            "path": "https://creativecommons.org/licenses/by-nc/4.0/",
+                            "title": "In-house data set",
+                            "attribution": "Forschungszentrum Jülich, Institut für Energie- und Klimaforschung, Technoökonomische Systemanalyse (IEK-3)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "cluster",
+                    "resolutionValue": "regional"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "electricity",
+                "demand",
+                "simulation",
+                "germany",
+                "electricity",
+                "regional"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0 1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "title": "CC0 1.0 Universal Public Domain Dedication",
+                    "attribution": "Forschungszentrum Jülich, Institut für Energie- und Klimaforschung, Technoökonomische Systemanalyse (IEK-3)",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2030-12-31T23:00:00+01:00",
+                        "start": "2030-01-01T00:00:00+01:00",
+                        "alignment": "left",
+                        "resolutionUnit": "h",
+                        "aggregationType": "average",
+                        "resolutionValue": "1"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Simulated electricity demand time series for eight regional clusters in Germany in hourly resolution for 2030.",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Theresa Groß",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Simonas Cerniauskas",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Peter Markewitz",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Felix Kullmann",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jochen Linßen",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Leander Kotzur",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Detlef Stolten",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

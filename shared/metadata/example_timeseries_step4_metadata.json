@@ -1,0 +1,434 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "example_timeseries_step4",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/example_timeseries_step4",
+            "type": "Table",
+            "title": "sedos_example_timeseries_step4",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_start",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Start timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_stop",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Stop timestamp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "timeindex_resolution",
+                        "type": "interval",
+                        "unit": "Percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timesteps",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "uncontrolled_charging",
+                        "type": "float array",
+                        "unit": "Percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timeseries for uncontrolled charging",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "charge_availability",
+                        "type": "float array",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timeseries for charging availability",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "drive_power",
+                        "type": "float array",
+                        "unit": "Percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timeseries for drive power",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "max_battery",
+                        "type": "float array",
+                        "unit": "Percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Timeseries for maximal vehicle battery storage level",
+                        "valueReference": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320064",
+                                "name": "charging"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "min_battery",
+                        "type": "float array",
+                        "unit": "Percent",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320064",
+                                "name": "charging"
+                            },
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010256",
+                                "name": "maximum value"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Timeseries for minimal vehicle battery storage level",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "hedda.gardian@dlr.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://doi.org/10.1002/er.4056",
+                    "title": "Impact of electric vehicles on a future renewable energy-based power system in Europe with a focus on Germany",
+                    "authors": [],
+                    "description": "Paper on novel modelling approach comprising a detailed representation of electric vehicles based on real driving patterns and interactions between the power systems of Germany and other European regions.",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. John Wiley & Sons, Ltd. 2018",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://bmdv.bund.de/SharedDocs/DE/Anlage/G/mid-2017-tabellenband.pdf?__blob=publicationFile",
+                    "title": "Mobilität in Deutschland: Tabellarische Grundauswertung",
+                    "authors": [],
+                    "description": "Mobilität in Deutschland (MiD) ist eine bundesweite Befragung von Haushalten zu ihrem alltäglichen Verkehrsverhalten im Auftrag des Bundesministeriums für Digitales und Verkehr (BMDV).",
+                    "sourceLicenses": [
+                        {
+                            "name": "null",
+                            "path": "null",
+                            "title": "null",
+                            "attribution": "copyright. Meier, Schindler, Gustav. 2011",
+                            "instruction": "null",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00320050",
+                    "name": "plug-in hybrid electric car"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "input_data",
+                "mobility",
+                "example"
+            ],
+            "licenses": [
+                {
+                    "name": "example_dummy_licence",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "",
+                    "attribution": "",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2021-12-31",
+                        "start": "2021-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2024-12-31",
+                        "start": "2024-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2027-12-31",
+                        "start": "2027-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2030-12-31",
+                        "start": "2030-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2035-12-31",
+                        "start": "2035-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2040-12-31",
+                        "start": "2040-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2045-12-31",
+                        "start": "2045-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2050-12-31",
+                        "start": "2050-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2060-12-31",
+                        "start": "2060-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    },
+                    {
+                        "end": "2070-12-31",
+                        "start": "2070-01-01",
+                        "alignment": "left",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": "hourly"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Example for SEDOS timeseries metadata. Techno-economic parameter for medium sized electric cars.",
+            "contributors": [
+                {
+                    "date": "2023-08-09",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christoph Muschner",
+                    "object": "data and metadata",
+                    "comment": "Example preparation",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2023-08-09"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

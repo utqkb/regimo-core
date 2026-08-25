@@ -1,0 +1,628 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "x2x_x2liquid_ft_1",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/x2x_x2liquid_ft_1",
+            "type": "Table",
+            "title": "sedos_x2x_x2liquid_ft_1",
+            "format": "csv",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_abs_new_max",
+                        "type": "float array",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum commissioning",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_constant",
+                        "type": "float",
+                        "unit": "percent",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140129",
+                                "name": "unplanned availability"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Constant output ratio.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec",
+                        "type": "float",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of electricity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_syngas",
+                        "type": "float",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of syngas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_diesel_syn_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of diesel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_gasoline_syn_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of gasoline",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_kerosene_syn_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of kerosene",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_naphtha_syn_orig",
+                        "type": "float array",
+                        "unit": "MWh/MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Commodity conversion factor of naphtha",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_p",
+                        "type": "float array",
+                        "unit": "EUR/kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Fixed operation and maintenance costs",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_p",
+                        "type": "float array",
+                        "unit": "EUR/kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Investment cost per capacity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_var_e",
+                        "type": "float",
+                        "unit": "EUR/kWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Variable opertion and maintenance costs",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_diesel_syn_orig",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum share of diesel output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_gasoline_syn_orig",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum share of gasoline output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_kerosene_syn_orig",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum share of kerosene output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_max_sec_naphtha_syn_orig",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Maximum share of naphtha output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_diesel_syn_orig",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum share of diesel output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_gasoline_syn_orig",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum share of gasoline output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_kerosene_syn_orig",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum share of kerosene output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_min_sec_naphtha_syn_orig",
+                        "type": "float",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Minimum share of naphtha output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Lifetime in operation.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wacc",
+                        "type": "text",
+                        "unit": "percent",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Percentage of costs for capital after taxes. Used to calculate annuity factor for investment costs.",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "g.mueller@fz-juelich.de",
+                "grantNo": "03EI1040D",
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.sciencedirect.com/science/article/pii/S1364032117309358",
+                    "title": "Electrofuels for the transport sector: A review of production costs",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_for_renewable_fuels.pdf",
+                    "title": "Technology Data: Renewable fuels",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 4.0 Deed",
+                            "path": "https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1",
+                            "title": "CC BY 4.0 Deed",
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "ownAssumption",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://iopscience.iop.org/article/10.1088/2516-1083/ac7937",
+                    "title": "Review of electrofuel feasibility",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://iea.blob.core.windows.net/assets/a02a0c80-77b2-462e-a9d5-1099e0e572ce/IEA-The-Future-of-Hydrogen-Assumptions-Annex.pdf",
+                    "title": "IEA G20 Hydrogen report",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://onlinelibrary.wiley.com/doi/book/10.1002/9783527635603",
+                    "title": "Fischer–Tropsch fuels refinery design",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.sciencedirect.com/science/article/pii/S0360544215011767",
+                    "title": "Simulation and evaluation of a process concept for the generation of synthetic fuel from CO2 and H2",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.sciencedirect.com/science/article/pii/S0961953419300881",
+                    "title": "Techno-economic and georeferenced analysis of forestry residues-based Fischer-Tropsch diesel with carbon capture in Brazil",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://www.sciencedirect.com/science/article/pii/S2212982021000263",
+                    "title": "Performance and cost analysis of liquid fuel production from H2 and CO2 based on the Fischer-Tropsch process",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://theicct.org/wp-content/uploads/2022/02/fuels-us-europe-current-future-cost-ekerosene-us-europe-mar22.pdf",
+                    "title": "Current and future cost of Current and future cost of e-kerosene in the United States and Europe and Europe",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": null,
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Global",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010156",
+                    "name": "liquid synthetic fuel"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020351",
+                    "name": "power-to-liquid technology"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140160",
+                    "name": "syngas"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "AP5",
+                "X2X",
+                "oedatamodel-parameter",
+                "input_data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": null,
+                    "instruction": "You are free: To Share, To Create, To Adapt",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Techno-economic parameter for fischer-tropsch synthesis plants.",
+            "contributors": [
+                {
+                    "date": "2024-04-23",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Hedda Gardian",
+                    "object": "data and metadata",
+                    "comment": "Literature review and data selection for Fischer-Tropsch plants.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-04-08",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Gian Müller, FZJ",
+                    "object": "data and metadata",
+                    "comment": "Literature review for Fischer-Tropsch plants.",
+                    "organization": null
+                },
+                {
+                    "date": "2024-04-23",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Andreas Meurer",
+                    "object": "data and metadata",
+                    "comment": "Literature review for Fischer-Tropsch plants.",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-04-23"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

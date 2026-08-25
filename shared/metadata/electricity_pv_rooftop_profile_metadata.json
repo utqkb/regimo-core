@@ -1,0 +1,78 @@
+{
+    "@id": null,
+    "name": "2045_scenario",
+    "title": "2045_scenario",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "electricity_pv_rooftop_profile",
+            "path": "data/sequences/electricity-pv_rooftop_profile.csv",
+            "title": "electricity-pv_rooftop_profile",
+            "extras": {
+                "oep:normalized_columns": {
+                    "timeindex": "timeindex",
+                    "r120640428428-electricity-pv_rooftop-profile": "r120640428428_electricity_pv_rooftop_profile",
+                    "r120640472472-electricity-pv_rooftop-profile": "r120640472472_electricity_pv_rooftop_profile",
+                    "r120670124124-electricity-pv_rooftop-profile": "r120670124124_electricity_pv_rooftop_profile",
+                    "r120670201201-electricity-pv_rooftop-profile": "r120670201201_electricity_pv_rooftop_profile"
+                },
+                "oep:normalized_table_name": "electricity_pv_rooftop_profile"
+            },
+            "format": "csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "timeindex",
+                        "type": "datetime",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "r120640428428_electricity_pv_rooftop_profile",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "r120640472472_electricity_pv_rooftop_profile",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "r120670124124_electricity_pv_rooftop_profile",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    },
+                    {
+                        "name": "r120670201201_electricity_pv_rooftop_profile",
+                        "type": "number",
+                        "format": "default",
+                        "nullable": true
+                    }
+                ],
+                "primaryKey": [],
+                "missingValues": [
+                    ""
+                ]
+            },
+            "profile": "tabular-data-resource",
+            "encoding": "utf-8",
+            "keywords": [
+                "SLE",
+                "preprocessed"
+            ],
+            "mediatype": "text/csv"
+        }
+    ],
+    "description": null,
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,319 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "wind_turbine_domestic_lod_geoss",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/wind_turbine_domestic_lod_geoss",
+            "type": "Table",
+            "title": "wind_turbine_domestic_LOD_GEOSS",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "data",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the different parameters of the wind turbine",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "_2015",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the data for 2015",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "_2020",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the data for 2020",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "_2030",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the data for 2030",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "_2050",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the data for 2050",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "uncertainty_2020_lower",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the lower boundary of the uncertainty of the paramter data in 2020",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "uncertainty_2020_upper",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the upper boundary of the uncertainty of the paramter data in 2020",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "uncertainty_2050_lower",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the lower boundary of the uncertainty of the paramter data in 2050",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "uncertainty_2050_upper",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains the upper boundary of the uncertainty of the paramter data in 2050",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "note",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains note id's regarding each data row",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ref",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains reference id's regarding each data row",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "note_id",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "The column contains each note id used in this datasheet",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "note_description",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains a note allocated to their Note_id",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ref_id",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "The column contains each reference id used in this datasheet",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ref_description",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "The column contains a reference allocated to their Ref_id",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_for_el_and_dh.xlsx",
+                    "title": "Technology Data Catalogue for Electricity and district heating production - Updated April 2020",
+                    "authors": [],
+                    "description": "2020, Data collection for electricity generation and district heating plants, last update: April 2020",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency 2021",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2021-05-10"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This is the first dataset to test the technology data prototype",
+            "contributors": [
+                {
+                    "date": "2021-05-10",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christoph Muschner",
+                    "object": "Metadata",
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-05-10"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

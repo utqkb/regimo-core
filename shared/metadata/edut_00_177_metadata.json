@@ -1,0 +1,263 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "demand.egon_peta_heat",
+            "path": null,
+            "type": "Table",
+            "title": "eGo_n scenario-specific future heat demand data",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "demand",
+                        "type": "double precision",
+                        "unit": "MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "annual heat demand",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector",
+                        "type": "text",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "sector e.g. residential",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "text",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "scenario name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zensus_population_id",
+                        "type": "integer",
+                        "unit": "none",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "census cell id",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "zensus_population_id"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "id"
+                            ],
+                            "resource": "society.destatis_zensus_population_per_ha"
+                        }
+                    },
+                    {
+                        "fields": [
+                            "scenario"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "name"
+                            ],
+                            "resource": "scenario.egon_scenario_parameters"
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "none",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://s-eenergies-open-data-euf.hub.arcgis.com/search?categories=seenergies_buildings",
+                    "title": "Peta5_0_1_HD_res and Peta5 0 1 HD ser",
+                    "authors": [],
+                    "description": "Der Datenbestand umfasst sämtliche Verwaltungseinheiten aller hierarchischen Verwaltungsebenen vom Staat bis zu den Gemeinden mit ihren Verwaltungsgrenzen, statistischen Schlüsselzahlen und dem Namen der Verwaltungseinheit sowie der spezifischen Bezeichnung der Verwaltungsebene des jeweiligen Bundeslandes.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution 4.0 International",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC BY 4.0",
+                            "attribution": "© Flensburg, Halmstad and Aalborg universities",
+                            "instruction": "You are free: To Share, To Adapt; As long as you: Attribute!",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/2020/vg250_01-01.geo84.shape.ebenen.zip",
+                    "title": "Dienstleistungszentrum des Bundes für Geoinformation und Geodäsie - Open Data",
+                    "authors": [],
+                    "description": "Dieser Datenbestand steht über Geodatendienste gemäß Geodatenzugangsgesetz (GeoZG) (http://www.geodatenzentrum.de/auftrag/pdf/geodatenzugangsgesetz.pdf) für die kommerzielle und nicht kommerzielle Nutzung geldleistungsfrei zum Download und zur Online-Nutzung zur Verfügung. Die Nutzung der Geodaten und Geodatendienste wird durch die Verordnung zur Festlegung der Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes (GeoNutzV) (http://www.geodatenzentrum.de/auftrag/pdf/geonutz.pdf) geregelt. Insbesondere hat jeder Nutzer den Quellenvermerk zu allen Geodaten, Metadaten und Geodatendiensten erkennbar und in optischem Zusammenhang zu platzieren. Veränderungen, Bearbeitungen, neue Gestaltungen oder sonstige Abwandlungen sind mit einem Veränderungshinweis im Quellenvermerk zu versehen. Quellenvermerk und Veränderungshinweis sind wie folgt zu gestalten. Bei der Darstellung auf einer Webseite ist der Quellenvermerk mit der URL http://www.bkg.bund.de zu verlinken. © GeoBasis-DE / BKG <Jahr des letzten Datenbezugs> © GeoBasis-DE / BKG <Jahr des letzten Datenbezugs> (Daten verändert) Beispiel: © GeoBasis-DE / BKG 2013",
+                    "sourceLicenses": [
+                        {
+                            "name": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "path": "https://www.govdata.de/dl-de/by-2-0",
+                            "title": "DL-DE->BY-2.0",
+                            "attribution": "© GeoBasis-DE / BKG 2016 dl-de/by-2-0 (Daten verändert)",
+                            "instruction": "You are free: To Share, To Adapt; As long as you: Attribute!",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://www.bkg.bund.de",
+                    "title": "BKG - Verwaltungsgebiete 1:250.000 (vg250)",
+                    "authors": [],
+                    "description": "Der Datenbestand umfasst sämtliche Verwaltungseinheiten aller hierarchischen Verwaltungsebenen vom Staat bis zu den Gemeinden mit ihren Verwaltungsgrenzen, statistischen Schlüsselzahlen und dem Namen der Verwaltungseinheit sowie der spezifischen Bezeichnung der Verwaltungsebene des jeweiligen Bundeslandes.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution 4.0 International",
+                            "path": "www.govdata.de/dl-de/by-2-0",
+                            "title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+                            "attribution": "© Bundesamt für Kartographie und Geodäsie",
+                            "instruction": "Jede Nutzung ist unter den Bedingungen dieser „Datenlizenz Deutschland - Namensnennung - Version 2.0 zulässig.\nDie bereitgestellten Daten und Metadaten dürfen für die kommerzielle und nicht kommerzielle Nutzung insbesondere:(1) vervielfältigt, ausgedruckt, präsentiert, verändert, bearbeitet sowie an Dritte übermittelt werden;\n (2) mit eigenen Daten und Daten Anderer zusammengeführt und zu selbständigen neuen Datensätzen verbunden werden;\n (3) in interne und externe Geschäftsprozesse, Produkte und Anwendungen in öffentlichen und nicht öffentlichen elektronischen Netzwerken eingebunden werden.",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "100x100m"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [],
+            "licenses": [
+                {
+                    "name": "Creative Commons Attribution 4.0 International",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC BY 4.0",
+                    "attribution": "© Europa-Universität Flensburg",
+                    "instruction": "You are free: To Share, To Adapt; As long as you: Attribute!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "scenario-specific"
+            },
+            "languages": [
+                "EN"
+            ],
+            "description": "Future heat demands per hectare grid cell of the residential and service sector",
+            "contributors": [
+                {
+                    "date": "2021-03-04",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Eva, Günni, Clara",
+                    "object": "",
+                    "comment": "Processed data",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

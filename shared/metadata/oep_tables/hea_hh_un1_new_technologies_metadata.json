@@ -1,0 +1,600 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "hea_hh_un1_new_technologies",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/hea_hh_un1_new_technologies",
+            "type": "Table",
+            "title": "sedos-hea_hh_un1_new_technologies",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country or regionx",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of process",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity_p_abs_new_max",
+                        "type": "float",
+                        "unit": "GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "maximum allowed capacity of a technology in a year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "availability_constant",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_fix_p",
+                        "type": "float",
+                        "unit": "Euro/GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "costs that occure every year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cost_inv_p",
+                        "type": "float",
+                        "unit": "MEuro/GW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "investment cost",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lifetime",
+                        "type": "float",
+                        "unit": "a",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_heating_oil",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "efficiency of the technology to turn heating oil into output",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_bio_wood",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of biomass used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_methane",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of natural gas used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_envir_heat",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of environmental heat used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_geoth_heat",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of geothermal heat used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_elec_distr",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of electricity used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_heat_district_low_hh",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of low heat used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_heat_district_high_hh",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of high heat used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_pri_solar_radiation",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of solar radiation used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_sec_biodiesel_orig",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "amount of biodiesel used to turn into output commodity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_pri_bio_wood",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of biomass wood",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_pri_solar_radiation",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of solar radiation",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_sec_elec_distr",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of electricity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_pri_envir_heat",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of environmental heat",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_sec_methane",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of methane",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_pri_geoth_heat",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of geothermal heat",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_hh_un1_space_heat",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "efficiency of technology to transform input commodity into space heating",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_hh_un1_hot_water",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "efficiency of technology to transform input commodity into hot water",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "conversion_factor_exo_hh_un1_space_cooling",
+                        "type": "float",
+                        "unit": "PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "efficiency of technology to transform input commodity into space cooling",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_exo_hh_un1_space_heat",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of space heat",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_exo_hh_un1_hot_water",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of hot water",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "flow_share_fix_exo_hh_un1_space_cooling",
+                        "type": "float",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "fix flow share of space cooling",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heating_oil_emi_ch4_f_hea",
+                        "type": "float",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of heating oil for CH4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heating_oil_emi_n2o_f_hea",
+                        "type": "float",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of heating oil for N2O",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_heating_oil_emi_co2_f_hea",
+                        "type": "text",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of heating oil for CO2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_bio_wood_emi_ch4_f_hea",
+                        "type": "float",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of stemwood for CH4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_bio_wood_emi_n2o_f_hea",
+                        "type": "float",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of stemwood for N2O",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_pri_bio_wood_emi_co2_f_hea",
+                        "type": "text",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of stemwood for CO2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_ch4_f_hea",
+                        "type": "float",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of natural gas for CH4",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_n2o_f_hea",
+                        "type": "float",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of natural gas for N2O",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ef_sec_methane_emi_co2_f_hea",
+                        "type": "text",
+                        "unit": "kt/PJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "emission factor of natural gas for CO2",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Bandwidth Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "jonas.winkler@ier.uni-stuttgart.de",
+                "grantNo": null,
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": "Bundesministerium fÃ¼r Wirtschaft und Klimaschutz (BMWK)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": "https://en.wikipedia.org/wiki/Federal_Ministry_for_Economic_Affairs_and_Climate_Action#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/oedatamodel-parameter",
+                    "title": "OEDatamodel-parameter",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "OEFamily",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": null,
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "OEFamily",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "NUTS-0"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "SEDOS",
+                "oedatamodel-parameter",
+                "input_data",
+                "heat"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0-1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": "Creative Commons Zero v1.0 Universal",
+                    "attribution": null,
+                    "instruction": "You are free: To Share, To Create, To Adapt",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2070-12-31",
+                        "start": "2021-01-01",
+                        "alignment": null,
+                        "resolutionUnit": "",
+                        "aggregationType": null,
+                        "resolutionValue": "yearly"
+                    }
+                ],
+                "referenceDate": "2021"
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "Heizungstechnologien fÃ¼r neue urbane Haushalte fÃ¼r RaumwÃ¤rme, Warmwasser und RaumkÃ¼hlung",
+            "contributors": [
+                {
+                    "date": "2024-05-23",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Jonas Winkler",
+                    "object": "data and metadata",
+                    "comment": "create metadata and data",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2024-05-23"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

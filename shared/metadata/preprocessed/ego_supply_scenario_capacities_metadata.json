@@ -1,0 +1,249 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "ego_supply_scenario_capacities",
+            "type": "Table",
+            "title": "eGo electrical scenario Capacities of Germany",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "state",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of federate state",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "generator_type",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of generator typ / energy source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capacity",
+                        "type": "",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Installed electrical capacity of scenario and region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "nuts",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "federate state NUTS ID",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario_name",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of Scenario",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "FlEnS (Fl)ensburg (En)ergy (S)cenarios for open_eGo",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "https://github.com/znes/FlEnS/tree/master/open_eGo",
+                            "title": "",
+                            "attribution": "© ZNES Flensburg. 2016-2017",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "NETZENTWICKLUNGSPLAN STROM 2025, VERSION 2015",
+                    "authors": [],
+                    "description": "Grid De­vel­op­ment Plan Power of Germany by the for TSOs",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.netzentwicklungsplan.de/_NEP_file_transfer/NEP_2025_1_Entwurf_Teil1.pdf",
+                            "title": "",
+                            "attribution": "© TenneT TSO GmbH, Amprion GmbH, 50Hertz Transmission GmbH, TransnetBW GmbH,",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Data Commons Open Database License 1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "ODbL-1.0",
+                    "attribution": "© ZNES Europa-Universität Flensburg",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050-12-31",
+                        "start": "2035-01-01",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "This Data set incluedes all electrical Capacities and energy source per federate state in Germany. The set inclueds the scenario B1 2035 / B2 2035 (see NEP 2015, p. 44) as NEP 2035 and eGo 100 scenario assumptions collected by own research.",
+            "contributors": [
+                {
+                    "date": "2016-10-10",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "wolfbunke",
+                    "object": null,
+                    "comment": "Create and restructure scripts and table",
+                    "organization": null
+                },
+                {
+                    "date": "2017-11-06",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "wolfbunke",
+                    "object": null,
+                    "comment": "Update Metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

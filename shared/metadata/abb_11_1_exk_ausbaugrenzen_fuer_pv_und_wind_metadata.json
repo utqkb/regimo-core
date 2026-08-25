@@ -1,0 +1,252 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "abb_11_1_exk_ausbaugrenzen_fuer_pv_und_wind",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/abb_11_1_exk_ausbaugrenzen_fuer_pv_und_wind",
+            "type": "Table",
+            "title": "Strategien für eine treibhausgasneutrale Energieversorgung bis zum Jahr 2045. (Kurzfassung) Forschungszentrum Jülich GmbH",
+            "format": null,
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "in_gw_a",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000000",
+                                "name": "uniu"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "festgelegter_maximaler_ausbau_pro_jahr",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bentigter_durschnittlicher_ausbau_im_ksg2045_szena",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "d.stolten@fz-juelich.de, p.markewitz@fz-juelich.de, l.kotzur@fz-juelich.de",
+                "grantNo": null,
+                "homepage": "https://www.fz-juelich.de/de/ice/ice-2/aktuelles/news/neue-ziele-auf-alten-wegen-strategien-fuer-eine-treibhausgasneutrale-energieversorgung-bis-zum-jahr-2045?expand=translations,fzjsettings,nearest-institut",
+                "publisher": "",
+                "sourceCode": null,
+                "documentation": "https://www.fz-juelich.de/de/ice/ice-2/aktuelles/news/neue-ziele-auf-alten-wegen-strategien-fuer-eine-treibhausgasneutrale-energieversorgung-bis-zum-jahr-2045?expand=translations,fzjsettings,nearest-institut",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": null,
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "https://www.fz-juelich.de/de/ice/ice-2/aktuelles/news/neue-ziele-auf-alten-wegen-strategien-fuer-eine-treibhausgasneutrale-energieversorgung-bis-zum-jahr-2045?expand=translations,fzjsettings,nearest-institut",
+                    "title": "Forschungszentrum Jülich GmbH, Institut für Energie- und Klimaforschung: Techno-ökonomische Systemanalyse (IEK-3)",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020317",
+                    "name": "greenhouse gas emission scenario"
+                },
+                {
+                    "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140133",
+                    "name": "re"
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                "2045",
+                "Deutschland",
+                "Germany",
+                "greenhouse gas ",
+                "strategie",
+                "energy",
+                "energy demand",
+                "sectors",
+                "wind energy",
+                "hydrogen",
+                "PV"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "Creative Commons Attribution License 4.0",
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2021-11-03"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "Zentrale Modellergebnisse der Studie \"Neue Ziele auf Alten Wegen? Strategien für eine treibhausgasneutrale Energieversorgung bis zum Jahr 2045\"",
+            "contributors": [
+                {
+                    "date": "2021-11-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Prof. Dr. Detlef Stolten",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-11-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Peter Markewitz",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-11-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Dr. Leander Kotzur",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-11-03"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

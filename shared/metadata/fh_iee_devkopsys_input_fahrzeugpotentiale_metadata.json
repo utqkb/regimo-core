@@ -1,0 +1,280 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "fh_iee_devkopsys_input_fahrzeugpotentiale",
+            "path": "https://openenergy-platform.org/dataedit/view/scenario/fh_iee_devkopsys_input_fahrzeugpotentiale",
+            "type": "Table",
+            "title": "Fraunhofer-Institut für Energiewirtschaft und Energiesystemtechnik Dekarbonierung Verkehr - Rückkopplung Energiesystem(DeVKopSys) - fahrzeugpotenzial",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Szenario",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of the scenario",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Szenariojahr",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country to which the value applies",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Kennwert",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Top category in the classification of technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Unterkennwert",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Middle category in the classification of technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Einheit",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit of measure",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "Wert",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Value",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "norman.gerhardt@iee.fraunhofer.de",
+                "grantNo": "16EM4005-1",
+                "homepage": "https://www.iee.fraunhofer.de/de/projekte/suche/laufende/DeVKopSys.html",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://www.iee.fraunhofer.de/de/projekte/suche/laufende/DeVKopSys.html",
+                "fundingAgency": "Bundesministerium für Umwelt, Naturschutz und nukleare Sicherheit",
+                "publisherLogo": "https://www.iee.fraunhofer.de/content/dam/iee/energiesystemtechnik/fraunhofer-iee.gif",
+                "fundingAgencyLogo": "https://de.wikipedia.org/wiki/Datei:BMU_Logo.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Europe (EU28 without Malta and Cyprus, including Norway and Switzerland)",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Fraunhofer IEE",
+                "Fh IEE DeVKopSys",
+                "BMU",
+                "emissions",
+                "Transport",
+                "Europe",
+                "Germany",
+                "2012",
+                "2050",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE-BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Data licence Germany – attribution – version 2.0",
+                    "attribution": "© Fraunhofer IEE 2021",
+                    "instruction": "Die bereitgestellten Daten und Metadaten dürfen für die kommerzielle und nicht kommerzielle Nutzung übermittelt werden",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2012-01-01"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "This table gives an overview of the biomass potential in all scenarios from project \"Fh IEE DeVKopSys\" (\"Investigation of development paths in the transport sector in feedback with other sectors of the energy system\"). It contains the biomass potential for heat, electricity and transport in Germany",
+            "contributors": [
+                {
+                    "date": "2021-03-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fraunhofer IEE",
+                    "object": "Metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-06-03",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "jh-RLI",
+                    "object": "review",
+                    "comment": "Review metadata and validate oep compatibility",
+                    "organization": null
+                },
+                {
+                    "date": "2022-03-11",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "steull",
+                    "object": "review and update",
+                    "comment": "review metadata and update to v1.5.1",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-03-29"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

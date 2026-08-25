@@ -1,0 +1,322 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": "https://energy.databus.dbpedia.org/chrwm/LOD-GEOSS_use_case_oemof-B3/umas_weatherdata_b_2017",
+            "name": "umas_weatherdata_b_2017",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/umas_weatherdata_b_2017",
+            "type": "Table",
+            "title": "umas_weatherdata_b_2017",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "time",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00140043",
+                                "name": "time stamp"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the time when the measurements were carried out",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "latitude",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000189",
+                                "name": "geographic coordinate"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the latitude of the measuring station",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "longitude",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000189",
+                                "name": "geographic coordinate"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the longitude of the measuring station",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "ghi",
+                        "type": "float",
+                        "unit": "W/m²",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020038",
+                                "name": "solar radiation"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the global horizontal irradiance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_speed",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000043",
+                                "name": "wind"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000060",
+                                "name": "speed/velocity unit"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the speed of the wind",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "temp_air",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000054",
+                                "name": "air"
+                            },
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000005",
+                                "name": "temperature unit"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the temperature of the air",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "precipitable_water",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00000441",
+                                "name": "water"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the amount of precipitable water",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dni",
+                        "type": "int",
+                        "unit": "W/m²",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020038",
+                                "name": "solar radiation"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the direct normal irradiance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "dhi",
+                        "type": "float",
+                        "unit": "W/m²",
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020038",
+                                "name": "solar radiation"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "column shows the diffuse horizontal irradiance",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://cds.climate.copernicus.eu",
+                    "title": "Climate Data Store",
+                    "authors": [],
+                    "description": "climate related data base",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC BY 4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "Creative Commons 4.0 International",
+                            "attribution": "@Copernicus Climate Change Service",
+                            "instruction": "You are free: To Share, To Adapt; As long as you: Attribute",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Berlin und Brandenburg",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "UMAS",
+                "raw",
+                "Input-data"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "",
+                    "instruction": "You are free to share and adapt, but you must attribute. See https://creativecommons.org/licenses/by/4.0/deed.en for further information.",
+                    "copyrightStatement": "https://www.ipcc.ch/copyright/"
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                ""
+            ],
+            "description": "Weather data for Berlin in 2017, hourly resolution",
+            "contributors": [
+                {
+                    "date": "2022-10-28",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Oskar",
+                    "object": "metadata",
+                    "comment": "Create metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2022-12-05",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "monika-o",
+                    "object": "metadata",
+                    "comment": "Annotate metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

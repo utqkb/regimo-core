@@ -1,0 +1,450 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "ego_pf_hv_result_transformer",
+            "type": "Table",
+            "title": "eGo hv powerflow results - transformer",
+            "format": "sql",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "result_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique result id corresponding to result_meta",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "line_id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "ID of corresponding transformer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bus0",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of first bus to which branch is attached",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bus1",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of second bus to which branch is attached",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "x",
+                        "type": "",
+                        "unit": "Ohm",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Series reactance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "r",
+                        "type": "",
+                        "unit": "Ohm",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Series resistance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "g",
+                        "type": "",
+                        "unit": "Siemens",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Shunt conductivity",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "b",
+                        "type": "",
+                        "unit": "Siemens",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Shunt susceptance",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "s_nom",
+                        "type": "",
+                        "unit": "MVA",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Limit of apparent power which can pass through branch",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "s_nom_extendable",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Switch to allow capacity s_nom to be extended",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "s_nom_min",
+                        "type": "",
+                        "unit": "MVA",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If s_nom is extendable, set its minimum value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "s_nom_max",
+                        "type": "",
+                        "unit": "MVA",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If s_nom is extendable in OPF, set its maximum value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "s_nom_max",
+                        "type": "",
+                        "unit": "MVA",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "If s_nom is extendable in OPF, set its maximum value",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "tap_ratio",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Ratio of per unit voltages at each bus",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "phase_shift",
+                        "type": "",
+                        "unit": "degrees",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Voltage phase angle shift",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "capital_cost",
+                        "type": "",
+                        "unit": "€/MVA",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Capital cost of extending s_nom by 1 MVA",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "x_pu",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Per unit series reactance calculated by PyPSA from x and bus.v_nom",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "r_pu",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Per unit series resistance calculated by PyPSA from r and bus.v_nom",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "g_pu",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Per unit shunt conductivity calculated by PyPSA from g and bus.v_nom",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "b_pu",
+                        "type": "",
+                        "unit": "per unit",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Per unit shunt susceptance calculated by PyPSA from b and bus.v_nom",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "s_nom_opt",
+                        "type": "",
+                        "unit": "MVA",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Optimised capacity for apparent power",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "geom",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "geometry that depict the real route of the line",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "topo",
+                        "type": "",
+                        "unit": "topo",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "topology that depicts a direct connection between both busses",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "eGo dataprocessing",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License Version 3 (AGPL-3.0)",
+                            "path": "https://github.com/openego/data_processing",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "OpenStreetMap",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "Open Database License (ODbL) v1.0",
+                            "path": "http://www.openstreetmap.org/",
+                            "title": "",
+                            "attribution": "© OpenStreetMap contributors",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Open Power System Data (OPSD)",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "MIT Licence",
+                            "path": "http://data.open-power-system-data.org/conventional_power_plants/2016-02-08/",
+                            "title": "",
+                            "attribution": "© 2016 Open Power System Data",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "EnergyMap",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License Version 3 (AGPL-3.0)",
+                            "path": "www.energymap.info",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Bundesnetzagentur (BNetzA)",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU Affero General Public License Version 3 (AGPL-3.0)",
+                            "path": "http://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/Versorgungssicherheit/Erzeugungskapazitaeten/Kraftwerksliste/kraftwerksliste-node.html",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Data Commons Open Database License 1.0",
+                    "path": "https://opendatacommons.org/licenses/odbl/1.0/",
+                    "title": "ODbL-1.0",
+                    "attribution": "© Flensburg University of Applied Sciences, Center for Sustainable Energy Systems",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute, Share-Alike, Keep open!",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Results of transformers considered in hv powerflow calculations",
+            "contributors": [
+                {
+                    "date": "2017-11-21",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Mariusves",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

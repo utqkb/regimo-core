@@ -1,0 +1,860 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "bnetza_eeg_anlagenstammdaten",
+            "type": "Table",
+            "title": "BNetzA - EEG-Anlagenstammdaten (außer PV-Gebäudeanlagen) - Veröffentlichung der Registerdaten",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Veröffentlichungsdatum",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "meldedatum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Meldedatum",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "meldegrund",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Meldegrund",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "anlagennummer",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Anlagennummer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "1.8_eeg-anlagenschlüssel",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "1.8 EEG-Anlagenschlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "3.1_genehmigungs-datum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "3.1 Genehmigungs-datum",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "3.2_genehmigungs-behörde",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "3.2 Genehmigungs-behörde",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "3.3_genehmigungs-aktenzeichen",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "3.3 Genehmigungs-Aktenzeichen",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "3.4_geplantes_inbetriebnahme-datum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "3.4 Geplantes Inbetriebnahme-datum",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "3.5_errichtungs-frist",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "3.5 Errichtungs-frist",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.1_energieträger",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.1 Energieträger",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.2_installierte_leistung",
+                        "type": "",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.2 Installierte Leistung [kW]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.2.1_inst._leistung_vor_änderung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.2.1 Inst. Leistung vor Leistungs-änderung (ohne Flexprämie)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.2.2_inst._leistung_nach_änderung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.2.2 Inst. Leistung nach Leistungs-änderung (ohne Flexprämie)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.3_tatsächliche_inbetriebnahme",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.3 Tatsächliche Inbetrieb-nahme",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.4_datum_leistungsänderung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.4 Datum Leistungs-änderung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.5_stilllegungsdatum",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.5 Stilllegungs-datum",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.6_name_der_anlage",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.6 Name der Anlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.7_strasse_bzw._flurstück",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.7 Strasse bzw. Flurstück",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.8_hausnummer",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.8 Haus-nummer",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.9_postleitzahl",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.9 Postleit-zahl",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.10_ort_bzw._gemarkung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.10 Ort bzw. Gemarkung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.10_1_gemeindeschlüssel",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Gemeinde-schlüssel",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.11_bundesland",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.11 Bundesland",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.12_utm-zonenwert",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "UTM-Zonenwert",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.12_utm-east",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "UTM-East",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.12_utm-north",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "UTM-North",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.13_zugehörigkeit_anlagenpark",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.13 Zugehörigkeit Anlagenpark",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.13.1_name_des_anlagenparks",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.13.1  Name des Anlagenparks",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.14_spannungsebene",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.14 Spannungsebene",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.15_netzanschlusspunkt",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.15 Netzanschlusspunkt",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.15.1_zählpunktbezeichnung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Zählpunktbezeichnung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.16_name_des_netzbetreibers",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.16 Name des Netzbetreibers",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.17_fernsteuerbarkeit_durch",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.17 Fernsteuerbarkeit durch:",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.18_gemeinsame_techn._einrichtung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.18 Gemeinsame techn. Einrichtung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.19_inanspruchnahme_finanzielle_Förderung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.19 Inanspruchnahme finanzielle Förderung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "4.20_Eigenverbrauch_geplant",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "4.20 Eigenverbrauch geplant",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.1_eingesetzte_biomasse",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.1 Eingesetzte Biomasse",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.2_ausschließlich_biomasse",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.2 Ausschließlich Biomasse",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.3_flexprämie_eeg",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.3 Flexprämie nach § 54 EEG 2014 oder § 50b EEG 2017",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.4_erstmalige_inanspruchnahme_flexprämie",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.4 Erstmalige Inanspruchnahme Flexprämie",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.4.1_leistungserhöhung_flexprämie",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.4.1 Leistungserhöhung Flexprämie",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.4.2_datum_leistungserhöhung_flexprämie",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.4.2 Datum Leistungserhöhung Flexprämie",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.4.3_umfang_der_leistungserhöhung",
+                        "type": "",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.4.3 Umfang der Leistungserhöhung [kW]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.5_erstmalig_ausschließlich_biomethan",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.5 Erstmalig ausschließlich Biomethan",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "5.6_zustimmung_gesonderte_veröffentlich",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "5.6 (5.8 in alter Version) Zustimmung gesonderte Veröffentlichung Biomethanstilllegung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "6.1_kwk-anlage",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "6.1 KWK-Anlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "6.2_thermische_leistung",
+                        "type": "",
+                        "unit": "kW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "6.2 Thermische Leistung [kW]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "6.3_andere_energieträger",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "6.3 Andere Energieträger vor 01.08.2014",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "6.4_eingesetzte_andere_energieträger",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "6.4 Eingesetzte andere Energieträger vor 01.08.2014",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "6.5_erstmalige_stromerzeugung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "6.5 Erstmalige Stromerzeugung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.1_windanlagenhersteller",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.1 Windanlagenhersteller",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.2_anlagentyp",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.2 Anlagentyp",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.3_nabenhöhe",
+                        "type": "",
+                        "unit": "m",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.3 Nabenhöhe [m]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.4_rotordurch-messer",
+                        "type": "",
+                        "unit": "m",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.4 Rotordurch-messer [m]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.5_repowering",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.5 Repowering",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.6_stilllegung_gemeldet",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.6 Stilllegung gemeldet",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.7.1_mittlere_windgeschwindigkeit",
+                        "type": "",
+                        "unit": "m/s",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.7.1 Mittlere Windge-schwindigkeit [m/s]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.7.2_formparameter_weibull-verteilung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.7.2 Formparameter Weibull-Verteilung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.7.3_skalenparameter_weibull-verteilung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.7.3 Skalenparameter Weibull-Verteilung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.7.4_ertrags-einschätzung",
+                        "type": "",
+                        "unit": "kWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.7.4 Ertrags-einschätzung [kWh]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.7.5_ertragseinschätzung/referenzertrag",
+                        "type": "",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.7.5 Ertragseinschätzung/Referenzertrag [%]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.8.1_seelage",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.8.1 Seelage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.8.2_wassertiefe",
+                        "type": "",
+                        "unit": "m",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.8.2 Wassertiefe [m]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.8.3_küstenentfernung",
+                        "type": "",
+                        "unit": "km",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.8.3 Küstenentfernung [km]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "7.9_pilotwindanlage",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "7.9 Pilotwindanlage (neue Spalte seit EEG2017)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "8.1_ertüchtigung_wasserkraftanlage",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "8.1 Ertüchtigung Wasserkraftanlage",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "8.2_art_der_ertüchtigung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "8.2 Art der Ertüchtigung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "8.3_zulassungspflichtige_maßnahme",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "8.3 Zulassungspflichtige Maßnahme",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "8.4._höhe_leistungssteigerung",
+                        "type": "",
+                        "unit": "%",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "8.4. HöheLeistungs-steigerung [%]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "8.5_datum_der_ertüchtigung",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "8.5 Datum der Ertüchtigung",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "9.1_zuschlagnummer_pv-freifläche",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "9.1 Zuschlagnummer PV-Freifläche",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "9.2_fläche_pv-freiflächenanlage",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "9.2 Wie viel Fläche wird durch die PV-Freiflächenanlage in Anspruch genommen? [ha]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "9.3_pv-freifläche_auf_ackerland",
+                        "type": "",
+                        "unit": "ha",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "9.3 Wie viel der PV-Freifläche ist davon Ackerland? [ha]",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "geom",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Geometrie",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Bundesnetzagentur - EEG-Registerdaten und EEG-Fördersätze",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "Namensnennung-Keine Bearbeitung 3.0 Deutschland (CC BY-ND 3.0 DE)",
+                            "path": "https://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/ErneuerbareEnergien/ZahlenDatenInformationen/EEG_Registerdaten/EEG_Registerdaten_node.html",
+                            "title": "",
+                            "attribution": "© 1998-2017 Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen; Pressestelle",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "vector"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Namensnennung-Keine Bearbeitung 3.0 Deutschland (CC BY-ND 3.0 DE)",
+                    "path": "https://creativecommons.org/licenses/by-nd/3.0/de/",
+                    "title": "CC-BY-ND-3.0-DE",
+                    "attribution": "© 1998-2017 Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen; Pressestelle",
+                    "instruction": "Die Inhalte des Internetauftritts stehen, soweit nicht anders gekennzeichnet, unter der Creative Commons Namensnennung-Keine Bearbeitung 3.0 Deutschland Lizenz.",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2017-12-01",
+                        "start": "2014-08-01",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2017-12-01"
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "In der nachfolgenden Datei werden für alle erneuerbaren Energieträger (außer für PV-Anlagen, die auf, an oder in einem Gebäude oder einer sonstigen baulichen Anlage angebracht sind) zur Überprüfung der Ausbaupfade notwendigen Veröffentlichungen der Bezugszeiträume und Zubau-Zahlen auf den Tabellenblätter 2, 3 und 4 aufgeführt.",
+            "contributors": [
+                {
+                    "date": "2018-02-01",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Ludee",
+                    "object": null,
+                    "comment": "Create table",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

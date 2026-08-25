@@ -1,0 +1,409 @@
+{
+    "@id": "https://doi.org/10.7910/DVN/GTNEJD",
+    "name": "rli-peoplesun-energy-audits",
+    "title": "RLI-PeopleSuN Energy Audits (RLI-PSN): Household and enterprise energy supply, use and preference data from rural Nigeria",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "peoplesun_household_energy_audit_normalised",
+            "path": "/mnt/d/Arbeit/dfg-datensichern/result/peoplesun_household_energy_audit_normalised.csv",
+            "type": "table",
+            "title": "PeopleSuN household energy audit normalised",
+            "format": "csv",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": true,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "hhid",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "question",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": null,
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "value",
+                        "type": "varchar",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "openModalButton": null
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "This field contains a ' ' separated list of all values for the given question and household id.",
+                        "valueReference": [
+                            {
+                                "@id": null,
+                                "name": null,
+                                "value": null,
+                                "openModalButton": null
+                            }
+                        ]
+                    }
+                ],
+                "primaryKey": [],
+                "foreignKeys": [
+                    {
+                        "fields": [],
+                        "reference": {
+                            "fields": [],
+                            "resource": null
+                        }
+                    }
+                ]
+            },
+            "topics": [],
+            "context": {
+                "title": "PeopleSuN: Optimizing off-grid electricity supply systems in Nigeria",
+                "contact": "clara.neyrand@rl-institut.de",
+                "grantNo": "03SF0606",
+                "homepage": "https://reiner-lemoine-institut.de/en/customized-electrification-how-the-peoplesun-project-is-advancing-the-energy-supply-in-nigeria/",
+                "publisher": "Harvard Dataverse",
+                "sourceCode": "https://github.com/rl-institut/dfg-preserving-energy-data",
+                "documentation": "https://reiner-lemoine-institut.de/wp-content/uploads/2024/12/reiner_lemoine_institut-people_sun-practitioners_guide-2024.pdf",
+                "fundingAgency": "Federal Ministry of Education and Research (BMBF)",
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": null
+            },
+            "sources": [
+                {
+                    "path": "https://doi.org/10.1038/s41597-023-02185-0",
+                    "title": "Electricity supply quality and use among rural and peri-urban households and small firms in Nigeria.",
+                    "authors": [
+                        "Pelz, S.",
+                        "Chinichian, N.",
+                        "Neyrand, C.",
+                        "Blechinger, P."
+                    ],
+                    "description": "Scientific Data, 10(1), 273. ",
+                    "sourceLicenses": [
+                        {
+                            "name": null,
+                            "path": null,
+                            "title": "Creative Commons Attribution 4.0 International License",
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2023"
+                },
+                {
+                    "path": "https://doi.org/10.7910/DVN/GTNEJD",
+                    "title": "Harvard Dataverse - RLI-PeopleSuN Energy Audits (RLI-PSN): Household and enterprise energy supply, use and preference data from rural Nigeria",
+                    "authors": [
+                        "Pelz, Setu",
+                        "Brügge, Clara",
+                        "Busayo, Fashoto",
+                        "Bello, Mohammed",
+                        "Jütte, Clara",
+                        "Blechinger, Philipp",
+                        "Awileru, Tomiwa",
+                        "Lich, Ulli"
+                    ],
+                    "description": "RLI-PeopleSuN Data and Replication Archives",
+                    "sourceLicenses": [
+                        {
+                            "name": "ODC-By 1.0",
+                            "path": null,
+                            "title": "Open Data Commons Attribution License (ODC-By) v1.0",
+                            "attribution": null,
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2022"
+                },
+                {
+                    "path": "https://doi.org/10.34657/18597",
+                    "title": "Abschlussbericht - CLIENT II – Verbundvorhaben PeopleSuN: Optimierung von Off-Grid Energieversorgungssystemen in Nigeria; Teilvorhaben Datenerfassung- und weiterverarbeitung; Stromnachfrage und Zahlungsbereitschaft",
+                    "authors": [
+                        "Clara Neyrand",
+                        "Dr. Philipp  Blechinger"
+                    ],
+                    "description": "Das Verbundvorhaben PeopleSuN – Optimierung von Off-Grid Energieversorgungssystemen in Nigeria zielte darauf ab, evidenzbasierte Planungsinstrumente für eine nachhaltige Elektrifizierung ländlicher Regionen Nigerias zu entwickeln. Unter Leitung des Reiner Lemoine Instituts (RLI) wurden gemeinsam mit internationalen Partnern umfangreiche quantitative und qualitative Datenerhebungen zur Stromnutzung, Zahlungsbereitschaft sowie zu sozialen und kulturellen Einflussfaktoren durchgeführt. Insgesamt wurden über 3.600 Haushalte und 1.125 Unternehmen in drei nigerianischen Regionen befragt, ergänzt durch Fokusgruppen und Stakeholder-Interviews. Die Ergebnisse flossen in die Entwicklung von Open-Source-Tools zur Bedarfsschätzung (RAMP) und zur techno-ökonomischen Planung von Off-Grid-Systemen (Offgridplanner) ein. Die Tools und erhobenen Datensätze wurden in praxisnahen Schulungen und Fallstudien validiert und stehen öffentlich zur Verfügung. Das Projekt leistet einen konkreten Beitrag zur Operationalisierung von SDG 7 (nachhaltige Energie für alle) und unterstützt Unternehmen, Entscheidungsträger*innen und Forschungseinrichtungen bei einer realitätsnahen Planung von Elektrifizierungsprojekten.",
+                    "sourceLicenses": [
+                        {
+                            "name": "Creative Commons Attribution 3.0 Germany",
+                            "path": "https://creativecommons.org/licenses/by/3.0/de/",
+                            "title": "CC-BY-3.0-DE",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": null,
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2025"
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": "https://www.wikidata.org/wiki/Q1033",
+                    "crs": null,
+                    "name": "Nigeria",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": null,
+                    "resolutionValue": null
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": null,
+                    "longitude": null
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": "Engineering",
+                    "openModalButton": null
+                },
+                {
+                    "@id": null,
+                    "name": "Social Sciences",
+                    "openModalButton": null
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "zrename2",
+                "zrename7",
+                "energy_consumption",
+                "rural",
+                "peoplesun",
+                "sub_saharan_africa",
+                "energy_access",
+                "nigeria",
+                "supply_quality",
+                "odc_by_1_0"
+            ],
+            "licenses": [
+                {
+                    "name": "ODC-By-1.0",
+                    "path": "https://opendatacommons.org/licenses/by/1-0",
+                    "title": "Open Data Commons Attribution License v1.0",
+                    "attribution": "© Reiner Lemoine Institut",
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": null,
+                        "start": null,
+                        "alignment": null,
+                        "resolutionUnit": null,
+                        "aggregationType": null,
+                        "resolutionValue": null
+                    }
+                ],
+                "referenceDate": "2021-12-31"
+            },
+            "languages": [
+                "en"
+            ],
+            "description": "Normalised energy audit dataset.",
+            "contributors": [
+                {
+                    "date": "2021-06-21",
+                    "path": "https://orcid.org/0000-0002-3528-8679",
+                    "roles": [
+                        "Researcher",
+                        "DataCollector"
+                    ],
+                    "title": "Pelz, Setu",
+                    "object": "data",
+                    "comment": null,
+                    "organization": "Reiner Lemoine Institut"
+                },
+                {
+                    "date": "2021-06-21",
+                    "path": null,
+                    "roles": [
+                        "Researcher",
+                        "DataCollector"
+                    ],
+                    "title": "Brügge, Clara",
+                    "object": "data",
+                    "comment": null,
+                    "organization": "Reiner Lemoine Institut"
+                },
+                {
+                    "date": "2021-06-21",
+                    "path": null,
+                    "roles": [
+                        "Researcher",
+                        "DataCollector"
+                    ],
+                    "title": "Busayo, Fashoto",
+                    "object": "data",
+                    "comment": null,
+                    "organization": "eHealth Africa"
+                },
+                {
+                    "date": "2021-06-21",
+                    "path": null,
+                    "roles": [
+                        "Researcher",
+                        "DataCollector"
+                    ],
+                    "title": "Bello, Mohammed",
+                    "object": "data",
+                    "comment": null,
+                    "organization": "eHealth Africa"
+                },
+                {
+                    "date": "2021-06-21",
+                    "path": null,
+                    "roles": [
+                        "Researcher",
+                        "DataCollector"
+                    ],
+                    "title": "Jütte, Clara",
+                    "object": "data",
+                    "comment": null,
+                    "organization": "Reiner Lemoine Institut"
+                },
+                {
+                    "date": "2021-06-21",
+                    "path": null,
+                    "roles": [
+                        "Researcher",
+                        "DataCollector"
+                    ],
+                    "title": "Awileru, Tomiwa",
+                    "object": "data",
+                    "comment": null,
+                    "organization": "Reiner Lemoine Institut"
+                },
+                {
+                    "date": "2021-06-21",
+                    "path": null,
+                    "roles": [
+                        "Researcher",
+                        "DataCollector"
+                    ],
+                    "title": "Lich, Ulli",
+                    "object": "data",
+                    "comment": null,
+                    "organization": "Reiner Lemoine Institut"
+                },
+                {
+                    "date": "2021-06-21",
+                    "path": "mailto:philipp.blechinger@rl-institut.de",
+                    "roles": [
+                        "Researcher",
+                        "DataCollector",
+                        "ContactPerson",
+                        "DataCurator"
+                    ],
+                    "title": "Blechinger, Philipp",
+                    "object": "data and metadata",
+                    "comment": "philipp.blechinger@rl-institut.de",
+                    "organization": "Reiner Lemoine Institut"
+                },
+                {
+                    "date": "2025-12-19",
+                    "path": "mailto:ludwig.huelk@rl-institut.de",
+                    "roles": [
+                        "DataCurator",
+                        "ResearchGroup"
+                    ],
+                    "title": "RLI Datenzentrum",
+                    "object": "data and metadata",
+                    "comment": "data reupload",
+                    "organization": "Reiner Lemoine Institut"
+                }
+            ],
+            "embargoPeriod": {
+                "end": null,
+                "start": null,
+                "isActive": false
+            },
+            "publicationDate": "2022-07-12"
+        }
+    ],
+    "description": "This dataset contains anonymized household and enterprise energy audit survey data gathered under the PeopleSuN project, funded by the German Federal Ministry of Education and Research.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

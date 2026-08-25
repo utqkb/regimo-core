@@ -1,0 +1,365 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "",
+            "path": "abbb_demand",
+            "type": "Table",
+            "title": "oemof app brandenburg berlin - demand per sector",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "name of scenario",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "abbreviation of region",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "abbreviation of demand sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "type",
+                        "type": "",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "type of demand or technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "demand",
+                        "type": "",
+                        "unit": "MWh",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "demand",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "",
+                "grantNo": "",
+                "homepage": "",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": ""
+            },
+            "sources": [
+                {
+                    "path": null,
+                    "title": "Amt f\\u00fcr Statistik Berlin-Brandenburg: Statistischer Bericht E IV 4 \\u2013 j / 12; Energie- und CO2-Bilanz im Land Brandenburg 2012; 2015",
+                    "authors": [],
+                    "description": "Energiebilanz Brandenburg, original url: http://www.lak-energiebilanzen.de/seiten/download/Archiv%20Bilanzen/Brandenburg/2012/Energiebilanz%20Brandenburg%202012.pdf",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Ministerium f\\u00fcr Wirtschaft und Energie des Landes Brandenburg: 6. Monitoringbericht zur Energiestrategie des Landes Brandenburg; Berichtsjahr 2014 , M\\u00e4rz 2016",
+                    "authors": [],
+                    "description": "original url: https://www.zab-energie.de/de/system/files/media-downloads/6._monitoringbericht_zur_energiestrategie_-_berichtsjahr_2014_1.pdf",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Ministerium f\\u00fcr Wirtschaft und Europaangelegenheiten des Landes Brandenburg: Energiestrategie 2030 des Landes Brandenburg; Februar 2012",
+                    "authors": [],
+                    "description": null,
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.energie.brandenburg.de/media/bb1.a.2865.de/Energiestrategie_2030.pdf",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "appBBB",
+                    "authors": [],
+                    "description": "An oemof application to model the heat and power systems of Brandenburg and Berlin",
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU General Public License v3.0",
+                            "path": "https://github.com/rl-institut/appBBB",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "ZAB ZukunftsAgentur Brandenburg GmbH",
+                    "authors": [],
+                    "description": "nicht \\u00f6ffentlich",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Hirschl, Reusswig, Wei\\u00df et.al: Entwurf f\\u00fcr ein Berliner Energie- und Klimaschutzprogramm (BEK) \\u2013 technischer Anhang B; Dezember 2015; im Auftrag des Landes Berlin, Senats-verwaltung f\\u00fcr Stadtentwicklung und Umwelt;",
+                    "authors": [],
+                    "description": "http://www.stadtentwicklung.berlin.de/umwelt/klima-schutz/bek_berlin/",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "http://www.stadtentwicklung.berlin.de/archiv/Klimaschutz-Berlin/klimaneutrales.berlin.de/stadt/de/home.html",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": null,
+                    "title": "Dokumentation_AppBBB",
+                    "authors": [],
+                    "description": "Oemof Application Berlin Brandenburg documentation",
+                    "sourceLicenses": [
+                        {
+                            "name": "GNU General Public License v3.0",
+                            "path": "https://github.com/rl-institut/appBBB/blob/master/Dokumentation_AppBBB.pdf",
+                            "title": "",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Brandenburg and Berlin",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "Planungsgemeinschaften und Berlin",
+                    "resolutionValue": "Regionale"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": null,
+            "keywords": [
+                ""
+            ],
+            "licenses": [
+                {
+                    "name": "Open Database License (ODbL) v1.0",
+                    "path": "http://www.opendefinition.org/licenses/odc-odbl",
+                    "title": "ODbL-1.0",
+                    "attribution": "",
+                    "instruction": "You are free to share, to create and to adapt as long as you attribute, share-alike and keep open. Copyright 2016 Reiner Lemoine Institut",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2016-11-24"
+            },
+            "languages": [
+                "en-US",
+                "de-DE"
+            ],
+            "description": "aggregated and modified demand data (electricity and heat) for every technology, region and scenario",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Elisa Gaudchau",
+                    "object": null,
+                    "comment": "create metadata",
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Elisa Gaudchau",
+                    "object": null,
+                    "comment": "update metadata",
+                    "organization": null
+                },
+                {
+                    "date": "2017-10-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Kilian Zimmerer",
+                    "object": null,
+                    "comment": "Update metadata to v1.3",
+                    "organization": null
+                },
+                {
+                    "date": "2018-09-18",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christian Hofmann",
+                    "object": null,
+                    "comment": "update metadata (v1.3); fixed urls",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

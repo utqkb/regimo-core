@@ -1,0 +1,63 @@
+{
+    "@id": "",
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "model_draft.hehu_teo_test",
+            "path": "https://openenergyplatform.org/dataedit/view/model_draft/hehu_teo_test",
+            "title": "TEO test data",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "nullable": false,
+                        "description": ""
+                    },
+                    {
+                        "name": "version",
+                        "type": "string",
+                        "nullable": false,
+                        "description": ""
+                    },
+                    {
+                        "name": "parameter",
+                        "type": "string",
+                        "nullable": false,
+                        "description": ""
+                    },
+                    {
+                        "name": "value",
+                        "type": "float",
+                        "nullable": false,
+                        "description": ""
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "context": {
+                "documentation": "TEO test data"
+            },
+            "keywords": [],
+            "licenses": [
+                {
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+                }
+            ]
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "",
+            "path": "",
+            "title": ""
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

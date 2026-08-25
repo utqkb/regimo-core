@@ -1,0 +1,354 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "rli_dea_technology_data_gen_wind_turbine_selected_parameters",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/rli_dea_technology_data_gen_wind_turbine_selected_parameters",
+            "type": "Table",
+            "title": "RLI - Danish Energy Agency - Technology Data for Generation of Electricity and District Heating - Technology Data Catalogue for Electricity and district heating production - Updated April 2020 - Wind Turbine (Selected Parameter)",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/92",
+                "badge": "Platinum"
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "model",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Model name",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "scenario",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Contains information about technology data and year, beginning from 2015 until 2050",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Region to which the data applies",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_technology_type",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Type of wind turbine",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [
+                            {
+                                "name": "year1"
+                            },
+                            {
+                                "name": "year2"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Reference year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_turbine_technical_generating_capacity_for_one_unit",
+                        "type": "decimal",
+                        "unit": "MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Generation capacity for one unit of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_turbine_technical_full_load_hours",
+                        "type": "decimal",
+                        "unit": "h",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Average annual full load hours of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_turbine_financial_nominal_investment",
+                        "type": "decimal",
+                        "unit": "M€/MW",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Nominal investment of the technology",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_turbine_technical_rotor_diameter",
+                        "type": "decimal",
+                        "unit": "m",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Rotor diameter of the wind turbine",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "wind_turbine_technical_hub_hight",
+                        "type": "decimal",
+                        "unit": "m",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Hub height of the wind turbine",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "https://github.com/Ludee",
+                "grantNo": "03EI1005D",
+                "homepage": "https://reiner-lemoine-institut.de/lod-geoss/",
+                "publisher": "",
+                "sourceCode": "https://github.com/LOD-GEOSS",
+                "documentation": "",
+                "fundingAgency": "Bundesministerium für Wirtschaft und Klimaschutz",
+                "publisherLogo": "https://reiner-lemoine-institut.de//wp-content/uploads/2015/09/rlilogo.png",
+                "fundingAgencyLogo": "https://commons.wikimedia.org/wiki/File:BMWi_Logo_2021.svg#/media/File:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data",
+                    "title": "Danish Energy Agency - Technology Data",
+                    "authors": [],
+                    "description": "The Danish Energy Agency and Energinet publish catalogues of technology data for energy technologies. Technology Data provides information about technology, economy and environment for a number of energy installations and are among other things used by the Danish Energy Agency for energy projections.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency 2021",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-generation-electricity-and",
+                    "title": "Danish Energy Agency - Technology Data for Generation of Electricity and District Heating",
+                    "authors": [],
+                    "description": "TThis Technology Data catalogue includes technology data for technologies for centralized and decentralized production of electricity and district heat. Technology data concerns more or less mature technologies.",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency 2021",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://ens.dk/sites/ens.dk/files/Analyser/technology_data_for_el_and_dh.xlsx",
+                    "title": "Technology Data Catalogue for Electricity and district heating production - Updated April 2020",
+                    "authors": [],
+                    "description": "Data collection for electricity generation and district heating plants, last update: April 2020",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "© Danish Energy Agency 2021",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "europe",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "m",
+                    "resolutionValue": "100"
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Danish Energy Agency",
+                "onshore",
+                "wind turbine",
+                "Technology Data Catalogue",
+                "RLI",
+                "offshore",
+                "example"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+                    "title": "Creative Commons Attribution 4.0 International",
+                    "attribution": "© Reiner Lemoine Institut",
+                    "instruction": "You are free: To Share, To Create, To Adapt; As long as you: Attribute! See: https://tldrlegal.com/license/creative-commons-attribution-4.0-international-(cc-by-4)",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This Technology Data catalogue includes technology data for technologies for centralized and decentralized production of electricity and district heat. Technology data concerns more or less mature technologies. There is currently one combined Technology Data catalogue concerning generation of electricity and district heating.  The catalogue was first published in August 2016, and is updated continuously. Technology descriptions in the previous catalogue from May 2012 have now been included in the catalogue from 2016 although some are not updated since 2015. It is mentioned in the beginning of the specific chapters, when each technology has been updated the last time. Index: 20 Wind turbines on-shore (updated May 2019) On-shore turbines and Domestic turbines. 21 Wind turbines off-shore (updated May 2019) Off-shore turbines and Near shore turbines (minor adjustment September 2019).",
+            "contributors": [
+                {
+                    "date": "2021-06-29",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Christoph Muschner",
+                    "object": "metadata",
+                    "comment": "Transpose the original table.",
+                    "organization": null
+                },
+                {
+                    "date": "2022-02-11",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "ludee",
+                    "object": "metadata",
+                    "comment": "Create file with new columns.",
+                    "organization": null
+                },
+                {
+                    "date": "2022-02-11",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "ludee",
+                    "object": "metadata",
+                    "comment": "Update to OEMetadata version 1.5.0",
+                    "organization": null
+                },
+                {
+                    "date": "2022-02-15",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "ludee",
+                    "object": "metadata",
+                    "comment": "Update to OEMetadata version 1.5.1",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-02-11"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "@id": "https://doi.org/10.5281/zenodo.8192149",
+    "name": "wedowind_community_wedowind_8192149",
+    "title": "Aventa AV-7 (6kW) IET-OST Research Wind Turbine SCADA",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_community_wedowind_8192149_avent_6e897efe",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_community_wedowind_8192149_avent_6e897efe",
+            "type": "table",
+            "title": "Aventa_AV_7_IET_OST_WT_metadata.json",
+            "format": "JSON",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "description": null
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": []
+            },
+            "topics": [
+                "wind"
+            ],
+            "context": {
+                "title": "WeDoWind",
+                "contact": "ToDo",
+                "grantNo": null,
+                "homepage": "https://community.wedowind.ch",
+                "publisher": "WeDoWind",
+                "sourceCode": "https://github.com/sdsc-ordes/wedowind",
+                "documentation": "ToDo",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ",",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://zenodo.org/api/records/8192149/files/Aventa_AV_7_IET_OST_WT_metadata.json/content",
+                    "title": "Aventa_AV_7_IET_OST_WT_metadata.json",
+                    "authors": [],
+                    "description": "SCADA Data from Aventa AV-7 (6kW) Research Wind Turbine, located in Taggenberg (ZH), Lat:47.52 Long:8.68236. The turbine is owned by IET-OST. The data covers time period from 2022-01-01 to 2023-07-20, sampled at 1Hz. The dataset is intended for environmental and operational analysis. 15 SCADA Channels contain timeseries observations (at 1Hz) of: Rotor speed in RPM, Generator speed in RPM, Stator temperature in C, Windspeed in m/s, Converter active power in kW, Wind direction w.r.t. nacelle measured in degrees, System supply voltage 24V , Pitch angle in degrees, Turbine status. Structured metadata about wind turbine characteristics and SCADA channels is included as JSON files and CSV. Additional information is available upon request.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC-BY-4.0",
+                            "path": "https://creativecommons.org/licenses/by/4.0/",
+                            "title": "CC-BY-4.0",
+                            "attribution": "ToDo",
+                            "instruction": "ToDo",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": "2023"
+                }
+            ],
+            "subject": [
+                {
+                    "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000150",
+                    "name": "energy"
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "zenodo_8192149",
+                "operational_analysis",
+                "wind_turbine",
+                "zenodo",
+                "wind_energy",
+                "scada"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "CC-BY-4.0",
+                    "attribution": "ToDo",
+                    "instruction": "ToDo",
+                    "copyrightStatement": null
+                }
+            ],
+            "languages": [
+                "en-GB"
+            ],
+            "description": "SCADA Data from Aventa AV-7 (6kW) Research Wind Turbine, located in Taggenberg (ZH), Lat:47.52 Long:8.68236. The turbine is owned by IET-OST. The data covers time period from 2022-01-01 to 2023-07-20, sampled at 1Hz. The dataset is intended for environmental and operational analysis. 15 SCADA Channels contain timeseries observations (at 1Hz) of: Rotor speed in RPM, Generator speed in RPM, Stator temperature in C, Windspeed in m/s, Converter active power in kW, Wind direction w.r.t. nacelle measured in degrees, System supply voltage 24V , Pitch angle in degrees, Turbine status. Structured metadata about wind turbine characteristics and SCADA channels is included as JSON files and CSV. Additional information is available upon request.",
+            "publicationDate": "2023-08-01"
+        }
+    ],
+    "description": "SCADA Data from Aventa AV-7 (6kW) Research Wind Turbine, located in Taggenberg (ZH), Lat:47.52 Long:8.68236. The turbine is owned by IET-OST. The data covers time period from 2022-01-01 to 2023-07-20, sampled at 1Hz. The dataset is intended for environmental and operational analysis. 15 SCADA Channels contain timeseries observations (at 1Hz) of: Rotor speed in RPM, Generator speed in RPM, Stator temperature in C, Windspeed in m/s, Converter active power in kW, Wind direction w.r.t. nacelle measured in degrees, System supply voltage 24V , Pitch angle in degrees, Turbine status. Structured metadata about wind turbine characteristics and SCADA channels is included as JSON files and CSV. Additional information is available upon request.",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

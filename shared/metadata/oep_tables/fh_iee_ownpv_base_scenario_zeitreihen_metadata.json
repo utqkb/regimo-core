@@ -1,0 +1,495 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "model_draft.fh_iee_ownpv_base_scenario_zeitreihen",
+            "path": "https://openenergy-platform.org/dataedit/view/model_draft/fh_iee_ownpv_base_scenario_zeitreihen",
+            "type": "Table",
+            "title": "Fraunhofer-Institut fuer Energiewirtschaft und Energiesystemtechnik OwnPV-Outlook PV-Eigenstrom als nachhaltiges, robustes und effizientes Element des zukuenftigen Energiesystems - Zeitreihen",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "szenario",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Name of the scenario",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "szenariojahr",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Country to which the value applies",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "einheit",
+                        "type": "text",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit of measure",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "zeit",
+                        "type": "timestamp",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Time",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_braunkohle_kraft_waerme_kopplung",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from lignite-fired CHP plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_steinkohle_kraft_waerme_kopplung",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from coal-fired CHP plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_erdgas_kraft_waerme_kopplung",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from gas-fired CHP plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_oel_kraft_waerme_kopplung",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from oil-fired CHP plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_braunkohle_kondensationskraftwerke",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from lignite-fired condensing plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_steinkohle_kondensationskraftwerke",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from coal-fired condensing plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_erdgas_kondensationskraftwerke",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from gas-fired condensing plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_oel_kondensationskraftwerke",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from oil-fired condensing plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_uran_kondensationskraftwerke",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from nuclear power plants",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_wind_onshore",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from onshore wind",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_wind_offshore",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from offshore wind",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_photovoltaik",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from solar PV",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_laufwasser",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from run-of-river",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_pumpspeicher",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from pumped hydro power",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "erzeugung_batterien",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity generation from battery (storage output)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_herkoemmlich_inkl_klimatisierung",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity consumption: conventional demand including air conditioning",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_pumpspeicher",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity consumption by pumped hydro power",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_batterien",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity consumption by batteries (storage input)",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_waermepumpen",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity consumption by heat pumps",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_heizstaebe",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity consumption by electric boilers",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_power_to_gas",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity consumption by Power-to-Gas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_batterie_elektrische_fahrzeuge",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity consumption by battery-electric vehicles",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_plug_in_hybride",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Electricity consumption by plug-in electric vehicles",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "verbrauch_range_extender",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity consumption by range extender electric vehicles",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "import",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity imported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "export",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Electricity exported",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "abregelung_wind_onshore",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Curtailment wind onshore",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "abregelung_wind_offshore",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Curtailment wind offshore",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "abregelung_photovoltaik",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Curtailment solar PV",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "sarah.becker@iee.fraunhofer.de",
+                "grantNo": "03EI1031A",
+                "homepage": "https://www.iee.fraunhofer.de/de/projekte/suche/laufende/OwnPV-Outlook.html",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "https://www.iee.fraunhofer.de/de/projekte/suche/laufende/OwnPV-Outlook.html",
+                "fundingAgency": "Bundesministerium fuer Wirtschaft und Klimaschutz",
+                "publisherLogo": "https://www.iee.fraunhofer.de/content/dam/iee/energiesystemtechnik/fraunhofer-iee.gif",
+                "fundingAgencyLogo": "https://de.wikipedia.org/wiki/Bundesministerium_f%C3%BCr_Wirtschaft_und_Klimaschutz#/media/Datei:BMWi_Logo_2021.svg"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "",
+                    "title": "",
+                    "authors": [
+                        ""
+                    ],
+                    "description": "",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": ""
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "AUT, BEL, CHE, CZE, DEU, DNK, ESP, FRA, GBR, ITA, LUX, NLD, NOR, POL SVK, SVN, SWE",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": "country"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Europe",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Fraunhofer IEE",
+                "Fh IEE OwnPV-Outlook",
+                "fh_iee_ownpv_base_scenario",
+                "BMWK",
+                "PV self-supply",
+                "SCOPE",
+                "Europe",
+                "Germany",
+                "2012",
+                "2030",
+                "2040",
+                "2050",
+                "time series"
+            ],
+            "licenses": [
+                {
+                    "name": "DL-DE-BY-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Data licence Germany – attribution – version 2.0",
+                    "attribution": "© Fraunhofer IEE 2022",
+                    "instruction": "Die bereitgestellten Daten und Metadaten duerfen fuer die kommerzielle und nicht kommerzielle Nutzung uebermittelt werden",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": "2012-01-01"
+            },
+            "languages": [
+                "de-DE"
+            ],
+            "description": "This table gives electricity generation and demand time series in Germany in scenario \"Fh IEE OwnPV-Outlook\" (\"PV self-supply as a sustainable, robust and efficient element of the future energy system\") (base scenario). It contains the time series of electricity generation and consumption.",
+            "contributors": [
+                {
+                    "date": "2022-12-14",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Fraunhofer IEE",
+                    "object": "Metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-12-14"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

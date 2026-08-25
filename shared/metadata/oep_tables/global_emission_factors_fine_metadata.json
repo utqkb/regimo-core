@@ -1,0 +1,878 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "global_emission_factors_fine",
+            "path": null,
+            "type": "Table",
+            "title": "sedos_global_emission_factors_fine",
+            "format": "PostgreSQL",
+            "review": {
+                "path": null,
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "int",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00010037",
+                                "name": "unique individual identifier"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "region",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020033",
+                                "name": "subregion"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Region in Germany",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "int",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://purl.obolibrary.org/obo/UO_0000036",
+                                "name": "year"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "raw_hard_coal_power_stations_industry",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hard_coal_briquettes",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hard_coal_coke",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hard_coal_coke_iron_steel",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "anthracite_heat_market_residential_tcs",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "coking_coal",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hard_coal_for_the_iron_and_steel_industry",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "other_hard_coal_products",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "hard_coal_tar",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "benzene",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "raw_lignite_public_district_heating_stations",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "raw_lignite_small_consumers",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lignite_briquettes",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lignite_dust_and_fluidised_bed_coal",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lignite_coke",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "meta_lignite",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "crude_oil",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "gasoline",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "naphtha",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "kerosene",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "avgas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "diesel_fuel",
+                        "type": "int",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "light_heating_oil",
+                        "type": "int",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "heavy_fuel_oil",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "petroleum",
+                        "type": "int",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "petroleum_coke_without_catalyst_regeneration",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lp_gas_energy_related_consumption",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "refinery_gas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "other_petroleum_products",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lubricants",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "coke_oven_gas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "top_gas_and_converter_gas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "other_produced_gases",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "natural_gas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "petroleum_gas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "pit_gas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "household_municipal_waste",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "industrial_waste",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "special_waste",
+                        "type": "int",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "used_oil",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "waste_plastics",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "waste_tyres",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bleaching_clay",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sewagesludge_2mj_per_kg",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sewagesludge_4mj_per_kg",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sewagesludge_6mj_per_kg",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sewagesludge_8mj_per_kg",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sewagesludge_10mj_per_kg",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "solvents_waste",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "spent_liquors_from_pulp_production",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "fibre_deinking_residues",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "firewood_untreated",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "waste_wood_wood_scraps_industry",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "waste_wood_wood_scraps_commercial_institutional",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bark",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "animal_meals_and_fats",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "biogas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "landfill_gas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sewage_gas",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bioethanol",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "biodiesel",
+                        "type": "float",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "methanol",
+                        "type": "int",
+                        "unit": "tCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cng",
+                        "type": "int",
+                        "unit": "kgCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lpg",
+                        "type": "int",
+                        "unit": "kgCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "lng",
+                        "type": "int",
+                        "unit": "kgCO2/TJ",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "None",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "bandwidth_type",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "",
+                                "name": "bandwidth type"
+                            }
+                        ],
+                        "nullable": false,
+                        "description": "Bandwith Type",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "version",
+                        "type": "text",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "",
+                                "name": "dataset version string"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Version",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "method",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "http://openenergy-platform.org/ontology/oeo/OEO_00020166",
+                                "name": "methodology"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Method",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "source",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "",
+                                "name": "data source"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Source",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "comment",
+                        "type": "json",
+                        "unit": null,
+                        "isAbout": [
+                            {
+                                "@id": "None",
+                                "name": "comment"
+                            }
+                        ],
+                        "nullable": true,
+                        "description": "Comment",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "Felix.Maurer@rl-institut.de",
+                "grantNo": null,
+                "homepage": "https://sedos-project.github.io/.github/",
+                "publisher": "",
+                "sourceCode": "https://github.com/sedos-project/oedatamodel/tree/main/parameter_datamodel",
+                "documentation": "https://sedos-project.github.io/.github/",
+                "fundingAgency": null,
+                "publisherLogo": null,
+                "fundingAgencyLogo": null
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://github.com/sedos-project/oedatamodel/tree/main/parameter_datamodel",
+                    "title": "Parameter datamodel from template for global_emission_factors",
+                    "authors": [],
+                    "description": "Parameter data model for secondary input scalars and timeseries",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0-1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                            "title": "Creative Commons Zero v1.0 Universal",
+                            "attribution": "© Reiner Lemoine Institut",
+                            "instruction": "You are free: To Share, To Create, To Adapt",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": null,
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": null
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "sedos",
+                "template",
+                "global_emission_factors",
+                "steel_casting_example",
+                "global",
+                "emission",
+                "factors"
+            ],
+            "licenses": [
+                {
+                    "name": "TestLicense",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+                    "title": null,
+                    "attribution": null,
+                    "instruction": null,
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "",
+                        "start": "",
+                        "alignment": "",
+                        "resolutionUnit": "",
+                        "aggregationType": "",
+                        "resolutionValue": ""
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "datamodel, metadata and examples provided as datapackage",
+            "contributors": [
+                {
+                    "date": "2022-11-13",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "FelixMau",
+                    "object": "datapackage",
+                    "comment": "Test data from template",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2022-11-14"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

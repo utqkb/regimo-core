@@ -1,0 +1,49 @@
+{
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+    "resources": [
+        {
+            "name": "wedowind_test_00b2af56",
+            "path": "https://openenergyplatform.org/dataedit/view/wind/wedowind_test_00b2af56",
+            "type": "Table",
+            "title": "t",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "bigint",
+                        "unit": null,
+                        "nullable": false,
+                        "data_type": "bigserial",
+                        "description": null,
+                        "primary_key": true
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ]
+            },
+            "topics": [
+                "wind"
+            ],
+            "keywords": [
+                "pakistan_wind_speed_and_wind_power_poten"
+            ],
+            "licenses": [
+                {
+                    "name": "CC-BY-4.0",
+                    "path": "https://creativecommons.org/licenses/by/4.0/",
+                    "title": "x"
+                }
+            ],
+            "description": "d"
+        }
+    ],
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "x"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

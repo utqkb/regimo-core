@@ -1,0 +1,414 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "example_multi_region_esm_germany_2020",
+            "path": "example_multi_region_esm_germany_2020",
+            "type": "Table",
+            "title": "Example Calculation Regionalized Energy System Optimization for Germany 2020",
+            "format": "csv",
+            "review": {
+                "path": "",
+                "badge": ""
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "component",
+                        "type": "varchar(50)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "property",
+                        "type": "varchar(50)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "varchar(50)",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "locationin",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_0",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_1",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_2",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_3",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_4",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_5",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_6",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "cluster_7",
+                        "type": "numeric",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    ""
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            ""
+                        ],
+                        "reference": {
+                            "fields": [
+                                ""
+                            ],
+                            "resource": ""
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "k.knosala@fz-juelich.de",
+                "grantNo": "",
+                "homepage": "https://www.fz-juelich.de/iek/iek-3/EN/Home/home_node.html",
+                "publisher": "",
+                "sourceCode": "",
+                "documentation": "",
+                "fundingAgency": "",
+                "publisherLogo": "",
+                "fundingAgencyLogo": ""
+            },
+            "dialect": {
+                "delimiter": ";",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://openenergy-platform.org/dataedit/view/model_draft/simulated_regional_electricity_demand_germany_2020",
+                    "title": "Simulated Regional Electricity Demand Germany 2020",
+                    "authors": [],
+                    "description": "Simulated electricity demand time series for eight regional clusters in Germany in hourly resolution for 2020.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0 1.0",
+                            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+                            "title": "CC0 1.0 Universal Public Domain Dedication",
+                            "attribution": "Forschungszentrum Jülich, Institut für Energie- und Klimaforschung, Technoökonomische Systemanalyse (IEK-3)",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "https://github.com/FZJ-IEK3-VSA/FINE/tree/master/examples/Multi-regional_Energy_System_Workflow",
+                    "title": "FINE - Framework for Integrated Energy System Assessment: Multi-regional_Energy_System_Workflow Example",
+                    "authors": [],
+                    "description": "Example use-case for multi-regional energy system assessment from the FINE repository.",
+                    "sourceLicenses": [
+                        {
+                            "name": "MIT",
+                            "path": "https://opensource.org/licenses/MIT",
+                            "title": "MIT License",
+                            "attribution": "Lara Welder, Theresa Groß, Leander Kotzur, Robin Beer, Henrik Büsing, Dilara Caglayan, Thomas Grube, Heidi Heinrichs, Maximilian Hoffmann, Timo Kannengießer, Kevin Knosala, Felix Kullmann, Stefan Kraus, Jochen Linßen, Peter Markewitz, Lars Nolting, Jan Priesmann, Bismark Singh, Andreas Smolenko, Peter Stenzel, Chloi Syranidou, Johannes Thürauf, Michael Zier, Martin Robinius, Detlef Stolten",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://data.europa.eu/89h/jrc-emhires-solar-generation-time-series",
+                    "title": "Solar hourly generation time series at country, NUTS 1, NUTS 2 level and bidding zones",
+                    "authors": [],
+                    "description": "EMHIRES is the first publically available European solar power generation dataset derived from meteorological sources that is available up to NUTS-2 level. It was generated applying the PVGIS model to capture local geographical information to generate meteorologically derived solar power time series at high temporal and spatial resolution. This allows for a better understanding of the solar resource at the precise location of wind farms.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0 1.0",
+                            "path": "https://data.jrc.ec.europa.eu/licence/com_reuse",
+                            "title": "European Commission Reuse and Copyright Notice",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://data.europa.eu/89h/jrc-emhires-wind-generation-time-series",
+                    "title": "Wind hourly generation time series at country, NUTS 1, NUTS 2 level and bidding zones",
+                    "authors": [],
+                    "description": "EMHIRES is the first publically available European wind power generation dataset derived from meteorological sources that is available up to NUTS-2 level. It was generated applying an innovative methodology capturing local geographical information to generate meteorologically derived wind power time series at high temporal and spatial resolution. This allows for a better understanding of the wind resource at the precise location of wind farms.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0 1.0",
+                            "path": "https://data.jrc.ec.europa.eu/licence/com_reuse",
+                            "title": "European Commission Reuse and Copyright Notice",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://data.europa.eu/89h/18eb348b-1420-46b6-978a-fe0b79e30ad3",
+                    "title": "ENSPRESO - SOLAR - PV and CSP",
+                    "authors": [],
+                    "description": "SOLAR (PV and CSP) data set of ENSPRESO - an open data, EU-28 wide, transparent and coherent database of wind, solar and biomass energy potential.",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0 1.0",
+                            "path": "https://data.jrc.ec.europa.eu/licence/com_reuse",
+                            "title": "European Commission Reuse and Copyright Notice",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                },
+                {
+                    "path": "http://data.europa.eu/89h/6d0774ec-4fe5-4ca3-8564-626f4927744e",
+                    "title": "ENSPRESO - WIND - ONSHORE and OFFSHORE",
+                    "authors": [],
+                    "description": "Wind data set of ENSPRESO - an open source, EU-28 wide, transparent and coherent database of wind, solar and biomass energy potentials",
+                    "sourceLicenses": [
+                        {
+                            "name": "CC0 1.0",
+                            "path": "https://data.jrc.ec.europa.eu/licence/com_reuse",
+                            "title": "European Commission Reuse and Copyright Notice",
+                            "attribution": "European Union",
+                            "instruction": "",
+                            "copyrightStatement": null
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "clusters",
+                    "resolutionValue": "8"
+                },
+                "location": {
+                    "@id": null,
+                    "address": "Germany",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "energy systems analysis",
+                "optimization",
+                "regional",
+                "germany",
+                "electricity"
+            ],
+            "licenses": [
+                {
+                    "name": "CC0 1.0",
+                    "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "title": "CC0 1.0 Universal Public Domain Dedication",
+                    "attribution": "Forschungszentrum Jülich, Institut für Energie- und Klimaforschung, Technoökonomische Systemanalyse (IEK-3)",
+                    "instruction": "",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2020-12-31T23:00:00+01:00",
+                        "start": "2020-01-01T00:00:00+01:00",
+                        "alignment": "left",
+                        "resolutionUnit": "h",
+                        "aggregationType": "average",
+                        "resolutionValue": "1"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-US"
+            ],
+            "description": "Optimal sizing and operation of an exemplary energy supply system for 2020 for 8 clusters in Germany in the FINE output format.",
+            "contributors": [
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Kevin Knosala",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Noah Pflugradt",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Leander Kotzur",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": null,
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Detlef Stolten",
+                    "object": null,
+                    "comment": null,
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": "2021-08-30"
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}

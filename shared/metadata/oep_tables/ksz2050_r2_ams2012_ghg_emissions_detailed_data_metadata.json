@@ -1,0 +1,263 @@
+{
+    "@id": null,
+    "name": "",
+    "title": "",
+    "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/v2/v20/context.json",
+    "resources": [
+        {
+            "@id": null,
+            "name": "ksz2050_r2_ams2012_ghg_emissions_detailed_data",
+            "path": "http://openenergyplatform.org/dataedit/view/model_draft/ksz2050_r2_AMS2012_ghg_emissions_detailed_data",
+            "type": "Table",
+            "title": "Detailed data of GHG emission projections of scenario AMS2012 by gases and sectors",
+            "format": "PostgreSQL",
+            "review": {
+                "path": "https://github.com/OpenEnergyPlatform/data-preprocessing/issues/27",
+                "badge": null
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "serial",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": false,
+                        "description": "Unique identifier",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "variable",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Variable",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "sector",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Sector",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "greenhouse_gas",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Greenhouse gas",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "unit",
+                        "type": "string",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Unit of measurement",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Scenario year",
+                        "valueReference": []
+                    },
+                    {
+                        "name": "value",
+                        "type": "float",
+                        "unit": "",
+                        "isAbout": [],
+                        "nullable": true,
+                        "description": "Value",
+                        "valueReference": []
+                    }
+                ],
+                "primaryKey": [
+                    "id"
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": [
+                            "year"
+                        ],
+                        "reference": {
+                            "fields": [
+                                "year"
+                            ],
+                            "resource": "schema.table"
+                        }
+                    }
+                ]
+            },
+            "topics": [
+                ""
+            ],
+            "context": {
+                "title": "",
+                "contact": "oedb@oeko.de",
+                "grantNo": "03KSE031",
+                "homepage": "https://www.klimaschutzszenario2050.de",
+                "publisher": "",
+                "sourceCode": "not available",
+                "documentation": "https://www.oeko.de/oekodoc/2451/2015-608-de.pdf",
+                "fundingAgency": "Diese Daten wurden im Auftrag des Bundesministeriums für Umwelt, Naturschutz und nukleare Sicherheit erstellt",
+                "publisherLogo": "https://www.oeko.de/fileadmin/templates/oeko/Resources/Public/images/logo.svg",
+                "fundingAgencyLogo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Logo_Bundesministerium_f%C3%BCr_Umwelt_Naturschutz_und_nukleare_Sicherheit.png"
+            },
+            "dialect": {
+                "delimiter": "",
+                "decimalSeparator": "."
+            },
+            "sources": [
+                {
+                    "path": "https://www.oeko.de/publikationen/p-details/klimaschutzszenario-2050-2-endbericht",
+                    "title": "Own projection",
+                    "authors": [],
+                    "description": "Details see report provided under URL",
+                    "sourceLicenses": [
+                        {
+                            "name": "",
+                            "path": "",
+                            "title": "",
+                            "attribution": "",
+                            "instruction": "",
+                            "copyrightStatement": ""
+                        }
+                    ],
+                    "publicationYear": null
+                }
+            ],
+            "spatial": {
+                "extent": {
+                    "@id": null,
+                    "crs": "",
+                    "name": "Germany",
+                    "boundingBox": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "resolutionUnit": "",
+                    "resolutionValue": ""
+                },
+                "location": {
+                    "@id": null,
+                    "address": null,
+                    "latitude": "",
+                    "longitude": ""
+                }
+            },
+            "subject": [
+                {
+                    "@id": null,
+                    "name": ""
+                }
+            ],
+            "encoding": "UTF-8",
+            "keywords": [
+                "Öko-Institut",
+                "KSz 2050",
+                "Germany",
+                "GHG emissions"
+            ],
+            "licenses": [
+                {
+                    "name": "dl-de-by-2.0",
+                    "path": "https://www.govdata.de/dl-de/by-2-0",
+                    "title": "Data licence Germany – attribution – version 2.0",
+                    "attribution": "© Öko-Institut",
+                    "instruction": "https://www.govdata.de/dl-de/by-2-0",
+                    "copyrightStatement": null
+                }
+            ],
+            "temporal": {
+                "timeseries": [
+                    {
+                        "end": "2050-01-01T00:00:00+01:00",
+                        "start": "2020-01-01T00:00:00+01:00",
+                        "alignment": "left",
+                        "resolutionUnit": "a",
+                        "aggregationType": "",
+                        "resolutionValue": "10"
+                    }
+                ],
+                "referenceDate": ""
+            },
+            "languages": [
+                "en-GB"
+            ],
+            "description": "This table holds GHG emissions projections of the AMS2012 scenario split by gases and sectors. The data corresponds to the data in tables 5-15, 5-39, 5-51, 5-77, 5-105, 5-114, 6-8, 6-27 and 6-35 of the report. For completeness the data also includes detailed data for the waste sector where no corresponding table was included in the report.",
+            "contributors": [
+                {
+                    "date": "2019-06-26",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "metadata",
+                    "comment": "Initial version",
+                    "organization": null
+                },
+                {
+                    "date": "2021-01-07",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "metadata",
+                    "comment": "Fixed small typos and urls",
+                    "organization": null
+                },
+                {
+                    "date": "2021-02-17",
+                    "path": null,
+                    "roles": [
+                        ""
+                    ],
+                    "title": "Öko-Institut",
+                    "object": "tags",
+                    "comment": "add further tags",
+                    "organization": null
+                },
+                {
+                    "date": "2021-09-01",
+                    "path": "https://github.com/OpenEnergyPlatform",
+                    "role": [
+                        "platform-maintainer"
+                    ],
+                    "title": "Open Energy Platform oemetadata conversion to v2",
+                    "object": "conversion of all metadata to oemetadata  version 2.0.4",
+                    "comment": "The conversion was done by the OpenEnergyFamily team using the OMI software.We did our best to mitigate data loss. Most unexpected or incorrect metadata propertyentries will be lost.",
+                    "organization": "OpenEnergyFamily"
+                }
+            ],
+            "embargoPeriod": {
+                "end": "",
+                "start": "",
+                "isActive": false
+            },
+            "publicationDate": null
+        }
+    ],
+    "description": "",
+    "metaMetadata": {
+        "metadataLicense": {
+            "name": "CC0-1.0",
+            "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "title": "Creative Commons Zero v1.0 Universal"
+        },
+        "metadataVersion": "OEMetadata-2.0.4"
+    }
+}
