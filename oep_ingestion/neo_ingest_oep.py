@@ -446,14 +446,10 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         ELSE []
     END |
 
-        CREATE (schema:Schema)
-        SET schema.source = "OEP"
+        CREATE (schema:OEP_Instance)
+        SET schema.source = "OEP_Instance"
 
         MERGE (r)-[:HAS_SCHEMA]->(schema)
-
-        //SET
-        //    schema.primaryKeyCount = size(coalesce(res.schema.primaryKey, [])),
-        //    schema.foreignKeyCount = size(coalesce(res.schema.foreignKeys, []))
 
         // Fields
         FOREACH (
