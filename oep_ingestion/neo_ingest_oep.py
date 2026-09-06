@@ -1,7 +1,9 @@
 import json
+from pathlib import Path
 import re
 from collections import Counter
 from sys import exit
+import sys
 from typing import Any
 
 import matplotlib.pyplot as plt
@@ -11,10 +13,14 @@ from oep_analysis.oep_validation.linkml_validation_script import (
     LINKML_ERROR_COUNTER,
     save_linkml_report,
     validate_directory,
+    plot_error_statistics as plot_linkml_statistics
 )
 from oep_client import OepClient
 
 # === CONFIGURATION ===========================================================
+SRC = Path(__file__).resolve().parents[1]   # .../graphon_ingestion/src
+sys.path.insert(0, str(SRC))
+
 from config.neo_config import PASSWORD, URI, USER
 from config.oep_config import (
     METADATA_DIR,
@@ -446,10 +452,14 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         ELSE []
     END |
 
-        CREATE (schema:OEP_Instance)
-        SET schema.source = "OEP_Instance"
+        CREATE (schema:Schema)
+        SET schema.source = "OEP"
 
         MERGE (r)-[:HAS_SCHEMA]->(schema)
+
+        //SET
+        //    schema.primaryKeyCount = size(coalesce(res.schema.primaryKey, [])),
+        //    schema.foreignKeyCount = size(coalesce(res.schema.foreignKeys, []))
 
         // Fields
         FOREACH (
@@ -675,42 +685,119 @@ def plot_error_statistics(
         title: str = "Error Statistics",
         filename: str = "error_statistics.png",
         show: bool = False,
-        color = "steelblue"
+        color="steelblue",
+        reason_prefix: str = "N"
         ):
     """
     Creates a sorted bar chart of error types and saves it as an image file.
-    
-    x-axis: Error type/class
-    y-axis: Count
+
+    The x-axis contains only reason codes (e.g. N1, N2, N3).
+    The corresponding mapping is returned.
+
+    Parameters
+    ----------
+    error_counter
+        Counter containing error types and frequencies.
+
+    reason_prefix
+        Prefix for the reason codes.
+        Example:
+            "N" -> N1, N2, N3
+            "T" -> T1, T2, T3
     """
 
     if not error_counter:
         print("No errors present - no graphic generated.")
-        return
+        return {}
 
-    # Prepare data: sort by frequency (descending)
-    sorted_items = sorted(error_counter.items(), key=lambda x: x[1], reverse=True)
-    labels, values = zip(*sorted_items)
+    # ---------------------------------------------------------
+    # Sort errors by frequency
+    # ---------------------------------------------------------
+    sorted_items = sorted(
+        error_counter.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )
 
+    error_types, values = zip(*sorted_items)
+
+    # ---------------------------------------------------------
+    # Create reason mapping
+    # ---------------------------------------------------------
+    reason_mapping = {
+        f"{reason_prefix}{i}": error_type
+        for i, (error_type, _) in enumerate(
+            sorted_items,
+            start=1
+        )
+    }
+
+    reason_codes = list(reason_mapping.keys())
+
+    # ---------------------------------------------------------
+    # Plot
+    # ---------------------------------------------------------
     plt.figure(figsize=(10, 6))
-    plt.bar(labels, values, color=color)  # darkorange
 
-    plt.xlabel("Error type/class")
+    plt.bar(
+        reason_codes,
+        values,
+        color=color
+    )
+
+    plt.xlabel("Reason")
     plt.ylabel("Count")
     plt.title(title)
-    plt.xticks(rotation=45, ha="right", fontsize=3)
 
-    # Write values above bars
+    # Values above bars
     for i, value in enumerate(values):
-        plt.text(i, value, str(value), ha="center", va="bottom", fontsize=3)
+        plt.text(
+            i,
+            value,
+            str(value),
+            ha="center",
+            va="bottom",
+            fontsize=8
+        )
 
     plt.tight_layout()
 
-    # Save
-    plt.savefig(filename, dpi=600, bbox_inches="tight")
+    # ---------------------------------------------------------
+    # Save plot
+    # ---------------------------------------------------------
+    plt.savefig(
+        filename,
+        dpi=600,
+        bbox_inches="tight"
+    )
+
     print(f"Error statistics saved as: {filename}")
 
+    if show:
+        plt.show()
+
     plt.close()
+
+    return reason_mapping
+
+def save_reason_mapping(
+    reason_mapping: dict[str, str],
+    filename: str,
+    title: str = "Neo4j Ingestion Error Reason Mapping"
+):
+    """
+    Saves the reason-code mapping to a text file.
+    """
+
+    with open(filename, "w", encoding="utf-8") as f:
+
+        f.write(title + "\n")
+        f.write("=" * 60 + "\n\n")
+
+        for reason_code, error_type in reason_mapping.items():
+            f.write(f"{reason_code} = {error_type}\n")
+
+    print(f"Reason mapping saved as: {filename}")
 
 
 def get_all_table_names_from_oep():
@@ -841,6 +928,7 @@ if __name__ == "__main__":
 
         if not records_to_ingest:
             print("No valid datasets available. Import aborted.")
+            print("Wurden die Daten zuvor preprocessed?")
             exit()
 
         print(f"{len(records_to_ingest)} datasets passed LinkML validation.")
@@ -913,7 +1001,7 @@ if __name__ == "__main__":
     # ---------------------------------------------------------------------
     save_linkml_report(filename= RESULT_DIR / "linkml_validation_report.json")
 
-    plot_error_statistics(
+    plot_linkml_statistics(
         LINKML_ERROR_COUNTER,
         title="LinkML Validation Errors",
         filename= RESULT_DIR / "linkml_validation_errors.png"
@@ -923,12 +1011,20 @@ if __name__ == "__main__":
     # 6. Save Neo4j ingestion errors
     # ---------------------------------------------------------------------
 
-    plot_error_statistics(
+    neo4j_reason_mapping = plot_error_statistics(
         ingest_errors,
         title="Neo4j Ingest Error Statistics",
-        filename= RESULT_DIR / "neo4j_ingest_errors.png", 
-        color="forestgreen"
+        filename=RESULT_DIR / "neo4j_ingest_errors.png",
+        color="forestgreen",
+        reason_prefix="N"
     )
+
+    save_reason_mapping(
+        neo4j_reason_mapping,
+        filename=RESULT_DIR / "neo4j_ingest_reason_mapping.txt",
+        title="Neo4j Ingestion Error Reason Mapping"
+    )
+
 
     # ---------------------------------------------------------------------
     # 7. Combined statistics
