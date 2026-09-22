@@ -866,6 +866,7 @@ def load_existing_metadata():
 # =============================================================================
 # MAIN
 # =============================================================================
+
 if __name__ == "__main__":
     log.info("Main started")
 
@@ -879,12 +880,9 @@ if __name__ == "__main__":
     # ---------------------------------------------------------------------
     # 2. Clear database
     # ---------------------------------------------------------------------
-    # Delete existing database
+    # Delete existing database if confirmed
     if not clear_database(driver):
-        log.info("Import aborted.")
-        driver.close()
-        exit()
-
+        log.info("Skipping database wipe, proceeding with existing database state...")
 
     print("\n========================================")
     print("OEP Metadata Import/Ingestion")
@@ -897,25 +895,31 @@ if __name__ == "__main__":
 
     choice = input("Select option (1/2/3/4): ").strip()
 
+    # Default fallback counters so reporting at the end doesn't fail
+    success_count = 0
+    failed_count = 0
+    ingest_errors = Counter()
 
     if choice == "1":
         print("\nDownloading metadata from OEP...")
-        # 1. Download all metadata via get_meta.py to local machine
-        # 2. Validate all files via LinkML validation
-        # 3. Ingest all valid files
+        table_names = get_all_table_names_from_oep()
+        records_to_ingest = []
+        for t_name in table_names:
+            try:
+                rec = cli.get_metadata(t_name)
+                records_to_ingest.append(rec)
+            except Exception as e:
+                log.exception(f"Failed to fetch metadata for {t_name}: {e}")
 
+        for record in records_to_ingest:
+            success_count, failed_count, ingest_errors = ingest_oep_metadata(
+                driver, record, success_count, failed_count, ingest_errors
+            )
 
     elif choice == "2":
         print("\nUsing existing local metadata from directory...")
         print("\nStarting LinkML validation...")
 
-        # 1. Validate existing data via LinkML validation
-        # 2. Ingest all valid files
-
-        # -------------------------------------------------------------------------
-        # 1. LinkML validation
-        # -------------------------------------------------------------------------
-        # validates all datasets in a folder
         records_to_ingest = []
         for json_file in METADATA_DIR.glob("*.json"):
             try:
@@ -924,8 +928,6 @@ if __name__ == "__main__":
             except Exception as e:
                 print(f"Error loading {json_file.name}: {e}")
 
-        #print("DEBUG LinkML counter:", LINKML_ERROR_COUNTER)
-
         if not records_to_ingest:
             print("No valid datasets available. Import aborted.")
             print("Wurden die Daten zuvor preprocessed?")
@@ -933,20 +935,12 @@ if __name__ == "__main__":
 
         print(f"{len(records_to_ingest)} datasets passed LinkML validation.")
 
-        # ---------------------------------------------------------------------
-        # 2. Ingest validated metadata
-        # ---------------------------------------------------------------------
-        # Start ingestion
-        success_count=0
-        failed_count = 0
-        ingest_errors = Counter()
         for record in records_to_ingest:
-            success_count, failed_count, ingest_errors = ingest_oep_metadata(driver, record, success_count, failed_count, ingest_errors)
+            success_count, failed_count, ingest_errors = ingest_oep_metadata(
+                driver, record, success_count, failed_count, ingest_errors
+            )
 
         print("\n==============================")
-        print("Valid datasets: WIP")
-        print("Failed datasets: WIP")
-        print("\n")
         print(f"Successfully ingested: {success_count}")
         print(f"Failed ingestions:     {failed_count}")
         print(f"Total datasets:        {len(records_to_ingest)}")
@@ -954,22 +948,10 @@ if __name__ == "__main__":
 
     elif choice == "3":
         print("\nUsing existing local metadata comparing to actual OEP Metadata ...")
-
-        # Compare existing data with current OEP data
-        # Or ingest via list of names
         records_to_ingest = load_existing_metadata()
 
     elif choice == "4":
-        # Download metadata and validate directly, then
-        # ingest into Neo4j DB as KG without storing locally
-
-        # 1. Get list of table names from OEP (to know what data is on OEP)
-        # 2. Validate this data
-        # 3. Ingest data
-        # Best to do this sequentially for each dataset (Download -> Validate -> Ingest)
-        pass
-        # Start ingestion
-        table_names = get_all_table_names_from_oep()  # 1.
+        table_names = get_all_table_names_from_oep()
         tables_downloaded = 0
         log.info(f"Table names count: {len(table_names)}")
 
@@ -980,9 +962,9 @@ if __name__ == "__main__":
                 metadata_rec = cli.get_metadata(table_name)
                 tables_downloaded += 1
                 try:
-                    # 2. Validate here with validate...
-                    # 3. Ingest data
-                    ingest_oep_metadata(driver, metadata_rec)
+                    success_count, failed_count, ingest_errors = ingest_oep_metadata(
+                        driver, metadata_rec, success_count, failed_count, ingest_errors
+                    )
                 except Exception as e:
                     log.exception("An error occurred during ingesting: %s", e)
 
@@ -995,22 +977,20 @@ if __name__ == "__main__":
         print("Invalid selection.")
         exit()
 
-
     # ---------------------------------------------------------------------
     # 5. Save LinkML report
     # ---------------------------------------------------------------------
-    save_linkml_report(filename= RESULT_DIR / "linkml_validation_report.json")
+    save_linkml_report(filename=RESULT_DIR / "linkml_validation_report.json")
 
     plot_linkml_statistics(
         LINKML_ERROR_COUNTER,
         title="LinkML Validation Errors",
-        filename= RESULT_DIR / "linkml_validation_errors.png"
+        filename=RESULT_DIR / "linkml_validation_errors.png"
     )
 
     # ---------------------------------------------------------------------
     # 6. Save Neo4j ingestion errors
     # ---------------------------------------------------------------------
-
     neo4j_reason_mapping = plot_error_statistics(
         ingest_errors,
         title="Neo4j Ingest Error Statistics",
@@ -1025,23 +1005,15 @@ if __name__ == "__main__":
         title="Neo4j Ingestion Error Reason Mapping"
     )
 
-
     # ---------------------------------------------------------------------
     # 7. Combined statistics
     # ---------------------------------------------------------------------
-
-    # All error sources:
-    #all_errors = error_counter + ingest_errors
-    all_errors = (
-        Counter()
-        + LINKML_ERROR_COUNTER
-        + ingest_errors
-    )
+    all_errors = Counter() + LINKML_ERROR_COUNTER + ingest_errors
 
     plot_error_statistics(
         all_errors, 
         title="Total Error Statistics (Load + Ingest)", 
-        filename= RESULT_DIR / "neo4j_load_ingest_errors.png"
+        filename=RESULT_DIR / "neo4j_load_ingest_errors.png"
     )
 
     if 'driver' in locals():
