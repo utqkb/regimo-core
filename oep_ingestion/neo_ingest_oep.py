@@ -618,20 +618,28 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
     """
 
+
+    raw_name = record.get("name")
+
+    # Guard clause: Check for missing, None, or blank names (Reason N1)
+    if not raw_name or not str(raw_name).strip():
+        failed_count += 1
+        ingest_errors["N1"] += 1
+        log.warning(f"-> SKIPPED (Reason N1): Dataset.name is null or empty in record ID: {record.get('id', 'unknown')}")
+        return success_count, failed_count, ingest_errors
+
+    dataset_name = str(raw_name).strip()
+    log.info(f"Processing Dataset: {dataset_name}...")
+
     with driver.session() as session:
-        dataset_name = record.get("name", "<unknown>")
-
-        log.info(f"Processing Dataset: {dataset_name}...")
-
         try:
             session.execute_write(lambda tx: tx.run(cypher_query, dataset=record))
             success_count += 1
-            log.info(f"-> Success: Dataset '{dataset_name}...' ingested.")
+            log.info(f"-> Success: Dataset '{dataset_name}' ingested.")
         except Exception as e:
             failed_count += 1
             error_type = categorize_neo4j_error(e)
             ingest_errors[error_type] += 1
-
             log.exception(f"-> FAILED ingestion for {dataset_name}: {e}")
 
     return success_count, failed_count, ingest_errors
