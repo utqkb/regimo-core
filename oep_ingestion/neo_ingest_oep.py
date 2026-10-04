@@ -5,6 +5,7 @@ from collections import Counter
 from sys import exit
 import sys
 from typing import Any
+import uuid
 
 import matplotlib.pyplot as plt
 import requests
@@ -84,30 +85,46 @@ def clear_database(driver: Driver):
 def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, failed_count, ingest_errors):
     """
     Transforms OEP metadata into a Neo4j graph based on the LinkML schema.
-    /
-    Imports a validated OEP metadata JSON file into Neo4j.
-
-    LinkML validation is executed before this function.
-    Therefore, only valid datasets are processed here.
+    Applies data sanitization before execution to prevent premature skipping.
     """
+    if not isinstance(record, dict):
+        failed_count += 1
+        ingest_errors["Invalid_Record_Format"] += 1
+        return success_count, failed_count, ingest_errors
+
+    # Sanitization: Ensure dataset has valid non-empty identifiers
+    dataset_id = str(record.get("@id") or record.get("id") or "").strip()
+    dataset_name = str(record.get("name") or "").strip()
+    dataset_title = str(record.get("title") or "").strip()
+
+    # Fallback assignment if name or @id is missing
+    if not dataset_name:
+        if dataset_id:
+            dataset_name = dataset_id
+        elif dataset_title:
+            dataset_name = dataset_title
+        else:
+            fallback_id = f"generated-id-{uuid.uuid4()}"
+            dataset_id = fallback_id
+            dataset_name = f"Unnamed Dataset ({fallback_id})"
+
+    if not dataset_id:
+        dataset_id = dataset_name
+
+    # Write sanitized values back into record payload
+    record["@id"] = dataset_id
+    record["name"] = dataset_name
+
+    log.info(f"Processing Dataset: {dataset_name} (ID: {dataset_id})...")
 
     cypher_query = """
     CALL {
-        WITH $dataset AS dataset
-        WITH dataset 
-        WHERE dataset.`@id` IS NOT NULL AND trim(dataset.`@id`) <> ""
-        MERGE (d:Dataset {id: dataset.`@id`})
-        RETURN d
-      UNION
-        WITH $dataset AS dataset
-        WITH dataset 
-        WHERE dataset.`@id` IS NULL OR trim(dataset.`@id`) = ""
-        MERGE (d:Dataset {name: dataset.name})
-        RETURN d
-    }
+    WITH $dataset AS dataset
+    MERGE (d:Dataset {id: dataset.`@id`})
+    RETURN d
+}
     WITH d, $dataset.metaMetadata AS mm
-    SET d.id = coalesce($dataset.`@id`, null),
-        d.name = $dataset.name,
+    SET d.name = $dataset.name,
         d.title = $dataset.title,
         d.description = $dataset.description,
         d.context = $dataset.`@context`,
@@ -129,8 +146,8 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
     // 2. Process resources
     WITH d
-    UNWIND $dataset.resources AS res
-    MERGE (r:Resource {path: res.path})
+    UNWIND coalesce($dataset.resources, []) AS res
+    MERGE (r:Resource {path: coalesce(res.path, "null")})
     SET r.id = coalesce(res.`@id`, "null"),
         r.name = res.name,
         r.topics = res.topics,
@@ -154,7 +171,7 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
     // Subject Ontology
     FOREACH (subj IN [s IN coalesce(res.subject, []) WHERE s.`@id` IS NOT NULL AND s.`@id` <> "null"] |
-        MERGE (os:Subject {id: subj.`@id`})  //Subject =^ OntologyReference
+        MERGE (os:Subject {id: subj.`@id`})
         ON CREATE SET 
             os.name = subj.name,
             os.source = "OEP"
@@ -176,15 +193,12 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         THEN [1]
         ELSE []
     END |
-
         MERGE (ep:EmbargoPeriod {
             start: res.embargoPeriod.start,
             end: res.embargoPeriod.end
         })
         ON CREATE SET ep.source = "OEP"
-
         SET ep.isActive = coalesce(res.embargoPeriod.isActive, false)
-        
         MERGE (r)-[:HAS_EMBARGO_PERIOD]->(ep)
     )
 
@@ -206,7 +220,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         THEN [1]
         ELSE []
     END |
-
         MERGE (c:Context {
             title: trim(coalesce(res.context.title, "")),
             contact: trim(coalesce(res.context.contact, "")),
@@ -220,12 +233,10 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
             fundingAgencyLogo: trim(coalesce(res.context.fundingAgencyLogo, ""))
         })
         ON CREATE SET c.source = "OEP"
-
         MERGE (r)-[:HAS_CONTEXT]->(c)
     )
 
     // Spatial Extent & Location
-    // Spatial
     FOREACH (_ IN CASE
         WHEN res.spatial IS NOT NULL
             AND (
@@ -252,13 +263,10 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         THEN [1]
         ELSE []
     END |
-
         CREATE (s:Spatial)
         MERGE (r)-[:HAS_SPATIAL]->(s)
         SET s.source = "OEP"
-        // Optional: Use MERGE (r)-[:HAS_SPATIAL]->(s:Spatial) instead of CREATE and MERGE if you want to ensure only one Spatial per Resource exists
 
-        // Location
         FOREACH (__ IN CASE
             WHEN res.spatial.location IS NOT NULL
                 AND res.spatial.location.address IS NOT NULL
@@ -266,7 +274,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
             THEN [1]
             ELSE []
         END |
-
             MERGE (loc:Location {address: res.spatial.location.address})
             ON CREATE SET loc.source = "OEP"
             SET
@@ -277,7 +284,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
             MERGE (s)-[:HAS_LOCATION]->(loc)
         )
 
-        // Extent
         FOREACH (__ IN CASE
             WHEN res.spatial.extent IS NOT NULL
                 AND res.spatial.extent.name IS NOT NULL
@@ -285,7 +291,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
             THEN [1]
             ELSE []
         END |
-
             MERGE (ext:Extent {name: res.spatial.extent.name})
             ON CREATE SET ext.source = "OEP"
             SET
@@ -301,7 +306,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
     // Temporal
     FOREACH (_ IN CASE WHEN res.temporal IS NOT NULL THEN [1] ELSE [] END |
-
         CREATE (t:Temporal)
         SET 
             t.referenceDate = res.temporal.referenceDate,
@@ -309,9 +313,7 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
         MERGE (r)-[:HAS_TEMPORAL]->(t)
 
-        // Time series
         FOREACH (ts IN coalesce(res.temporal.timeseries, []) |
-
             MERGE (time:TimeSeries {
                 start: coalesce(ts.start, ""),
                 end: coalesce(ts.end, ""),
@@ -327,10 +329,8 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
     // Sources
     FOREACH (src IN coalesce(res.sources, []) |
-
         MERGE (s:Source {path: coalesce(src.path, "null")})
         ON CREATE SET s.source = "OEP"
-
         SET
             s.title = src.title,
             s.description = src.description,
@@ -338,16 +338,12 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
         MERGE (r)-[:HAS_SOURCE]->(s)
 
-        // Authors
         FOREACH (author IN coalesce(src.authors, []) |
-
             MERGE (a:Author {name: author})
             ON CREATE SET a.source = "OEP"
-
             MERGE (s)-[:HAS_AUTHOR]->(a)
         )
 
-        // Source Licenses
         FOREACH (
             lic IN [
                 l IN coalesce(src.sourceLicenses, [])
@@ -359,7 +355,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                     trim(coalesce(l.attribution, "")) <> "" OR
                     trim(coalesce(l.copyrightStatement, "")) <> ""
             ] |
-
             MERGE (sl:License {
                 name: trim(coalesce(lic.name, "")),
                 title: trim(coalesce(lic.title, "")),
@@ -369,7 +364,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                 copyrightStatement: trim(coalesce(lic.copyrightStatement, ""))
             })
             ON CREATE SET sl.source = "OEP"
-
             MERGE (s)-[:HAS_SOURCE_LICENSE]->(sl)
         )
     )
@@ -386,7 +380,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                 trim(coalesce(l.attribution, "")) <> "" OR
                 trim(coalesce(l.copyrightStatement, "")) <> ""
         ] |
-
         MERGE (rl:License {
             name: trim(coalesce(lic.name, "")),
             title: trim(coalesce(lic.title, "")),
@@ -396,7 +389,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
             copyrightStatement: trim(coalesce(lic.copyrightStatement, ""))
         })
         ON CREATE SET rl.source = "OEP"
-
         MERGE (r)-[:HAS_LICENSE]->(rl)
     )
 
@@ -412,7 +404,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                 trim(coalesce(c.path, "")) <> "" OR
                 trim(coalesce(c.comment, "")) <> ""
         ] |
-
         MERGE (p:Contributor {
             title: trim(coalesce(con.title, "")),
             object: trim(coalesce(con.object, "")),
@@ -422,7 +413,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
             comment: trim(coalesce(con.comment, ""))
         })
         ON CREATE SET p.source = "OEP"
-
         MERGE (r)-[:CONTRIBUTED_BY]->(p)
 
         FOREACH (
@@ -430,12 +420,10 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                 rn IN (coalesce(con.roles, []) + coalesce(con.role, []))
                 WHERE trim(coalesce(rn, "")) <> ""
             ] |
-
             MERGE (role:Role {
                 name: trim(roleName)
             })
             ON CREATE SET role.source = "OEP"
-
             MERGE (p)-[:HAS_ROLE]->(role)
         )
     )
@@ -451,17 +439,10 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         THEN [1]
         ELSE []
     END |
-
         CREATE (schema:Schema)
         SET schema.source = "OEP"
-
         MERGE (r)-[:HAS_SCHEMA]->(schema)
 
-        //SET
-        //    schema.primaryKeyCount = size(coalesce(res.schema.primaryKey, [])),
-        //    schema.foreignKeyCount = size(coalesce(res.schema.foreignKeys, []))
-
-        // Fields
         FOREACH (
             field IN [
                 f IN coalesce(res.schema.fields, [])
@@ -472,7 +453,6 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                     trim(coalesce(f.description, "")) <> "" OR
                     f.nullable IS NOT NULL
             ] |
-
             MERGE (fi:Field {
                 name: trim(coalesce(field.name, "")),
                 type: trim(coalesce(field.type, "")),
@@ -481,10 +461,8 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                 nullable: coalesce(field.nullable, false)
             })
             ON CREATE SET fi.source = "OEP"
-
             MERGE (schema)-[:HAS_FIELD]->(fi)
 
-            // isAbout -> OntologyReference
             FOREACH (
                 about IN [
                     a IN coalesce(field.isAbout, [])
@@ -492,17 +470,14 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                         trim(coalesce(a.`@id`, "")) <> "" OR
                         trim(coalesce(a.name, "")) <> ""
                 ] |
-
                 MERGE (ont:isAbout {
                     id: trim(coalesce(about.`@id`, "")),
                     name: trim(coalesce(about.name, "")) 
                 })
                 ON CREATE SET ont.source = "OEP"
-
                 MERGE (fi)-[:IS_ABOUT]->(ont)
             )
 
-            // valueReference
             FOREACH (
                 ref IN [
                     v IN coalesce(field.valueReference, [])
@@ -511,35 +486,28 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                         trim(coalesce(v.name, "")) <> "" OR
                         trim(coalesce(v.value, "")) <> ""
                 ] |
-
                 MERGE (vr:ValueReference {
                     id: trim(coalesce(ref.`@id`, "")),
                     name: trim(coalesce(ref.name, "")),
                     value: trim(coalesce(ref.value, ""))
                 })
                 ON CREATE SET vr.source = "OEP"
-
                 MERGE (fi)-[:HAS_VALUE_REFERENCE]->(vr)
             )
         )
 
-        // Primary Keys
         FOREACH (
             pk IN [
                 p IN coalesce(res.schema.primaryKey, [])
-                WHERE 
-                    trim(coalesce(p, "")) <> ""
+                WHERE trim(coalesce(p, "")) <> ""
             ] |
-
             MERGE (primaryKey:PrimaryKey {
                 field: trim(pk)
             })
             ON CREATE SET primaryKey.source = "OEP"
-
             MERGE (schema)-[:HAS_PRIMARY_KEY]->(primaryKey)
         )
 
-        // Foreign Keys
         FOREACH (
             fk IN [
                 f IN coalesce(res.schema.foreignKeys, [])
@@ -548,12 +516,10 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                     size(coalesce(f.reference.fields, [])) > 0 OR
                     trim(coalesce(f.reference.resource, "")) <> ""
             ] |
-
             CREATE (foreignKey:ForeignKey {
                 fields: coalesce(fk.fields, [])
             })
             SET foreignKey.source = "OEP"
-
             MERGE (schema)-[:HAS_FOREIGN_KEY]->(foreignKey)
 
             FOREACH (_ IN CASE
@@ -563,13 +529,11 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                 THEN [1]
                 ELSE []
             END |
-
                 MERGE (ref:Reference {
                     fields: coalesce(fk.reference.fields, []),
                     resource: trim(coalesce(fk.reference.resource, ""))
                 })
                 ON CREATE SET ref.source = "OEP"
-
                 MERGE (foreignKey)-[:REFERENCES]->(ref)
             )
         )
@@ -585,13 +549,11 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         THEN [1]
         ELSE []
     END |
-
         MERGE (di:Dialect {
             delimiter: trim(coalesce(res.dialect.delimiter, "")),
             decimalSeparator: trim(coalesce(res.dialect.decimalSeparator, ""))
         })
         ON CREATE SET di.source = "OEP"
-
         MERGE (r)-[:HAS_DIALECT]->(di)
     )
 
@@ -606,30 +568,14 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
             THEN [res.review]
             ELSE []
         END |
-
         MERGE (review:Review {
             path: trim(coalesce(rev.path, "")),
             badge: trim(coalesce(rev.badge, ""))
         })
         ON CREATE SET review.source = "OEP"
-
         MERGE (r)-[:HAS_REVIEW]->(review)
     )
-
     """
-
-
-    raw_name = record.get("name")
-
-    # Guard clause: Check for missing, None, or blank names (Reason N1)
-    if not raw_name or not str(raw_name).strip():
-        failed_count += 1
-        ingest_errors["N1"] += 1
-        log.warning(f"-> SKIPPED (Reason N1): Dataset.name is null or empty in record ID: {record.get('id', 'unknown')}")
-        return success_count, failed_count, ingest_errors
-
-    dataset_name = str(raw_name).strip()
-    log.info(f"Processing Dataset: {dataset_name}...")
 
     with driver.session() as session:
         try:
@@ -811,20 +757,16 @@ def save_reason_mapping(
 def get_all_table_names_from_oep():
     # 1. Create list of all table names
     log.info("Get all table names")
-    # Note: Using the 'advanced' search/info endpoint is often the most reliable way to list tables
     list_url = f"{OEP_API_BASE}/advanced/get_table_names"
     response = requests.post(list_url, json={"schema": SCHEMA})
 
     if response.status_code != 200:
         print(f"Failed to fetch table list: {response.text}")
-        return
+        return []
 
     data = response.json()
 
-    # If data is a list, use it directly.
-    # If data is a dict, extract the values:
     if isinstance(data, dict):
-        # Replace "tables" with the actual key from your API
         tables = data.get("content", list(data.keys()))
     else:
         tables = data
@@ -840,12 +782,10 @@ def load_existing_metadata():
     Loads all existing OEP metadata from the local metadata folder.
     """
 
-    # 1. Get all table names from OEP
     table_names = get_all_table_names_from_oep()
 
     records_to_ingest = []
 
-    # 2. Retrieve corresponding metadata records using all table names
     for table_name in table_names:
         print(f"Loading local metadata: {table_name}")
 
@@ -859,8 +799,7 @@ def load_existing_metadata():
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 json_content = f.read()
-                raw_data: list[dict[str, Any]] = json.loads(json_content)     # Converts e.g. "@id": null to "@id": None -> converts everything to Python syntax so Python can work with it (since null would cause errors, as it's called none in Python, not null)
-                #raw_data = json.load(f)  # Use this if the two lines above no longer work
+                raw_data: list[dict[str, Any]] = json.loads(json_content)
 
             records_to_ingest.append(raw_data)
 
@@ -871,24 +810,19 @@ def load_existing_metadata():
 
 # === 3. Main Execution =======================================================
 
-# =============================================================================
-# MAIN
-# =============================================================================
-
 if __name__ == "__main__":
     log.info("Main started")
 
     # -------------------------------------------------------------------------
     # 1. Connect Neo4j
     # -------------------------------------------------------------------------
-    cli = OepClient()                                           # Initialize Open Energy Platform Client
-    driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))   # Initialize driver connection to Neo4j
+    cli = OepClient()
+    driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
     verify_neo4j_connection(driver)
 
     # ---------------------------------------------------------------------
     # 2. Clear database
     # ---------------------------------------------------------------------
-    # Delete existing database if confirmed
     if not clear_database(driver):
         log.info("Skipping database wipe, proceeding with existing database state...")
 
@@ -903,7 +837,6 @@ if __name__ == "__main__":
 
     choice = input("Select option (1/2/3/4): ").strip()
 
-    # Default fallback counters so reporting at the end doesn't fail
     success_count = 0
     failed_count = 0
     ingest_errors = Counter()
