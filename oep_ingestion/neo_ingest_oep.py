@@ -5,7 +5,6 @@ from collections import Counter
 from sys import exit
 import sys
 from typing import Any
-import uuid
 
 import matplotlib.pyplot as plt
 import requests
@@ -85,69 +84,52 @@ def clear_database(driver: Driver):
 def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, failed_count, ingest_errors):
     """
     Transforms OEP metadata into a Neo4j graph based on the LinkML schema.
-    Applies data sanitization before execution to prevent premature skipping.
     """
-    if not isinstance(record, dict):
-        failed_count += 1
-        ingest_errors["Invalid_Record_Format"] += 1
-        return success_count, failed_count, ingest_errors
-
-    # Sanitization: Ensure dataset has valid non-empty identifiers
-    dataset_id = str(record.get("@id") or record.get("id") or "").strip()
-    dataset_name = str(record.get("name") or "").strip()
-    dataset_title = str(record.get("title") or "").strip()
-
-    # Fallback assignment if name or @id is missing
-    if not dataset_name:
-        if dataset_id:
-            dataset_name = dataset_id
-        elif dataset_title:
-            dataset_name = dataset_title
-        else:
-            fallback_id = f"generated-id-{uuid.uuid4()}"
-            dataset_id = fallback_id
-            dataset_name = f"Unnamed Dataset ({fallback_id})"
-
-    if not dataset_id:
-        dataset_id = dataset_name
-
-    # Write sanitized values back into record payload
-    record["@id"] = dataset_id
-    record["name"] = dataset_name
-
-    log.info(f"Processing Dataset: {dataset_name} (ID: {dataset_id})...")
 
     cypher_query = """
     CALL {
-    WITH $dataset AS dataset
-    MERGE (d:Dataset {id: dataset.`@id`})
-    RETURN d
-}
+        WITH $dataset AS dataset
+        WITH dataset 
+        WHERE dataset.`@id` IS NOT NULL AND trim(toString(dataset.`@id`)) <> ""
+        MERGE (d:Dataset {id: dataset.`@id`})
+        RETURN d
+      UNION
+        WITH $dataset AS dataset
+        WITH dataset 
+        WHERE dataset.`@id` IS NULL OR trim(toString(dataset.`@id`)) = ""
+        MERGE (d:Dataset {name: coalesce(dataset.name, "unknown_dataset")})
+        RETURN d
+    }
     WITH d, $dataset.metaMetadata AS mm
-    SET d.name = $dataset.name,
+    SET d.id = coalesce($dataset.`@id`, null),
+        d.name = $dataset.name,
         d.title = $dataset.title,
         d.description = $dataset.description,
         d.context = $dataset.`@context`,
         d.source = "OEP"
 
-    FOREACH (_ IN CASE WHEN mm IS NOT NULL THEN [1] ELSE [] END |
-        MERGE (m:MetaMetadata {version: mm.metadataVersion})
+    FOREACH (_ IN CASE WHEN mm IS NOT NULL AND trim(coalesce(toString(mm.metadataVersion), "")) <> "" THEN [1] ELSE [] END |
+        MERGE (m:MetaMetadata {version: trim(toString(mm.metadataVersion))})
         ON CREATE SET m.source = "OEP"
 
         MERGE (d)-[:HAS_METAMETADATA]->(m)
 
-        MERGE (ml:License {name: mm.metadataLicense.name})
-        ON CREATE SET
-            ml.title = mm.metadataLicense.title,
-            ml.path = mm.metadataLicense.path, 
-            ml.source = "OEP"
-        MERGE (m)-[:HAS_METADATA_LICENSE]->(ml)
+        FOREACH (__ IN CASE WHEN mm.metadataLicense IS NOT NULL AND trim(coalesce(toString(mm.metadataLicense.name), "")) <> "" THEN [1] ELSE [] END |
+            MERGE (ml:License {name: trim(toString(mm.metadataLicense.name))})
+            ON CREATE SET
+                ml.title = mm.metadataLicense.title,
+                ml.path = mm.metadataLicense.path, 
+                ml.source = "OEP"
+            MERGE (m)-[:HAS_METADATA_LICENSE]->(ml)
+        )
     )
 
     // 2. Process resources
     WITH d
     UNWIND coalesce($dataset.resources, []) AS res
-    MERGE (r:Resource {path: coalesce(res.path, "null")})
+    WITH d, res
+    WHERE res.path IS NOT NULL AND trim(toString(res.path)) <> ""
+    MERGE (r:Resource {path: trim(toString(res.path))})
     SET r.id = coalesce(res.`@id`, "null"),
         r.name = res.name,
         r.topics = res.topics,
@@ -157,21 +139,21 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         r.encoding = coalesce(res.encoding, "null"),
         r.publicationDate = res.publicationDate,
         r.description = res.description,
-        r.review_badge = res.review.badge,
+        r.review_badge = coalesce(res.review.badge, "null"),
         r.source = "OEP"
 
     MERGE (d)-[:HAS_RESOURCE]->(r)
     
     // Languages
-    FOREACH (lang IN coalesce(res.languages, []) |
-        MERGE (l:Language {code: lang})
+    FOREACH (lang IN [l IN coalesce(res.languages, []) WHERE l IS NOT NULL AND trim(toString(l)) <> ""] |
+        MERGE (l:Language {code: trim(toString(lang))})
         ON CREATE SET l.source = "OEP"
         MERGE (r)-[:HAS_LANGUAGE]->(l)
     )
 
     // Subject Ontology
-    FOREACH (subj IN [s IN coalesce(res.subject, []) WHERE s.`@id` IS NOT NULL AND s.`@id` <> "null"] |
-        MERGE (os:Subject {id: subj.`@id`})
+    FOREACH (subj IN [s IN coalesce(res.subject, []) WHERE s.`@id` IS NOT NULL AND toString(s.`@id`) <> "null" AND trim(toString(s.`@id`)) <> ""] |
+        MERGE (os:Subject {id: trim(toString(subj.`@id`))})
         ON CREATE SET 
             os.name = subj.name,
             os.source = "OEP"
@@ -179,8 +161,8 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
     )
 
     // Keywords
-    FOREACH (kw IN [k IN coalesce(res.keywords, []) WHERE k <> "" AND k <> "null" AND k IS NOT NULL] |
-        MERGE (key:Keyword {value: kw})
+    FOREACH (kw IN [k IN coalesce(res.keywords, []) WHERE k IS NOT NULL AND k <> "" AND k <> "null" AND trim(toString(k)) <> ""] |
+        MERGE (key:Keyword {value: trim(toString(kw))})
         ON CREATE SET key.source = "OEP"
         MERGE (r)-[:HAS_KEYWORD]->(key)
     )
@@ -188,17 +170,18 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
     // Embargo Period
     FOREACH (_ IN CASE
         WHEN res.embargoPeriod IS NOT NULL
-            AND trim(coalesce(res.embargoPeriod.start, "")) <> ""
-            AND trim(coalesce(res.embargoPeriod.end, "")) <> ""
+            AND trim(coalesce(toString(res.embargoPeriod.start), "")) <> ""
+            AND trim(coalesce(toString(res.embargoPeriod.end), "")) <> ""
         THEN [1]
         ELSE []
     END |
         MERGE (ep:EmbargoPeriod {
-            start: res.embargoPeriod.start,
-            end: res.embargoPeriod.end
+            start: trim(toString(res.embargoPeriod.start)),
+            end: trim(toString(res.embargoPeriod.end))
         })
         ON CREATE SET ep.source = "OEP"
         SET ep.isActive = coalesce(res.embargoPeriod.isActive, false)
+        
         MERGE (r)-[:HAS_EMBARGO_PERIOD]->(ep)
     )
 
@@ -206,33 +189,34 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
     FOREACH (_ IN CASE
         WHEN res.context IS NOT NULL
             AND (
-                trim(coalesce(res.context.title, "")) <> "" OR
-                trim(coalesce(res.context.contact, "")) <> "" OR
-                trim(coalesce(res.context.grantNo, "")) <> "" OR
-                trim(coalesce(res.context.homepage, "")) <> "" OR
-                trim(coalesce(res.context.publisher, "")) <> "" OR
-                trim(coalesce(res.context.sourceCode, "")) <> "" OR
-                trim(coalesce(res.context.documentation, "")) <> "" OR
-                trim(coalesce(res.context.fundingAgency, "")) <> "" OR
+                trim(coalesce(toString(res.context.title), "")) <> "" OR
+                trim(coalesce(toString(res.context.contact), "")) <> "" OR
+                trim(coalesce(toString(res.context.grantNo), "")) <> "" OR
+                trim(coalesce(toString(res.context.homepage), "")) <> "" OR
+                trim(coalesce(toString(res.context.publisher), "")) <> "" OR
+                trim(coalesce(toString(res.context.sourceCode), "")) <> "" OR
+                trim(coalesce(toString(res.context.documentation), "")) <> "" OR
+                trim(coalesce(toString(res.context.fundingAgency), "")) <> "" OR
                 res.context.publisherLogo IS NOT NULL OR
-                trim(coalesce(res.context.fundingAgencyLogo, "")) <> ""
+                trim(coalesce(toString(res.context.fundingAgencyLogo), "")) <> ""
             )
         THEN [1]
         ELSE []
     END |
         MERGE (c:Context {
-            title: trim(coalesce(res.context.title, "")),
-            contact: trim(coalesce(res.context.contact, "")),
-            grantNo: trim(coalesce(res.context.grantNo, "")),
-            homepage: trim(coalesce(res.context.homepage, "")),
-            publisher: trim(coalesce(res.context.publisher, "")),
-            sourceCode: trim(coalesce(res.context.sourceCode, "")),
-            documentation: trim(coalesce(res.context.documentation, "")),
-            fundingAgency: trim(coalesce(res.context.fundingAgency, "")),
-            publisherLogo: trim(coalesce(res.context.publisherLogo, "")),
-            fundingAgencyLogo: trim(coalesce(res.context.fundingAgencyLogo, ""))
+            title: trim(coalesce(toString(res.context.title), "")),
+            contact: trim(coalesce(toString(res.context.contact), "")),
+            grantNo: trim(coalesce(toString(res.context.grantNo), "")),
+            homepage: trim(coalesce(toString(res.context.homepage), "")),
+            publisher: trim(coalesce(toString(res.context.publisher), "")),
+            sourceCode: trim(coalesce(toString(res.context.sourceCode), "")),
+            documentation: trim(coalesce(toString(res.context.documentation), "")),
+            fundingAgency: trim(coalesce(toString(res.context.fundingAgency), "")),
+            publisherLogo: trim(coalesce(toString(res.context.publisherLogo), "")),
+            fundingAgencyLogo: trim(coalesce(toString(res.context.fundingAgencyLogo), ""))
         })
         ON CREATE SET c.source = "OEP"
+
         MERGE (r)-[:HAS_CONTEXT]->(c)
     )
 
@@ -243,19 +227,19 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
                 (
                     res.spatial.location IS NOT NULL
                     AND (
-                        trim(coalesce(res.spatial.location.address, "")) <> "" OR
-                        trim(coalesce(res.spatial.location.latitude, "")) <> "" OR
-                        trim(coalesce(res.spatial.location.longitude, "")) <> ""
+                        trim(coalesce(toString(res.spatial.location.address), "")) <> "" OR
+                        trim(coalesce(toString(res.spatial.location.latitude), "")) <> "" OR
+                        trim(coalesce(toString(res.spatial.location.longitude), "")) <> ""
                     )
                 )
                 OR
                 (
                     res.spatial.extent IS NOT NULL
                     AND (
-                        trim(coalesce(res.spatial.extent.name, "")) <> "" OR
-                        trim(coalesce(res.spatial.extent.crs, "")) <> "" OR
-                        trim(coalesce(res.spatial.extent.resolutionUnit, "")) <> "" OR
-                        trim(coalesce(res.spatial.extent.resolutionValue, "")) <> "" OR
+                        trim(coalesce(toString(res.spatial.extent.name), "")) <> "" OR
+                        trim(coalesce(toString(res.spatial.extent.crs), "")) <> "" OR
+                        trim(coalesce(toString(res.spatial.extent.resolutionUnit), "")) <> "" OR
+                        trim(coalesce(toString(res.spatial.extent.resolutionValue), "")) <> "" OR
                         coalesce(res.spatial.extent.boundingBox, [0,0,0,0]) <> [0,0,0,0]
                     )
                 )
@@ -267,14 +251,15 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         MERGE (r)-[:HAS_SPATIAL]->(s)
         SET s.source = "OEP"
 
+        // Location
         FOREACH (__ IN CASE
             WHEN res.spatial.location IS NOT NULL
                 AND res.spatial.location.address IS NOT NULL
-                AND trim(res.spatial.location.address) <> ""
+                AND trim(toString(res.spatial.location.address)) <> ""
             THEN [1]
             ELSE []
         END |
-            MERGE (loc:Location {address: res.spatial.location.address})
+            MERGE (loc:Location {address: trim(toString(res.spatial.location.address))})
             ON CREATE SET loc.source = "OEP"
             SET
                 loc.id = coalesce(res.spatial.location.`@id`, "null"),
@@ -284,14 +269,15 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
             MERGE (s)-[:HAS_LOCATION]->(loc)
         )
 
+        // Extent
         FOREACH (__ IN CASE
             WHEN res.spatial.extent IS NOT NULL
                 AND res.spatial.extent.name IS NOT NULL
-                AND trim(res.spatial.extent.name) <> ""
+                AND trim(toString(res.spatial.extent.name)) <> ""
             THEN [1]
             ELSE []
         END |
-            MERGE (ext:Extent {name: res.spatial.extent.name})
+            MERGE (ext:Extent {name: trim(toString(res.spatial.extent.name))})
             ON CREATE SET ext.source = "OEP"
             SET
                 ext.id = coalesce(res.spatial.extent.`@id`, "null"),
@@ -313,6 +299,7 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
         MERGE (r)-[:HAS_TEMPORAL]->(t)
 
+        // Time series
         FOREACH (ts IN coalesce(res.temporal.timeseries, []) |
             MERGE (time:TimeSeries {
                 start: coalesce(ts.start, ""),
@@ -331,6 +318,7 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
     FOREACH (src IN coalesce(res.sources, []) |
         MERGE (s:Source {path: coalesce(src.path, "null")})
         ON CREATE SET s.source = "OEP"
+
         SET
             s.title = src.title,
             s.description = src.description,
@@ -338,32 +326,36 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
 
         MERGE (r)-[:HAS_SOURCE]->(s)
 
-        FOREACH (author IN coalesce(src.authors, []) |
-            MERGE (a:Author {name: author})
+        // Authors
+        FOREACH (author IN [a IN coalesce(src.authors, []) WHERE a IS NOT NULL AND trim(toString(a)) <> ""] |
+            MERGE (a:Author {name: trim(toString(author))})
             ON CREATE SET a.source = "OEP"
+
             MERGE (s)-[:HAS_AUTHOR]->(a)
         )
 
+        // Source Licenses
         FOREACH (
             lic IN [
                 l IN coalesce(src.sourceLicenses, [])
                 WHERE
-                    trim(coalesce(l.name, "")) <> "" OR
-                    trim(coalesce(l.path, "")) <> "" OR
-                    trim(coalesce(l.title, "")) <> "" OR
-                    trim(coalesce(l.instruction, "")) <> "" OR
-                    trim(coalesce(l.attribution, "")) <> "" OR
-                    trim(coalesce(l.copyrightStatement, "")) <> ""
+                    trim(coalesce(toString(l.name), "")) <> "" OR
+                    trim(coalesce(toString(l.path), "")) <> "" OR
+                    trim(coalesce(toString(l.title), "")) <> "" OR
+                    trim(coalesce(toString(l.instruction), "")) <> "" OR
+                    trim(coalesce(toString(l.attribution), "")) <> "" OR
+                    trim(coalesce(toString(l.copyrightStatement), "")) <> ""
             ] |
             MERGE (sl:License {
-                name: trim(coalesce(lic.name, "")),
-                title: trim(coalesce(lic.title, "")),
-                path: trim(coalesce(lic.path, "")),
-                instruction: trim(coalesce(lic.instruction, "")),
-                attribution: trim(coalesce(lic.attribution, "")),
-                copyrightStatement: trim(coalesce(lic.copyrightStatement, ""))
+                name: trim(coalesce(toString(lic.name), "")),
+                title: trim(coalesce(toString(lic.title), "")),
+                path: trim(coalesce(toString(lic.path), "")),
+                instruction: trim(coalesce(toString(lic.instruction), "")),
+                attribution: trim(coalesce(toString(lic.attribution), "")),
+                copyrightStatement: trim(coalesce(toString(lic.copyrightStatement), ""))
             })
             ON CREATE SET sl.source = "OEP"
+
             MERGE (s)-[:HAS_SOURCE_LICENSE]->(sl)
         )
     )
@@ -373,22 +365,23 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         lic IN [
             l IN coalesce(res.licenses, [])
             WHERE
-                trim(coalesce(l.name, "")) <> "" OR
-                trim(coalesce(l.path, "")) <> "" OR
-                trim(coalesce(l.title, "")) <> "" OR
-                trim(coalesce(l.instruction, "")) <> "" OR
-                trim(coalesce(l.attribution, "")) <> "" OR
-                trim(coalesce(l.copyrightStatement, "")) <> ""
+                trim(coalesce(toString(l.name), "")) <> "" OR
+                trim(coalesce(toString(l.path), "")) <> "" OR
+                trim(coalesce(toString(l.title), "")) <> "" OR
+                trim(coalesce(toString(l.instruction), "")) <> "" OR
+                trim(coalesce(toString(l.attribution), "")) <> "" OR
+                trim(coalesce(toString(l.copyrightStatement), "")) <> ""
         ] |
         MERGE (rl:License {
-            name: trim(coalesce(lic.name, "")),
-            title: trim(coalesce(lic.title, "")),
-            path: trim(coalesce(lic.path, "")),
-            instruction: trim(coalesce(lic.instruction, "")),
-            attribution: trim(coalesce(lic.attribution, "")),
-            copyrightStatement: trim(coalesce(lic.copyrightStatement, ""))
+            name: trim(coalesce(toString(lic.name), "")),
+            title: trim(coalesce(toString(lic.title), "")),
+            path: trim(coalesce(toString(lic.path), "")),
+            instruction: trim(coalesce(toString(lic.instruction), "")),
+            attribution: trim(coalesce(toString(lic.attribution), "")),
+            copyrightStatement: trim(coalesce(toString(lic.copyrightStatement), ""))
         })
         ON CREATE SET rl.source = "OEP"
+
         MERGE (r)-[:HAS_LICENSE]->(rl)
     )
 
@@ -397,33 +390,35 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         con IN [
             c IN coalesce(res.contributors, [])
             WHERE 
-                trim(coalesce(c.title, "")) <> "" OR
-                trim(coalesce(c.object, "")) <> "" OR
-                trim(coalesce(c.organization, "")) <> "" OR
-                trim(coalesce(c.date, "")) <> "" OR
-                trim(coalesce(c.path, "")) <> "" OR
-                trim(coalesce(c.comment, "")) <> ""
+                trim(coalesce(toString(c.title), "")) <> "" OR
+                trim(coalesce(toString(c.object), "")) <> "" OR
+                trim(coalesce(toString(c.organization), "")) <> "" OR
+                trim(coalesce(toString(c.date), "")) <> "" OR
+                trim(coalesce(toString(c.path), "")) <> "" OR
+                trim(coalesce(toString(c.comment), "")) <> ""
         ] |
         MERGE (p:Contributor {
-            title: trim(coalesce(con.title, "")),
-            object: trim(coalesce(con.object, "")),
-            organization: trim(coalesce(con.organization, "")),
+            title: trim(coalesce(toString(con.title), "")),
+            object: trim(coalesce(toString(con.object), "")),
+            organization: trim(coalesce(toString(con.organization), "")),
             date: coalesce(con.date, ""),
-            path: trim(coalesce(con.path, "")),
-            comment: trim(coalesce(con.comment, ""))
+            path: trim(coalesce(toString(con.path), "")),
+            comment: trim(coalesce(toString(con.comment), ""))
         })
         ON CREATE SET p.source = "OEP"
+
         MERGE (r)-[:CONTRIBUTED_BY]->(p)
 
         FOREACH (
             roleName IN [
                 rn IN (coalesce(con.roles, []) + coalesce(con.role, []))
-                WHERE trim(coalesce(rn, "")) <> ""
+                WHERE trim(coalesce(toString(rn), "")) <> ""
             ] |
             MERGE (role:Role {
-                name: trim(roleName)
+                name: trim(toString(roleName))
             })
             ON CREATE SET role.source = "OEP"
+
             MERGE (p)-[:HAS_ROLE]->(role)
         )
     )
@@ -441,99 +436,115 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
     END |
         CREATE (schema:Schema)
         SET schema.source = "OEP"
+
         MERGE (r)-[:HAS_SCHEMA]->(schema)
 
+        // Fields
         FOREACH (
             field IN [
                 f IN coalesce(res.schema.fields, [])
                 WHERE
-                    trim(f.name) <> "" OR
-                    trim(f.type) <> "" OR
-                    trim(coalesce(f.unit, "")) <> "" OR
-                    trim(coalesce(f.description, "")) <> "" OR
+                    trim(coalesce(toString(f.name), "")) <> "" OR
+                    trim(coalesce(toString(f.type), "")) <> "" OR
+                    trim(coalesce(toString(f.unit), "")) <> "" OR
+                    trim(coalesce(toString(f.description), "")) <> "" OR
                     f.nullable IS NOT NULL
             ] |
             MERGE (fi:Field {
-                name: trim(coalesce(field.name, "")),
-                type: trim(coalesce(field.type, "")),
-                unit: trim(coalesce(field.unit, "")),
-                description: trim(coalesce(field.description, "")),
-                nullable: coalesce(field.nullable, false)
+                name: trim(coalesce(toString(field.name), ""))
             })
-            ON CREATE SET fi.source = "OEP"
+            ON CREATE SET 
+                fi.type = trim(coalesce(toString(field.type), "")),
+                fi.unit = trim(coalesce(toString(field.unit), "")),
+                fi.description = trim(coalesce(toString(field.description), "")),
+                fi.nullable = coalesce(field.nullable, false),
+                fi.source = "OEP"
+
             MERGE (schema)-[:HAS_FIELD]->(fi)
 
+            // isAbout -> OntologyReference
             FOREACH (
                 about IN [
                     a IN coalesce(field.isAbout, [])
                     WHERE 
-                        trim(coalesce(a.`@id`, "")) <> "" OR
-                        trim(coalesce(a.name, "")) <> ""
+                        trim(coalesce(toString(a.`@id`), "")) <> "" OR
+                        trim(coalesce(toString(a.name), "")) <> ""
                 ] |
                 MERGE (ont:isAbout {
-                    id: trim(coalesce(about.`@id`, "")),
-                    name: trim(coalesce(about.name, "")) 
+                    id: coalesce(nullif(trim(coalesce(toString(about.`@id`), "")), ""), trim(coalesce(toString(about.name), "")), "unknown_ontology")
                 })
-                ON CREATE SET ont.source = "OEP"
+                ON CREATE SET 
+                    ont.name = trim(coalesce(toString(about.name), "")),
+                    ont.source = "OEP"
+
                 MERGE (fi)-[:IS_ABOUT]->(ont)
             )
 
+            // valueReference
             FOREACH (
                 ref IN [
                     v IN coalesce(field.valueReference, [])
                     WHERE 
-                        trim(coalesce(v.`@id`, "")) <> "" OR
-                        trim(coalesce(v.name, "")) <> "" OR
-                        trim(coalesce(v.value, "")) <> ""
+                        trim(coalesce(toString(v.`@id`), "")) <> "" OR
+                        trim(coalesce(toString(v.name), "")) <> "" OR
+                        trim(coalesce(toString(v.value), "")) <> ""
                 ] |
                 MERGE (vr:ValueReference {
-                    id: trim(coalesce(ref.`@id`, "")),
-                    name: trim(coalesce(ref.name, "")),
-                    value: trim(coalesce(ref.value, ""))
+                    id: coalesce(nullif(trim(coalesce(toString(ref.`@id`), "")), ""), trim(coalesce(toString(ref.name), "")), "unknown_val_ref")
                 })
-                ON CREATE SET vr.source = "OEP"
+                ON CREATE SET 
+                    vr.name = trim(coalesce(toString(ref.name), "")),
+                    vr.value = trim(coalesce(toString(ref.value), "")),
+                    vr.source = "OEP"
+
                 MERGE (fi)-[:HAS_VALUE_REFERENCE]->(vr)
             )
         )
 
+        // Primary Keys
         FOREACH (
             pk IN [
                 p IN coalesce(res.schema.primaryKey, [])
-                WHERE trim(coalesce(p, "")) <> ""
+                WHERE trim(coalesce(toString(p), "")) <> ""
             ] |
             MERGE (primaryKey:PrimaryKey {
-                field: trim(pk)
+                field: trim(toString(pk))
             })
             ON CREATE SET primaryKey.source = "OEP"
+
             MERGE (schema)-[:HAS_PRIMARY_KEY]->(primaryKey)
         )
 
+        // Foreign Keys
         FOREACH (
             fk IN [
                 f IN coalesce(res.schema.foreignKeys, [])
                 WHERE
                     size(coalesce(f.fields, [])) > 0 OR
                     size(coalesce(f.reference.fields, [])) > 0 OR
-                    trim(coalesce(f.reference.resource, "")) <> ""
+                    trim(coalesce(toString(f.reference.resource), "")) <> ""
             ] |
             CREATE (foreignKey:ForeignKey {
                 fields: coalesce(fk.fields, [])
             })
             SET foreignKey.source = "OEP"
+
             MERGE (schema)-[:HAS_FOREIGN_KEY]->(foreignKey)
 
             FOREACH (_ IN CASE
                 WHEN
                     size(coalesce(fk.reference.fields, [])) > 0 OR
-                    trim(coalesce(fk.reference.resource, "")) <> ""
+                    trim(coalesce(toString(fk.reference.resource), "")) <> ""
                 THEN [1]
                 ELSE []
             END |
                 MERGE (ref:Reference {
-                    fields: coalesce(fk.reference.fields, []),
-                    resource: trim(coalesce(fk.reference.resource, ""))
+                    resource: coalesce(nullif(trim(coalesce(toString(fk.reference.resource), "")), ""), "unknown_ref_resource")
                 })
-                ON CREATE SET ref.source = "OEP"
+                ON CREATE SET 
+                    ref.fields = coalesce(fk.reference.fields, []),
+                    ref.source = "OEP"
+
                 MERGE (foreignKey)-[:REFERENCES]->(ref)
             )
         )
@@ -543,17 +554,18 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
     FOREACH (_ IN CASE
         WHEN res.dialect IS NOT NULL
             AND (
-                trim(coalesce(res.dialect.delimiter, "")) <> "" OR
-                trim(coalesce(res.dialect.decimalSeparator, "")) <> ""
+                trim(coalesce(toString(res.dialect.delimiter), "")) <> "" OR
+                trim(coalesce(toString(res.dialect.decimalSeparator), "")) <> ""
             )
         THEN [1]
         ELSE []
     END |
         MERGE (di:Dialect {
-            delimiter: trim(coalesce(res.dialect.delimiter, "")),
-            decimalSeparator: trim(coalesce(res.dialect.decimalSeparator, ""))
+            delimiter: trim(coalesce(toString(res.dialect.delimiter), "")),
+            decimalSeparator: trim(coalesce(toString(res.dialect.decimalSeparator), ""))
         })
         ON CREATE SET di.source = "OEP"
+
         MERGE (r)-[:HAS_DIALECT]->(di)
     )
 
@@ -562,30 +574,37 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
         rev IN CASE
             WHEN res.review IS NOT NULL
                 AND (
-                    trim(coalesce(res.review.path, "")) <> "" OR
-                    trim(coalesce(res.review.badge, "")) <> ""
+                    trim(coalesce(toString(res.review.path), "")) <> "" OR
+                    trim(coalesce(toString(res.review.badge), "")) <> ""
                 )
             THEN [res.review]
             ELSE []
         END |
         MERGE (review:Review {
-            path: trim(coalesce(rev.path, "")),
-            badge: trim(coalesce(rev.badge, ""))
+            path: coalesce(nullif(trim(coalesce(toString(rev.path), "")), ""), "unknown_review_path")
         })
-        ON CREATE SET review.source = "OEP"
+        ON CREATE SET 
+            review.badge = trim(coalesce(toString(rev.badge), "")),
+            review.source = "OEP"
+
         MERGE (r)-[:HAS_REVIEW]->(review)
     )
     """
 
     with driver.session() as session:
+        dataset_name = record.get("name", "<unknown>")
+
+        log.info(f"Processing Dataset: {dataset_name}...")
+
         try:
             session.execute_write(lambda tx: tx.run(cypher_query, dataset=record))
             success_count += 1
-            log.info(f"-> Success: Dataset '{dataset_name}' ingested.")
+            log.info(f"-> Success: Dataset '{dataset_name}...' ingested.")
         except Exception as e:
             failed_count += 1
             error_type = categorize_neo4j_error(e)
             ingest_errors[error_type] += 1
+
             log.exception(f"-> FAILED ingestion for {dataset_name}: {e}")
 
     return success_count, failed_count, ingest_errors
@@ -644,29 +663,12 @@ def plot_error_statistics(
         ):
     """
     Creates a sorted bar chart of error types and saves it as an image file.
-
-    The x-axis contains only reason codes (e.g. N1, N2, N3).
-    The corresponding mapping is returned.
-
-    Parameters
-    ----------
-    error_counter
-        Counter containing error types and frequencies.
-
-    reason_prefix
-        Prefix for the reason codes.
-        Example:
-            "N" -> N1, N2, N3
-            "T" -> T1, T2, T3
     """
 
     if not error_counter:
         print("No errors present - no graphic generated.")
         return {}
 
-    # ---------------------------------------------------------
-    # Sort errors by frequency
-    # ---------------------------------------------------------
     sorted_items = sorted(
         error_counter.items(),
         key=lambda x: x[1],
@@ -675,9 +677,6 @@ def plot_error_statistics(
 
     error_types, values = zip(*sorted_items)
 
-    # ---------------------------------------------------------
-    # Create reason mapping
-    # ---------------------------------------------------------
     reason_mapping = {
         f"{reason_prefix}{i}": error_type
         for i, (error_type, _) in enumerate(
@@ -688,9 +687,6 @@ def plot_error_statistics(
 
     reason_codes = list(reason_mapping.keys())
 
-    # ---------------------------------------------------------
-    # Plot
-    # ---------------------------------------------------------
     plt.figure(figsize=(10, 6))
 
     plt.bar(
@@ -703,7 +699,6 @@ def plot_error_statistics(
     plt.ylabel("Count")
     plt.title(title)
 
-    # Values above bars
     for i, value in enumerate(values):
         plt.text(
             i,
@@ -716,9 +711,6 @@ def plot_error_statistics(
 
     plt.tight_layout()
 
-    # ---------------------------------------------------------
-    # Save plot
-    # ---------------------------------------------------------
     plt.savefig(
         filename,
         dpi=600,
@@ -755,14 +747,13 @@ def save_reason_mapping(
 
 
 def get_all_table_names_from_oep():
-    # 1. Create list of all table names
     log.info("Get all table names")
     list_url = f"{OEP_API_BASE}/advanced/get_table_names"
     response = requests.post(list_url, json={"schema": SCHEMA})
 
     if response.status_code != 200:
         print(f"Failed to fetch table list: {response.text}")
-        return []
+        return
 
     data = response.json()
 
@@ -783,7 +774,6 @@ def load_existing_metadata():
     """
 
     table_names = get_all_table_names_from_oep()
-
     records_to_ingest = []
 
     for table_name in table_names:
@@ -800,7 +790,6 @@ def load_existing_metadata():
             with open(filepath, "r", encoding="utf-8") as f:
                 json_content = f.read()
                 raw_data: list[dict[str, Any]] = json.loads(json_content)
-
             records_to_ingest.append(raw_data)
 
         except Exception as e:
@@ -813,18 +802,14 @@ def load_existing_metadata():
 if __name__ == "__main__":
     log.info("Main started")
 
-    # -------------------------------------------------------------------------
-    # 1. Connect Neo4j
-    # -------------------------------------------------------------------------
     cli = OepClient()
     driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
     verify_neo4j_connection(driver)
 
-    # ---------------------------------------------------------------------
-    # 2. Clear database
-    # ---------------------------------------------------------------------
     if not clear_database(driver):
-        log.info("Skipping database wipe, proceeding with existing database state...")
+        log.info("Import aborted.")
+        driver.close()
+        exit()
 
     print("\n========================================")
     print("OEP Metadata Import/Ingestion")
@@ -837,25 +822,8 @@ if __name__ == "__main__":
 
     choice = input("Select option (1/2/3/4): ").strip()
 
-    success_count = 0
-    failed_count = 0
-    ingest_errors = Counter()
-
     if choice == "1":
         print("\nDownloading metadata from OEP...")
-        table_names = get_all_table_names_from_oep()
-        records_to_ingest = []
-        for t_name in table_names:
-            try:
-                rec = cli.get_metadata(t_name)
-                records_to_ingest.append(rec)
-            except Exception as e:
-                log.exception(f"Failed to fetch metadata for {t_name}: {e}")
-
-        for record in records_to_ingest:
-            success_count, failed_count, ingest_errors = ingest_oep_metadata(
-                driver, record, success_count, failed_count, ingest_errors
-            )
 
     elif choice == "2":
         print("\nUsing existing local metadata from directory...")
@@ -871,15 +839,15 @@ if __name__ == "__main__":
 
         if not records_to_ingest:
             print("No valid datasets available. Import aborted.")
-            print("Wurden die Daten zuvor preprocessed?")
             exit()
 
         print(f"{len(records_to_ingest)} datasets passed LinkML validation.")
 
+        success_count = 0
+        failed_count = 0
+        ingest_errors = Counter()
         for record in records_to_ingest:
-            success_count, failed_count, ingest_errors = ingest_oep_metadata(
-                driver, record, success_count, failed_count, ingest_errors
-            )
+            success_count, failed_count, ingest_errors = ingest_oep_metadata(driver, record, success_count, failed_count, ingest_errors)
 
         print("\n==============================")
         print(f"Successfully ingested: {success_count}")
@@ -903,9 +871,7 @@ if __name__ == "__main__":
                 metadata_rec = cli.get_metadata(table_name)
                 tables_downloaded += 1
                 try:
-                    success_count, failed_count, ingest_errors = ingest_oep_metadata(
-                        driver, metadata_rec, success_count, failed_count, ingest_errors
-                    )
+                    ingest_oep_metadata(driver, metadata_rec, 0, 0, Counter())
                 except Exception as e:
                     log.exception("An error occurred during ingesting: %s", e)
 
@@ -918,9 +884,7 @@ if __name__ == "__main__":
         print("Invalid selection.")
         exit()
 
-    # ---------------------------------------------------------------------
-    # 5. Save LinkML report
-    # ---------------------------------------------------------------------
+    # Save LinkML report
     save_linkml_report(filename=RESULT_DIR / "linkml_validation_report.json")
 
     plot_linkml_statistics(
@@ -929,9 +893,7 @@ if __name__ == "__main__":
         filename=RESULT_DIR / "linkml_validation_errors.png"
     )
 
-    # ---------------------------------------------------------------------
-    # 6. Save Neo4j ingestion errors
-    # ---------------------------------------------------------------------
+    # Save Neo4j ingestion errors
     neo4j_reason_mapping = plot_error_statistics(
         ingest_errors,
         title="Neo4j Ingest Error Statistics",
@@ -946,10 +908,12 @@ if __name__ == "__main__":
         title="Neo4j Ingestion Error Reason Mapping"
     )
 
-    # ---------------------------------------------------------------------
-    # 7. Combined statistics
-    # ---------------------------------------------------------------------
-    all_errors = Counter() + LINKML_ERROR_COUNTER + ingest_errors
+    # Combined statistics
+    all_errors = (
+        Counter()
+        + LINKML_ERROR_COUNTER
+        + ingest_errors
+    )
 
     plot_error_statistics(
         all_errors, 
