@@ -103,7 +103,7 @@ def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, f
     record = sanitize_dataset_record(record)
 
     cypher_query = """
-    CALL {
+    CALL ($dataset) {
         WITH $dataset AS dataset
         WITH dataset 
         WHERE dataset.`@id` IS NOT NULL AND trim(dataset.`@id`) <> ""
@@ -904,6 +904,9 @@ if __name__ == "__main__":
         # Start ingestion
         table_names = get_all_table_names_from_oep()  # 1.
         tables_downloaded = 0
+        success_count = 0
+        failed_count = 0
+        ingest_errors = Counter()
         log.info(f"Table names count: {len(table_names)}")
 
         for table_name in table_names:
@@ -915,7 +918,7 @@ if __name__ == "__main__":
                 try:
                     # 2. Validate here with validate...
                     # 3. Ingest data
-                    ingest_oep_metadata(driver, metadata_rec)
+                    success_count, failed_count, ingest_errors = ingest_oep_metadata(driver, metadata_rec, success_count, failed_count, ingest_errors)
                 except Exception as e:
                     log.exception("An error occurred during ingesting: %s", e)
 

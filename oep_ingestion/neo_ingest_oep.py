@@ -81,13 +81,13 @@ def clear_database(driver: Driver):
 # =============================================================================
 # Neo4j Metadata Ingestion
 # =============================================================================
-def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count, failed_count, ingest_errors):
+def ingest_oep_metadata(driver: Driver, record: dict[str, Any], success_count: int, failed_count: int, ingest_errors: Counter):
     """
     Transforms OEP metadata into a Neo4j graph based on the LinkML schema.
     """
 
     cypher_query = """
-    CALL {
+    CALL ($dataset) {
         WITH $dataset AS dataset
         WITH dataset 
         WHERE dataset.`@id` IS NOT NULL AND trim(toString(dataset.`@id`)) <> ""
@@ -753,7 +753,7 @@ def get_all_table_names_from_oep():
 
     if response.status_code != 200:
         print(f"Failed to fetch table list: {response.text}")
-        return
+        return []
 
     data = response.json()
 
@@ -862,6 +862,9 @@ if __name__ == "__main__":
     elif choice == "4":
         table_names = get_all_table_names_from_oep()
         tables_downloaded = 0
+        success_count = 0
+        failed_count = 0
+        ingest_errors = Counter()
         log.info(f"Table names count: {len(table_names)}")
 
         for table_name in table_names:
@@ -871,12 +874,20 @@ if __name__ == "__main__":
                 metadata_rec = cli.get_metadata(table_name)
                 tables_downloaded += 1
                 try:
-                    ingest_oep_metadata(driver, metadata_rec, 0, 0, Counter())
+                    success_count, failed_count, ingest_errors = ingest_oep_metadata(
+                        driver, metadata_rec, success_count, failed_count, ingest_errors
+                    )
                 except Exception as e:
                     log.exception("An error occurred during ingesting: %s", e)
 
             except Exception as e:
                 log.exception("An error occurred during downloading: %s", e)
+
+        print("\n==============================")
+        print(f"Successfully ingested: {success_count}")
+        print(f"Failed ingestions:     {failed_count}")
+        print(f"Total datasets:        {len(table_names)}")
+        print("==============================\n")
 
         log.info(f"Ingestion Metadata finished {tables_downloaded}")
 
