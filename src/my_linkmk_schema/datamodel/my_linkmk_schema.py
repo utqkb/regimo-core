@@ -1,9 +1,9 @@
 # Auto generated from my_linkmk_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-03-04T16:08:07
-# Schema: regimo_metadata_schema
+# Generation date: 2026-11-01T20:44:42
+# Schema: my_linkmk_schema
 #
 # id: https://example.org/regimo/metadata_integrity_schema
-# description: Enforces data integrity for temperature and 3-phase electrical measurements.
+# description: Enforces data integrity for temperature, 3-phase electrical measurements, and RDMO project metadata.
 # license: MIT
 
 import dataclasses
@@ -22,11 +22,11 @@ from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from rdflib import Namespace, URIRef
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.linkml_model.types import Date, Datetime, Float, String
+from linkml_runtime.linkml_model.types import Date, Datetime, Float, Integer, String
 from linkml_runtime.utils.metamodelcore import XSDDate, XSDDateTime
 
 metamodel_version = "1.7.0"
-version = "0.2.0"
+version = "0.3.0"
 
 # Overwrite dataclasses _init_fn to add **kwargs in __init__
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
@@ -34,6 +34,7 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 # Namespaces
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 OEO = CurieNamespace('oeo', 'http://openenergy-platform.org/ontology/oeo/')
+RDMO = CurieNamespace('rdmo', 'https://rdmorganiser.github.io/terms/')
 REGIMO = CurieNamespace('regimo', 'https://example.org/regimo/')
 XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
 DEFAULT_ = REGIMO
@@ -43,6 +44,10 @@ DEFAULT_ = REGIMO
 
 # Class references
 class ProjectSubmissionProjectId(extended_str):
+    pass
+
+
+class RDMOProjectRdmoId(extended_int):
     pass
 
 
@@ -153,6 +158,92 @@ class MeasurementRecord(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
+@dataclass
+class RDMOProject(YAMLRoot):
+    """
+    Entity representing an RDMO project imported into Regimo.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = REGIMO["RDMOProject"]
+    class_class_curie: ClassVar[str] = "regimo:RDMOProject"
+    class_name: ClassVar[str] = "RDMOProject"
+    class_model_uri: ClassVar[URIRef] = REGIMO.RDMOProject
+
+    rdmo_id: Union[int, RDMOProjectRdmoId] = None
+    title: str = None
+    description: Optional[str] = None
+    created: Optional[Union[str, XSDDateTime]] = None
+    updated: Optional[Union[str, XSDDateTime]] = None
+    answers: Optional[Union[Union[dict, "QuestionnaireAnswer"], List[Union[dict, "QuestionnaireAnswer"]]]] = empty_list()
+    linked_oep_datasets: Optional[Union[str, List[str]]] = empty_list()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.rdmo_id):
+            self.MissingRequiredField("rdmo_id")
+        if not isinstance(self.rdmo_id, RDMOProjectRdmoId):
+            self.rdmo_id = RDMOProjectRdmoId(self.rdmo_id)
+
+        if self._is_empty(self.title):
+            self.MissingRequiredField("title")
+        if not isinstance(self.title, str):
+            self.title = str(self.title)
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
+
+        if self.created is not None and not isinstance(self.created, XSDDateTime):
+            self.created = XSDDateTime(self.created)
+
+        if self.updated is not None and not isinstance(self.updated, XSDDateTime):
+            self.updated = XSDDateTime(self.updated)
+
+        if not isinstance(self.answers, list):
+            self.answers = [self.answers] if self.answers is not None else []
+        self.answers = [v if isinstance(v, QuestionnaireAnswer) else QuestionnaireAnswer(**as_dict(v)) for v in self.answers]
+
+        if not isinstance(self.linked_oep_datasets, list):
+            self.linked_oep_datasets = [self.linked_oep_datasets] if self.linked_oep_datasets is not None else []
+        self.linked_oep_datasets = [v if isinstance(v, str) else str(v) for v in self.linked_oep_datasets]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class QuestionnaireAnswer(YAMLRoot):
+    """
+    Individual attribute-value response from an RDMO questionnaire.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = REGIMO["QuestionnaireAnswer"]
+    class_class_curie: ClassVar[str] = "regimo:QuestionnaireAnswer"
+    class_name: ClassVar[str] = "QuestionnaireAnswer"
+    class_model_uri: ClassVar[URIRef] = REGIMO.QuestionnaireAnswer
+
+    attribute_path: str = None
+    value_text: Optional[str] = None
+    value_datatype: Optional[str] = None
+    unit: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.attribute_path):
+            self.MissingRequiredField("attribute_path")
+        if not isinstance(self.attribute_path, str):
+            self.attribute_path = str(self.attribute_path)
+
+        if self.value_text is not None and not isinstance(self.value_text, str):
+            self.value_text = str(self.value_text)
+
+        if self.value_datatype is not None and not isinstance(self.value_datatype, str):
+            self.value_datatype = str(self.value_datatype)
+
+        if self.unit is not None and not isinstance(self.unit, str):
+            self.unit = str(self.unit)
+
+        super().__post_init__(**kwargs)
+
+
 # Enumerations
 
 
@@ -206,3 +297,36 @@ slots.current_l3 = Slot(uri=REGIMO.current_l3, name="current_l3", curie=REGIMO.c
 
 slots.records = Slot(uri=REGIMO.records, name="records", curie=REGIMO.curie('records'),
                    model_uri=REGIMO.records, domain=None, range=Optional[Union[Union[dict, MeasurementRecord], List[Union[dict, MeasurementRecord]]]])
+
+slots.rdmo_id = Slot(uri=REGIMO.rdmo_id, name="rdmo_id", curie=REGIMO.curie('rdmo_id'),
+                   model_uri=REGIMO.rdmo_id, domain=None, range=URIRef)
+
+slots.title = Slot(uri=REGIMO.title, name="title", curie=REGIMO.curie('title'),
+                   model_uri=REGIMO.title, domain=None, range=str)
+
+slots.description = Slot(uri=REGIMO.description, name="description", curie=REGIMO.curie('description'),
+                   model_uri=REGIMO.description, domain=None, range=Optional[str])
+
+slots.created = Slot(uri=REGIMO.created, name="created", curie=REGIMO.curie('created'),
+                   model_uri=REGIMO.created, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.updated = Slot(uri=REGIMO.updated, name="updated", curie=REGIMO.curie('updated'),
+                   model_uri=REGIMO.updated, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.attribute_path = Slot(uri=REGIMO.attribute_path, name="attribute_path", curie=REGIMO.curie('attribute_path'),
+                   model_uri=REGIMO.attribute_path, domain=None, range=str)
+
+slots.value_text = Slot(uri=REGIMO.value_text, name="value_text", curie=REGIMO.curie('value_text'),
+                   model_uri=REGIMO.value_text, domain=None, range=Optional[str])
+
+slots.value_datatype = Slot(uri=REGIMO.value_datatype, name="value_datatype", curie=REGIMO.curie('value_datatype'),
+                   model_uri=REGIMO.value_datatype, domain=None, range=Optional[str])
+
+slots.unit = Slot(uri=REGIMO.unit, name="unit", curie=REGIMO.curie('unit'),
+                   model_uri=REGIMO.unit, domain=None, range=Optional[str])
+
+slots.answers = Slot(uri=REGIMO.answers, name="answers", curie=REGIMO.curie('answers'),
+                   model_uri=REGIMO.answers, domain=None, range=Optional[Union[Union[dict, QuestionnaireAnswer], List[Union[dict, QuestionnaireAnswer]]]])
+
+slots.linked_oep_datasets = Slot(uri=REGIMO.linked_oep_datasets, name="linked_oep_datasets", curie=REGIMO.curie('linked_oep_datasets'),
+                   model_uri=REGIMO.linked_oep_datasets, domain=None, range=Optional[Union[str, List[str]]])

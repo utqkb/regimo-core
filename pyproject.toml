@@ -17,6 +17,7 @@ dynamic = ["version"]
 dependencies = [
   "linkml==1.7.10",
   "linkml-runtime >=1.9.4",
+  "neo4j>=5.28.8",
 ]
 
 [dependency-groups]

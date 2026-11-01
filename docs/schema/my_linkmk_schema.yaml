@@ -1,9 +1,9 @@
-name: regimo_metadata_schema
-description: Enforces data integrity, provenance and FAIR principles for temperature
-  measurements.
+name: my_linkmk_schema
+description: Enforces data integrity for temperature, 3-phase electrical measurements,
+  and RDMO project metadata.
 title: Regimo Metadata Integrity Schema
 id: https://example.org/regimo/metadata_integrity_schema
-version: 0.1.0
+version: 0.3.0
 imports:
 - linkml:types
 license: MIT
@@ -20,16 +20,12 @@ prefixes:
   oeo:
     prefix_prefix: oeo
     prefix_reference: http://openenergy-platform.org/ontology/oeo/
+  rdmo:
+    prefix_prefix: rdmo
+    prefix_reference: https://rdmorganiser.github.io/terms/
 default_prefix: regimo
 default_range: string
 types:
-  MeasurementValue:
-    name: MeasurementValue
-    definition_uri: https://example.org/regimo/MeasurementValue
-    description: Temperature reading as a floating-point number
-    from_schema: https://example.org/regimo/metadata_integrity_schema
-    base: float
-    uri: xsd:float
   string:
     name: string
     definition_uri: https://w3id.org/linkml/String
@@ -298,208 +294,343 @@ types:
     base: str
     uri: xsd:string
     repr: str
-enums:
-  UnitOfTemperature:
-    name: UnitOfTemperature
-    definition_uri: https://example.org/regimo/UnitOfTemperature
-    description: Allowed temperature units
-    from_schema: https://example.org/regimo/metadata_integrity_schema
-    permissible_values:
-      Kelvin:
-        text: Kelvin
-        description: Kelvin scale
-        meaning: oeo:OEO_00020034
-      Celsius:
-        text: Celsius
-        description: Degrees Celsius
-        meaning: oeo:OEO_00020035
 slots:
   project_id:
     name: project_id
     definition_uri: https://example.org/regimo/project_id
-    description: Unique project identifier
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:project_id
     identifier: true
+    owner: ProjectSubmission
+    domain_of:
+    - ProjectSubmission
     range: string
+    required: true
+    pattern: ^REGIMO-\d{4}-\d{3}$
+  project_start_date:
+    name: project_start_date
+    definition_uri: https://example.org/regimo/project_start_date
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:project_start_date
+    owner: ProjectSubmission
+    domain_of:
+    - ProjectSubmission
+    range: date
     required: true
   operator_name:
     name: operator_name
     definition_uri: https://example.org/regimo/operator_name
-    description: Person responsible for the measurement
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:operator_name
+    owner: ProjectSubmission
+    domain_of:
+    - ProjectSubmission
     range: string
     required: true
   sample_unique_id:
     name: sample_unique_id
     definition_uri: https://example.org/regimo/sample_unique_id
-    description: Unique identifier of the sample
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:sample_unique_id
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
     range: string
     required: true
+    pattern: ^SAMPLE-\d{3}$
   measurement_time:
     name: measurement_time
     definition_uri: https://example.org/regimo/measurement_time
-    description: Date and time of the measurement
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:measurement_time
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
     range: datetime
-    required: true
-  temperature_value:
-    name: temperature_value
-    definition_uri: https://example.org/regimo/temperature_value
-    description: Measured temperature value
-    from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:temperature_value
-    range: MeasurementValue
-    required: true
-  temperature_unit:
-    name: temperature_unit
-    definition_uri: https://example.org/regimo/temperature_unit
-    description: Unit of the temperature
-    from_schema: https://example.org/regimo/metadata_integrity_schema
-    mappings:
-    - oeo:OEO_00020035
-    slot_uri: oeo:OEO_00020035
-    range: UnitOfTemperature
     required: true
   instrument_calibration_date:
     name: instrument_calibration_date
     definition_uri: https://example.org/regimo/instrument_calibration_date
-    description: Date the instrument was last calibrated
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:instrument_calibration_date
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
     range: date
     required: true
+  temperature_celsius:
+    name: temperature_celsius
+    definition_uri: https://example.org/regimo/temperature_celsius
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:temperature_celsius
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 10
+    maximum_value: 40
+  temperature_kelvin:
+    name: temperature_kelvin
+    definition_uri: https://example.org/regimo/temperature_kelvin
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:temperature_kelvin
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 283.15
+    maximum_value: 313.15
+  voltage_l1:
+    name: voltage_l1
+    definition_uri: https://example.org/regimo/voltage_l1
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:voltage_l1
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 200
+    maximum_value: 250
+  voltage_l2:
+    name: voltage_l2
+    definition_uri: https://example.org/regimo/voltage_l2
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:voltage_l2
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 200
+    maximum_value: 250
+  voltage_l3:
+    name: voltage_l3
+    definition_uri: https://example.org/regimo/voltage_l3
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:voltage_l3
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 200
+    maximum_value: 250
+  current_l1:
+    name: current_l1
+    definition_uri: https://example.org/regimo/current_l1
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:current_l1
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 0
+    maximum_value: 16
+  current_l2:
+    name: current_l2
+    definition_uri: https://example.org/regimo/current_l2
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:current_l2
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 0
+    maximum_value: 16
+  current_l3:
+    name: current_l3
+    definition_uri: https://example.org/regimo/current_l3
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:current_l3
+    owner: MeasurementRecord
+    domain_of:
+    - MeasurementRecord
+    range: float
+    minimum_value: 0
+    maximum_value: 16
   records:
     name: records
     definition_uri: https://example.org/regimo/records
-    description: List of all measurement records in this submission
+    description: List of all measurement records in this submission.
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slot_uri: regimo:records
+    owner: ProjectSubmission
+    domain_of:
+    - ProjectSubmission
     range: MeasurementRecord
     multivalued: true
     inlined: true
     inlined_as_list: true
-  projectSubmission__project_id:
-    name: projectSubmission__project_id
+  rdmo_id:
+    name: rdmo_id
+    definition_uri: https://example.org/regimo/rdmo_id
+    description: Primary key ID of the RDMO project.
     from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:project_id
-    alias: project_id
-    owner: ProjectSubmission
+    slot_uri: regimo:rdmo_id
+    identifier: true
+    owner: RDMOProject
     domain_of:
-    - ProjectSubmission
-    range: string
-  projectSubmission__operator_name:
-    name: projectSubmission__operator_name
+    - RDMOProject
+    range: integer
+    required: true
+  title:
+    name: title
+    definition_uri: https://example.org/regimo/title
     from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:operator_name
-    alias: operator_name
-    owner: ProjectSubmission
+    slot_uri: regimo:title
+    owner: RDMOProject
     domain_of:
-    - ProjectSubmission
+    - RDMOProject
     range: string
-  projectSubmission__records:
-    name: projectSubmission__records
+    required: true
+  description:
+    name: description
+    definition_uri: https://example.org/regimo/description
     from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:records
-    alias: records
-    owner: ProjectSubmission
+    slot_uri: regimo:description
+    owner: RDMOProject
     domain_of:
-    - ProjectSubmission
+    - RDMOProject
     range: string
-  measurementRecord__sample_unique_id:
-    name: measurementRecord__sample_unique_id
+  created:
+    name: created
+    definition_uri: https://example.org/regimo/created
     from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:sample_unique_id
-    alias: sample_unique_id
-    owner: MeasurementRecord
+    slot_uri: regimo:created
+    owner: RDMOProject
     domain_of:
-    - MeasurementRecord
-    range: string
-  measurementRecord__measurement_time:
-    name: measurementRecord__measurement_time
+    - RDMOProject
+    range: datetime
+  updated:
+    name: updated
+    definition_uri: https://example.org/regimo/updated
     from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:measurement_time
-    alias: measurement_time
-    owner: MeasurementRecord
+    slot_uri: regimo:updated
+    owner: RDMOProject
     domain_of:
-    - MeasurementRecord
-    range: string
-  measurementRecord__temperature_value:
-    name: measurementRecord__temperature_value
+    - RDMOProject
+    range: datetime
+  attribute_path:
+    name: attribute_path
+    definition_uri: https://example.org/regimo/attribute_path
+    description: RDMO attribute path (e.g., project/dataset/identifier).
     from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:temperature_value
-    alias: temperature_value
-    owner: MeasurementRecord
+    slot_uri: regimo:attribute_path
+    owner: QuestionnaireAnswer
     domain_of:
-    - MeasurementRecord
+    - QuestionnaireAnswer
     range: string
-  measurementRecord__temperature_unit:
-    name: measurementRecord__temperature_unit
+    required: true
+  value_text:
+    name: value_text
+    definition_uri: https://example.org/regimo/value_text
+    description: Textual or URI answer provided in RDMO.
     from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:temperature_unit
-    alias: temperature_unit
-    owner: MeasurementRecord
+    slot_uri: regimo:value_text
+    owner: QuestionnaireAnswer
     domain_of:
-    - MeasurementRecord
+    - QuestionnaireAnswer
     range: string
-  measurementRecord__instrument_calibration_date:
-    name: measurementRecord__instrument_calibration_date
+  value_datatype:
+    name: value_datatype
+    definition_uri: https://example.org/regimo/value_datatype
     from_schema: https://example.org/regimo/metadata_integrity_schema
-    slot_uri: regimo:instrument_calibration_date
-    alias: instrument_calibration_date
-    owner: MeasurementRecord
+    slot_uri: regimo:value_datatype
+    owner: QuestionnaireAnswer
     domain_of:
-    - MeasurementRecord
+    - QuestionnaireAnswer
     range: string
+  unit:
+    name: unit
+    definition_uri: https://example.org/regimo/unit
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:unit
+    owner: QuestionnaireAnswer
+    domain_of:
+    - QuestionnaireAnswer
+    range: string
+  answers:
+    name: answers
+    definition_uri: https://example.org/regimo/answers
+    description: Collection of attribute answers belonging to this project.
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:answers
+    owner: RDMOProject
+    domain_of:
+    - RDMOProject
+    range: QuestionnaireAnswer
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  linked_oep_datasets:
+    name: linked_oep_datasets
+    definition_uri: https://example.org/regimo/linked_oep_datasets
+    description: Identifiers linking this RDMO project to OEP research datasets in
+      Neo4j.
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slot_uri: regimo:linked_oep_datasets
+    owner: RDMOProject
+    domain_of:
+    - RDMOProject
+    range: string
+    multivalued: true
 classes:
   ProjectSubmission:
     name: ProjectSubmission
     definition_uri: https://example.org/regimo/ProjectSubmission
-    description: Container for one or more measurement records
+    description: Container for one or more measurement records.
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slots:
-    - projectSubmission__project_id
-    - projectSubmission__operator_name
-    - projectSubmission__records
-    attributes:
-      project_id:
-        name: project_id
-      operator_name:
-        name: operator_name
-      records:
-        name: records
+    - project_id
+    - operator_name
+    - project_start_date
+    - records
     class_uri: regimo:ProjectSubmission
     tree_root: true
   MeasurementRecord:
     name: MeasurementRecord
     definition_uri: https://example.org/regimo/MeasurementRecord
-    description: Single temperature measurement with provenance
+    description: Single measurement event (Temperature or 3-Phase Power).
     from_schema: https://example.org/regimo/metadata_integrity_schema
     slots:
-    - measurementRecord__sample_unique_id
-    - measurementRecord__measurement_time
-    - measurementRecord__temperature_value
-    - measurementRecord__temperature_unit
-    - measurementRecord__instrument_calibration_date
-    attributes:
-      sample_unique_id:
-        name: sample_unique_id
-      measurement_time:
-        name: measurement_time
-      temperature_value:
-        name: temperature_value
-      temperature_unit:
-        name: temperature_unit
-      instrument_calibration_date:
-        name: instrument_calibration_date
+    - sample_unique_id
+    - measurement_time
+    - instrument_calibration_date
+    - temperature_celsius
+    - temperature_kelvin
+    - voltage_l1
+    - voltage_l2
+    - voltage_l3
+    - current_l1
+    - current_l2
+    - current_l3
     class_uri: regimo:MeasurementRecord
+  RDMOProject:
+    name: RDMOProject
+    definition_uri: https://example.org/regimo/RDMOProject
+    description: Entity representing an RDMO project imported into Regimo.
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slots:
+    - rdmo_id
+    - title
+    - description
+    - created
+    - updated
+    - answers
+    - linked_oep_datasets
+    class_uri: regimo:RDMOProject
+  QuestionnaireAnswer:
+    name: QuestionnaireAnswer
+    definition_uri: https://example.org/regimo/QuestionnaireAnswer
+    description: Individual attribute-value response from an RDMO questionnaire.
+    from_schema: https://example.org/regimo/metadata_integrity_schema
+    slots:
+    - attribute_path
+    - value_text
+    - value_datatype
+    - unit
+    class_uri: regimo:QuestionnaireAnswer
 metamodel_version: 1.7.0
 source_file: my_linkmk_schema.yaml
-source_file_date: '2025-12-09T01:34:58'
-source_file_size: 2262
-generation_date: '2025-12-09T11:28:13'
+source_file_date: '2026-11-01T20:41:24'
+source_file_size: 3893
+generation_date: '2026-11-01T20:44:50'
 

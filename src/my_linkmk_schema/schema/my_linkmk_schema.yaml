@@ -1,8 +1,8 @@
 id: https://example.org/regimo/metadata_integrity_schema
-name: regimo_metadata_schema
+name: my_linkmk_schema
 title: Regimo Metadata Integrity Schema
-description: Enforces data integrity for temperature and 3-phase electrical measurements.
-version: 0.2.0
+description: Enforces data integrity for temperature, 3-phase electrical measurements, and RDMO project metadata.
+version: 0.3.0
 license: MIT
 
 default_prefix: regimo
@@ -13,11 +13,13 @@ prefixes:
   linkml: https://w3id.org/linkml/
   xsd: http://www.w3.org/2001/XMLSchema#
   oeo: http://openenergy-platform.org/ontology/oeo/
+  rdmo: https://rdmorganiser.github.io/terms/
 
 imports:
   - linkml:types
 
 classes:
+  # Existing Physical Measurement Classes
   ProjectSubmission:
     tree_root: true
     description: Container for one or more measurement records.
@@ -36,16 +38,37 @@ classes:
       # Temperature Slots
       - temperature_celsius
       - temperature_kelvin
-      # 3-Phase Voltage Slots (Volts)
+      # 3-Phase Voltage Slots
       - voltage_l1
       - voltage_l2
       - voltage_l3
-      # 3-Phase Current Slots (Amperes)
+      # 3-Phase Current Slots
       - current_l1
       - current_l2
       - current_l3
 
+  # New RDMO Metadata Classes
+  RDMOProject:
+    description: Entity representing an RDMO project imported into Regimo.
+    slots:
+      - rdmo_id
+      - title
+      - description
+      - created
+      - updated
+      - answers
+      - linked_oep_datasets
+
+  QuestionnaireAnswer:
+    description: Individual attribute-value response from an RDMO questionnaire.
+    slots:
+      - attribute_path
+      - value_text
+      - value_datatype
+      - unit
+
 slots:
+  # Existing Physical Slots
   project_id:
     identifier: true
     required: true
@@ -65,7 +88,7 @@ slots:
     required: true
     range: date
 
-  # --- Temperature Rules ---
+  # Temperature Rules
   temperature_celsius:
     range: float
     minimum_value: 10
@@ -75,12 +98,11 @@ slots:
     minimum_value: 283.15
     maximum_value: 313.15
 
-  # --- 3-Phase Electrical Rules ---
+  # 3-Phase Electrical Rules
   voltage_l1:
     range: float
     minimum_value: 200
     maximum_value: 250
-    description: Voltage on Phase 1 (Target 230V)
   voltage_l2:
     range: float
     minimum_value: 200
@@ -89,12 +111,10 @@ slots:
     range: float
     minimum_value: 200
     maximum_value: 250
-
   current_l1:
     range: float
     minimum_value: 0
     maximum_value: 16
-    description: Current on Phase 1 (Max 16A for standard lab socket)
   current_l2:
     range: float
     minimum_value: 0
@@ -104,10 +124,56 @@ slots:
     minimum_value: 0
     maximum_value: 16
 
-  # Moved 'records' back inside the slots section
   records:
     multivalued: true
     inlined: true
     inlined_as_list: true
     range: MeasurementRecord
     description: List of all measurement records in this submission.
+
+  # New RDMO Slots
+  rdmo_id:
+    identifier: true
+    required: true
+    range: integer
+    description: Primary key ID of the RDMO project.
+
+  title:
+    required: true
+    range: string
+
+  description:
+    range: string
+
+  created:
+    range: datetime
+
+  updated:
+    range: datetime
+
+  attribute_path:
+    required: true
+    range: string
+    description: RDMO attribute path (e.g., project/dataset/identifier).
+
+  value_text:
+    range: string
+    description: Textual or URI answer provided in RDMO.
+
+  value_datatype:
+    range: string
+
+  unit:
+    range: string
+
+  answers:
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+    range: QuestionnaireAnswer
+    description: Collection of attribute answers belonging to this project.
+
+  linked_oep_datasets:
+    multivalued: true
+    range: string
+    description: Identifiers linking this RDMO project to OEP research datasets in Neo4j.

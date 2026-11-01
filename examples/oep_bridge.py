@@ -16,7 +16,7 @@ TABLE_NAME = "regimo_measurements"
 
 # Your KIT Institution Credentials
 KIT_USERNAME = "utqkb"  
-KIT_PASSWORD = "YOUR_KIT_PASSWORD"  # <-- ENTER YOUR CORRECT KIT PORTAL PASSWORD HERE
+KIT_PASSWORD = "Triple9h!$5617"  # <-- ENTER YOUR CORRECT KIT PORTAL PASSWORD HERE
 
 class TlsCompatibilityAdapter(HTTPAdapter):
     def init_poolmanager(self, connections, maxsize, block=False, **pool_kwargs):
