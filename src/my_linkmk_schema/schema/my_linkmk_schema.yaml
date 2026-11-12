@@ -154,6 +154,7 @@ slots:
   attribute_path:
     required: true
     range: string
+    pattern: "^[a-z0-9_/]+$"
     description: RDMO attribute path (e.g., project/dataset/identifier).
 
   value_text:
@@ -176,4 +177,5 @@ slots:
   linked_oep_datasets:
     multivalued: true
     range: string
+    pattern: "^OEP-\\d{5}$"
     description: Identifiers linking this RDMO project to OEP research datasets in Neo4j.
